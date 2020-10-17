@@ -1,0 +1,42 @@
+﻿using StoreLibrary.Models;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StoreLibrary.DataAccess
+{
+    public interface IDataConnection
+    {
+        Model_Employee CreateNew_Employee(Model_Employee model);
+        Model_Category CreateNew_Category(Model_Category model);
+        Model_Color CreateNew_Color(Model_Color model);
+        Model_Object CreateNew_Object(Model_Object model);
+        Model_Season CreateNew_Season(Model_Season model);
+        Model_RawMaterial CreateNew_RawMaterial(Model_RawMaterial model);
+        Model_Role CreateNew_Role(Model_Role model);
+        Model_Size CreateNew_Size(Model_Size model);
+        Model_Manufactured CreateNew_Manufactured(Model_Manufactured model);
+        List<Model_Category> GetAllCategory();
+        List<Model_Color> GetAllColor();
+        List<Model_Manufactured> GetAllManufactured();
+        List<Model_Object> GetAllObject();
+        List<Model_RawMaterial> GetModel_RawMaterials();
+        List<Model_Size> GetAllSize();
+        List<Model_Season> GetAllSeason();
+        List<Model_Role> GetAllRole();
+        Model_Product InsertNewProduct(Model_Product model);
+        Model_Employee InsertNewEmployee(Model_Employee model);
+        Model_Supplier InsertNewSupplier(Model_Supplier model);
+        Model_Customer InsertNewCustomer(Model_Customer model);
+        DataTable GetAllCustomers();
+        DataTable GetAllEmployees();
+        DataTable GetAllProducts();
+        DataTable GetAllSuppliers();
+        DataTable GetAllEntryBills();
+        DataTable GetAllSellBills();
+        void DeleteCustomer(Model_Customer model);
+    }
+}

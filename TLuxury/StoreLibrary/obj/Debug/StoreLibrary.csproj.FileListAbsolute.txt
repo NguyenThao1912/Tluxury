@@ -1,0 +1,8 @@
+D:\c#\BTlC#_v2\TLuxury\StoreLibrary\bin\Debug\StoreLibrary.dll
+D:\c#\BTlC#_v2\TLuxury\StoreLibrary\bin\Debug\StoreLibrary.pdb
+D:\c#\BTlC#_v2\TLuxury\StoreLibrary\bin\Debug\Dapper.dll
+D:\c#\BTlC#_v2\TLuxury\StoreLibrary\bin\Debug\Dapper.xml
+D:\c#\BTlC#_v2\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.csprojAssemblyReference.cache
+D:\c#\BTlC#_v2\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.csproj.CopyComplete
+D:\c#\BTlC#_v2\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.dll
+D:\c#\BTlC#_v2\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.pdb
