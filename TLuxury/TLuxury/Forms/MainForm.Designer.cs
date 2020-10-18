@@ -481,6 +481,8 @@
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelParentOfPanelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1400, 900);
+            this.MinimumSize = new System.Drawing.Size(1400, 900);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
