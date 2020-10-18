@@ -10,7 +10,6 @@ namespace StoreLibrary.DataAccess
 {
     public interface IDataConnection
     {
-        Model_Employee CreateNew_Employee(Model_Employee model);
         Model_Category CreateNew_Category(Model_Category model);
         Model_Color CreateNew_Color(Model_Color model);
         Model_Object CreateNew_Object(Model_Object model);
@@ -38,5 +37,8 @@ namespace StoreLibrary.DataAccess
         DataTable GetAllEntryBills();
         DataTable GetAllSellBills();
         void DeleteCustomer(Model_Customer model);
+        void UpdateCustomer(Model_Customer model);
+        DataTable FindCustomerByName(string name);
+        DataTable FindCustomerByID(string ID);
     }
 }

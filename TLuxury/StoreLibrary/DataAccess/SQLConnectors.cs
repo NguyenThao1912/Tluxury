@@ -116,11 +116,6 @@ namespace StoreLibrary.DataAccess
             }
         }
 
-        public Model_Employee CreateNew_Employee(Model_Employee model)
-        {
-            return model;
-        }
-
         public List<Model_Category> GetAllCategory()
         {
             List<Model_Category> model;
@@ -363,9 +358,42 @@ namespace StoreLibrary.DataAccess
             throw new NotImplementedException();
         }
 
-        public void DeleteCustomer()
+
+        public void UpdateCustomer(Model_Customer model)
         {
-            throw new NotImplementedException();
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@CustomerID", model.ID);
+            p.Add("@Name", model.Name);
+            p.Add("@PhoneNumber", model.PhoneNumber);
+            p.Add("@Address", model.Address);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("UpdateCustomer", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public DataTable FindCustomerByName(string name)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@CustomerName", name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+               table.Load(connection.ExecuteReader("FindCustomerBy_Name", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+        public DataTable FindCustomerByID(string ID)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@CustomerID", ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindCustomerBy_ID", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
         }
     }
 }

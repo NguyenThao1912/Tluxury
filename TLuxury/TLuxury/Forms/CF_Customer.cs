@@ -14,14 +14,14 @@ namespace TLuxury.Forms
 {
     public partial class CF_Customer : Form
     {
-        Model_Customer temp ;
+        Model_Customer temp ; // Đối tượng để xóa
         public CF_Customer()
         {
             InitializeComponent();
 
         }
         private void WireData()
-        {
+        {   
             DataTable model = GlobalConfig.Connection.GetAllCustomers();
             DanhsachKH.DataSource = null;
             DanhsachKH.DataSource = model;
@@ -42,11 +42,19 @@ namespace TLuxury.Forms
             a.ShowDialog();
             WireData();
         }
-
+        private void ResetButton()
+        {
+            textBoxName.ReadOnly = true;
+            textBoxPhoneNumber.ReadOnly = true;
+            textBoxAddress.ReadOnly = true;
+            buttonSave.Visible = false;
+        }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
+                if (textBoxName.ReadOnly == false)
+                    ResetButton();
                 temp = new Model_Customer();
                 DataGridViewRow selectRow = this.DanhsachKH.Rows[e.RowIndex];
                 temp.ID = selectRow.Cells["Mã KH"].Value.ToString();
@@ -73,7 +81,8 @@ namespace TLuxury.Forms
            {
                 try 
                 {
-                        GlobalConfig.Connection.DeleteCustomer(temp); temp = null;
+                        GlobalConfig.Connection.DeleteCustomer(temp);
+                        temp = null;
                         MessageBox.Show("Xóa Thành Công", "Thông Báo", MessageBoxButtons.OK);
                         temp = null;
                         ClearData();
@@ -88,6 +97,44 @@ namespace TLuxury.Forms
            else
                 MessageBox.Show("Hãy chọn 1 hàng trên danh sách ", "Thông Báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
   
+        }
+
+        private void buttonSua_Click(object sender, EventArgs e)
+        {
+            if (textBoxID.Text != "")
+            {
+                buttonSave.Visible = true;
+                textBoxName.ReadOnly = false;
+                textBoxPhoneNumber.ReadOnly = false;
+                textBoxAddress.ReadOnly = false;
+            }
+            else
+                MessageBox.Show("Chưa có thông tin gì trên bảng thông tin KHÔNG thể sửa ", "Thông Báo", MessageBoxButtons.OK);
+
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            Model_Customer model = new Model_Customer(textBoxName.Text,textBoxAddress.Text,textBoxPhoneNumber.Text);
+            model.ID = textBoxID.Text;
+            try
+            {
+                GlobalConfig.Connection.UpdateCustomer(model);
+                MessageBox.Show($"Sửa thông tin khách hàng mã {model.ID} thành công", "Thông Báo", MessageBoxButtons.OK);
+                ResetButton();
+                WireData();
+                buttonSave.Visible = false;
+            }
+            catch
+            {
+                MessageBox.Show("Có lỗi Sửa không thành công ", "Thông Báo", MessageBoxButtons.OK);
+            }
+            
+        }
+
+        private void buttonGetData_Click(object sender, EventArgs e)
+        {
+            WireData();
         }
     }
 }
