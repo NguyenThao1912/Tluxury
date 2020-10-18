@@ -120,7 +120,7 @@ namespace TLuxury.Forms
         }
         private void buttonHangHoa_Click(object sender, EventArgs e)
         {
-           
+          
         }
         private void buttonDT_KhachHang_Click(object sender, EventArgs e)
         {
