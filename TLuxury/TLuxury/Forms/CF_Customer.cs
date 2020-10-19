@@ -136,5 +136,59 @@ namespace TLuxury.Forms
         {
             WireData();
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            if(textBox5.Text == "")
+            {
+                WireData();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DataTable table = new DataTable();
+            try
+            {
+                if (comboBox1.Text != "")
+                {
+                    if (comboBox1.Text == "Tìm Kiếm Theo Tên Khách")
+                    {
+                        table = GlobalConfig.Connection.FindCustomerByName($"{textBox5.Text.Trim()}");
+                    }
+                    else if (comboBox1.Text == "Tìm Kiếm Theo Mã Khách")
+                    {
+                        table = GlobalConfig.Connection.FindCustomerByID(textBox5.Text);
+                    }
+                    else if (comboBox1.Text == "Tìm Kiếm Theo Địa Chỉ")
+                    {
+                        //working on it
+                    }
+                    else if (comboBox1.Text == "Tìm Kiếm Theo Số Điện Thoại")
+                    {
+                        //tramkamtime
+                    }
+                }
+                if(table.Rows.Count>0)
+                {
+                    DanhsachKH.DataSource = null;
+                    DanhsachKH.DataSource = table;
+                    DanhsachKH.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    DanhsachKH.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    DanhsachKH.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    DanhsachKH.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+                else
+                    if(comboBox1.Text == "")
+                        MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK);
+                    else 
+                    MessageBox.Show("Không tìm thấy kết quả phù hợp với tìm kiếm", "Thông báo", MessageBoxButtons.OK);
+
+            }
+            catch(Exception b)
+            {
+                MessageBox.Show($"Xảy ra lỗi trong quá trình tìm kiếm {b} ", "Thông báo", MessageBoxButtons.OK);
+            }
+        }
     }
 }

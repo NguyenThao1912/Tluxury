@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Customer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTitle = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.DanhsachKH = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
@@ -43,7 +44,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonSave = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -51,7 +51,6 @@
             this.buttonThêm = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
             this.panelDataGrid = new System.Windows.Forms.Panel();
-            this.buttonGetData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachKH)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -64,9 +63,9 @@
             this.labelTitle.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.Location = new System.Drawing.Point(12, 9);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(146, 30);
+            this.labelTitle.Size = new System.Drawing.Size(216, 30);
             this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "> Khách Hàng";
+            this.labelTitle.Text = "Đối Tác \\ Khách Hàng";
             // 
             // buttonDelete
             // 
@@ -78,7 +77,7 @@
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
             this.buttonDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete.Image")));
             this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelete.Location = new System.Drawing.Point(782, 46);
+            this.buttonDelete.Location = new System.Drawing.Point(924, 46);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonDelete.Size = new System.Drawing.Size(104, 48);
@@ -93,21 +92,21 @@
             this.DanhsachKH.AllowDrop = true;
             this.DanhsachKH.AllowUserToResizeColumns = false;
             this.DanhsachKH.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachKH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachKH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DanhsachKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DanhsachKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(148)))), ((int)(((byte)(181)))));
             this.DanhsachKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DanhsachKH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachKH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DanhsachKH.ColumnHeadersHeight = 25;
             this.DanhsachKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DanhsachKH.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -120,6 +119,7 @@
             this.DanhsachKH.RowHeadersVisible = false;
             this.DanhsachKH.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.DanhsachKH.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachKH.RowTemplate.Height = 30;
             this.DanhsachKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DanhsachKH.Size = new System.Drawing.Size(694, 592);
             this.DanhsachKH.TabIndex = 2;
@@ -145,6 +145,27 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Khách Hàng";
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
+            this.buttonSave.FlatAppearance.BorderSize = 0;
+            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSave.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.ForeColor = System.Drawing.Color.White;
+            this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
+            this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSave.Location = new System.Drawing.Point(158, 378);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonSave.Size = new System.Drawing.Size(104, 48);
+            this.buttonSave.TabIndex = 12;
+            this.buttonSave.Text = "Lưu";
+            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Visible = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // textBoxPhoneNumber
             // 
@@ -235,27 +256,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Khách Hàng";
             // 
-            // buttonSave
-            // 
-            this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
-            this.buttonSave.FlatAppearance.BorderSize = 0;
-            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSave.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.ForeColor = System.Drawing.Color.White;
-            this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
-            this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSave.Location = new System.Drawing.Point(158, 378);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.buttonSave.Size = new System.Drawing.Size(104, 48);
-            this.buttonSave.TabIndex = 12;
-            this.buttonSave.Text = "Lưu";
-            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSave.UseVisualStyleBackColor = false;
-            this.buttonSave.Visible = false;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button4);
@@ -272,12 +272,13 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(314, 90);
+            this.button4.Location = new System.Drawing.Point(321, 93);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(96, 28);
             this.button4.TabIndex = 9;
             this.button4.Text = "Tìm ";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox5
             // 
@@ -286,6 +287,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(275, 25);
             this.textBox5.TabIndex = 9;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // comboBox1
             // 
@@ -312,7 +314,7 @@
             this.buttonThêm.ForeColor = System.Drawing.Color.White;
             this.buttonThêm.Image = ((System.Drawing.Image)(resources.GetObject("buttonThêm.Image")));
             this.buttonThêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThêm.Location = new System.Drawing.Point(646, 46);
+            this.buttonThêm.Location = new System.Drawing.Point(791, 46);
             this.buttonThêm.Name = "buttonThêm";
             this.buttonThêm.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonThêm.Size = new System.Drawing.Size(104, 48);
@@ -332,7 +334,7 @@
             this.buttonSua.ForeColor = System.Drawing.Color.White;
             this.buttonSua.Image = ((System.Drawing.Image)(resources.GetObject("buttonSua.Image")));
             this.buttonSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSua.Location = new System.Drawing.Point(921, 46);
+            this.buttonSua.Location = new System.Drawing.Point(1048, 46);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonSua.Size = new System.Drawing.Size(104, 48);
@@ -353,33 +355,12 @@
             this.panelDataGrid.Size = new System.Drawing.Size(694, 592);
             this.panelDataGrid.TabIndex = 12;
             // 
-            // buttonGetData
-            // 
-            this.buttonGetData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGetData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.buttonGetData.FlatAppearance.BorderSize = 0;
-            this.buttonGetData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGetData.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGetData.ForeColor = System.Drawing.Color.White;
-            this.buttonGetData.Image = ((System.Drawing.Image)(resources.GetObject("buttonGetData.Image")));
-            this.buttonGetData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGetData.Location = new System.Drawing.Point(1048, 46);
-            this.buttonGetData.Name = "buttonGetData";
-            this.buttonGetData.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.buttonGetData.Size = new System.Drawing.Size(104, 48);
-            this.buttonGetData.TabIndex = 13;
-            this.buttonGetData.Text = "Lấy DS";
-            this.buttonGetData.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonGetData.UseVisualStyleBackColor = false;
-            this.buttonGetData.Click += new System.EventHandler(this.buttonGetData_Click);
-            // 
             // CF_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(1164, 725);
-            this.Controls.Add(this.buttonGetData);
             this.Controls.Add(this.panelDataGrid);
             this.Controls.Add(this.buttonSua);
             this.Controls.Add(this.buttonThêm);
@@ -424,6 +405,5 @@
         private System.Windows.Forms.Button buttonThêm;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Panel panelDataGrid;
-        private System.Windows.Forms.Button buttonGetData;
     }
 }
