@@ -291,20 +291,21 @@ namespace StoreLibrary.DataAccess
                 connection.Execute("Delete_Customer", p, commandType: CommandType.StoredProcedure);
             }
         }
+
         /// <summary>
         /// Lấy toàn bộ Nhân viên ra 1 data table
         /// </summary>
         /// <returns></returns>
-
-        public DataTable GetAllEmployees(Model_Employee model)
+        public DataTable GetAllEmployees()
         {
             throw new NotImplementedException();
         }
+
         /// <summary>
         /// Lấy toàn bộ Sản phẩm ra 1 data table
         /// </summary>
         /// <returns></returns>
-        public DataTable GetAllProducts(Model_Product model)
+        public DataTable GetAllProducts()
         {
             throw new NotImplementedException();
         }
@@ -312,47 +313,29 @@ namespace StoreLibrary.DataAccess
         /// Lấy toàn bộ Nhà cung cấp ra 1 data table
         /// </summary>
         /// <returns></returns>
-        public DataTable GetAllSuppliers(Model_Supplier model)
+        public DataTable GetAllSuppliers()
         {
-            throw new NotImplementedException();
+            DataTable model = new DataTable();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                model.Load(connection.ExecuteReader("dbo.GetAllSuppliers", null, commandType: CommandType.StoredProcedure));
+            }
+            return model;
         }
         /// <summary>
         /// Lấy toàn bộ Hóa đơn Nhập ra 1 data table
         /// </summary>
         /// <returns></returns>
-        public DataTable GetAllEntryBills(Model_EntryInvoice model)
-        {
-            throw new NotImplementedException();
-        }
-        /// <summary>
-        /// Lấy toàn bộ Hóa đơn bán ra 1 data table
-        /// </summary>
-        /// <returns></returns>
-        public DataTable GetAllSellBills(Model_SaleInvoice model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public DataTable GetAllEmployees()
-        {
-            throw new NotImplementedException();
-        }
-
-        public DataTable GetAllProducts()
-        {
-            throw new NotImplementedException();
-        }
-
-        public DataTable GetAllSuppliers()
-        {
-            throw new NotImplementedException();
-        }
 
         public DataTable GetAllEntryBills()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Lấy toàn bộ Hóa đơn bán ra 1 data table
+        /// </summary>
+        /// <returns></returns>
         public DataTable GetAllSellBills()
         {
             throw new NotImplementedException();
@@ -394,6 +377,29 @@ namespace StoreLibrary.DataAccess
                 table.Load(connection.ExecuteReader("FindCustomerBy_ID", p, commandType: CommandType.StoredProcedure));
             }
             return table;
+        }
+
+        public void UpdateSupplier(Model_Supplier model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@SupplierID", model.ID);
+            p.Add("@Name", model.Name);
+            p.Add("@PhoneNumber", model.PhoneNumber);
+            p.Add("@Address", model.Address);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("UpdateSupplier", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void DeleteSupplier(Model_Supplier model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@SupplierID", model.ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("Delete_Supplier", p, commandType: CommandType.StoredProcedure);
+            }
         }
     }
 }

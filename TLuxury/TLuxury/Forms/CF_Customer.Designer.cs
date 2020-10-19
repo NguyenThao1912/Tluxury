@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Customer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTitle = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.DanhsachKH = new System.Windows.Forms.DataGridView();
@@ -45,8 +45,8 @@
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.buttonFind = new System.Windows.Forms.Button();
+            this.textBoxFind = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonThêm = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
@@ -92,21 +92,21 @@
             this.DanhsachKH.AllowDrop = true;
             this.DanhsachKH.AllowUserToResizeColumns = false;
             this.DanhsachKH.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachKH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachKH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DanhsachKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DanhsachKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(148)))), ((int)(((byte)(181)))));
             this.DanhsachKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DanhsachKH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachKH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DanhsachKH.ColumnHeadersHeight = 25;
             this.DanhsachKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DanhsachKH.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -258,8 +258,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.buttonFind);
+            this.groupBox2.Controls.Add(this.textBoxFind);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(19, 107);
@@ -269,25 +269,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm Kiếm";
             // 
-            // button4
+            // buttonFind
             // 
-            this.button4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(321, 93);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 28);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Tìm ";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonFind.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFind.Location = new System.Drawing.Point(321, 93);
+            this.buttonFind.Name = "buttonFind";
+            this.buttonFind.Size = new System.Drawing.Size(96, 28);
+            this.buttonFind.TabIndex = 9;
+            this.buttonFind.Text = "Tìm ";
+            this.buttonFind.UseVisualStyleBackColor = true;
+            this.buttonFind.Click += new System.EventHandler(this.buttonFind_Click);
             // 
-            // textBox5
+            // textBoxFind
             // 
-            this.textBox5.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(20, 93);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(275, 25);
-            this.textBox5.TabIndex = 9;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBoxFind.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFind.Location = new System.Drawing.Point(20, 93);
+            this.textBoxFind.Name = "textBoxFind";
+            this.textBoxFind.Size = new System.Drawing.Size(275, 25);
+            this.textBoxFind.TabIndex = 9;
+            this.textBoxFind.TextChanged += new System.EventHandler(this.textBoxFind_TextChanged);
             // 
             // comboBox1
             // 
@@ -296,9 +296,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Tìm Kiếm Theo Tên Khách",
-            "Tìm Kiếm Theo Mã Khách",
-            "Tìm Kiếm Theo Địa Chỉ",
-            "Tìm Kiếm Theo Số Điện Thoại"});
+            "Tìm Kiếm Theo Mã Khách"});
             this.comboBox1.Location = new System.Drawing.Point(20, 32);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(222, 29);
@@ -322,7 +320,7 @@
             this.buttonThêm.Text = "Thêm ";
             this.buttonThêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonThêm.UseVisualStyleBackColor = false;
-            this.buttonThêm.Click += new System.EventHandler(this.button5_Click);
+            this.buttonThêm.Click += new System.EventHandler(this.buttonThêm_Click);
             // 
             // buttonSua
             // 
@@ -398,8 +396,8 @@
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button buttonFind;
+        private System.Windows.Forms.TextBox textBoxFind;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonThêm;

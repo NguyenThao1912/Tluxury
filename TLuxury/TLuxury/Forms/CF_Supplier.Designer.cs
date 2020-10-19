@@ -28,30 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Supplier));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
+            this.panelDataGird = new System.Windows.Forms.Panel();
+            this.DanhsachNCC = new System.Windows.Forms.DataGridView();
+            this.buttonSua = new System.Windows.Forms.Button();
+            this.buttonThêm = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.Ttip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.panelDataGird.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DanhsachNCC)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -59,7 +64,6 @@
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(9, 102);
             this.groupBox2.Name = "groupBox2";
@@ -73,7 +77,7 @@
             this.button4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(316, 89);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 26);
+            this.button4.Size = new System.Drawing.Size(96, 25);
             this.button4.TabIndex = 9;
             this.button4.Text = "Tìm ";
             this.button4.UseVisualStyleBackColor = true;
@@ -83,8 +87,9 @@
             this.textBox5.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(20, 89);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(275, 25);
+            this.textBox5.Size = new System.Drawing.Size(282, 25);
             this.textBox5.TabIndex = 9;
+            this.Ttip.SetToolTip(this.textBox5, "Thanh tìm kiếm trắng sẽ load lại danh sách");
             // 
             // comboBox1
             // 
@@ -94,105 +99,63 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Mã Khách",
             "Tên Khách"});
-            this.comboBox1.Location = new System.Drawing.Point(118, 36);
+            this.comboBox1.Location = new System.Drawing.Point(20, 32);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(112, 29);
+            this.comboBox1.Size = new System.Drawing.Size(222, 29);
             this.comboBox1.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Tìm Kiếm Theo";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(458, 114);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(678, 549);
-            this.dataGridView1.TabIndex = 12;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.textBoxPhoneNumber);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBoxAddress);
+            this.groupBox1.Controls.Add(this.buttonSave);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBoxName);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxID);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(9, 249);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(433, 414);
+            this.groupBox1.Size = new System.Drawing.Size(433, 425);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Khách Hàng";
             // 
-            // button3
+            // textBoxPhoneNumber
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(228, 360);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 33);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Lưu";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(84, 360);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 33);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Sửa";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textBox4.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(28, 301);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(380, 25);
-            this.textBox4.TabIndex = 7;
+            this.textBoxPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.textBoxPhoneNumber.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(28, 312);
+            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
+            this.textBoxPhoneNumber.ReadOnly = true;
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(380, 25);
+            this.textBoxPhoneNumber.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 281);
+            this.label5.Location = new System.Drawing.Point(26, 292);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "Số Điện Thoại";
             // 
-            // textBox3
+            // textBoxAddress
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox3.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(27, 182);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(380, 80);
-            this.textBox3.TabIndex = 5;
+            this.textBoxAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxAddress.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAddress.Location = new System.Drawing.Point(27, 182);
+            this.textBoxAddress.Multiline = true;
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.ReadOnly = true;
+            this.textBoxAddress.Size = new System.Drawing.Size(380, 91);
+            this.textBoxAddress.TabIndex = 5;
             // 
             // label4
             // 
@@ -207,14 +170,15 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Địa Chỉ";
             // 
-            // textBox2
+            // textBoxName
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBox2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(27, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(380, 25);
-            this.textBox2.TabIndex = 3;
+            this.textBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxName.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxName.Location = new System.Drawing.Point(27, 118);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.ReadOnly = true;
+            this.textBoxName.Size = new System.Drawing.Size(380, 25);
+            this.textBoxName.TabIndex = 3;
             // 
             // label3
             // 
@@ -227,14 +191,15 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên Nhà Cung Cấp";
             // 
-            // textBox1
+            // textBoxID
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(27, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 25);
-            this.textBox1.TabIndex = 1;
+            this.textBoxID.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxID.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(27, 54);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
+            this.textBoxID.Size = new System.Drawing.Size(186, 25);
+            this.textBoxID.TabIndex = 1;
             // 
             // label2
             // 
@@ -249,45 +214,147 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Nhà Cung Cấp";
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(689, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 25);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Danh Sách Nhà Cung Cấp";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(245)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(959, 9);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(177, 57);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Thêm NCC";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.Location = new System.Drawing.Point(12, 9);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(245, 30);
+            this.labelTitle.Size = new System.Drawing.Size(239, 30);
             this.labelTitle.TabIndex = 10;
-            this.labelTitle.Text = "Đối Tác > Nhà Cung Cấp";
+            this.labelTitle.Text = "Đối Tác \\ Nhà Cung Cấp";
+            // 
+            // panelDataGird
+            // 
+            this.panelDataGird.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDataGird.Controls.Add(this.DanhsachNCC);
+            this.panelDataGird.Location = new System.Drawing.Point(448, 114);
+            this.panelDataGird.Name = "panelDataGird";
+            this.panelDataGird.Size = new System.Drawing.Size(687, 560);
+            this.panelDataGird.TabIndex = 16;
+            // 
+            // DanhsachNCC
+            // 
+            this.DanhsachNCC.AllowDrop = true;
+            this.DanhsachNCC.AllowUserToResizeColumns = false;
+            this.DanhsachNCC.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachNCC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DanhsachNCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DanhsachNCC.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(148)))), ((int)(((byte)(181)))));
+            this.DanhsachNCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DanhsachNCC.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.DanhsachNCC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachNCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DanhsachNCC.ColumnHeadersHeight = 25;
+            this.DanhsachNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DanhsachNCC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DanhsachNCC.EnableHeadersVisualStyles = false;
+            this.DanhsachNCC.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.DanhsachNCC.Location = new System.Drawing.Point(0, 0);
+            this.DanhsachNCC.MultiSelect = false;
+            this.DanhsachNCC.Name = "DanhsachNCC";
+            this.DanhsachNCC.ReadOnly = true;
+            this.DanhsachNCC.RowHeadersVisible = false;
+            this.DanhsachNCC.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.DanhsachNCC.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachNCC.RowTemplate.Height = 30;
+            this.DanhsachNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DanhsachNCC.Size = new System.Drawing.Size(687, 560);
+            this.DanhsachNCC.TabIndex = 3;
+            // 
+            // buttonSua
+            // 
+            this.buttonSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(158)))), ((int)(((byte)(0)))));
+            this.buttonSua.FlatAppearance.BorderSize = 0;
+            this.buttonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSua.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSua.ForeColor = System.Drawing.Color.White;
+            this.buttonSua.Image = ((System.Drawing.Image)(resources.GetObject("buttonSua.Image")));
+            this.buttonSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSua.Location = new System.Drawing.Point(1031, 48);
+            this.buttonSua.Name = "buttonSua";
+            this.buttonSua.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonSua.Size = new System.Drawing.Size(104, 48);
+            this.buttonSua.TabIndex = 19;
+            this.buttonSua.Text = "Sửa";
+            this.buttonSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSua.UseVisualStyleBackColor = false;
+            // 
+            // buttonThêm
+            // 
+            this.buttonThêm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonThêm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(245)))));
+            this.buttonThêm.FlatAppearance.BorderSize = 0;
+            this.buttonThêm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThêm.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThêm.ForeColor = System.Drawing.Color.White;
+            this.buttonThêm.Image = ((System.Drawing.Image)(resources.GetObject("buttonThêm.Image")));
+            this.buttonThêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThêm.Location = new System.Drawing.Point(788, 48);
+            this.buttonThêm.Name = "buttonThêm";
+            this.buttonThêm.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonThêm.Size = new System.Drawing.Size(104, 48);
+            this.buttonThêm.TabIndex = 18;
+            this.buttonThêm.Text = "Thêm ";
+            this.buttonThêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonThêm.UseVisualStyleBackColor = false;
+            this.buttonThêm.Click += new System.EventHandler(this.buttonThêm_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(0)))));
+            this.buttonDelete.FlatAppearance.BorderSize = 0;
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDelete.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.ForeColor = System.Drawing.Color.White;
+            this.buttonDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete.Image")));
+            this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDelete.Location = new System.Drawing.Point(912, 48);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonDelete.Size = new System.Drawing.Size(104, 48);
+            this.buttonDelete.TabIndex = 17;
+            this.buttonDelete.Text = "Xóa";
+            this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
+            this.buttonSave.FlatAppearance.BorderSize = 0;
+            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSave.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.ForeColor = System.Drawing.Color.White;
+            this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
+            this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSave.Location = new System.Drawing.Point(150, 360);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonSave.Size = new System.Drawing.Size(104, 48);
+            this.buttonSave.TabIndex = 20;
+            this.buttonSave.Text = "Lưu";
+            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Visible = false;
+            // 
+            // Ttip
+            // 
+            this.Ttip.AutoPopDelay = 5000;
+            this.Ttip.InitialDelay = 1;
+            this.Ttip.ReshowDelay = 100;
             // 
             // CF_Supplier
             // 
@@ -295,20 +362,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1148, 686);
+            this.Controls.Add(this.buttonSua);
+            this.Controls.Add(this.buttonThêm);
+            this.Controls.Add(this.buttonDelete);
+            this.Controls.Add(this.panelDataGird);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CF_Supplier";
             this.Text = "CF_Supplier";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panelDataGird.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DanhsachNCC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,21 +389,22 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Panel panelDataGird;
+        private System.Windows.Forms.DataGridView DanhsachNCC;
+        private System.Windows.Forms.ToolTip Ttip;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonSua;
+        private System.Windows.Forms.Button buttonThêm;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }

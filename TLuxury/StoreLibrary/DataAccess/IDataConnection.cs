@@ -38,7 +38,10 @@ namespace StoreLibrary.DataAccess
         DataTable GetAllSellBills();
         void DeleteCustomer(Model_Customer model);
         void UpdateCustomer(Model_Customer model);
+        void UpdateSupplier(Model_Supplier model);
+        void DeleteSupplier(Model_Supplier model);
         DataTable FindCustomerByName(string name);
         DataTable FindCustomerByID(string ID);
+        
     }
 }

@@ -52,6 +52,10 @@
             // 
             // buttonCancel
             // 
+            this.buttonCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonCancel.FlatAppearance.BorderSize = 3;
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancel.ForeColor = System.Drawing.Color.Maroon;
             this.buttonCancel.Location = new System.Drawing.Point(419, 254);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancel.Name = "buttonCancel";
@@ -63,6 +67,10 @@
             // 
             // buttonOK
             // 
+            this.buttonOK.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.buttonOK.FlatAppearance.BorderSize = 3;
+            this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOK.ForeColor = System.Drawing.Color.Green;
             this.buttonOK.Location = new System.Drawing.Point(266, 254);
             this.buttonOK.Margin = new System.Windows.Forms.Padding(4);
             this.buttonOK.Name = "buttonOK";
@@ -94,17 +102,18 @@
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(192, 133);
+            this.textBoxAddress.Location = new System.Drawing.Point(192, 124);
             this.textBoxAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(327, 22);
+            this.textBoxAddress.Size = new System.Drawing.Size(327, 44);
             this.textBoxAddress.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(103, 136);
+            this.label4.Location = new System.Drawing.Point(103, 127);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 16);
@@ -149,6 +158,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddSupplier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddSupplier";
             this.ResumeLayout(false);
             this.PerformLayout();
