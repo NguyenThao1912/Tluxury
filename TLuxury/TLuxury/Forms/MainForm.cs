@@ -13,7 +13,7 @@ namespace TLuxury.Forms
         public MainForm()
         {
             InitializeComponent();
-            this.Size = new Size(1400, 900);
+            this.MinimumSize = new Size(1400, 900);
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

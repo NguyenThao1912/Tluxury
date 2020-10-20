@@ -485,6 +485,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             this.panelDropdownRP.ResumeLayout(false);
             this.flowLayoutPanelMenu.ResumeLayout(false);
