@@ -14,3 +14,12 @@ D:\Netflix\Git\Luxury\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.csproj
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.csproj.CopyComplete
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.dll
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.pdb
+D:\git\Tluxury\TLuxury\StoreLibrary\bin\Debug\StoreLibrary.dll
+D:\git\Tluxury\TLuxury\StoreLibrary\bin\Debug\StoreLibrary.pdb
+D:\git\Tluxury\TLuxury\StoreLibrary\bin\Debug\Dapper.dll
+D:\git\Tluxury\TLuxury\StoreLibrary\bin\Debug\Dapper.xml
+D:\git\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.csprojAssemblyReference.cache
+D:\git\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.csproj.CoreCompileInputs.cache
+D:\git\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.csproj.CopyComplete
+D:\git\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.dll
+D:\git\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.pdb

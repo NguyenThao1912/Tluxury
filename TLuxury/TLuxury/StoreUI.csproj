@@ -46,6 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Add_hoadon1.cs" />
+    <Compile Include="Forms\Add_hoadon1.designer.cs">
+      <DependentUpon>Add_hoadon1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CF_HOADON1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CF_HOADON1.designer.cs">
+      <DependentUpon>CF_HOADON1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Add.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +112,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Add_hoadon1.resx">
+      <DependentUpon>Add_hoadon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CF_HOADON1.resx">
+      <DependentUpon>CF_HOADON1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>

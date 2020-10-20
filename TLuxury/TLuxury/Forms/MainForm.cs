@@ -133,5 +133,14 @@ namespace TLuxury.Forms
             OpenChildForm(new CF_Supplier(), (Button)sender);
         }
 
+        private void buttonBanHang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonHD_Ban_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CF_HOADON(), (Button)sender);
+        }
     }
 }
