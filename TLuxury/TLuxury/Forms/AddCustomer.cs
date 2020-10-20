@@ -67,9 +67,16 @@ namespace TLuxury.Forms
             if(ValidateForm())
             {
                 Model_Customer model = new Model_Customer(textBoxName.Text, textBoxAddress.Text, textBoxPhoneNumber.Text);
-                GlobalConfig.Connection.InsertNewCustomer(model);
-                MessageBox.Show("Thêm Thành công", "Thông báo", MessageBoxButtons.OK);
-                this.Dispose();
+                try
+                {
+                    GlobalConfig.Connection.InsertNewCustomer(model);
+                    MessageBox.Show("Thêm Thành công", "Thông báo", MessageBoxButtons.OK);
+                    this.Dispose();
+                }
+                catch
+                {
+                    MessageBox.Show("Có lỗi xảy ra khi truy vấn SQL liên hệ thảo fix ", "Thông báo", MessageBoxButtons.OK);
+                }
             }
         }
     }

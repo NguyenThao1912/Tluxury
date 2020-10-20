@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Customer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTitle = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.DanhsachKH = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxThongTin = new System.Windows.Forms.GroupBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,17 +45,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxTimKiem = new System.Windows.Forms.GroupBox();
             this.buttonFind = new System.Windows.Forms.Button();
             this.textBoxFind = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonThêm = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
             this.panelDataGrid = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.loadDâtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachKH)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBoxThongTin.SuspendLayout();
+            this.groupBoxTimKiem.SuspendLayout();
             this.panelDataGrid.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -92,23 +96,24 @@
             this.DanhsachKH.AllowDrop = true;
             this.DanhsachKH.AllowUserToResizeColumns = false;
             this.DanhsachKH.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachKH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachKH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DanhsachKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DanhsachKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(148)))), ((int)(((byte)(181)))));
             this.DanhsachKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DanhsachKH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachKH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DanhsachKH.ColumnHeadersHeight = 25;
             this.DanhsachKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DanhsachKH.ContextMenuStrip = this.contextMenuStrip1;
             this.DanhsachKH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DanhsachKH.EnableHeadersVisualStyles = false;
             this.DanhsachKH.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -125,26 +130,26 @@
             this.DanhsachKH.TabIndex = 2;
             this.DanhsachKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // groupBox1
+            // groupBoxThongTin
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBoxThongTin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.Controls.Add(this.buttonSave);
-            this.groupBox1.Controls.Add(this.textBoxPhoneNumber);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBoxAddress);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBoxName);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBoxID);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(17, 272);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(433, 441);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin Khách Hàng";
+            this.groupBoxThongTin.Controls.Add(this.buttonSave);
+            this.groupBoxThongTin.Controls.Add(this.textBoxPhoneNumber);
+            this.groupBoxThongTin.Controls.Add(this.label5);
+            this.groupBoxThongTin.Controls.Add(this.textBoxAddress);
+            this.groupBoxThongTin.Controls.Add(this.label4);
+            this.groupBoxThongTin.Controls.Add(this.textBoxName);
+            this.groupBoxThongTin.Controls.Add(this.label3);
+            this.groupBoxThongTin.Controls.Add(this.textBoxID);
+            this.groupBoxThongTin.Controls.Add(this.label2);
+            this.groupBoxThongTin.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxThongTin.Location = new System.Drawing.Point(17, 272);
+            this.groupBoxThongTin.Name = "groupBoxThongTin";
+            this.groupBoxThongTin.Size = new System.Drawing.Size(433, 441);
+            this.groupBoxThongTin.TabIndex = 4;
+            this.groupBoxThongTin.TabStop = false;
+            this.groupBoxThongTin.Text = "Thông tin Khách Hàng";
             // 
             // buttonSave
             // 
@@ -256,18 +261,18 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Khách Hàng";
             // 
-            // groupBox2
+            // groupBoxTimKiem
             // 
-            this.groupBox2.Controls.Add(this.buttonFind);
-            this.groupBox2.Controls.Add(this.textBoxFind);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(19, 107);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(433, 159);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tìm Kiếm";
+            this.groupBoxTimKiem.Controls.Add(this.buttonFind);
+            this.groupBoxTimKiem.Controls.Add(this.textBoxFind);
+            this.groupBoxTimKiem.Controls.Add(this.comboBox1);
+            this.groupBoxTimKiem.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxTimKiem.Location = new System.Drawing.Point(19, 107);
+            this.groupBoxTimKiem.Name = "groupBoxTimKiem";
+            this.groupBoxTimKiem.Size = new System.Drawing.Size(433, 159);
+            this.groupBoxTimKiem.TabIndex = 9;
+            this.groupBoxTimKiem.TabStop = false;
+            this.groupBoxTimKiem.Text = "Tìm Kiếm";
             // 
             // buttonFind
             // 
@@ -353,6 +358,20 @@
             this.panelDataGrid.Size = new System.Drawing.Size(694, 592);
             this.panelDataGrid.TabIndex = 12;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadDâtToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(128, 26);
+            // 
+            // loadDâtToolStripMenuItem
+            // 
+            this.loadDâtToolStripMenuItem.Name = "loadDâtToolStripMenuItem";
+            this.loadDâtToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.loadDâtToolStripMenuItem.Text = "Load Data";
+            this.loadDâtToolStripMenuItem.Click += new System.EventHandler(this.loadDâtToolStripMenuItem_Click);
+            // 
             // CF_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,20 +381,20 @@
             this.Controls.Add(this.panelDataGrid);
             this.Controls.Add(this.buttonSua);
             this.Controls.Add(this.buttonThêm);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxTimKiem);
+            this.Controls.Add(this.groupBoxThongTin);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.labelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CF_Customer";
             this.Text = "CF_Customer";
-            this.Load += new System.EventHandler(this.CF_Customer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachKH)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBoxThongTin.ResumeLayout(false);
+            this.groupBoxThongTin.PerformLayout();
+            this.groupBoxTimKiem.ResumeLayout(false);
+            this.groupBoxTimKiem.PerformLayout();
             this.panelDataGrid.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,7 +405,7 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.DataGridView DanhsachKH;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxThongTin;
         private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxAddress;
@@ -395,7 +414,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxTimKiem;
         private System.Windows.Forms.Button buttonFind;
         private System.Windows.Forms.TextBox textBoxFind;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -403,5 +422,7 @@
         private System.Windows.Forms.Button buttonThêm;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Panel panelDataGrid;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem loadDâtToolStripMenuItem;
     }
 }

@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Supplier));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Supplier));
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.groupBoxTimKiem = new System.Windows.Forms.GroupBox();
+            this.buttonFind = new System.Windows.Forms.Button();
+            this.textBoxFind = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxThôngTin = new System.Windows.Forms.GroupBox();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,45 +52,47 @@
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonThêm = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.Ttip = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.ContextMenu1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ItemNum1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBoxTimKiem.SuspendLayout();
+            this.groupBoxThôngTin.SuspendLayout();
             this.panelDataGird.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachNCC)).BeginInit();
+            this.ContextMenu1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox2
+            // groupBoxTimKiem
             // 
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(9, 102);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(433, 141);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tìm Kiếm";
+            this.groupBoxTimKiem.Controls.Add(this.buttonFind);
+            this.groupBoxTimKiem.Controls.Add(this.textBoxFind);
+            this.groupBoxTimKiem.Controls.Add(this.comboBox1);
+            this.groupBoxTimKiem.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxTimKiem.Location = new System.Drawing.Point(19, 107);
+            this.groupBoxTimKiem.Name = "groupBoxTimKiem";
+            this.groupBoxTimKiem.Size = new System.Drawing.Size(433, 159);
+            this.groupBoxTimKiem.TabIndex = 15;
+            this.groupBoxTimKiem.TabStop = false;
+            this.groupBoxTimKiem.Text = "Tìm Kiếm";
             // 
-            // button4
+            // buttonFind
             // 
-            this.button4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(316, 89);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 25);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Tìm ";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonFind.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFind.Location = new System.Drawing.Point(321, 93);
+            this.buttonFind.Name = "buttonFind";
+            this.buttonFind.Size = new System.Drawing.Size(96, 28);
+            this.buttonFind.TabIndex = 9;
+            this.buttonFind.Text = "Tìm ";
+            this.buttonFind.UseVisualStyleBackColor = true;
+            this.buttonFind.Click += new System.EventHandler(this.buttonFind_Click);
             // 
-            // textBox5
+            // textBoxFind
             // 
-            this.textBox5.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(20, 89);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(282, 25);
-            this.textBox5.TabIndex = 9;
-            this.Ttip.SetToolTip(this.textBox5, "Thanh tìm kiếm trắng sẽ load lại danh sách");
+            this.textBoxFind.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFind.Location = new System.Drawing.Point(20, 93);
+            this.textBoxFind.Name = "textBoxFind";
+            this.textBoxFind.Size = new System.Drawing.Size(282, 25);
+            this.textBoxFind.TabIndex = 9;
+            this.textBoxFind.TextChanged += new System.EventHandler(this.textBoxFind_TextChanged);
             // 
             // comboBox1
             // 
@@ -97,39 +100,39 @@
             this.comboBox1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Mã Khách",
-            "Tên Khách"});
+            "Tìm Theo Mã NCC",
+            "Tìm Theo Tên NCC"});
             this.comboBox1.Location = new System.Drawing.Point(20, 32);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(222, 29);
             this.comboBox1.TabIndex = 10;
             // 
-            // groupBox1
+            // groupBoxThôngTin
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBoxThôngTin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.Controls.Add(this.textBoxPhoneNumber);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBoxAddress);
-            this.groupBox1.Controls.Add(this.buttonSave);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBoxName);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBoxID);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(9, 249);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(433, 425);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin Khách Hàng";
+            this.groupBoxThôngTin.Controls.Add(this.textBoxPhoneNumber);
+            this.groupBoxThôngTin.Controls.Add(this.label5);
+            this.groupBoxThôngTin.Controls.Add(this.textBoxAddress);
+            this.groupBoxThôngTin.Controls.Add(this.buttonSave);
+            this.groupBoxThôngTin.Controls.Add(this.label4);
+            this.groupBoxThôngTin.Controls.Add(this.textBoxName);
+            this.groupBoxThôngTin.Controls.Add(this.label3);
+            this.groupBoxThôngTin.Controls.Add(this.textBoxID);
+            this.groupBoxThôngTin.Controls.Add(this.label2);
+            this.groupBoxThôngTin.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxThôngTin.Location = new System.Drawing.Point(17, 272);
+            this.groupBoxThôngTin.Name = "groupBoxThôngTin";
+            this.groupBoxThôngTin.Size = new System.Drawing.Size(433, 441);
+            this.groupBoxThôngTin.TabIndex = 14;
+            this.groupBoxThôngTin.TabStop = false;
+            this.groupBoxThôngTin.Text = "Thông tin Nhà Cung Cấp";
             // 
             // textBoxPhoneNumber
             // 
             this.textBoxPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBoxPhoneNumber.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(28, 312);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(28, 328);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.ReadOnly = true;
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(380, 25);
@@ -140,7 +143,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 292);
+            this.label5.Location = new System.Drawing.Point(26, 308);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 17);
             this.label5.TabIndex = 6;
@@ -154,8 +157,29 @@
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.ReadOnly = true;
-            this.textBoxAddress.Size = new System.Drawing.Size(380, 91);
+            this.textBoxAddress.Size = new System.Drawing.Size(380, 107);
             this.textBoxAddress.TabIndex = 5;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
+            this.buttonSave.FlatAppearance.BorderSize = 0;
+            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSave.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.ForeColor = System.Drawing.Color.White;
+            this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
+            this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSave.Location = new System.Drawing.Point(150, 376);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonSave.Size = new System.Drawing.Size(104, 48);
+            this.buttonSave.TabIndex = 20;
+            this.buttonSave.Text = "Lưu";
+            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Visible = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // label4
             // 
@@ -230,9 +254,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDataGird.Controls.Add(this.DanhsachNCC);
-            this.panelDataGird.Location = new System.Drawing.Point(448, 114);
+            this.panelDataGird.Location = new System.Drawing.Point(458, 121);
             this.panelDataGird.Name = "panelDataGird";
-            this.panelDataGird.Size = new System.Drawing.Size(687, 560);
+            this.panelDataGird.Size = new System.Drawing.Size(694, 592);
             this.panelDataGird.TabIndex = 16;
             // 
             // DanhsachNCC
@@ -257,6 +281,7 @@
             this.DanhsachNCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DanhsachNCC.ColumnHeadersHeight = 25;
             this.DanhsachNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DanhsachNCC.ContextMenuStrip = this.ContextMenu1;
             this.DanhsachNCC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DanhsachNCC.EnableHeadersVisualStyles = false;
             this.DanhsachNCC.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -269,8 +294,9 @@
             this.DanhsachNCC.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachNCC.RowTemplate.Height = 30;
             this.DanhsachNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachNCC.Size = new System.Drawing.Size(687, 560);
+            this.DanhsachNCC.Size = new System.Drawing.Size(694, 592);
             this.DanhsachNCC.TabIndex = 3;
+            this.DanhsachNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhsachNCC_CellClick);
             // 
             // buttonSua
             // 
@@ -282,7 +308,7 @@
             this.buttonSua.ForeColor = System.Drawing.Color.White;
             this.buttonSua.Image = ((System.Drawing.Image)(resources.GetObject("buttonSua.Image")));
             this.buttonSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSua.Location = new System.Drawing.Point(1031, 48);
+            this.buttonSua.Location = new System.Drawing.Point(1047, 48);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonSua.Size = new System.Drawing.Size(104, 48);
@@ -290,6 +316,7 @@
             this.buttonSua.Text = "Sửa";
             this.buttonSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSua.UseVisualStyleBackColor = false;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
             // buttonThêm
             // 
@@ -301,7 +328,7 @@
             this.buttonThêm.ForeColor = System.Drawing.Color.White;
             this.buttonThêm.Image = ((System.Drawing.Image)(resources.GetObject("buttonThêm.Image")));
             this.buttonThêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThêm.Location = new System.Drawing.Point(788, 48);
+            this.buttonThêm.Location = new System.Drawing.Point(804, 48);
             this.buttonThêm.Name = "buttonThêm";
             this.buttonThêm.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonThêm.Size = new System.Drawing.Size(104, 48);
@@ -321,7 +348,7 @@
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
             this.buttonDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete.Image")));
             this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelete.Location = new System.Drawing.Point(912, 48);
+            this.buttonDelete.Location = new System.Drawing.Point(928, 48);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonDelete.Size = new System.Drawing.Size(104, 48);
@@ -329,55 +356,45 @@
             this.buttonDelete.Text = "Xóa";
             this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // buttonSave
+            // ContextMenu1
             // 
-            this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
-            this.buttonSave.FlatAppearance.BorderSize = 0;
-            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSave.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.ForeColor = System.Drawing.Color.White;
-            this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
-            this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSave.Location = new System.Drawing.Point(150, 360);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.buttonSave.Size = new System.Drawing.Size(104, 48);
-            this.buttonSave.TabIndex = 20;
-            this.buttonSave.Text = "Lưu";
-            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSave.UseVisualStyleBackColor = false;
-            this.buttonSave.Visible = false;
+            this.ContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ItemNum1});
+            this.ContextMenu1.Name = "ContextMenu1";
+            this.ContextMenu1.Size = new System.Drawing.Size(181, 48);
             // 
-            // Ttip
+            // ItemNum1
             // 
-            this.Ttip.AutoPopDelay = 5000;
-            this.Ttip.InitialDelay = 1;
-            this.Ttip.ReshowDelay = 100;
+            this.ItemNum1.Name = "ItemNum1";
+            this.ItemNum1.Size = new System.Drawing.Size(180, 22);
+            this.ItemNum1.Text = "Load Data ";
+            this.ItemNum1.Click += new System.EventHandler(this.ItemNum1_Click);
             // 
             // CF_Supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1148, 686);
+            this.ClientSize = new System.Drawing.Size(1164, 725);
             this.Controls.Add(this.buttonSua);
             this.Controls.Add(this.buttonThêm);
             this.Controls.Add(this.buttonDelete);
+            this.Controls.Add(this.groupBoxThôngTin);
             this.Controls.Add(this.panelDataGird);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxTimKiem);
             this.Controls.Add(this.labelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CF_Supplier";
             this.Text = "CF_Supplier";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxTimKiem.ResumeLayout(false);
+            this.groupBoxTimKiem.PerformLayout();
+            this.groupBoxThôngTin.ResumeLayout(false);
+            this.groupBoxThôngTin.PerformLayout();
             this.panelDataGird.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachNCC)).EndInit();
+            this.ContextMenu1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,11 +402,11 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.GroupBox groupBoxTimKiem;
+        private System.Windows.Forms.Button buttonFind;
+        private System.Windows.Forms.TextBox textBoxFind;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxThôngTin;
         private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxAddress;
@@ -401,10 +418,11 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panelDataGird;
         private System.Windows.Forms.DataGridView DanhsachNCC;
-        private System.Windows.Forms.ToolTip Ttip;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonThêm;
         private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.ContextMenuStrip ContextMenu1;
+        private System.Windows.Forms.ToolStripMenuItem ItemNum1;
     }
 }

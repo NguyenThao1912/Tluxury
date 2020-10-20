@@ -42,6 +42,8 @@ namespace StoreLibrary.DataAccess
         void DeleteSupplier(Model_Supplier model);
         DataTable FindCustomerByName(string name);
         DataTable FindCustomerByID(string ID);
-        
+        DataTable FindSupplierByName(string name);
+        DataTable FindSupplierByID(string ID);
+
     }
 }

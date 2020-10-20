@@ -18,7 +18,7 @@ namespace TLuxury.Forms
         public CF_Customer()
         {
             InitializeComponent();
-
+            WireData();
         }
         private void WireData()
         {   
@@ -29,11 +29,6 @@ namespace TLuxury.Forms
             DanhsachKH.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             DanhsachKH.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             DanhsachKH.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        }
-
-        private void CF_Customer_Load(object sender, EventArgs e)
-        {
-            WireData();
         }
         private void ResetButton()
         {
@@ -72,21 +67,25 @@ namespace TLuxury.Forms
         {
            if(temp != null)
            {
-                try 
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa Khách Hàng này ? ", "Thông Báo", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                    return;
+                else
                 {
+                    try
+                    {
                         GlobalConfig.Connection.DeleteCustomer(temp);
                         temp = null;
                         MessageBox.Show("Xóa Thành Công", "Thông Báo", MessageBoxButtons.OK);
                         temp = null;
                         ClearData();
                         WireData();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Có lỗi Xóa không thành công ", "Thông Báo", MessageBoxButtons.OK);
+                    }
                 }
-                catch
-                {
-                    MessageBox.Show("Có lỗi Xóa không thành công ", "Thông Báo", MessageBoxButtons.OK);
-                }
-
-           }
+            }
            else
                 MessageBox.Show("Hãy chọn 1 hàng trên danh sách ", "Thông Báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
   
@@ -124,7 +123,6 @@ namespace TLuxury.Forms
             }
             
         }
-
 
         private void buttonFind_Click(object sender, EventArgs e)
         {
@@ -176,6 +174,11 @@ namespace TLuxury.Forms
         {
             AddCustomer a = new AddCustomer();
             a.ShowDialog();
+            WireData();
+        }
+
+        private void loadDâtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             WireData();
         }
     }

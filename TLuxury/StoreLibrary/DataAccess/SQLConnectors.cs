@@ -401,5 +401,29 @@ namespace StoreLibrary.DataAccess
                 connection.Execute("Delete_Supplier", p, commandType: CommandType.StoredProcedure);
             }
         }
+
+        public DataTable FindSupplierByName(string name)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@SupplierName", name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindSupplierBy_Name", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+        public DataTable FindSupplierByID(string ID)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@SupplierID", ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindSupplierBy_ID", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
     }
 }
