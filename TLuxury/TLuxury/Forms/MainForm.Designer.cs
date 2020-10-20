@@ -392,7 +392,7 @@
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(220, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1180, 136);
+            this.panelTitle.Size = new System.Drawing.Size(980, 136);
             this.panelTitle.TabIndex = 0;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
@@ -402,7 +402,7 @@
             this.buttonCLose.FlatAppearance.BorderSize = 0;
             this.buttonCLose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCLose.Image = ((System.Drawing.Image)(resources.GetObject("buttonCLose.Image")));
-            this.buttonCLose.Location = new System.Drawing.Point(1141, 12);
+            this.buttonCLose.Location = new System.Drawing.Point(941, 12);
             this.buttonCLose.Name = "buttonCLose";
             this.buttonCLose.Size = new System.Drawing.Size(39, 38);
             this.buttonCLose.TabIndex = 2;
@@ -415,7 +415,7 @@
             this.buttonMaximize.FlatAppearance.BorderSize = 0;
             this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMaximize.Image = ((System.Drawing.Image)(resources.GetObject("buttonMaximize.Image")));
-            this.buttonMaximize.Location = new System.Drawing.Point(1102, 12);
+            this.buttonMaximize.Location = new System.Drawing.Point(902, 12);
             this.buttonMaximize.Name = "buttonMaximize";
             this.buttonMaximize.Size = new System.Drawing.Size(39, 38);
             this.buttonMaximize.TabIndex = 5;
@@ -428,7 +428,7 @@
             this.buttonMinimize.FlatAppearance.BorderSize = 0;
             this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMinimize.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinimize.Image")));
-            this.buttonMinimize.Location = new System.Drawing.Point(1063, 12);
+            this.buttonMinimize.Location = new System.Drawing.Point(863, 12);
             this.buttonMinimize.Name = "buttonMinimize";
             this.buttonMinimize.Size = new System.Drawing.Size(39, 38);
             this.buttonMinimize.TabIndex = 3;
@@ -441,7 +441,7 @@
             this.panelRedBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRedBar.Location = new System.Drawing.Point(0, 0);
             this.panelRedBar.Name = "panelRedBar";
-            this.panelRedBar.Size = new System.Drawing.Size(1180, 12);
+            this.panelRedBar.Size = new System.Drawing.Size(980, 12);
             this.panelRedBar.TabIndex = 2;
             this.panelRedBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
@@ -453,7 +453,7 @@
             this.labelTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelTitle.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(474, 50);
+            this.labelTitle.Location = new System.Drawing.Point(374, 50);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(230, 58);
             this.labelTitle.TabIndex = 4;
@@ -467,25 +467,24 @@
             this.panelContent.BackColor = System.Drawing.Color.White;
             this.panelContent.Location = new System.Drawing.Point(220, 136);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1180, 764);
+            this.panelContent.Size = new System.Drawing.Size(980, 764);
             this.panelContent.TabIndex = 13;
             this.panelContent.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1400, 900);
+            this.ClientSize = new System.Drawing.Size(1200, 900);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelParentOfPanelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1400, 900);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             this.panelDropdownRP.ResumeLayout(false);
             this.flowLayoutPanelMenu.ResumeLayout(false);
