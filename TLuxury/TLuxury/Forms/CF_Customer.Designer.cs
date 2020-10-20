@@ -30,11 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Customer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTitle = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.DanhsachKH = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.loadDâtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxThongTin = new System.Windows.Forms.GroupBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
@@ -52,13 +54,11 @@
             this.buttonThêm = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
             this.panelDataGrid = new System.Windows.Forms.Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.loadDâtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachKH)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.groupBoxThongTin.SuspendLayout();
             this.groupBoxTimKiem.SuspendLayout();
             this.panelDataGrid.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -96,21 +96,21 @@
             this.DanhsachKH.AllowDrop = true;
             this.DanhsachKH.AllowUserToResizeColumns = false;
             this.DanhsachKH.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachKH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachKH.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DanhsachKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DanhsachKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(148)))), ((int)(((byte)(181)))));
-            this.DanhsachKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DanhsachKH.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachKH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachKH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DanhsachKH.ColumnHeadersHeight = 25;
             this.DanhsachKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DanhsachKH.ContextMenuStrip = this.contextMenuStrip1;
@@ -129,6 +129,20 @@
             this.DanhsachKH.Size = new System.Drawing.Size(694, 592);
             this.DanhsachKH.TabIndex = 2;
             this.DanhsachKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadDâtToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(128, 26);
+            // 
+            // loadDâtToolStripMenuItem
+            // 
+            this.loadDâtToolStripMenuItem.Name = "loadDâtToolStripMenuItem";
+            this.loadDâtToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.loadDâtToolStripMenuItem.Text = "Load Data";
+            this.loadDâtToolStripMenuItem.Click += new System.EventHandler(this.loadDâtToolStripMenuItem_Click);
             // 
             // groupBoxThongTin
             // 
@@ -187,7 +201,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(29, 305);
+            this.label5.Location = new System.Drawing.Point(31, 316);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 17);
             this.label5.TabIndex = 6;
@@ -211,7 +225,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 162);
+            this.label4.Location = new System.Drawing.Point(26, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 17);
             this.label4.TabIndex = 4;
@@ -277,7 +291,7 @@
             // buttonFind
             // 
             this.buttonFind.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFind.Location = new System.Drawing.Point(321, 93);
+            this.buttonFind.Location = new System.Drawing.Point(317, 92);
             this.buttonFind.Name = "buttonFind";
             this.buttonFind.Size = new System.Drawing.Size(96, 28);
             this.buttonFind.TabIndex = 9;
@@ -293,6 +307,7 @@
             this.textBoxFind.Size = new System.Drawing.Size(275, 25);
             this.textBoxFind.TabIndex = 9;
             this.textBoxFind.TextChanged += new System.EventHandler(this.textBoxFind_TextChanged);
+            this.textBoxFind.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxFind_KeyDown);
             // 
             // comboBox1
             // 
@@ -358,25 +373,11 @@
             this.panelDataGrid.Size = new System.Drawing.Size(694, 592);
             this.panelDataGrid.TabIndex = 12;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadDâtToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(128, 26);
-            // 
-            // loadDâtToolStripMenuItem
-            // 
-            this.loadDâtToolStripMenuItem.Name = "loadDâtToolStripMenuItem";
-            this.loadDâtToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
-            this.loadDâtToolStripMenuItem.Text = "Load Data";
-            this.loadDâtToolStripMenuItem.Click += new System.EventHandler(this.loadDâtToolStripMenuItem_Click);
-            // 
             // CF_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Snow;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1164, 725);
             this.Controls.Add(this.panelDataGrid);
             this.Controls.Add(this.buttonSua);
@@ -389,12 +390,12 @@
             this.Name = "CF_Customer";
             this.Text = "CF_Customer";
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachKH)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.groupBoxThongTin.ResumeLayout(false);
             this.groupBoxThongTin.PerformLayout();
             this.groupBoxTimKiem.ResumeLayout(false);
             this.groupBoxTimKiem.PerformLayout();
             this.panelDataGrid.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

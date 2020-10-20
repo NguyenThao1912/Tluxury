@@ -11,15 +11,11 @@ namespace StoreLibrary.Models
         /// <summary>
         /// Mã Nhân Viên
         /// </summary>
-        public int ID { get; set; }
+        public string ID { get; set; }
         /// <summary>
         /// Tên Nhân Viên
         /// </summary>
-        public string FirstName { get; set; }
-        /// <summary>
-        /// Họ Nhân Viên
-        /// </summary>
-        public string  LastName { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// Giới Tính
         /// </summary>
@@ -44,16 +40,14 @@ namespace StoreLibrary.Models
         /// 
         /// </summary>
         /// <param name="firstName"> Tên Nhân Viên</param>
-        /// <param name="lastName"> Họ + Tên Đệm</param>
         /// <param name="sex"> Giới Tính</param>
         /// <param name="dateOfBirth">Ngày Sinh</param>
         /// <param name="phoneNumber">Số điện Thoại</param>
         /// <param name="address">Địa chỉ</param>
         /// <param name="roleID"> mã Chức vụ</param>
-        public Model_Employee(string firstName, string lastName, char sex, DateTime dateOfBirth, string phoneNumber, string address, Model_Role role)
+        public Model_Employee(string firstName, char sex, DateTime dateOfBirth, string phoneNumber, string address, Model_Role role)
         {
-            FirstName = firstName;
-            LastName = lastName;
+            Name = firstName;
             Sex = sex;
             DateOfBirth = dateOfBirth;
             PhoneNumber = phoneNumber;

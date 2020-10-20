@@ -52,8 +52,8 @@ namespace TLuxury.Forms
                     ResetButton();
                 temp = new Model_Customer();
                 DataGridViewRow selectRow = this.DanhsachKH.Rows[e.RowIndex];
-                temp.ID = selectRow.Cells["Mã KH"].Value.ToString();
-                temp.Name = selectRow.Cells["Tên KH"].Value.ToString();
+                temp.ID = selectRow.Cells["Mã Khách Hàng"].Value.ToString();
+                temp.Name = selectRow.Cells["Tên Khách Hàng"].Value.ToString();
                 temp.PhoneNumber = selectRow.Cells["Số Điện Thoại"].Value.ToString();
                 temp.Address = selectRow.Cells["Địa Chỉ"].Value.ToString();
                 textBoxID.Text = temp.ID;
@@ -180,6 +180,11 @@ namespace TLuxury.Forms
         private void loadDâtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WireData();
+        }
+
+        private void textBoxFind_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

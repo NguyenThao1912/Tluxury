@@ -225,8 +225,7 @@ namespace StoreLibrary.DataAccess
             using(IDbConnection connection =  new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 var p = new DynamicParameters();
-                p.Add("@FirstName", model.FirstName);
-                p.Add("@LastName", model.LastName);
+                p.Add("@Name", model.Name);
                 p.Add("@Sex", model.Sex);
                 p.Add("@DateOfBirth", model.DateOfBirth);
                 p.Add("@PhoneNumber", model.PhoneNumber);
@@ -424,6 +423,36 @@ namespace StoreLibrary.DataAccess
                 table.Load(connection.ExecuteReader("FindSupplierBy_ID", p, commandType: CommandType.StoredProcedure));
             }
             return table;
+        }
+
+        public List<Model_Product> GetAllProduct_List()
+        {
+            List<Model_Product> model;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                model = connection.Query<Model_Product>("exec dbo.GetAllProduct_List").ToList();
+            }
+            return model;
+        }
+
+        public List<Model_Supplier> GetAllSupplier_List()
+        {
+            List<Model_Supplier> model;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                model = connection.Query<Model_Supplier>("exec dbo.GetAllSupplier_List").ToList();
+            }
+            return model;
+        }
+
+        public List<Model_Employee> GetAllEmployee_List()
+        {
+            List<Model_Employee> model;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                model = connection.Query<Model_Employee>("exec dbo.GetAllEmployee_List").ToList();
+            }
+            return model;
         }
     }
 }

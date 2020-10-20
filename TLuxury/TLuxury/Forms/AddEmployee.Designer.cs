@@ -33,8 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.rbFeMale = new System.Windows.Forms.RadioButton();
@@ -83,32 +81,12 @@
             this.textBoxFirstName.Size = new System.Drawing.Size(164, 22);
             this.textBoxFirstName.TabIndex = 2;
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(63, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Họ";
-            // 
-            // textBoxLastName
-            // 
-            this.textBoxLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLastName.Location = new System.Drawing.Point(135, 136);
-            this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(164, 22);
-            this.textBoxLastName.TabIndex = 4;
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(328, 190);
+            this.label4.Location = new System.Drawing.Point(34, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 5;
@@ -119,7 +97,7 @@
             this.rbMale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbMale.AutoSize = true;
             this.rbMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMale.Location = new System.Drawing.Point(417, 190);
+            this.rbMale.Location = new System.Drawing.Point(135, 192);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(55, 20);
             this.rbMale.TabIndex = 9;
@@ -132,7 +110,7 @@
             this.rbFeMale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbFeMale.AutoSize = true;
             this.rbFeMale.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFeMale.Location = new System.Drawing.Point(482, 190);
+            this.rbFeMale.Location = new System.Drawing.Point(243, 192);
             this.rbFeMale.Name = "rbFeMale";
             this.rbFeMale.Size = new System.Drawing.Size(43, 20);
             this.rbFeMale.TabIndex = 10;
@@ -146,7 +124,7 @@
             this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(417, 136);
+            this.dateTimePicker1.Location = new System.Drawing.Point(414, 189);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(114, 22);
             this.dateTimePicker1.TabIndex = 8;
@@ -156,7 +134,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(328, 138);
+            this.label5.Location = new System.Drawing.Point(324, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 16);
             this.label5.TabIndex = 9;
@@ -167,7 +145,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(58, 190);
+            this.label6.Location = new System.Drawing.Point(60, 142);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 16);
             this.label6.TabIndex = 10;
@@ -177,7 +155,7 @@
             // 
             this.textBoxPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(135, 185);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(135, 135);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(164, 22);
             this.textBoxPhoneNumber.TabIndex = 5;
@@ -291,8 +269,6 @@
             this.Controls.Add(this.rbFeMale);
             this.Controls.Add(this.rbMale);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxLastName);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxFirstName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -311,8 +287,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxFirstName;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton rbMale;
         private System.Windows.Forms.RadioButton rbFeMale;

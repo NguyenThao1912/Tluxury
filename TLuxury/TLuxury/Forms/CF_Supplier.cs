@@ -171,5 +171,6 @@ namespace TLuxury.Forms
         {
             WireData();
         }
+
     }
 }

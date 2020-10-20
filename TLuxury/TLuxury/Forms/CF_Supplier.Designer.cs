@@ -70,17 +70,17 @@
             this.groupBoxTimKiem.Location = new System.Drawing.Point(19, 107);
             this.groupBoxTimKiem.Name = "groupBoxTimKiem";
             this.groupBoxTimKiem.Size = new System.Drawing.Size(433, 159);
-            this.groupBoxTimKiem.TabIndex = 15;
+            this.groupBoxTimKiem.TabIndex = 0;
             this.groupBoxTimKiem.TabStop = false;
             this.groupBoxTimKiem.Text = "Tìm Kiếm";
             // 
             // buttonFind
             // 
             this.buttonFind.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFind.Location = new System.Drawing.Point(321, 93);
+            this.buttonFind.Location = new System.Drawing.Point(317, 92);
             this.buttonFind.Name = "buttonFind";
             this.buttonFind.Size = new System.Drawing.Size(96, 28);
-            this.buttonFind.TabIndex = 9;
+            this.buttonFind.TabIndex = 2;
             this.buttonFind.Text = "Tìm ";
             this.buttonFind.UseVisualStyleBackColor = true;
             this.buttonFind.Click += new System.EventHandler(this.buttonFind_Click);
@@ -90,8 +90,8 @@
             this.textBoxFind.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFind.Location = new System.Drawing.Point(20, 93);
             this.textBoxFind.Name = "textBoxFind";
-            this.textBoxFind.Size = new System.Drawing.Size(282, 25);
-            this.textBoxFind.TabIndex = 9;
+            this.textBoxFind.Size = new System.Drawing.Size(275, 25);
+            this.textBoxFind.TabIndex = 1;
             this.textBoxFind.TextChanged += new System.EventHandler(this.textBoxFind_TextChanged);
             // 
             // comboBox1
@@ -105,7 +105,7 @@
             this.comboBox1.Location = new System.Drawing.Point(20, 32);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(222, 29);
-            this.comboBox1.TabIndex = 10;
+            this.comboBox1.TabIndex = 0;
             // 
             // groupBoxThôngTin
             // 
@@ -124,7 +124,7 @@
             this.groupBoxThôngTin.Location = new System.Drawing.Point(17, 272);
             this.groupBoxThôngTin.Name = "groupBoxThôngTin";
             this.groupBoxThôngTin.Size = new System.Drawing.Size(433, 441);
-            this.groupBoxThôngTin.TabIndex = 14;
+            this.groupBoxThôngTin.TabIndex = 1;
             this.groupBoxThôngTin.TabStop = false;
             this.groupBoxThôngTin.Text = "Thông tin Nhà Cung Cấp";
             // 
@@ -132,18 +132,18 @@
             // 
             this.textBoxPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBoxPhoneNumber.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(28, 328);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(28, 336);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.ReadOnly = true;
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(380, 25);
-            this.textBoxPhoneNumber.TabIndex = 7;
+            this.textBoxPhoneNumber.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 308);
+            this.label5.Location = new System.Drawing.Point(31, 316);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 17);
             this.label5.TabIndex = 6;
@@ -158,7 +158,7 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.ReadOnly = true;
             this.textBoxAddress.Size = new System.Drawing.Size(380, 107);
-            this.textBoxAddress.TabIndex = 5;
+            this.textBoxAddress.TabIndex = 2;
             // 
             // buttonSave
             // 
@@ -170,11 +170,11 @@
             this.buttonSave.ForeColor = System.Drawing.Color.White;
             this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
             this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSave.Location = new System.Drawing.Point(150, 376);
+            this.buttonSave.Location = new System.Drawing.Point(158, 378);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonSave.Size = new System.Drawing.Size(104, 48);
-            this.buttonSave.TabIndex = 20;
+            this.buttonSave.TabIndex = 4;
             this.buttonSave.Text = "Lưu";
             this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSave.UseVisualStyleBackColor = false;
@@ -202,7 +202,7 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.ReadOnly = true;
             this.textBoxName.Size = new System.Drawing.Size(380, 25);
-            this.textBoxName.TabIndex = 3;
+            this.textBoxName.TabIndex = 1;
             // 
             // label3
             // 
@@ -223,7 +223,7 @@
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(186, 25);
-            this.textBoxID.TabIndex = 1;
+            this.textBoxID.TabIndex = 0;
             // 
             // label2
             // 
@@ -241,7 +241,7 @@
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.Location = new System.Drawing.Point(12, 9);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(239, 30);
@@ -268,7 +268,7 @@
             this.DanhsachNCC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DanhsachNCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DanhsachNCC.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(148)))), ((int)(((byte)(181)))));
-            this.DanhsachNCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DanhsachNCC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachNCC.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachNCC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -295,7 +295,7 @@
             this.DanhsachNCC.RowTemplate.Height = 30;
             this.DanhsachNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DanhsachNCC.Size = new System.Drawing.Size(694, 592);
-            this.DanhsachNCC.TabIndex = 3;
+            this.DanhsachNCC.TabIndex = 0;
             this.DanhsachNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhsachNCC_CellClick);
             // 
             // buttonSua
@@ -312,7 +312,7 @@
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonSua.Size = new System.Drawing.Size(104, 48);
-            this.buttonSua.TabIndex = 19;
+            this.buttonSua.TabIndex = 4;
             this.buttonSua.Text = "Sửa";
             this.buttonSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSua.UseVisualStyleBackColor = false;
@@ -332,7 +332,7 @@
             this.buttonThêm.Name = "buttonThêm";
             this.buttonThêm.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonThêm.Size = new System.Drawing.Size(104, 48);
-            this.buttonThêm.TabIndex = 18;
+            this.buttonThêm.TabIndex = 2;
             this.buttonThêm.Text = "Thêm ";
             this.buttonThêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonThêm.UseVisualStyleBackColor = false;
@@ -352,7 +352,7 @@
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonDelete.Size = new System.Drawing.Size(104, 48);
-            this.buttonDelete.TabIndex = 17;
+            this.buttonDelete.TabIndex = 3;
             this.buttonDelete.Text = "Xóa";
             this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDelete.UseVisualStyleBackColor = false;
@@ -363,12 +363,12 @@
             this.ContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ItemNum1});
             this.ContextMenu1.Name = "ContextMenu1";
-            this.ContextMenu1.Size = new System.Drawing.Size(181, 48);
+            this.ContextMenu1.Size = new System.Drawing.Size(131, 26);
             // 
             // ItemNum1
             // 
             this.ItemNum1.Name = "ItemNum1";
-            this.ItemNum1.Size = new System.Drawing.Size(180, 22);
+            this.ItemNum1.Size = new System.Drawing.Size(130, 22);
             this.ItemNum1.Text = "Load Data ";
             this.ItemNum1.Click += new System.EventHandler(this.ItemNum1_Click);
             // 
@@ -376,7 +376,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1164, 725);
             this.Controls.Add(this.buttonSua);
             this.Controls.Add(this.buttonThêm);

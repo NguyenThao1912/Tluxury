@@ -14,7 +14,7 @@ namespace TLuxury.Forms
 {
     public partial class AddEmployee : Form
     {
-        Add child;
+
         public AddEmployee()
         {
             InitializeComponent();
@@ -22,22 +22,25 @@ namespace TLuxury.Forms
         }
         private void WireData()
         {
-            List<Model_Role> model = GlobalConfig.Connection.GetAllRole();
-            cbxRole.DataSource = null;
-            cbxRole.DataSource = model;
-            cbxRole.DisplayMember = "Name";
-            cbxRole.SelectedIndex = -1;
+            try
+            {
+                List<Model_Role> model = GlobalConfig.Connection.GetAllRole();
+                cbxRole.DataSource = null;
+                cbxRole.DataSource = model;
+                cbxRole.DisplayMember = "Name";
+                cbxRole.SelectedIndex = -1;
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi lấy dữ liệu chức vụ", "Thông báo");
+            }
+ 
         }
         private bool ValidateForm()
         {
             if(textBoxFirstName.Text == "")
             {
                 MessageBox.Show("Tên không được để trống", "Thông Báo", MessageBoxButtons.OK);
-                return false;
-            }
-            if(textBoxLastName.Text == "")
-            {
-                MessageBox.Show("Họ Không được để trống", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
             if(textBoxPhoneNumber.Text =="")
@@ -74,7 +77,7 @@ namespace TLuxury.Forms
 
         private void buttonAddRole_Click(object sender, EventArgs e)
         {
-            child = new Add(8);
+            Add child = new Add(8);
             child.ShowDialog();
             WireData();
         }
@@ -88,7 +91,6 @@ namespace TLuxury.Forms
                 else Sex = 'F';
                 Model_Role role = (Model_Role)cbxRole.SelectedItem;
                 Model_Employee model = new Model_Employee(textBoxFirstName.Text,
-                    textBoxLastName.Text,
                     Sex,dateTimePicker1.Value.Date,
                     textBoxPhoneNumber.Text,
                     textBoxAddress.Text,

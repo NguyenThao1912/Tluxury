@@ -265,10 +265,12 @@
             // 
             this.textBox_soluong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_soluong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_soluong.Location = new System.Drawing.Point(433, 267);
+            this.textBox_soluong.Location = new System.Drawing.Point(433, 268);
             this.textBox_soluong.Name = "textBox_soluong";
+            this.textBox_soluong.ReadOnly = true;
             this.textBox_soluong.Size = new System.Drawing.Size(115, 20);
             this.textBox_soluong.TabIndex = 12;
+            this.textBox_soluong.Text = "0";
             this.textBox_soluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
             // 
             // textBox_GiaNhap
@@ -276,8 +278,10 @@
             this.textBox_GiaNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_GiaNhap.Location = new System.Drawing.Point(433, 112);
             this.textBox_GiaNhap.Name = "textBox_GiaNhap";
+            this.textBox_GiaNhap.ReadOnly = true;
             this.textBox_GiaNhap.Size = new System.Drawing.Size(141, 20);
             this.textBox_GiaNhap.TabIndex = 8;
+            this.textBox_GiaNhap.Text = "0";
             this.textBox_GiaNhap.TextChanged += new System.EventHandler(this.textBox_GiaNhap_TextChanged);
             this.textBox_GiaNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
             // 
@@ -308,8 +312,10 @@
             this.textBox_GiaBan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_GiaBan.Location = new System.Drawing.Point(433, 154);
             this.textBox_GiaBan.Name = "textBox_GiaBan";
+            this.textBox_GiaBan.ReadOnly = true;
             this.textBox_GiaBan.Size = new System.Drawing.Size(141, 20);
             this.textBox_GiaBan.TabIndex = 9;
+            this.textBox_GiaBan.Text = "0";
             this.textBox_GiaBan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumber);
             // 
             // buttonThemLoai

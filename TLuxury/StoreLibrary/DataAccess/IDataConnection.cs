@@ -25,7 +25,10 @@ namespace StoreLibrary.DataAccess
         List<Model_RawMaterial> GetModel_RawMaterials();
         List<Model_Size> GetAllSize();
         List<Model_Season> GetAllSeason();
+        List<Model_Product> GetAllProduct_List();
         List<Model_Role> GetAllRole();
+        List<Model_Employee> GetAllEmployee_List();
+        List<Model_Supplier> GetAllSupplier_List();
         Model_Product InsertNewProduct(Model_Product model);
         Model_Employee InsertNewEmployee(Model_Employee model);
         Model_Supplier InsertNewSupplier(Model_Supplier model);
@@ -44,6 +47,7 @@ namespace StoreLibrary.DataAccess
         DataTable FindCustomerByID(string ID);
         DataTable FindSupplierByName(string name);
         DataTable FindSupplierByID(string ID);
+
 
     }
 }
