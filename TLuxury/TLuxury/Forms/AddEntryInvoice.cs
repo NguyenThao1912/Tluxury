@@ -53,10 +53,21 @@ namespace TLuxury.Forms
             table.Columns.Add("Tên Sản Phẩm", typeof(string));
             table.Columns.Add("Số Lượng", typeof(int));
             table.Columns.Add("Đơn Giá", typeof(double));
-            table.Columns.Add("Giảm Giá (%)", typeof(int));
+            table.Columns.Add("Giảm Giá (%)", typeof(float));
             table.Columns.Add("Nhà Cung Cấp", typeof(string));
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = table;
+            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+        private void buttonAddProduct_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

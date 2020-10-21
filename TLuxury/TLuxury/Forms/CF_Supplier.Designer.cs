@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Supplier));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxTimKiem = new System.Windows.Forms.GroupBox();
             this.buttonFind = new System.Windows.Forms.Button();
             this.textBoxFind = new System.Windows.Forms.TextBox();
@@ -69,7 +69,7 @@
             this.groupBoxTimKiem.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTimKiem.Location = new System.Drawing.Point(19, 107);
             this.groupBoxTimKiem.Name = "groupBoxTimKiem";
-            this.groupBoxTimKiem.Size = new System.Drawing.Size(433, 159);
+            this.groupBoxTimKiem.Size = new System.Drawing.Size(413, 159);
             this.groupBoxTimKiem.TabIndex = 0;
             this.groupBoxTimKiem.TabStop = false;
             this.groupBoxTimKiem.Text = "Tìm Kiếm";
@@ -123,27 +123,27 @@
             this.groupBoxThôngTin.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxThôngTin.Location = new System.Drawing.Point(17, 272);
             this.groupBoxThôngTin.Name = "groupBoxThôngTin";
-            this.groupBoxThôngTin.Size = new System.Drawing.Size(433, 370);
+            this.groupBoxThôngTin.Size = new System.Drawing.Size(415, 370);
             this.groupBoxThôngTin.TabIndex = 1;
             this.groupBoxThôngTin.TabStop = false;
             this.groupBoxThôngTin.Text = "Thông tin Nhà Cung Cấp";
             // 
             // textBoxPhoneNumber
             // 
-            this.textBoxPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBoxPhoneNumber.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(28, 257);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(19, 257);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.ReadOnly = true;
-            this.textBoxPhoneNumber.Size = new System.Drawing.Size(380, 25);
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(379, 25);
             this.textBoxPhoneNumber.TabIndex = 3;
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 237);
+            this.label5.Location = new System.Drawing.Point(16, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 17);
             this.label5.TabIndex = 6;
@@ -151,9 +151,11 @@
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxAddress.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAddress.Location = new System.Drawing.Point(28, 182);
+            this.textBoxAddress.Location = new System.Drawing.Point(18, 182);
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.ReadOnly = true;
@@ -170,7 +172,7 @@
             this.buttonSave.ForeColor = System.Drawing.Color.White;
             this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
             this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSave.Location = new System.Drawing.Point(158, 307);
+            this.buttonSave.Location = new System.Drawing.Point(149, 307);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonSave.Size = new System.Drawing.Size(104, 48);
@@ -188,7 +190,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 162);
+            this.label4.Location = new System.Drawing.Point(16, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 17);
             this.label4.TabIndex = 4;
@@ -198,7 +200,7 @@
             // 
             this.textBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxName.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxName.Location = new System.Drawing.Point(27, 118);
+            this.textBoxName.Location = new System.Drawing.Point(18, 118);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.ReadOnly = true;
             this.textBoxName.Size = new System.Drawing.Size(380, 25);
@@ -209,7 +211,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 98);
+            this.label3.Location = new System.Drawing.Point(16, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 17);
             this.label3.TabIndex = 2;
@@ -219,7 +221,7 @@
             // 
             this.textBoxID.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxID.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(27, 54);
+            this.textBoxID.Location = new System.Drawing.Point(18, 54);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(186, 25);
@@ -232,7 +234,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 34);
+            this.label2.Location = new System.Drawing.Point(18, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 17);
             this.label2.TabIndex = 0;
@@ -254,9 +256,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDataGird.Controls.Add(this.DanhsachNCC);
-            this.panelDataGird.Location = new System.Drawing.Point(458, 121);
+            this.panelDataGird.Location = new System.Drawing.Point(438, 121);
             this.panelDataGird.Name = "panelDataGird";
-            this.panelDataGird.Size = new System.Drawing.Size(610, 521);
+            this.panelDataGird.Size = new System.Drawing.Size(630, 521);
             this.panelDataGird.TabIndex = 16;
             // 
             // DanhsachNCC
@@ -264,21 +266,21 @@
             this.DanhsachNCC.AllowDrop = true;
             this.DanhsachNCC.AllowUserToResizeColumns = false;
             this.DanhsachNCC.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachNCC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachNCC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DanhsachNCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DanhsachNCC.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(148)))), ((int)(((byte)(181)))));
             this.DanhsachNCC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachNCC.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachNCC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachNCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachNCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DanhsachNCC.ColumnHeadersHeight = 25;
             this.DanhsachNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DanhsachNCC.ContextMenuStrip = this.ContextMenu1;
@@ -294,7 +296,7 @@
             this.DanhsachNCC.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachNCC.RowTemplate.Height = 30;
             this.DanhsachNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachNCC.Size = new System.Drawing.Size(610, 521);
+            this.DanhsachNCC.Size = new System.Drawing.Size(630, 521);
             this.DanhsachNCC.TabIndex = 0;
             this.DanhsachNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhsachNCC_CellClick);
             // 
@@ -322,7 +324,7 @@
             this.buttonSua.ForeColor = System.Drawing.Color.White;
             this.buttonSua.Image = ((System.Drawing.Image)(resources.GetObject("buttonSua.Image")));
             this.buttonSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSua.Location = new System.Drawing.Point(963, 48);
+            this.buttonSua.Location = new System.Drawing.Point(963, 46);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonSua.Size = new System.Drawing.Size(104, 48);
@@ -342,7 +344,7 @@
             this.buttonThêm.ForeColor = System.Drawing.Color.White;
             this.buttonThêm.Image = ((System.Drawing.Image)(resources.GetObject("buttonThêm.Image")));
             this.buttonThêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThêm.Location = new System.Drawing.Point(720, 48);
+            this.buttonThêm.Location = new System.Drawing.Point(707, 46);
             this.buttonThêm.Name = "buttonThêm";
             this.buttonThêm.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonThêm.Size = new System.Drawing.Size(104, 48);
@@ -362,7 +364,7 @@
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
             this.buttonDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete.Image")));
             this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelete.Location = new System.Drawing.Point(844, 48);
+            this.buttonDelete.Location = new System.Drawing.Point(835, 46);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonDelete.Size = new System.Drawing.Size(104, 48);
