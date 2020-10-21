@@ -72,12 +72,11 @@
             this.panelDropdownRP.Controls.Add(this.buttonRP_Doanhthu);
             this.panelDropdownRP.Controls.Add(this.buttonRP_NCC);
             this.panelDropdownRP.Controls.Add(this.buttonBaoCao);
-            this.panelDropdownRP.Location = new System.Drawing.Point(4, 766);
-            this.panelDropdownRP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelDropdownRP.MaximumSize = new System.Drawing.Size(275, 200);
-            this.panelDropdownRP.MinimumSize = new System.Drawing.Size(275, 75);
+            this.panelDropdownRP.Location = new System.Drawing.Point(3, 524);
+            this.panelDropdownRP.MaximumSize = new System.Drawing.Size(220, 150);
+            this.panelDropdownRP.MinimumSize = new System.Drawing.Size(220, 50);
             this.panelDropdownRP.Name = "panelDropdownRP";
-            this.panelDropdownRP.Size = new System.Drawing.Size(275, 200);
+            this.panelDropdownRP.Size = new System.Drawing.Size(220, 150);
             this.panelDropdownRP.TabIndex = 9;
             // 
             // buttonRP_KhachHang
@@ -89,10 +88,9 @@
             this.buttonRP_KhachHang.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRP_KhachHang.ForeColor = System.Drawing.Color.White;
             this.buttonRP_KhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRP_KhachHang.Location = new System.Drawing.Point(0, 157);
-            this.buttonRP_KhachHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRP_KhachHang.Location = new System.Drawing.Point(0, 116);
             this.buttonRP_KhachHang.Name = "buttonRP_KhachHang";
-            this.buttonRP_KhachHang.Size = new System.Drawing.Size(275, 41);
+            this.buttonRP_KhachHang.Size = new System.Drawing.Size(220, 33);
             this.buttonRP_KhachHang.TabIndex = 11;
             this.buttonRP_KhachHang.Text = "Khách Hàng";
             this.buttonRP_KhachHang.UseVisualStyleBackColor = false;
@@ -106,10 +104,9 @@
             this.buttonRP_Doanhthu.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRP_Doanhthu.ForeColor = System.Drawing.Color.White;
             this.buttonRP_Doanhthu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRP_Doanhthu.Location = new System.Drawing.Point(0, 116);
-            this.buttonRP_Doanhthu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRP_Doanhthu.Location = new System.Drawing.Point(0, 83);
             this.buttonRP_Doanhthu.Name = "buttonRP_Doanhthu";
-            this.buttonRP_Doanhthu.Size = new System.Drawing.Size(275, 41);
+            this.buttonRP_Doanhthu.Size = new System.Drawing.Size(220, 33);
             this.buttonRP_Doanhthu.TabIndex = 10;
             this.buttonRP_Doanhthu.Text = "Doanh Thu";
             this.buttonRP_Doanhthu.UseVisualStyleBackColor = false;
@@ -123,10 +120,9 @@
             this.buttonRP_NCC.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRP_NCC.ForeColor = System.Drawing.Color.White;
             this.buttonRP_NCC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRP_NCC.Location = new System.Drawing.Point(0, 75);
-            this.buttonRP_NCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRP_NCC.Location = new System.Drawing.Point(0, 50);
             this.buttonRP_NCC.Name = "buttonRP_NCC";
-            this.buttonRP_NCC.Size = new System.Drawing.Size(275, 41);
+            this.buttonRP_NCC.Size = new System.Drawing.Size(220, 33);
             this.buttonRP_NCC.TabIndex = 9;
             this.buttonRP_NCC.Text = "Nhà Cung Cấp";
             this.buttonRP_NCC.UseVisualStyleBackColor = false;
@@ -142,10 +138,8 @@
             this.buttonBaoCao.Image = ((System.Drawing.Image)(resources.GetObject("buttonBaoCao.Image")));
             this.buttonBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBaoCao.Location = new System.Drawing.Point(0, 0);
-            this.buttonBaoCao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.buttonBaoCao.MinimumSize = new System.Drawing.Size(226, 75);
             this.buttonBaoCao.Name = "buttonBaoCao";
-            this.buttonBaoCao.Size = new System.Drawing.Size(275, 75);
+            this.buttonBaoCao.Size = new System.Drawing.Size(220, 50);
             this.buttonBaoCao.TabIndex = 8;
             this.buttonBaoCao.Text = "Báo Cáo";
             this.buttonBaoCao.UseVisualStyleBackColor = false;
@@ -164,9 +158,8 @@
             this.buttonDoiTac.Image = ((System.Drawing.Image)(resources.GetObject("buttonDoiTac.Image")));
             this.buttonDoiTac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDoiTac.Location = new System.Drawing.Point(0, 0);
-            this.buttonDoiTac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonDoiTac.Name = "buttonDoiTac";
-            this.buttonDoiTac.Size = new System.Drawing.Size(275, 75);
+            this.buttonDoiTac.Size = new System.Drawing.Size(220, 50);
             this.buttonDoiTac.TabIndex = 3;
             this.buttonDoiTac.Text = "Đối Tác";
             this.buttonDoiTac.UseVisualStyleBackColor = false;
@@ -193,9 +186,8 @@
             this.flowLayoutPanelMenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanelMenu.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanelMenu.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanelMenu.Name = "flowLayoutPanelMenu";
-            this.flowLayoutPanelMenu.Size = new System.Drawing.Size(275, 900);
+            this.flowLayoutPanelMenu.Size = new System.Drawing.Size(220, 760);
             this.flowLayoutPanelMenu.TabIndex = 10;
             this.flowLayoutPanelMenu.WrapContents = false;
             this.flowLayoutPanelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
@@ -204,10 +196,9 @@
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(60)))));
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(4, 4);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogo.Location = new System.Drawing.Point(3, 3);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(275, 170);
+            this.panelLogo.Size = new System.Drawing.Size(220, 105);
             this.panelLogo.TabIndex = 0;
             this.panelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
@@ -220,10 +211,9 @@
             this.buttonHome.ForeColor = System.Drawing.Color.White;
             this.buttonHome.Image = ((System.Drawing.Image)(resources.GetObject("buttonHome.Image")));
             this.buttonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.Location = new System.Drawing.Point(4, 182);
-            this.buttonHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonHome.Location = new System.Drawing.Point(3, 114);
             this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(271, 75);
+            this.buttonHome.Size = new System.Drawing.Size(217, 50);
             this.buttonHome.TabIndex = 16;
             this.buttonHome.Text = "Home";
             this.buttonHome.UseVisualStyleBackColor = false;
@@ -237,10 +227,9 @@
             this.buttonBanHang.ForeColor = System.Drawing.Color.White;
             this.buttonBanHang.Image = ((System.Drawing.Image)(resources.GetObject("buttonBanHang.Image")));
             this.buttonBanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBanHang.Location = new System.Drawing.Point(4, 265);
-            this.buttonBanHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBanHang.Location = new System.Drawing.Point(3, 170);
             this.buttonBanHang.Name = "buttonBanHang";
-            this.buttonBanHang.Size = new System.Drawing.Size(271, 75);
+            this.buttonBanHang.Size = new System.Drawing.Size(217, 50);
             this.buttonBanHang.TabIndex = 15;
             this.buttonBanHang.Text = "Bán Hàng";
             this.buttonBanHang.UseVisualStyleBackColor = false;
@@ -257,10 +246,9 @@
             this.buttonHangHoa.ForeColor = System.Drawing.Color.White;
             this.buttonHangHoa.Image = ((System.Drawing.Image)(resources.GetObject("buttonHangHoa.Image")));
             this.buttonHangHoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHangHoa.Location = new System.Drawing.Point(4, 348);
-            this.buttonHangHoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonHangHoa.Location = new System.Drawing.Point(3, 226);
             this.buttonHangHoa.Name = "buttonHangHoa";
-            this.buttonHangHoa.Size = new System.Drawing.Size(268, 75);
+            this.buttonHangHoa.Size = new System.Drawing.Size(214, 50);
             this.buttonHangHoa.TabIndex = 14;
             this.buttonHangHoa.Text = "Hàng Hóa";
             this.buttonHangHoa.UseVisualStyleBackColor = false;
@@ -273,12 +261,11 @@
             this.panelDropdownGiaoDich.Controls.Add(this.buttonHD_Nhap);
             this.panelDropdownGiaoDich.Controls.Add(this.buttonHD_Ban);
             this.panelDropdownGiaoDich.Controls.Add(this.buttonGiaoDich);
-            this.panelDropdownGiaoDich.Location = new System.Drawing.Point(4, 431);
-            this.panelDropdownGiaoDich.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelDropdownGiaoDich.MaximumSize = new System.Drawing.Size(275, 160);
-            this.panelDropdownGiaoDich.MinimumSize = new System.Drawing.Size(275, 75);
+            this.panelDropdownGiaoDich.Location = new System.Drawing.Point(3, 282);
+            this.panelDropdownGiaoDich.MaximumSize = new System.Drawing.Size(220, 117);
+            this.panelDropdownGiaoDich.MinimumSize = new System.Drawing.Size(220, 50);
             this.panelDropdownGiaoDich.Name = "panelDropdownGiaoDich";
-            this.panelDropdownGiaoDich.Size = new System.Drawing.Size(275, 160);
+            this.panelDropdownGiaoDich.Size = new System.Drawing.Size(220, 117);
             this.panelDropdownGiaoDich.TabIndex = 13;
             // 
             // buttonHD_Nhap
@@ -290,10 +277,9 @@
             this.buttonHD_Nhap.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHD_Nhap.ForeColor = System.Drawing.Color.White;
             this.buttonHD_Nhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHD_Nhap.Location = new System.Drawing.Point(0, 116);
-            this.buttonHD_Nhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonHD_Nhap.Location = new System.Drawing.Point(0, 83);
             this.buttonHD_Nhap.Name = "buttonHD_Nhap";
-            this.buttonHD_Nhap.Size = new System.Drawing.Size(275, 41);
+            this.buttonHD_Nhap.Size = new System.Drawing.Size(220, 33);
             this.buttonHD_Nhap.TabIndex = 10;
             this.buttonHD_Nhap.Text = "Nhập Hàng";
             this.buttonHD_Nhap.UseVisualStyleBackColor = false;
@@ -307,10 +293,9 @@
             this.buttonHD_Ban.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHD_Ban.ForeColor = System.Drawing.Color.White;
             this.buttonHD_Ban.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHD_Ban.Location = new System.Drawing.Point(0, 75);
-            this.buttonHD_Ban.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonHD_Ban.Location = new System.Drawing.Point(0, 50);
             this.buttonHD_Ban.Name = "buttonHD_Ban";
-            this.buttonHD_Ban.Size = new System.Drawing.Size(275, 41);
+            this.buttonHD_Ban.Size = new System.Drawing.Size(220, 33);
             this.buttonHD_Ban.TabIndex = 9;
             this.buttonHD_Ban.Text = "Hóa đơn";
             this.buttonHD_Ban.UseVisualStyleBackColor = false;
@@ -327,10 +312,8 @@
             this.buttonGiaoDich.Image = ((System.Drawing.Image)(resources.GetObject("buttonGiaoDich.Image")));
             this.buttonGiaoDich.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonGiaoDich.Location = new System.Drawing.Point(0, 0);
-            this.buttonGiaoDich.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.buttonGiaoDich.MinimumSize = new System.Drawing.Size(226, 75);
             this.buttonGiaoDich.Name = "buttonGiaoDich";
-            this.buttonGiaoDich.Size = new System.Drawing.Size(275, 75);
+            this.buttonGiaoDich.Size = new System.Drawing.Size(220, 50);
             this.buttonGiaoDich.TabIndex = 8;
             this.buttonGiaoDich.Text = "Giao Dịch";
             this.buttonGiaoDich.UseVisualStyleBackColor = false;
@@ -343,12 +326,11 @@
             this.panelDropdown_DoiTac.Controls.Add(this.buttonDT_NhaCungCap);
             this.panelDropdown_DoiTac.Controls.Add(this.buttonDT_KhachHang);
             this.panelDropdown_DoiTac.Controls.Add(this.buttonDoiTac);
-            this.panelDropdown_DoiTac.Location = new System.Drawing.Point(4, 599);
-            this.panelDropdown_DoiTac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelDropdown_DoiTac.MaximumSize = new System.Drawing.Size(275, 159);
-            this.panelDropdown_DoiTac.MinimumSize = new System.Drawing.Size(275, 75);
+            this.panelDropdown_DoiTac.Location = new System.Drawing.Point(3, 405);
+            this.panelDropdown_DoiTac.MaximumSize = new System.Drawing.Size(220, 113);
+            this.panelDropdown_DoiTac.MinimumSize = new System.Drawing.Size(220, 50);
             this.panelDropdown_DoiTac.Name = "panelDropdown_DoiTac";
-            this.panelDropdown_DoiTac.Size = new System.Drawing.Size(275, 159);
+            this.panelDropdown_DoiTac.Size = new System.Drawing.Size(220, 113);
             this.panelDropdown_DoiTac.TabIndex = 11;
             // 
             // buttonDT_NhaCungCap
@@ -360,10 +342,9 @@
             this.buttonDT_NhaCungCap.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDT_NhaCungCap.ForeColor = System.Drawing.Color.White;
             this.buttonDT_NhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDT_NhaCungCap.Location = new System.Drawing.Point(0, 116);
-            this.buttonDT_NhaCungCap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDT_NhaCungCap.Location = new System.Drawing.Point(0, 83);
             this.buttonDT_NhaCungCap.Name = "buttonDT_NhaCungCap";
-            this.buttonDT_NhaCungCap.Size = new System.Drawing.Size(275, 41);
+            this.buttonDT_NhaCungCap.Size = new System.Drawing.Size(220, 33);
             this.buttonDT_NhaCungCap.TabIndex = 11;
             this.buttonDT_NhaCungCap.Text = "Nhà Cung Cấp";
             this.buttonDT_NhaCungCap.UseVisualStyleBackColor = false;
@@ -378,10 +359,9 @@
             this.buttonDT_KhachHang.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDT_KhachHang.ForeColor = System.Drawing.Color.White;
             this.buttonDT_KhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDT_KhachHang.Location = new System.Drawing.Point(0, 75);
-            this.buttonDT_KhachHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDT_KhachHang.Location = new System.Drawing.Point(0, 50);
             this.buttonDT_KhachHang.Name = "buttonDT_KhachHang";
-            this.buttonDT_KhachHang.Size = new System.Drawing.Size(275, 41);
+            this.buttonDT_KhachHang.Size = new System.Drawing.Size(220, 33);
             this.buttonDT_KhachHang.TabIndex = 10;
             this.buttonDT_KhachHang.Text = "Khách Hàng";
             this.buttonDT_KhachHang.UseVisualStyleBackColor = false;
@@ -397,9 +377,8 @@
             this.panelParentOfPanelMenu.Controls.Add(this.flowLayoutPanelMenu);
             this.panelParentOfPanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelParentOfPanelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelParentOfPanelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelParentOfPanelMenu.Name = "panelParentOfPanelMenu";
-            this.panelParentOfPanelMenu.Size = new System.Drawing.Size(275, 900);
+            this.panelParentOfPanelMenu.Size = new System.Drawing.Size(220, 760);
             this.panelParentOfPanelMenu.TabIndex = 12;
             // 
             // panelTitle
@@ -411,10 +390,9 @@
             this.panelTitle.Controls.Add(this.panelRedBar);
             this.panelTitle.Controls.Add(this.labelTitle);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(275, 0);
-            this.panelTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTitle.Location = new System.Drawing.Point(220, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1325, 170);
+            this.panelTitle.Size = new System.Drawing.Size(1080, 108);
             this.panelTitle.TabIndex = 0;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
@@ -424,10 +402,9 @@
             this.buttonCLose.FlatAppearance.BorderSize = 0;
             this.buttonCLose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCLose.Image = ((System.Drawing.Image)(resources.GetObject("buttonCLose.Image")));
-            this.buttonCLose.Location = new System.Drawing.Point(1276, 15);
-            this.buttonCLose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCLose.Location = new System.Drawing.Point(1041, 12);
             this.buttonCLose.Name = "buttonCLose";
-            this.buttonCLose.Size = new System.Drawing.Size(49, 48);
+            this.buttonCLose.Size = new System.Drawing.Size(39, 38);
             this.buttonCLose.TabIndex = 2;
             this.buttonCLose.UseVisualStyleBackColor = true;
             this.buttonCLose.Click += new System.EventHandler(this.buttonCLose_Click);
@@ -438,10 +415,9 @@
             this.buttonMaximize.FlatAppearance.BorderSize = 0;
             this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMaximize.Image = ((System.Drawing.Image)(resources.GetObject("buttonMaximize.Image")));
-            this.buttonMaximize.Location = new System.Drawing.Point(1228, 15);
-            this.buttonMaximize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonMaximize.Location = new System.Drawing.Point(1002, 12);
             this.buttonMaximize.Name = "buttonMaximize";
-            this.buttonMaximize.Size = new System.Drawing.Size(49, 48);
+            this.buttonMaximize.Size = new System.Drawing.Size(39, 38);
             this.buttonMaximize.TabIndex = 5;
             this.buttonMaximize.UseVisualStyleBackColor = true;
             this.buttonMaximize.Click += new System.EventHandler(this.button1_Click);
@@ -452,10 +428,9 @@
             this.buttonMinimize.FlatAppearance.BorderSize = 0;
             this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMinimize.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinimize.Image")));
-            this.buttonMinimize.Location = new System.Drawing.Point(1179, 15);
-            this.buttonMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonMinimize.Location = new System.Drawing.Point(963, 12);
             this.buttonMinimize.Name = "buttonMinimize";
-            this.buttonMinimize.Size = new System.Drawing.Size(49, 48);
+            this.buttonMinimize.Size = new System.Drawing.Size(39, 38);
             this.buttonMinimize.TabIndex = 3;
             this.buttonMinimize.UseVisualStyleBackColor = true;
             this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
@@ -465,9 +440,8 @@
             this.panelRedBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(42)))), ((int)(((byte)(0)))));
             this.panelRedBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRedBar.Location = new System.Drawing.Point(0, 0);
-            this.panelRedBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelRedBar.Name = "panelRedBar";
-            this.panelRedBar.Size = new System.Drawing.Size(1325, 15);
+            this.panelRedBar.Size = new System.Drawing.Size(1080, 12);
             this.panelRedBar.TabIndex = 2;
             this.panelRedBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
@@ -479,10 +453,9 @@
             this.labelTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelTitle.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(518, 62);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitle.Location = new System.Drawing.Point(424, 22);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(291, 74);
+            this.labelTitle.Size = new System.Drawing.Size(230, 58);
             this.labelTitle.TabIndex = 4;
             this.labelTitle.Text = "T - Luxury";
             // 
@@ -492,28 +465,27 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContent.BackColor = System.Drawing.Color.White;
-            this.panelContent.Location = new System.Drawing.Point(275, 170);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContent.Location = new System.Drawing.Point(220, 106);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1325, 753);
+            this.panelContent.Size = new System.Drawing.Size(1080, 654);
             this.panelContent.TabIndex = 13;
             this.panelContent.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1600, 900);
+            this.ClientSize = new System.Drawing.Size(1300, 760);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelParentOfPanelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1300, 760);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             this.panelDropdownRP.ResumeLayout(false);
             this.flowLayoutPanelMenu.ResumeLayout(false);

@@ -67,3 +67,5 @@ D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\StoreUI.csproj.CoreCompileInputs.cache
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\StoreUI.csproj.CopyComplete
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.exe
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.pdb
+D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.Add_hoadon.resources
+D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_HOADON.resources
