@@ -283,6 +283,7 @@
             this.buttonHD_Nhap.TabIndex = 10;
             this.buttonHD_Nhap.Text = "Nhập Hàng";
             this.buttonHD_Nhap.UseVisualStyleBackColor = false;
+            this.buttonHD_Nhap.Click += new System.EventHandler(this.buttonHD_Nhap_Click);
             // 
             // buttonHD_Ban
             // 
@@ -297,7 +298,7 @@
             this.buttonHD_Ban.Name = "buttonHD_Ban";
             this.buttonHD_Ban.Size = new System.Drawing.Size(220, 33);
             this.buttonHD_Ban.TabIndex = 9;
-            this.buttonHD_Ban.Text = "Hóa đơn";
+            this.buttonHD_Ban.Text = "Hóa đơn Bán";
             this.buttonHD_Ban.UseVisualStyleBackColor = false;
             this.buttonHD_Ban.Click += new System.EventHandler(this.buttonHD_Ban_Click);
             // 

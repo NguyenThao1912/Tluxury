@@ -143,5 +143,10 @@ namespace TLuxury.Forms
         {
             OpenChildForm(new CF_HOADON(), (Button)sender);
         }
+
+        private void buttonHD_Nhap_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CF_EntryInvoice(), (Button)sender);
+        }
     }
 }

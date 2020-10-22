@@ -52,6 +52,12 @@
     <Compile Include="Forms\addhoadon.designer.cs">
       <DependentUpon>addhoadon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CF_EntryInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CF_EntryInvoice.Designer.cs">
+      <DependentUpon>CF_EntryInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CF_HOADON1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\addhoadon.resx">
       <DependentUpon>addhoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CF_EntryInvoice.resx">
+      <DependentUpon>CF_EntryInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CF_HOADON1.resx">
       <DependentUpon>CF_HOADON1.cs</DependentUpon>

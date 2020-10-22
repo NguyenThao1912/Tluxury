@@ -48,6 +48,8 @@ namespace StoreLibrary.DataAccess
         DataTable FindSupplierByName(string name);
         DataTable FindSupplierByID(string ID);
 
-
+        Model_EntryInvoice InsertNewEntryInvoice(string emID, string supID, DateTime day, decimal total);
+        void InsertNewEntryDetails(string entryID,string prodID,float discount,decimal unitprice,int quantity,decimal total );
+        
     }
 }

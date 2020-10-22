@@ -454,5 +454,41 @@ namespace StoreLibrary.DataAccess
             }
             return model;
         }
+
+        public Model_EntryInvoice InsertNewEntryInvoice(string emID,string supID,DateTime day,decimal total)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                Model_EntryInvoice model = new Model_EntryInvoice();
+                var p = new DynamicParameters();
+                p.Add("@EmployeeID ", emID);
+                p.Add("@SupplierID", supID);
+                p.Add("@DayEntry", day);
+                p.Add("@Total", total);
+                p.Add("@EntryID", "", DbType.String, direction: ParameterDirection.Output);
+                connection.Execute("dbo.InsertNewEntryInvoice", p, commandType: CommandType.StoredProcedure);
+                model.ID =  p.Get<string>("@EntryID");
+                model.SupplierID = supID;
+                model.Day = day;
+                model.EmployeeID = emID;
+                model.Total = total;
+                return model;
+            }
+        }
+
+        public void InsertNewEntryDetails(string entryID, string prodID, float discount, decimal unitprice, int quantity, decimal total)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@EntryID ", entryID);
+                p.Add("@ProductID", prodID);
+                p.Add("@Discount", discount);
+                p.Add("@UnitPrice", unitprice);
+                p.Add("@Quantity",quantity );
+                p.Add("@Total", total);
+                connection.Execute("dbo.InsertNewEntryDetails", p, commandType: CommandType.StoredProcedure);
+            }
+        }
     }
 }
