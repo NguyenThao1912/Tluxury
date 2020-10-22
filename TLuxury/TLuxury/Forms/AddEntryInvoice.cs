@@ -173,7 +173,8 @@ namespace TLuxury.Forms
                     decimal money = decimal.Parse(item.Cells[2].Value.ToString()) * decimal.Parse(item.Cells[3].Value.ToString());
                     tongtien = tongtien - money;
                     labelTotal.Text = "Tổng tiền : " + tongtien.ToString("N0", System.Globalization.CultureInfo.GetCultureInfo("de")) + " VND";
-                    dataGridView1.Rows.RemoveAt(item.Index);
+                    stockEntry.Remove(item.Cells[0].Value.ToString());
+                    dataGridView1.Rows.RemoveAt(item.Index);                  
                 }
             }
         }
