@@ -188,9 +188,9 @@ namespace TLuxury.Forms
                 {
                     model = GlobalConfig.Connection.InsertNewEntryInvoice(Employee.ID, Supplier.ID, DateEntryPicker.Value, tongtien);
                 }
-                catch
+                catch (Exception r)
                 {
-                    MessageBox.Show(" Lỗi câu lệnh sql ~ 1 ~ line 186", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"{r.ToString()} Lỗi câu lệnh sql ~ 1 ~ line 186", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -205,10 +205,8 @@ namespace TLuxury.Forms
                                 float.Parse(row.Cells["Discount"].Value.ToString()) / 100,
                                 decimal.Parse(row.Cells["UnitPrice"].Value.ToString()),
                                 int.Parse(row.Cells["Quantity"].Value.ToString()),
-                                tongtien
+                                decimal.Parse(row.Cells["UnitPrice"].Value.ToString()) * decimal.Parse(row.Cells["Quantity"].Value.ToString())
                              );
-                            MessageBox.Show("Thêm hóa đơn thành công!", "Thông Báo", MessageBoxButtons.OK);
-                            this.Dispose();
                           //  dataGridView1.Rows.Clear();
                          //   labelTotal.Text = "Tổng Tiền : 0 VND";
                         }
@@ -218,6 +216,8 @@ namespace TLuxury.Forms
                         }
                     }
                 }
+                MessageBox.Show("Thêm hóa đơn thành công!", "Thông Báo", MessageBoxButtons.OK);
+                this.Dispose();
             }
         }
 
