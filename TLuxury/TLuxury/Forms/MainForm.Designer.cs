@@ -72,7 +72,7 @@
             this.panelDropdownRP.Controls.Add(this.buttonRP_Doanhthu);
             this.panelDropdownRP.Controls.Add(this.buttonRP_NCC);
             this.panelDropdownRP.Controls.Add(this.buttonBaoCao);
-            this.panelDropdownRP.Location = new System.Drawing.Point(3, 524);
+            this.panelDropdownRP.Location = new System.Drawing.Point(3, 461);
             this.panelDropdownRP.MaximumSize = new System.Drawing.Size(220, 150);
             this.panelDropdownRP.MinimumSize = new System.Drawing.Size(220, 50);
             this.panelDropdownRP.Name = "panelDropdownRP";
@@ -331,7 +331,7 @@
             this.panelDropdown_DoiTac.MaximumSize = new System.Drawing.Size(220, 113);
             this.panelDropdown_DoiTac.MinimumSize = new System.Drawing.Size(220, 50);
             this.panelDropdown_DoiTac.Name = "panelDropdown_DoiTac";
-            this.panelDropdown_DoiTac.Size = new System.Drawing.Size(220, 113);
+            this.panelDropdown_DoiTac.Size = new System.Drawing.Size(220, 50);
             this.panelDropdown_DoiTac.TabIndex = 11;
             // 
             // buttonDT_NhaCungCap

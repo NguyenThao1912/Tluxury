@@ -20,7 +20,7 @@ namespace TLuxury
             Application.SetCompatibleTextRenderingDefault(false);
             //Khởi Tạo Kết nối
             GlobalConfig.InitializeConnections();
-            Application.Run(new CF_Products());
+            Application.Run(new MainForm());
         }
     }
 }

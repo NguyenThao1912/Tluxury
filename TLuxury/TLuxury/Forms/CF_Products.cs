@@ -21,7 +21,7 @@ namespace TLuxury.Forms
         private void SlideMove(Button a)
         {
             Point b = a.Location;
-            panel1.Location = new Point(b.X, b.Y + 54);
+            panel1.Location = new Point(b.X, b.Y + 49);
         }
         private void button2_Click(object sender, EventArgs e)
         {
