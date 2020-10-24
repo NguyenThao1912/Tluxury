@@ -19,6 +19,7 @@ namespace TLuxury.Forms
         {
             InitializeComponent();
             WireData();
+            comboBox1.SelectedItem = "--- Tìm Kiếm ---";
         }
         private void WireData()
         {   
@@ -123,50 +124,50 @@ namespace TLuxury.Forms
             }
             
         }
-
-        private void buttonFind_Click(object sender, EventArgs e)
-        {
-            DataTable table = new DataTable();
-            try
-            {
-                if (comboBox1.Text != "")
-                {
-                    if (comboBox1.Text == "Tìm Kiếm Theo Tên Khách")
-                    {
-                        table = GlobalConfig.Connection.FindCustomerByName($"{textBoxFind.Text.Trim()}");
-                    }
-                    else if (comboBox1.Text == "Tìm Kiếm Theo Mã Khách")
-                    {
-                        table = GlobalConfig.Connection.FindCustomerByID(textBoxFind.Text);
-                    }
-                }
-                if (table.Rows.Count > 0)
-                {
-                    DanhsachKH.DataSource = null;
-                    DanhsachKH.DataSource = table;
-                    DanhsachKH.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                    DanhsachKH.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                    DanhsachKH.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                    DanhsachKH.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                }
-                else
-                    if (comboBox1.Text == "")
-                    MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK);
-                else
-                    MessageBox.Show("Không tìm thấy kết quả phù hợp với tìm kiếm", "Thông báo", MessageBoxButtons.OK);
-
-            }
-            catch (Exception b)
-            {
-                MessageBox.Show($"Xảy ra lỗi trong quá trình tìm kiếm {b} ", "Thông báo", MessageBoxButtons.OK);
-            }
-        }
-
+     
         private void textBoxFind_TextChanged(object sender, EventArgs e)
         {
             if (textBoxFind.Text == "")
             {
                 WireData();
+            }
+            else
+            {
+                DataTable table = new DataTable();
+                try
+                {
+                    if (comboBox1.Text != "")
+                    {
+                        if (comboBox1.Text == "Tìm Kiếm Theo Tên Khách")
+                        {
+                            table = GlobalConfig.Connection.FindCustomerByName($"{textBoxFind.Text.Trim()}");
+                        }
+                        else if (comboBox1.Text == "Tìm Kiếm Theo Mã Khách")
+                        {
+                            table = GlobalConfig.Connection.FindCustomerByID(textBoxFind.Text);
+                        }
+                    }
+                    if (table.Rows.Count > 0)
+                    {
+                        DanhsachKH.DataSource = null;
+                        DanhsachKH.DataSource = table;
+                        DanhsachKH.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                        DanhsachKH.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                        DanhsachKH.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                        DanhsachKH.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    }
+                    else
+                        if (comboBox1.Text == "")
+                        {
+                            MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK);
+                            textBoxFind.Text = "";
+                        }
+
+                }
+                catch (Exception b)
+                {
+                    MessageBox.Show($"Xảy ra lỗi trong quá trình tìm kiếm {b} ", "Thông báo", MessageBoxButtons.OK);
+                }
             }
         }
 
@@ -177,14 +178,9 @@ namespace TLuxury.Forms
             WireData();
         }
 
-        private void loadDâtToolStripMenuItem_Click(object sender, EventArgs e)
+        private void loadDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WireData();
-        }
-
-        private void textBoxFind_KeyDown(object sender, KeyEventArgs e)
-        {
-
         }
     }
 }

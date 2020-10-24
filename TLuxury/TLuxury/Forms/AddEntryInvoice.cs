@@ -27,28 +27,52 @@ namespace TLuxury.Forms
             GetEmployee();
         }
         private void GetProducts()
-        {
-            List<Model_Product> products = GlobalConfig.Connection.GetAllProduct_List();
-            comboBoxProduct.DataSource = null;
-            comboBoxProduct.DataSource = products;
-            comboBoxProduct.DisplayMember = "Name";
-            comboBoxProduct.SelectedIndex = -1;
+        { 
+            try
+            {
+                List<Model_Product> products = GlobalConfig.Connection.GetAllProduct_List();
+                comboBoxProduct.DataSource = null;
+                comboBoxProduct.DataSource = products;
+                comboBoxProduct.DisplayMember = "Name";
+                comboBoxProduct.SelectedIndex = -1;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Thông Báo",MessageBoxButtons.OK);
+            }
+
         }
         private void GetSupplier()
         {
-            List<Model_Supplier> suppliers = GlobalConfig.Connection.GetAllSupplier_List();
-            comboBoxSupplier.DataSource = null;
-            comboBoxSupplier.DataSource = suppliers;
-            comboBoxSupplier.DisplayMember = "Name";
-            comboBoxSupplier.SelectedIndex = -1;
+
+            try
+            {
+                List<Model_Supplier> suppliers = GlobalConfig.Connection.GetAllSupplier_List();
+                comboBoxSupplier.DataSource = null;
+                comboBoxSupplier.DataSource = suppliers;
+                comboBoxSupplier.DisplayMember = "Name";
+                comboBoxSupplier.SelectedIndex = -1;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Thông Báo", MessageBoxButtons.OK);
+            }
         }
         private void GetEmployee()
         {
-            List<Model_Employee> employees = GlobalConfig.Connection.GetAllEmployee_List();
-            comboBoxEmployee.DataSource = null;
-            comboBoxEmployee.DataSource = employees;
-            comboBoxEmployee.DisplayMember = "Name";
-            comboBoxEmployee.SelectedIndex = -1;
+
+            try
+            {
+                List<Model_Employee> employees = GlobalConfig.Connection.GetAllEmployee_List();
+                comboBoxEmployee.DataSource = null;
+                comboBoxEmployee.DataSource = employees;
+                comboBoxEmployee.DisplayMember = "Name";
+                comboBoxEmployee.SelectedIndex = -1;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Thông Báo", MessageBoxButtons.OK);
+            }
         }
         private void ClearText()
         {
@@ -202,7 +226,7 @@ namespace TLuxury.Forms
                             GlobalConfig.Connection.InsertNewEntryDetails(
                                 model.ID,
                                 row.Cells["ProductID"].Value.ToString(),
-                                float.Parse(row.Cells["Discount"].Value.ToString()) / 100,
+                                (float.Parse(row.Cells["Discount"].Value.ToString()) * 100) / 100,
                                 decimal.Parse(row.Cells["UnitPrice"].Value.ToString()),
                                 int.Parse(row.Cells["Quantity"].Value.ToString()),
                                 decimal.Parse(row.Cells["UnitPrice"].Value.ToString()) * decimal.Parse(row.Cells["Quantity"].Value.ToString())

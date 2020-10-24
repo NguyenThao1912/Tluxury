@@ -116,14 +116,14 @@
             // 
             // DateEntryPicker
             // 
-            this.DateEntryPicker.CustomFormat = "dd/M/yyyy";
+            this.DateEntryPicker.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.DateEntryPicker.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateEntryPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateEntryPicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.DateEntryPicker.Location = new System.Drawing.Point(647, 77);
             this.DateEntryPicker.Margin = new System.Windows.Forms.Padding(4);
             this.DateEntryPicker.Name = "DateEntryPicker";
-            this.DateEntryPicker.Size = new System.Drawing.Size(122, 25);
+            this.DateEntryPicker.Size = new System.Drawing.Size(172, 25);
             this.DateEntryPicker.TabIndex = 2;
             // 
             // labelDayEntry
@@ -419,6 +419,7 @@
             this.Name = "AddEntryInvoice";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddEntryInvoice";
             this.Load += new System.EventHandler(this.AddEntryInvoice_Load);
             this.groupBox1.ResumeLayout(false);

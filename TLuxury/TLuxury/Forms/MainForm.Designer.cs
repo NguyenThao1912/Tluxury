@@ -51,13 +51,13 @@
             this.buttonDT_KhachHang = new System.Windows.Forms.Button();
             this.timerClose = new System.Windows.Forms.Timer(this.components);
             this.panelParentOfPanelMenu = new System.Windows.Forms.Panel();
-            this.panelTitle = new System.Windows.Forms.Panel();
-            this.buttonCLose = new System.Windows.Forms.Button();
-            this.buttonMaximize = new System.Windows.Forms.Button();
-            this.buttonMinimize = new System.Windows.Forms.Button();
-            this.panelRedBar = new System.Windows.Forms.Panel();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.panelRedBar = new System.Windows.Forms.Panel();
+            this.buttonMinimize = new System.Windows.Forms.Button();
+            this.buttonMaximize = new System.Windows.Forms.Button();
+            this.buttonCLose = new System.Windows.Forms.Button();
+            this.panelTitle = new System.Windows.Forms.Panel();
             this.panelDropdownRP.SuspendLayout();
             this.flowLayoutPanelMenu.SuspendLayout();
             this.panelDropdownGiaoDich.SuspendLayout();
@@ -382,69 +382,17 @@
             this.panelParentOfPanelMenu.Size = new System.Drawing.Size(220, 760);
             this.panelParentOfPanelMenu.TabIndex = 12;
             // 
-            // panelTitle
+            // panelContent
             // 
-            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
-            this.panelTitle.Controls.Add(this.buttonCLose);
-            this.panelTitle.Controls.Add(this.buttonMaximize);
-            this.panelTitle.Controls.Add(this.buttonMinimize);
-            this.panelTitle.Controls.Add(this.panelRedBar);
-            this.panelTitle.Controls.Add(this.labelTitle);
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(220, 0);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1080, 108);
-            this.panelTitle.TabIndex = 0;
-            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
-            // 
-            // buttonCLose
-            // 
-            this.buttonCLose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCLose.FlatAppearance.BorderSize = 0;
-            this.buttonCLose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCLose.Image = ((System.Drawing.Image)(resources.GetObject("buttonCLose.Image")));
-            this.buttonCLose.Location = new System.Drawing.Point(1041, 12);
-            this.buttonCLose.Name = "buttonCLose";
-            this.buttonCLose.Size = new System.Drawing.Size(39, 38);
-            this.buttonCLose.TabIndex = 2;
-            this.buttonCLose.UseVisualStyleBackColor = true;
-            this.buttonCLose.Click += new System.EventHandler(this.buttonCLose_Click);
-            // 
-            // buttonMaximize
-            // 
-            this.buttonMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMaximize.FlatAppearance.BorderSize = 0;
-            this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMaximize.Image = ((System.Drawing.Image)(resources.GetObject("buttonMaximize.Image")));
-            this.buttonMaximize.Location = new System.Drawing.Point(1002, 12);
-            this.buttonMaximize.Name = "buttonMaximize";
-            this.buttonMaximize.Size = new System.Drawing.Size(39, 38);
-            this.buttonMaximize.TabIndex = 5;
-            this.buttonMaximize.UseVisualStyleBackColor = true;
-            this.buttonMaximize.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // buttonMinimize
-            // 
-            this.buttonMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMinimize.FlatAppearance.BorderSize = 0;
-            this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinimize.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinimize.Image")));
-            this.buttonMinimize.Location = new System.Drawing.Point(963, 12);
-            this.buttonMinimize.Name = "buttonMinimize";
-            this.buttonMinimize.Size = new System.Drawing.Size(39, 38);
-            this.buttonMinimize.TabIndex = 3;
-            this.buttonMinimize.UseVisualStyleBackColor = true;
-            this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
-            // 
-            // panelRedBar
-            // 
-            this.panelRedBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(42)))), ((int)(((byte)(0)))));
-            this.panelRedBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRedBar.Location = new System.Drawing.Point(0, 0);
-            this.panelRedBar.Name = "panelRedBar";
-            this.panelRedBar.Size = new System.Drawing.Size(1080, 12);
-            this.panelRedBar.TabIndex = 2;
-            this.panelRedBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            this.panelContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelContent.BackColor = System.Drawing.Color.White;
+            this.panelContent.Location = new System.Drawing.Point(220, 106);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1080, 654);
+            this.panelContent.TabIndex = 13;
+            this.panelContent.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
             // labelTitle
             // 
@@ -460,17 +408,69 @@
             this.labelTitle.TabIndex = 4;
             this.labelTitle.Text = "T - Luxury";
             // 
-            // panelContent
+            // panelRedBar
             // 
-            this.panelContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContent.BackColor = System.Drawing.Color.White;
-            this.panelContent.Location = new System.Drawing.Point(220, 106);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1080, 654);
-            this.panelContent.TabIndex = 13;
-            this.panelContent.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            this.panelRedBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(42)))), ((int)(((byte)(0)))));
+            this.panelRedBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelRedBar.Location = new System.Drawing.Point(0, 0);
+            this.panelRedBar.Name = "panelRedBar";
+            this.panelRedBar.Size = new System.Drawing.Size(1080, 12);
+            this.panelRedBar.TabIndex = 2;
+            this.panelRedBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            // 
+            // buttonMinimize
+            // 
+            this.buttonMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMinimize.FlatAppearance.BorderSize = 0;
+            this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMinimize.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinimize.Image")));
+            this.buttonMinimize.Location = new System.Drawing.Point(963, 12);
+            this.buttonMinimize.Name = "buttonMinimize";
+            this.buttonMinimize.Size = new System.Drawing.Size(39, 38);
+            this.buttonMinimize.TabIndex = 3;
+            this.buttonMinimize.UseVisualStyleBackColor = true;
+            this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
+            // 
+            // buttonMaximize
+            // 
+            this.buttonMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMaximize.FlatAppearance.BorderSize = 0;
+            this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMaximize.Image = ((System.Drawing.Image)(resources.GetObject("buttonMaximize.Image")));
+            this.buttonMaximize.Location = new System.Drawing.Point(1002, 12);
+            this.buttonMaximize.Name = "buttonMaximize";
+            this.buttonMaximize.Size = new System.Drawing.Size(39, 38);
+            this.buttonMaximize.TabIndex = 5;
+            this.buttonMaximize.UseVisualStyleBackColor = true;
+            this.buttonMaximize.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonCLose
+            // 
+            this.buttonCLose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCLose.FlatAppearance.BorderSize = 0;
+            this.buttonCLose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCLose.Image = ((System.Drawing.Image)(resources.GetObject("buttonCLose.Image")));
+            this.buttonCLose.Location = new System.Drawing.Point(1041, 12);
+            this.buttonCLose.Name = "buttonCLose";
+            this.buttonCLose.Size = new System.Drawing.Size(39, 38);
+            this.buttonCLose.TabIndex = 2;
+            this.buttonCLose.UseVisualStyleBackColor = true;
+            this.buttonCLose.Click += new System.EventHandler(this.buttonCLose_Click);
+            // 
+            // panelTitle
+            // 
+            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(107)))), ((int)(((byte)(135)))));
+            this.panelTitle.Controls.Add(this.buttonCLose);
+            this.panelTitle.Controls.Add(this.buttonMaximize);
+            this.panelTitle.Controls.Add(this.buttonMinimize);
+            this.panelTitle.Controls.Add(this.panelRedBar);
+            this.panelTitle.Controls.Add(this.labelTitle);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Location = new System.Drawing.Point(220, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(1080, 108);
+            this.panelTitle.TabIndex = 0;
+            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
             // MainForm
             // 
@@ -486,7 +486,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             this.panelDropdownRP.ResumeLayout(false);
             this.flowLayoutPanelMenu.ResumeLayout(false);
@@ -521,12 +521,12 @@
         private System.Windows.Forms.Panel panelParentOfPanelMenu;
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Panel panelTitle;
-        private System.Windows.Forms.Button buttonCLose;
-        private System.Windows.Forms.Button buttonMaximize;
-        private System.Windows.Forms.Button buttonMinimize;
-        private System.Windows.Forms.Panel panelRedBar;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panelContent;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Panel panelRedBar;
+        private System.Windows.Forms.Button buttonMinimize;
+        private System.Windows.Forms.Button buttonMaximize;
+        private System.Windows.Forms.Button buttonCLose;
+        private System.Windows.Forms.Panel panelTitle;
     }
 }

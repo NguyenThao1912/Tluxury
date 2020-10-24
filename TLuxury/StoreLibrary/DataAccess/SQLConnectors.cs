@@ -326,9 +326,17 @@ namespace StoreLibrary.DataAccess
         /// </summary>
         /// <returns></returns>
 
-        public DataTable GetAllEntryBills()
+        public DataTable GetAllEntryBills(DateTime start, DateTime end)
         {
-            throw new NotImplementedException();
+            DataTable model = new DataTable();
+            var p = new DynamicParameters();
+            p.Add("@DateStart", start);
+            p.Add("@DateEnd", end);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                model.Load(connection.ExecuteReader("dbo.GetAllEntryInvoices", p, commandType: CommandType.StoredProcedure));
+            }
+            return model;
         }
 
         /// <summary>
@@ -489,6 +497,42 @@ namespace StoreLibrary.DataAccess
                 p.Add("@Total", total);
                 connection.Execute("dbo.InsertNewEntryDetails", p, commandType: CommandType.StoredProcedure);
             }
+        }
+
+        public DataTable FindEntryInvoiceByID(string ID)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@EntryID", ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindEntryInvoiceBy_ID ", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+        public DataTable FindEntryInvoiceBySupplierName(string name)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@SupplierName", name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindEntryInvoiceBy_SupplierName", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+        public DataTable FindEntryInvoiceByEmployeeName(string name)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@EmployeeName", name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindEntryInvoiceBy_EmployeeName", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
         }
     }
 }

@@ -19,6 +19,7 @@ namespace TLuxury.Forms
         {
             InitializeComponent();
             WireData();
+            comboBox1.SelectedItem = "--- Tìm Kiếm ---";
         }
         private void WireData()
         {
@@ -123,48 +124,49 @@ namespace TLuxury.Forms
             else
                 MessageBox.Show("Hãy chọn 1 hàng trên danh sách ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        private void buttonFind_Click(object sender, EventArgs e)
-        {
-            DataTable table = new DataTable();
-            try
-            {
-                if (comboBox1.Text != "")
-                {
-                    if (comboBox1.Text == "Tìm Theo Tên NCC")
-                    {
-                        table = GlobalConfig.Connection.FindSupplierByName($"{textBoxFind.Text.Trim()}");
-                    }
-                    else if (comboBox1.Text == "Tìm Theo Mã NCC")
-                    {
-                        table = GlobalConfig.Connection.FindSupplierByID(textBoxFind.Text);
-                    }
-                }
-                if (table.Rows.Count > 0)
-                {
-                    DanhsachNCC.DataSource = null;
-                    DanhsachNCC.DataSource = table;
-                    DanhsachNCC.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                    DanhsachNCC.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                    DanhsachNCC.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                    DanhsachNCC.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                }
-                else
-                    if (comboBox1.Text == "")
-                    MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK);
-                else
-                    MessageBox.Show("Không tìm thấy kết quả phù hợp với tìm kiếm", "Thông báo", MessageBoxButtons.OK);
-
-            }
-            catch (Exception b)
-            {
-                MessageBox.Show($"Xảy ra lỗi trong quá trình tìm kiếm {b} ", "Thông báo", MessageBoxButtons.OK);
-            }
-        }
+        
         private void textBoxFind_TextChanged(object sender, EventArgs e)
         {
             if (textBoxFind.Text == "")
             {
                 WireData();
+            }
+            else
+            {
+                DataTable table = new DataTable();
+                try
+                {
+                    if (comboBox1.Text != "")
+                    {
+                        if (comboBox1.Text == "Tìm Theo Tên NCC")
+                        {
+                            table = GlobalConfig.Connection.FindSupplierByName($"{textBoxFind.Text.Trim()}");
+                        }
+                        else if (comboBox1.Text == "Tìm Theo Mã NCC")
+                        {
+                            table = GlobalConfig.Connection.FindSupplierByID(textBoxFind.Text);
+                        }
+                    }
+                    if (table.Rows.Count > 0)
+                    {
+                        DanhsachNCC.DataSource = null;
+                        DanhsachNCC.DataSource = table;
+                        DanhsachNCC.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                        DanhsachNCC.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                        DanhsachNCC.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                        DanhsachNCC.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    }
+                    else
+                        if (comboBox1.Text == "")
+                        {
+                            MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK);
+                            textBoxFind.Text = "";
+                        }
+                }
+                catch (Exception b)
+                {
+                    MessageBox.Show($"Xảy ra lỗi trong quá trình tìm kiếm {b} ", "Thông báo", MessageBoxButtons.OK);
+                }
             }
         }
         private void ItemNum1_Click(object sender, EventArgs e)
@@ -172,5 +174,9 @@ namespace TLuxury.Forms
             WireData();
         }
 
+        private void comboBox1_MouseLeave(object sender, EventArgs e)
+        {
+            textBoxFind.Text = "";
+        }
     }
 }

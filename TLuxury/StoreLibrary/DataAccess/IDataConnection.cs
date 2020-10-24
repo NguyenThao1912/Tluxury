@@ -37,7 +37,7 @@ namespace StoreLibrary.DataAccess
         DataTable GetAllEmployees();
         DataTable GetAllProducts();
         DataTable GetAllSuppliers();
-        DataTable GetAllEntryBills();
+        DataTable GetAllEntryBills(DateTime start,DateTime end);
         DataTable GetAllSellBills();
         void DeleteCustomer(Model_Customer model);
         void UpdateCustomer(Model_Customer model);
@@ -47,9 +47,10 @@ namespace StoreLibrary.DataAccess
         DataTable FindCustomerByID(string ID);
         DataTable FindSupplierByName(string name);
         DataTable FindSupplierByID(string ID);
-
         Model_EntryInvoice InsertNewEntryInvoice(string emID, string supID, DateTime day, decimal total);
         void InsertNewEntryDetails(string entryID,string prodID,float discount,decimal unitprice,int quantity,decimal total );
-        
+        DataTable FindEntryInvoiceByID(string ID);
+        DataTable FindEntryInvoiceBySupplierName(string name);
+        DataTable FindEntryInvoiceByEmployeeName(string name);
     }
 }
