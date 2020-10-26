@@ -52,6 +52,12 @@
     <Compile Include="Forms\addhoadon.designer.cs">
       <DependentUpon>addhoadon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BANHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BANHANG.Designer.cs">
+      <DependentUpon>BANHANG.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CF_EntryInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\addhoadon.resx">
       <DependentUpon>addhoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BANHANG.resx">
+      <DependentUpon>BANHANG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CF_EntryInvoice.resx">
       <DependentUpon>CF_EntryInvoice.cs</DependentUpon>
