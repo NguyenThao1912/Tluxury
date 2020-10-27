@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BANHANG));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxthanhtoan = new System.Windows.Forms.TextBox();
             this.labeltienthua = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.labelkhachthanhtoan = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.labelkhachtra = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,14 +54,30 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonthanhtoan = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridViewhanghoa = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxtimhang = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewhanghoa)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -69,9 +85,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Controls.Add(this.textBoxthanhtoan);
             this.panel1.Controls.Add(this.labeltienthua);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.labelkhachthanhtoan);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.labelkhachtra);
             this.panel1.Controls.Add(this.label9);
@@ -90,6 +106,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(398, 768);
             this.panel1.TabIndex = 0;
+            // 
+            // textBoxthanhtoan
+            // 
+            this.textBoxthanhtoan.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBoxthanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxthanhtoan.Location = new System.Drawing.Point(191, 556);
+            this.textBoxthanhtoan.Name = "textBoxthanhtoan";
+            this.textBoxthanhtoan.Size = new System.Drawing.Size(185, 30);
+            this.textBoxthanhtoan.TabIndex = 16;
             // 
             // labeltienthua
             // 
@@ -112,17 +137,6 @@
             this.label14.Size = new System.Drawing.Size(185, 25);
             this.label14.TabIndex = 14;
             this.label14.Text = "Tiền thừa trả khách:";
-            // 
-            // labelkhachthanhtoan
-            // 
-            this.labelkhachthanhtoan.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelkhachthanhtoan.AutoSize = true;
-            this.labelkhachthanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelkhachthanhtoan.Location = new System.Drawing.Point(187, 556);
-            this.labelkhachthanhtoan.Name = "labelkhachthanhtoan";
-            this.labelkhachthanhtoan.Size = new System.Drawing.Size(23, 25);
-            this.labelkhachthanhtoan.TabIndex = 13;
-            this.labelkhachthanhtoan.Text = "0";
             // 
             // label12
             // 
@@ -256,6 +270,7 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "14_Add-512.png");
             this.imageList1.Images.SetKeyName(1, "unnamed.png");
+            this.imageList1.Images.SetKeyName(2, "iconfinder_basket_1814090.png");
             // 
             // textBoxtenkh
             // 
@@ -294,7 +309,7 @@
             this.labeltime.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labeltime.AutoSize = true;
             this.labeltime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeltime.Location = new System.Drawing.Point(238, 32);
+            this.labeltime.Location = new System.Drawing.Point(263, 27);
             this.labeltime.Name = "labeltime";
             this.labeltime.Size = new System.Drawing.Size(64, 25);
             this.labeltime.TabIndex = 2;
@@ -305,9 +320,9 @@
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 24);
+            this.comboBox1.Location = new System.Drawing.Point(29, 24);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(204, 33);
+            this.comboBox1.Size = new System.Drawing.Size(213, 33);
             this.comboBox1.TabIndex = 1;
             // 
             // buttonthanhtoan
@@ -331,6 +346,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel1.Controls.Add(this.panel3);
             this.splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // splitContainer1.Panel2
@@ -338,9 +355,52 @@
             this.splitContainer1.Panel2.Controls.Add(this.dataGridViewhanghoa);
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Size = new System.Drawing.Size(934, 768);
-            this.splitContainer1.SplitterDistance = 457;
+            this.splitContainer1.SplitterDistance = 274;
             this.splitContainer1.SplitterWidth = 10;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column8,
+            this.Column9,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(200, 0);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(732, 272);
+            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 272);
+            this.panel3.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(8, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(184, 238);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // dataGridViewhanghoa
             // 
@@ -349,11 +409,13 @@
             this.dataGridViewhanghoa.Location = new System.Drawing.Point(0, 44);
             this.dataGridViewhanghoa.MultiSelect = false;
             this.dataGridViewhanghoa.Name = "dataGridViewhanghoa";
+            this.dataGridViewhanghoa.ReadOnly = true;
             this.dataGridViewhanghoa.RowHeadersWidth = 51;
             this.dataGridViewhanghoa.RowTemplate.Height = 24;
             this.dataGridViewhanghoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewhanghoa.Size = new System.Drawing.Size(932, 255);
+            this.dataGridViewhanghoa.Size = new System.Drawing.Size(932, 438);
             this.dataGridViewhanghoa.TabIndex = 1;
+            this.dataGridViewhanghoa.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewhanghoa_CellContentDoubleClick);
             // 
             // panel2
             // 
@@ -371,6 +433,79 @@
             this.textBoxtimhang.Size = new System.Drawing.Size(246, 22);
             this.textBoxtimhang.TabIndex = 0;
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "MÃ QUẦN ÁO";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.HeaderText = "TÊN QUẦN ÁO";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 104;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column8.HeaderText = "CỠ";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 57;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column9.HeaderText = "MÀU";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 67;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "SỐ LƯỢNG";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column4.HeaderText = "ĐƠN GIÁ";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 88;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "GIẢM GIÁ(%)";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "THÀNH TIỀN";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "XÓA";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            // 
             // BANHANG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -386,9 +521,13 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewhanghoa)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -415,7 +554,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label labeltienthua;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label labelkhachthanhtoan;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label labelkhachtra;
         private System.Windows.Forms.Label label9;
@@ -425,5 +563,18 @@
         private System.Windows.Forms.Label labeltongsoluong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBoxthanhtoan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewButtonColumn Column7;
     }
 }
