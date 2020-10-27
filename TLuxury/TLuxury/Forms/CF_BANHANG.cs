@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace TLuxury.Forms
 {
-    public partial class BANHANG : Form
+    public partial class CF_BANHANG : Form
     {
-        public BANHANG()
+        public CF_BANHANG()
         {
             InitializeComponent();
         }

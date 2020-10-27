@@ -1,6 +1,6 @@
 ﻿namespace TLuxury.Forms
 {
-    partial class BANHANG
+    partial class CF_BANHANG
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BANHANG));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_BANHANG));
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxthanhtoan = new System.Windows.Forms.TextBox();
             this.labeltienthua = new System.Windows.Forms.Label();
