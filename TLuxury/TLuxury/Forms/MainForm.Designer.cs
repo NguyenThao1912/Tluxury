@@ -73,11 +73,14 @@
             this.panelDropdownRP.Controls.Add(this.buttonRP_NCC);
             this.panelDropdownRP.Controls.Add(this.buttonBaoCao);
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.panelDropdownRP.Location = new System.Drawing.Point(4, 577);
             this.panelDropdownRP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDropdownRP.MaximumSize = new System.Drawing.Size(275, 188);
             this.panelDropdownRP.MinimumSize = new System.Drawing.Size(275, 62);
 =======
+=======
+>>>>>>> parent of 39cefb8... fix
             this.panelDropdownRP.Location = new System.Drawing.Point(3, 524);
             this.panelDropdownRP.MaximumSize = new System.Drawing.Size(220, 150);
             this.panelDropdownRP.MinimumSize = new System.Drawing.Size(220, 50);
@@ -354,7 +357,11 @@
             this.panelDropdown_DoiTac.MinimumSize = new System.Drawing.Size(275, 62);
             this.panelDropdown_DoiTac.Name = "panelDropdown_DoiTac";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.panelDropdown_DoiTac.Size = new System.Drawing.Size(275, 62);
+=======
+            this.panelDropdown_DoiTac.Size = new System.Drawing.Size(220, 113);
+>>>>>>> parent of 39cefb8... fix
 =======
             this.panelDropdown_DoiTac.Size = new System.Drawing.Size(220, 113);
 >>>>>>> parent of 39cefb8... fix
