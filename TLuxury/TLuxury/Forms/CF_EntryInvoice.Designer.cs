@@ -95,6 +95,7 @@
             this.DanhsachHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DanhsachHoaDon.Size = new System.Drawing.Size(1064, 635);
             this.DanhsachHoaDon.TabIndex = 3;
+            this.DanhsachHoaDon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhsachHoaDon_CellDoubleClick);
             // 
             // label1
             // 

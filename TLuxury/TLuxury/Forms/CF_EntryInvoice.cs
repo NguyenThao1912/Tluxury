@@ -123,5 +123,12 @@ namespace TLuxury.Forms
                 }
             }
         }
+
+        private void DanhsachHoaDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1) return;
+            EntryDetails f = new EntryDetails(DanhsachHoaDon.Rows[e.RowIndex].Cells[0].Value.ToString(), DanhsachHoaDon.Rows[e.RowIndex].Cells[3].Value.ToString());
+            f.ShowDialog();
+        }
     }
 }

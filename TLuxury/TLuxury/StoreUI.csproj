@@ -52,11 +52,11 @@
     <Compile Include="Forms\addhoadon.designer.cs">
       <DependentUpon>addhoadon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BANHANG.cs">
+    <Compile Include="Forms\CF_BANHANG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BANHANG.Designer.cs">
-      <DependentUpon>BANHANG.cs</DependentUpon>
+    <Compile Include="Forms\CF_BANHANG.Designer.cs">
+      <DependentUpon>CF_BANHANG.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CF_EntryInvoice.cs">
       <SubType>Form</SubType>
@@ -124,6 +124,12 @@
     <Compile Include="Forms\CF_Supplier.Designer.cs">
       <DependentUpon>CF_Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EntryDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EntryDetails.designer.cs">
+      <DependentUpon>EntryDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,8 +141,8 @@
     <EmbeddedResource Include="Forms\addhoadon.resx">
       <DependentUpon>addhoadon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\BANHANG.resx">
-      <DependentUpon>BANHANG.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CF_BANHANG.resx">
+      <DependentUpon>CF_BANHANG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CF_EntryInvoice.resx">
       <DependentUpon>CF_EntryInvoice.cs</DependentUpon>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CF_Supplier.resx">
       <DependentUpon>CF_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EntryDetails.resx">
+      <DependentUpon>EntryDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

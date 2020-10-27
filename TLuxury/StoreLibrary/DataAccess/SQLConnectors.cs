@@ -539,5 +539,24 @@ namespace StoreLibrary.DataAccess
             }
             return table;
         }
+
+        public DataTable GetAllEntryDetails(string id, out int quantity, out decimal total, out string supplierName)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                DataTable table = new DataTable();
+                var p = new DynamicParameters();
+                p.Add("@EntryInvoiceID", id);
+                p.Add("@Quantity", 0, DbType.Int32, direction: ParameterDirection.Output);
+                p.Add("@Total", 0, DbType.Decimal, direction: ParameterDirection.Output);
+                p.Add("@Name", "", DbType.String, direction: ParameterDirection.Output);
+                table.Load(connection.ExecuteReader("GetAllProduct_In_EntryInvoice", p, commandType: CommandType.StoredProcedure));
+                quantity = p.Get<int>("@Quantity");
+                total = p.Get<decimal>("@Total");
+                supplierName = p.Get<string>("@Name");
+                return table;
+            }
+
+        }
     }
 }

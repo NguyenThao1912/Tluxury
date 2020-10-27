@@ -101,4 +101,5 @@ D:\Netflix\Git\Luxury\Tluxury-9159102c47a64707509932d53298c2b104121aa8\TLuxury\T
 D:\Netflix\Git\Luxury\Tluxury-9159102c47a64707509932d53298c2b104121aa8\TLuxury\TLuxury\obj\Debug\StoreUI.csproj.CopyComplete
 D:\Netflix\Git\Luxury\Tluxury-9159102c47a64707509932d53298c2b104121aa8\TLuxury\TLuxury\obj\Debug\TLuxury.exe
 D:\Netflix\Git\Luxury\Tluxury-9159102c47a64707509932d53298c2b104121aa8\TLuxury\TLuxury\obj\Debug\TLuxury.pdb
-D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.BANHANG.resources
+D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_BANHANG.resources
+D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.EntryDetails.resources
