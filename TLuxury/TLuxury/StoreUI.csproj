@@ -118,6 +118,12 @@
     <Compile Include="Forms\CF_Supplier.Designer.cs">
       <DependentUpon>CF_Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EntryDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EntryDetails.Designer.cs">
+      <DependentUpon>EntryDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CF_Supplier.resx">
       <DependentUpon>CF_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EntryDetails.resx">
+      <DependentUpon>EntryDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

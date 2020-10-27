@@ -24,7 +24,7 @@ namespace TLuxury.Forms
         {
             AddEntryInvoice entry = new AddEntryInvoice();
             entry.ShowDialog();
-         
+            WireData();
         }
         private void WireData()
         {
@@ -36,6 +36,7 @@ namespace TLuxury.Forms
                 table = GlobalConfig.Connection.GetAllEntryBills(start, end);
                 DanhsachHoaDon.DataSource = null;
                 DanhsachHoaDon.DataSource = table;
+                MessageBox.Show(table.Rows.Count.ToString());
             }
             catch (Exception t)
             {
@@ -43,7 +44,11 @@ namespace TLuxury.Forms
             }
 
         }
-
+        private void LoadRecord(int pageNumber,int numberRecord)
+        {
+            DataTable table = new DataTable();
+            
+        }
         private void DateStart_ValueChanged(object sender, EventArgs e)
         {
             if (DateEnd.Value < DateStart.Value)
@@ -123,5 +128,14 @@ namespace TLuxury.Forms
                 }
             }
         }
+
+        private void DanhsachHoaDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1) return;
+            EntryDetails f = new EntryDetails(DanhsachHoaDon.Rows[e.RowIndex].Cells[0].Value.ToString(),DanhsachHoaDon.Rows[e.RowIndex].Cells[3].Value.ToString());
+            f.ShowDialog();
+
+        }
+
     }
 }

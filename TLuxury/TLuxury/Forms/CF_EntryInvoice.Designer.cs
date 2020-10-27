@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_EntryInvoice));
@@ -42,6 +43,7 @@
             this.textBoxFind = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelDatagrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachHoaDon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -62,6 +64,7 @@
             // DanhsachHoaDon
             // 
             this.DanhsachHoaDon.AllowDrop = true;
+            this.DanhsachHoaDon.AllowUserToAddRows = false;
             this.DanhsachHoaDon.AllowUserToResizeColumns = false;
             this.DanhsachHoaDon.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -95,6 +98,8 @@
             this.DanhsachHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DanhsachHoaDon.Size = new System.Drawing.Size(1064, 635);
             this.DanhsachHoaDon.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.DanhsachHoaDon, "\"Double Click Để xem thông tin\"");
+            this.DanhsachHoaDon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhsachHoaDon_CellDoubleClick);
             // 
             // label1
             // 
@@ -220,6 +225,12 @@
             this.panel1.Size = new System.Drawing.Size(1064, 138);
             this.panel1.TabIndex = 22;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.InitialDelay = 1;
+            this.toolTip1.ReshowDelay = 100;
+            // 
             // CF_EntryInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,5 +261,6 @@
         private System.Windows.Forms.TextBox textBoxFind;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

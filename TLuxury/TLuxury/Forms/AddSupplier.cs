@@ -47,11 +47,18 @@ namespace TLuxury.Forms
         {
             if(ValidateForm())
             {
-                Model_Supplier model = new Model_Supplier(textBoxName.Text,textBoxAddress.Text,textBoxPhoneNumber.Text);
-                //Chạy lệnh SQL
-                GlobalConfig.Connection.InsertNewSupplier(model);
-                MessageBox.Show("Nhập Thành Công", "Thông Báo", MessageBoxButtons.OK);
-                this.Dispose();
+                try
+                {
+                    Model_Supplier model = new Model_Supplier(textBoxName.Text, textBoxAddress.Text, textBoxPhoneNumber.Text);
+                    //Chạy lệnh SQL
+                    GlobalConfig.Connection.InsertNewSupplier(model);
+                    MessageBox.Show("Nhập Thành Công", "Thông Báo", MessageBoxButtons.OK);
+                    this.Dispose();
+                }
+                catch
+                {
+                    MessageBox.Show("lỗi SQL");
+                }
             }
         }
 

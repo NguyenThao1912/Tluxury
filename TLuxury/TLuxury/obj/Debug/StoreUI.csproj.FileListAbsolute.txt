@@ -71,3 +71,4 @@ D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.Add_hoadon
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_HOADON.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_EntryInvoice.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_Products.resources
+D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.EntryDetails.resources
