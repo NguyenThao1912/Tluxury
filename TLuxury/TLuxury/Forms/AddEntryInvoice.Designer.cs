@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEntryInvoice));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxEntryID = new System.Windows.Forms.TextBox();
             this.labelEntryID = new System.Windows.Forms.Label();
@@ -88,7 +88,7 @@
             this.textBoxEntryID.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxEntryID.Location = new System.Drawing.Point(164, 40);
             this.textBoxEntryID.Name = "textBoxEntryID";
-            this.textBoxEntryID.Size = new System.Drawing.Size(284, 25);
+            this.textBoxEntryID.Size = new System.Drawing.Size(284, 29);
             this.textBoxEntryID.TabIndex = 29;
             this.textBoxEntryID.Text = "( Mã Hóa đơn được tạo tự động )";
             // 
@@ -99,7 +99,7 @@
             this.labelEntryID.Location = new System.Drawing.Point(46, 43);
             this.labelEntryID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEntryID.Name = "labelEntryID";
-            this.labelEntryID.Size = new System.Drawing.Size(88, 19);
+            this.labelEntryID.Size = new System.Drawing.Size(107, 23);
             this.labelEntryID.TabIndex = 6;
             this.labelEntryID.Text = "Mã Hóa Đơn";
             // 
@@ -110,7 +110,7 @@
             this.label2.Location = new System.Drawing.Point(24, 77);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 19);
+            this.label2.Size = new System.Drawing.Size(138, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nhân Viên Nhập";
             // 
@@ -120,10 +120,10 @@
             this.DateEntryPicker.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateEntryPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateEntryPicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.DateEntryPicker.Location = new System.Drawing.Point(647, 77);
+            this.DateEntryPicker.Location = new System.Drawing.Point(666, 77);
             this.DateEntryPicker.Margin = new System.Windows.Forms.Padding(4);
             this.DateEntryPicker.Name = "DateEntryPicker";
-            this.DateEntryPicker.Size = new System.Drawing.Size(172, 25);
+            this.DateEntryPicker.Size = new System.Drawing.Size(172, 29);
             this.DateEntryPicker.TabIndex = 2;
             // 
             // labelDayEntry
@@ -133,7 +133,7 @@
             this.labelDayEntry.Location = new System.Drawing.Point(561, 80);
             this.labelDayEntry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDayEntry.Name = "labelDayEntry";
-            this.labelDayEntry.Size = new System.Drawing.Size(78, 19);
+            this.labelDayEntry.Size = new System.Drawing.Size(97, 23);
             this.labelDayEntry.TabIndex = 3;
             this.labelDayEntry.Text = "Ngày Nhập";
             // 
@@ -144,7 +144,7 @@
             this.comboBoxEmployee.FormattingEnabled = true;
             this.comboBoxEmployee.Location = new System.Drawing.Point(164, 77);
             this.comboBoxEmployee.Name = "comboBoxEmployee";
-            this.comboBoxEmployee.Size = new System.Drawing.Size(284, 25);
+            this.comboBoxEmployee.Size = new System.Drawing.Size(284, 29);
             this.comboBoxEmployee.TabIndex = 5;
             // 
             // groupBox2
@@ -186,7 +186,7 @@
             0,
             0});
             this.numericUpDownQuantity.Name = "numericUpDownQuantity";
-            this.numericUpDownQuantity.Size = new System.Drawing.Size(101, 29);
+            this.numericUpDownQuantity.Size = new System.Drawing.Size(101, 34);
             this.numericUpDownQuantity.TabIndex = 30;
             // 
             // label1
@@ -194,7 +194,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(531, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 21);
+            this.label1.Size = new System.Drawing.Size(75, 28);
             this.label1.TabIndex = 29;
             this.label1.Text = "( VND )";
             // 
@@ -203,16 +203,16 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(713, 102);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 21);
+            this.label10.Size = new System.Drawing.Size(50, 28);
             this.label10.TabIndex = 28;
             this.label10.Text = "( % )";
             // 
             // textBoxDiscount
             // 
             this.textBoxDiscount.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDiscount.Location = new System.Drawing.Point(674, 102);
+            this.textBoxDiscount.Location = new System.Drawing.Point(679, 102);
             this.textBoxDiscount.Name = "textBoxDiscount";
-            this.textBoxDiscount.Size = new System.Drawing.Size(33, 25);
+            this.textBoxDiscount.Size = new System.Drawing.Size(33, 29);
             this.textBoxDiscount.TabIndex = 27;
             this.textBoxDiscount.Text = "0";
             // 
@@ -223,7 +223,7 @@
             this.label9.Location = new System.Drawing.Point(602, 105);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 19);
+            this.label9.Size = new System.Drawing.Size(80, 23);
             this.label9.TabIndex = 26;
             this.label9.Text = "Giảm Giá";
             // 
@@ -243,7 +243,7 @@
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(634, 145);
+            this.buttonDelete.Location = new System.Drawing.Point(574, 145);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(108, 35);
             this.buttonDelete.TabIndex = 15;
@@ -254,9 +254,9 @@
             // buttonComplete
             // 
             this.buttonComplete.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonComplete.Location = new System.Drawing.Point(748, 145);
+            this.buttonComplete.Location = new System.Drawing.Point(698, 145);
             this.buttonComplete.Name = "buttonComplete";
-            this.buttonComplete.Size = new System.Drawing.Size(108, 35);
+            this.buttonComplete.Size = new System.Drawing.Size(140, 35);
             this.buttonComplete.TabIndex = 17;
             this.buttonComplete.Text = "Hoàn Thành";
             this.buttonComplete.UseVisualStyleBackColor = true;
@@ -278,7 +278,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(524, 145);
+            this.buttonAdd.Location = new System.Drawing.Point(456, 145);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(104, 35);
             this.buttonAdd.TabIndex = 14;
@@ -289,19 +289,19 @@
             // textBoxUnitPrice
             // 
             this.textBoxUnitPrice.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUnitPrice.Location = new System.Drawing.Point(395, 102);
+            this.textBoxUnitPrice.Location = new System.Drawing.Point(395, 106);
             this.textBoxUnitPrice.Name = "textBoxUnitPrice";
-            this.textBoxUnitPrice.Size = new System.Drawing.Size(130, 25);
+            this.textBoxUnitPrice.Size = new System.Drawing.Size(130, 29);
             this.textBoxUnitPrice.TabIndex = 13;
             // 
             // labelUnitPrice
             // 
             this.labelUnitPrice.AutoSize = true;
             this.labelUnitPrice.Font = new System.Drawing.Font("Leelawadee UI", 10F);
-            this.labelUnitPrice.Location = new System.Drawing.Point(322, 105);
+            this.labelUnitPrice.Location = new System.Drawing.Point(310, 108);
             this.labelUnitPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUnitPrice.Name = "labelUnitPrice";
-            this.labelUnitPrice.Size = new System.Drawing.Size(66, 19);
+            this.labelUnitPrice.Size = new System.Drawing.Size(82, 23);
             this.labelUnitPrice.TabIndex = 12;
             this.labelUnitPrice.Text = "Giá Nhập";
             // 
@@ -309,10 +309,10 @@
             // 
             this.labelQuantity.AutoSize = true;
             this.labelQuantity.Font = new System.Drawing.Font("Leelawadee UI", 10F);
-            this.labelQuantity.Location = new System.Drawing.Point(78, 108);
+            this.labelQuantity.Location = new System.Drawing.Point(29, 110);
             this.labelQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelQuantity.Name = "labelQuantity";
-            this.labelQuantity.Size = new System.Drawing.Size(104, 19);
+            this.labelQuantity.Size = new System.Drawing.Size(129, 23);
             this.labelQuantity.TabIndex = 10;
             this.labelQuantity.Text = "Số Lượng Nhập";
             // 
@@ -320,10 +320,10 @@
             // 
             this.labelSupplier.AutoSize = true;
             this.labelSupplier.Font = new System.Drawing.Font("Leelawadee UI", 10F);
-            this.labelSupplier.Location = new System.Drawing.Point(49, 66);
+            this.labelSupplier.Location = new System.Drawing.Point(29, 65);
             this.labelSupplier.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSupplier.Name = "labelSupplier";
-            this.labelSupplier.Size = new System.Drawing.Size(136, 19);
+            this.labelSupplier.Size = new System.Drawing.Size(169, 23);
             this.labelSupplier.TabIndex = 8;
             this.labelSupplier.Text = "Chọn Nhà Cung Cấp";
             // 
@@ -334,17 +334,17 @@
             this.comboBoxSupplier.FormattingEnabled = true;
             this.comboBoxSupplier.Location = new System.Drawing.Point(202, 63);
             this.comboBoxSupplier.Name = "comboBoxSupplier";
-            this.comboBoxSupplier.Size = new System.Drawing.Size(510, 25);
+            this.comboBoxSupplier.Size = new System.Drawing.Size(510, 29);
             this.comboBoxSupplier.TabIndex = 9;
             // 
             // labelProduct
             // 
             this.labelProduct.AutoSize = true;
             this.labelProduct.Font = new System.Drawing.Font("Leelawadee UI", 10F);
-            this.labelProduct.Location = new System.Drawing.Point(78, 33);
+            this.labelProduct.Location = new System.Drawing.Point(29, 31);
             this.labelProduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProduct.Name = "labelProduct";
-            this.labelProduct.Size = new System.Drawing.Size(107, 19);
+            this.labelProduct.Size = new System.Drawing.Size(133, 23);
             this.labelProduct.TabIndex = 6;
             this.labelProduct.Text = "Chọn Sản Phẩm";
             // 
@@ -355,21 +355,21 @@
             this.comboBoxProduct.FormattingEnabled = true;
             this.comboBoxProduct.Location = new System.Drawing.Point(202, 28);
             this.comboBoxProduct.Name = "comboBoxProduct";
-            this.comboBoxProduct.Size = new System.Drawing.Size(510, 25);
+            this.comboBoxProduct.Size = new System.Drawing.Size(510, 29);
             this.comboBoxProduct.TabIndex = 7;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -377,6 +377,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(855, 259);
@@ -387,9 +388,9 @@
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.labelTotal.ForeColor = System.Drawing.Color.Red;
-            this.labelTotal.Location = new System.Drawing.Point(687, 21);
+            this.labelTotal.Location = new System.Drawing.Point(622, 24);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(88, 19);
+            this.labelTotal.Size = new System.Drawing.Size(109, 23);
             this.labelTotal.TabIndex = 26;
             this.labelTotal.Text = "Tổng Tiền : 0";
             // 
@@ -397,15 +398,15 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Leelawadee UI", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(14, 9);
+            this.label8.Location = new System.Drawing.Point(3, 6);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 32);
+            this.label8.Size = new System.Drawing.Size(169, 41);
             this.label8.TabIndex = 27;
             this.label8.Text = "Nhập Hàng";
             // 
             // AddEntryInvoice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(874, 631);

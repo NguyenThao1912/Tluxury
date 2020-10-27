@@ -306,7 +306,12 @@ namespace StoreLibrary.DataAccess
         /// <returns></returns>
         public DataTable GetAllProducts()
         {
-            throw new NotImplementedException();
+            DataTable model = new DataTable();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                model.Load(connection.ExecuteReader("dbo.getallproduct_banhang", null, commandType: CommandType.StoredProcedure));
+            }
+            return model;
         }
         /// <summary>
         /// Lấy toàn bộ Nhà cung cấp ra 1 data table

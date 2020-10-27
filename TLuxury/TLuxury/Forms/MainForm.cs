@@ -134,7 +134,7 @@ namespace TLuxury.Forms
 
         private void buttonBanHang_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new BANHANG(), (Button)sender);
         }
 
         private void buttonHD_Ban_Click(object sender, EventArgs e)
