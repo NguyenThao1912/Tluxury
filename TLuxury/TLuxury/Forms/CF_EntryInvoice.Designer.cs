@@ -56,12 +56,13 @@
             this.panelDatagrid.Controls.Add(this.DanhsachHoaDon);
             this.panelDatagrid.Location = new System.Drawing.Point(0, 139);
             this.panelDatagrid.Name = "panelDatagrid";
-            this.panelDatagrid.Size = new System.Drawing.Size(1064, 635);
+            this.panelDatagrid.Size = new System.Drawing.Size(1064, 477);
             this.panelDatagrid.TabIndex = 12;
             // 
             // DanhsachHoaDon
             // 
             this.DanhsachHoaDon.AllowDrop = true;
+            this.DanhsachHoaDon.AllowUserToAddRows = false;
             this.DanhsachHoaDon.AllowUserToResizeColumns = false;
             this.DanhsachHoaDon.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,7 +94,7 @@
             this.DanhsachHoaDon.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachHoaDon.RowTemplate.Height = 30;
             this.DanhsachHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachHoaDon.Size = new System.Drawing.Size(1064, 635);
+            this.DanhsachHoaDon.Size = new System.Drawing.Size(1064, 477);
             this.DanhsachHoaDon.TabIndex = 3;
             this.DanhsachHoaDon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhsachHoaDon_CellDoubleClick);
             // 

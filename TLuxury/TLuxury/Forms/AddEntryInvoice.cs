@@ -190,6 +190,8 @@ namespace TLuxury.Forms
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.Rows.Count < 2)
+                return;
             if(MessageBox.Show("Bạn chắc chắn muốn xóa sản phẩm này ","Thông báo",MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 foreach (DataGridViewRow item in dataGridView1.SelectedRows)

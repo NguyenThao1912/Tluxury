@@ -11,28 +11,65 @@ namespace TLuxury.Forms
         public CF_BANHANG()
         {
             InitializeComponent();
+            InitializeButton();
         }
-
+        private void InitializeButton()
+        {
+            DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+            {
+                button.Name = "hihi";
+                button.HeaderText = "Chức Năng";
+                button.Text = "Xóa";
+                button.UseColumnTextForButtonValue = true; 
+                this.dataGridView1.Columns.Add(button);
+            }
+        }
         private void BANHANG_Load(object sender, EventArgs e)
         {
-            labeltime.Text = DateTime.Now.ToString("MM/dd/yyyy");
-            DataTable model = GlobalConfig.Connection.GetAllProducts();
-            dataGridViewhanghoa.DataSource = null;
-            dataGridViewhanghoa.DataSource = model;
-            dataGridViewhanghoa.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewhanghoa.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewhanghoa.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewhanghoa.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewhanghoa.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewhanghoa.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewhanghoa.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewhanghoa.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewhanghoa.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewhanghoa.Columns[9].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewhanghoa.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            try
+            {
+                labeltime.Text = DateTime.Now.ToString("MM/dd/yyyy");
+                DataTable model = GlobalConfig.Connection.GetAllProducts();
+                dataGridViewhanghoa.DataSource = null;
+                dataGridViewhanghoa.DataSource = model;
+                dataGridViewhanghoa.Columns["Mã Sản Phẩm"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridViewhanghoa.Columns["Tên Sản Phẩm"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dataGridViewhanghoa.Columns["Loại Sản Phẩm"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridViewhanghoa.Columns["Kích Cỡ"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridViewhanghoa.Columns["Nguyên Liệu"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dataGridViewhanghoa.Columns["Màu Sắc"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridViewhanghoa.Columns["Đối Tượng"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dataGridViewhanghoa.Columns["Mùa"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridViewhanghoa.Columns["Nhà Sản Xuất"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dataGridViewhanghoa.Columns["Số Lượng"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridViewhanghoa.Columns["Giá Bán"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            catch(Exception r)
+            {
+                MessageBox.Show($"lỗi sql  {r}");
+            }
+        }
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.CurrentRow.Cells[7].Value =
+                decimal.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString()) *
+                decimal.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString()) *
+                ( 1-(decimal.Parse(dataGridView1.CurrentRow.Cells[6].Value.ToString())/100));
+
+            int dem = 0; float tongtien = 0;
+            for (var VARIABLE = 0; VARIABLE <= dataGridView1.Rows.Count - 1; VARIABLE++)
+            {
+                if (dataGridView1.Rows[VARIABLE].Cells[4].Value != null)
+                    dem += int.Parse(dataGridView1.Rows[VARIABLE].Cells[4].Value.ToString());
+                if (dataGridView1.Rows[VARIABLE].Cells[7].Value != null)
+                    tongtien += float.Parse(dataGridView1.Rows[VARIABLE].Cells[7].Value.ToString());
+            }
+
+            labeltongsoluong.Text = " " + (dem);
+            labeltongtien.Text = " " + tongtien;
         }
 
-        private void dataGridViewhanghoa_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewhanghoa_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Rows.Count == 0) return;
             Model_Product product = new Model_Product();
@@ -60,11 +97,12 @@ namespace TLuxury.Forms
             addRow.Cells[7].Value = product.PriceSell;
 
 
-            Button b=new Button();
+/*            Button b = new Button();
             b.Text = " ";
             b.ImageList = imageList1;
             b.ImageIndex = 3;
-            addRow.Cells[8].Value = b;
+
+            addRow.Cells[8].Value = b;*/
 
 
 
@@ -80,28 +118,12 @@ namespace TLuxury.Forms
             }
 
             labeltongsoluong.Text = " " + (dem);
-            labeltongtien.Text = " " + tongtien;
+            labeltongtien.Text = " " + tongtien;    
         }
 
-        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView1.CurrentRow.Cells[7].Value =
-                decimal.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString()) *
-                decimal.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString()) *
-                ( 1-(decimal.Parse(dataGridView1.CurrentRow.Cells[6].Value.ToString())/100))
-                ;
-
-            int dem = 0; float tongtien = 0;
-            for (var VARIABLE = 0; VARIABLE <= dataGridView1.Rows.Count - 1; VARIABLE++)
-            {
-                if (dataGridView1.Rows[VARIABLE].Cells[4].Value != null)
-                    dem += int.Parse(dataGridView1.Rows[VARIABLE].Cells[4].Value.ToString());
-                if (dataGridView1.Rows[VARIABLE].Cells[7].Value != null)
-                    tongtien += float.Parse(dataGridView1.Rows[VARIABLE].Cells[7].Value.ToString());
-            }
-
-            labeltongsoluong.Text = " " + (dem);
-            labeltongtien.Text = " " + tongtien;
+            //DO SOMETHING
         }
     }
 }
