@@ -210,7 +210,7 @@ namespace TLuxury.Forms
 
                 try
                 {
-                    model = GlobalConfig.Connection.InsertNewEntryInvoice(Employee.ID, Supplier.ID, DateEntryPicker.Value.ToString("yyyy-MM-dd HH:mm:ss"), tongtien);
+                    model = GlobalConfig.Connection.InsertNewEntryInvoice(Employee.ID, Supplier.ID, DateEntryPicker.Value, tongtien);
                 }
                 catch (Exception r)
                 {

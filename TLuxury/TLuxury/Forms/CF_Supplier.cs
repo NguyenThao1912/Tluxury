@@ -136,7 +136,7 @@ namespace TLuxury.Forms
                 DataTable table = new DataTable();
                 try
                 {
-                    if (comboBox1.Text != "--- Tìm Kiếm ---")
+                    if (comboBox1.Text != "")
                     {
                         if (comboBox1.Text == "Tìm Theo Tên NCC")
                         {
@@ -157,9 +157,9 @@ namespace TLuxury.Forms
                         DanhsachNCC.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     }
                     else
-                        if (comboBox1.Text == "--- Tìm Kiếm ---")
+                        if (comboBox1.Text == "")
                         {
-                            MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK);
                             textBoxFind.Text = "";
                         }
                 }

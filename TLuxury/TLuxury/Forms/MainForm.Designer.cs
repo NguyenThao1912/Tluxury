@@ -72,10 +72,16 @@
             this.panelDropdownRP.Controls.Add(this.buttonRP_Doanhthu);
             this.panelDropdownRP.Controls.Add(this.buttonRP_NCC);
             this.panelDropdownRP.Controls.Add(this.buttonBaoCao);
+<<<<<<< HEAD
             this.panelDropdownRP.Location = new System.Drawing.Point(4, 577);
             this.panelDropdownRP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDropdownRP.MaximumSize = new System.Drawing.Size(275, 188);
             this.panelDropdownRP.MinimumSize = new System.Drawing.Size(275, 62);
+=======
+            this.panelDropdownRP.Location = new System.Drawing.Point(3, 524);
+            this.panelDropdownRP.MaximumSize = new System.Drawing.Size(220, 150);
+            this.panelDropdownRP.MinimumSize = new System.Drawing.Size(220, 50);
+>>>>>>> parent of 39cefb8... fix
             this.panelDropdownRP.Name = "panelDropdownRP";
             this.panelDropdownRP.Size = new System.Drawing.Size(275, 188);
             this.panelDropdownRP.TabIndex = 9;
@@ -347,7 +353,11 @@
             this.panelDropdown_DoiTac.MaximumSize = new System.Drawing.Size(275, 141);
             this.panelDropdown_DoiTac.MinimumSize = new System.Drawing.Size(275, 62);
             this.panelDropdown_DoiTac.Name = "panelDropdown_DoiTac";
+<<<<<<< HEAD
             this.panelDropdown_DoiTac.Size = new System.Drawing.Size(275, 62);
+=======
+            this.panelDropdown_DoiTac.Size = new System.Drawing.Size(220, 113);
+>>>>>>> parent of 39cefb8... fix
             this.panelDropdown_DoiTac.TabIndex = 11;
             // 
             // buttonDT_NhaCungCap

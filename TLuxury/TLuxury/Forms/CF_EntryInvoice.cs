@@ -69,9 +69,9 @@ namespace TLuxury.Forms
                 DataTable table = new DataTable();
                 try
                 {
-                    if (comboBox1.Text != "--- Tìm Kiếm ---")
+                    if (comboBox1.Text != "")
                     {
-                        if (comboBox1.Text == "Tìm Theo Tên Nhà Cung Cấp")
+                        if (comboBox1.Text == "Tìm Theo Nhà Cung Cấp")
                         { 
                             try
                             {
@@ -111,9 +111,9 @@ namespace TLuxury.Forms
                         DanhsachHoaDon.DataSource = table;
                     }
                     else
-                        if (comboBox1.Text == "--- Tìm Kiếm ---")
+                        if (comboBox1.Text == "")
                         {
-                            MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK);
                             textBoxFind.Text = "";
                          }
                 }

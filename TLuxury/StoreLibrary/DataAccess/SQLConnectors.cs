@@ -468,7 +468,7 @@ namespace StoreLibrary.DataAccess
             return model;
         }
 
-        public Model_EntryInvoice InsertNewEntryInvoice(string emID,string supID,string day,decimal total)
+        public Model_EntryInvoice InsertNewEntryInvoice(string emID,string supID,DateTime day,decimal total)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
@@ -482,7 +482,7 @@ namespace StoreLibrary.DataAccess
                 connection.Execute("dbo.InsertNewEntryInvoice", p, commandType: CommandType.StoredProcedure);
                 model.ID =  p.Get<string>("@EntryID");
                 model.SupplierID = supID;
-                model.Day = DateTime.Parse(day);
+                model.Day = day;
                 model.EmployeeID = emID;
                 model.Total = total;
                 return model;
