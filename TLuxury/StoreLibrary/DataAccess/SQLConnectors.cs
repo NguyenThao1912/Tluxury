@@ -297,7 +297,12 @@ namespace StoreLibrary.DataAccess
         /// <returns></returns>
         public DataTable GetAllEmployees()
         {
-            throw new NotImplementedException();
+            DataTable model = new DataTable();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                model.Load(connection.ExecuteReader("dbo.GetAllEmployee", null, commandType: CommandType.StoredProcedure));
+            }
+            return model;
         }
 
         /// <summary>

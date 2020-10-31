@@ -146,5 +146,10 @@ namespace TLuxury.Forms
         {
             OpenChildForm(new CF_EntryInvoice(), (Button)sender);
         }
+
+        private void buttonEmployee_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CF_Employee(), (Button)sender);
+        }
     }
 }

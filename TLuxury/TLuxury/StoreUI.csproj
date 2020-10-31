@@ -52,23 +52,29 @@
     <Compile Include="Forms\addhoadon.designer.cs">
       <DependentUpon>addhoadon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CF_BANHANG.cs">
+    <Compile Include="CF_Forms\CF_BANHANG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CF_BANHANG.Designer.cs">
+    <Compile Include="CF_Forms\CF_BANHANG.Designer.cs">
       <DependentUpon>CF_BANHANG.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CF_EntryInvoice.cs">
+    <Compile Include="CF_Forms\CF_Employee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CF_EntryInvoice.Designer.cs">
+    <Compile Include="CF_Forms\CF_Employee.Designer.cs">
+      <DependentUpon>CF_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CF_Forms\CF_EntryInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CF_Forms\CF_EntryInvoice.Designer.cs">
       <DependentUpon>CF_EntryInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CF_HOADON1.cs">
+    <Compile Include="CF_Forms\CF_SaleInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CF_HOADON1.designer.cs">
-      <DependentUpon>CF_HOADON1.cs</DependentUpon>
+    <Compile Include="CF_Forms\CF_SaleInvoice.designer.cs">
+      <DependentUpon>CF_SaleInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Add.cs">
       <SubType>Form</SubType>
@@ -106,22 +112,28 @@
     <Compile Include="Forms\AddSupplier.Designer.cs">
       <DependentUpon>AddSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CF_Customer.cs">
+    <Compile Include="CF_Forms\CF_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CF_Customer.Designer.cs">
+    <Compile Include="CF_Forms\CF_Customer.Designer.cs">
       <DependentUpon>CF_Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CF_Products.cs">
+    <Compile Include="CF_Forms\CF_Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CF_Products.Designer.cs">
+    <Compile Include="CF_Forms\CF_Home.Designer.cs">
+      <DependentUpon>CF_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CF_Forms\CF_Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CF_Forms\CF_Products.Designer.cs">
       <DependentUpon>CF_Products.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CF_Supplier.cs">
+    <Compile Include="CF_Forms\CF_Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CF_Supplier.Designer.cs">
+    <Compile Include="CF_Forms\CF_Supplier.Designer.cs">
       <DependentUpon>CF_Supplier.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EntryDetails.cs">
@@ -141,14 +153,17 @@
     <EmbeddedResource Include="Forms\addhoadon.resx">
       <DependentUpon>addhoadon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CF_BANHANG.resx">
+    <EmbeddedResource Include="CF_Forms\CF_BANHANG.resx">
       <DependentUpon>CF_BANHANG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CF_EntryInvoice.resx">
+    <EmbeddedResource Include="CF_Forms\CF_Employee.resx">
+      <DependentUpon>CF_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CF_Forms\CF_EntryInvoice.resx">
       <DependentUpon>CF_EntryInvoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CF_HOADON1.resx">
-      <DependentUpon>CF_HOADON1.cs</DependentUpon>
+    <EmbeddedResource Include="CF_Forms\CF_SaleInvoice.resx">
+      <DependentUpon>CF_SaleInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
@@ -168,13 +183,13 @@
     <EmbeddedResource Include="Forms\AddSupplier.resx">
       <DependentUpon>AddSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CF_Customer.resx">
+    <EmbeddedResource Include="CF_Forms\CF_Customer.resx">
       <DependentUpon>CF_Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CF_Products.resx">
+    <EmbeddedResource Include="CF_Forms\CF_Products.resx">
       <DependentUpon>CF_Products.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CF_Supplier.resx">
+    <EmbeddedResource Include="CF_Forms\CF_Supplier.resx">
       <DependentUpon>CF_Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EntryDetails.resx">

@@ -33,10 +33,10 @@
             this.labelName = new System.Windows.Forms.Label();
             this.labelTotal = new System.Windows.Forms.Label();
             this.groupBoxGeneral = new System.Windows.Forms.GroupBox();
+            this.labelDay = new System.Windows.Forms.Label();
             this.labelQuantity = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelList = new System.Windows.Forms.Label();
-            this.labelDay = new System.Windows.Forms.Label();
             this.groupBoxGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -95,6 +95,15 @@
             this.groupBoxGeneral.TabStop = false;
             this.groupBoxGeneral.Text = "Thông Tin Chung Hóa Đơn";
             // 
+            // labelDay
+            // 
+            this.labelDay.AutoSize = true;
+            this.labelDay.Location = new System.Drawing.Point(579, 77);
+            this.labelDay.Name = "labelDay";
+            this.labelDay.Size = new System.Drawing.Size(96, 21);
+            this.labelDay.TabIndex = 6;
+            this.labelDay.Text = "Ngày Nhập :";
+            // 
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
@@ -130,15 +139,6 @@
             this.labelList.TabIndex = 6;
             this.labelList.Text = "Danh Sách Sản Phẩm";
             // 
-            // labelDay
-            // 
-            this.labelDay.AutoSize = true;
-            this.labelDay.Location = new System.Drawing.Point(579, 77);
-            this.labelDay.Name = "labelDay";
-            this.labelDay.Size = new System.Drawing.Size(96, 21);
-            this.labelDay.TabIndex = 6;
-            this.labelDay.Text = "Ngày Nhập :";
-            // 
             // EntryDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -153,7 +153,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EntryDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "EmtryDetails";
+            this.Text = "EntryDetails";
             this.Load += new System.EventHandler(this.EntryDetails_Load);
             this.groupBoxGeneral.ResumeLayout(false);
             this.groupBoxGeneral.PerformLayout();

@@ -63,6 +63,11 @@ namespace TLuxury.Forms
                 MessageBox.Show("hãy Tích vào giới tính", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
+            if(DateTime.Now.Year - dateTimePicker1.Value.Year < 18)
+            {
+                MessageBox.Show("Chỉ nhận nhân viên trên 18 tuổi", "Thông Báo", MessageBoxButtons.OK);
+                return false;
+            }
             if(cbxRole.SelectedIndex == -1)
             {
                 MessageBox.Show("Chức vụ không được để trống", "Thông Báo", MessageBoxButtons.OK);

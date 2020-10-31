@@ -56,7 +56,7 @@
             this.panelDatagrid.Controls.Add(this.DanhsachHoaDon);
             this.panelDatagrid.Location = new System.Drawing.Point(0, 139);
             this.panelDatagrid.Name = "panelDatagrid";
-            this.panelDatagrid.Size = new System.Drawing.Size(1064, 477);
+            this.panelDatagrid.Size = new System.Drawing.Size(1080, 516);
             this.panelDatagrid.TabIndex = 12;
             // 
             // DanhsachHoaDon
@@ -94,7 +94,7 @@
             this.DanhsachHoaDon.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachHoaDon.RowTemplate.Height = 30;
             this.DanhsachHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachHoaDon.Size = new System.Drawing.Size(1064, 477);
+            this.DanhsachHoaDon.Size = new System.Drawing.Size(1080, 516);
             this.DanhsachHoaDon.TabIndex = 3;
             this.DanhsachHoaDon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhsachHoaDon_CellDoubleClick);
             // 
@@ -115,7 +115,7 @@
             this.DateEnd.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateEnd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.DateEnd.Location = new System.Drawing.Point(941, 105);
+            this.DateEnd.Location = new System.Drawing.Point(957, 105);
             this.DateEnd.Margin = new System.Windows.Forms.Padding(4);
             this.DateEnd.Name = "DateEnd";
             this.DateEnd.Size = new System.Drawing.Size(109, 29);
@@ -129,7 +129,7 @@
             this.DateStart.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.DateStart.Location = new System.Drawing.Point(734, 105);
+            this.DateStart.Location = new System.Drawing.Point(750, 105);
             this.DateStart.Margin = new System.Windows.Forms.Padding(4);
             this.DateStart.Name = "DateStart";
             this.DateStart.Size = new System.Drawing.Size(114, 29);
@@ -142,7 +142,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(659, 109);
+            this.label2.Location = new System.Drawing.Point(675, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 21);
             this.label2.TabIndex = 16;
@@ -153,7 +153,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(855, 107);
+            this.label3.Location = new System.Drawing.Point(871, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 21);
             this.label3.TabIndex = 17;
@@ -169,7 +169,7 @@
             this.buttonThêm.ForeColor = System.Drawing.Color.White;
             this.buttonThêm.Image = ((System.Drawing.Image)(resources.GetObject("buttonThêm.Image")));
             this.buttonThêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThêm.Location = new System.Drawing.Point(944, 12);
+            this.buttonThêm.Location = new System.Drawing.Point(960, 12);
             this.buttonThêm.Name = "buttonThêm";
             this.buttonThêm.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonThêm.Size = new System.Drawing.Size(108, 48);
@@ -219,7 +219,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1064, 138);
+            this.panel1.Size = new System.Drawing.Size(1080, 138);
             this.panel1.TabIndex = 22;
             // 
             // CF_EntryInvoice
@@ -227,9 +227,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(1064, 615);
+            this.ClientSize = new System.Drawing.Size(1080, 654);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelDatagrid);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CF_EntryInvoice";
             this.Text = "CF_EntryInvoice";
             this.panelDatagrid.ResumeLayout(false);
