@@ -16,5 +16,9 @@ namespace TLuxury.Forms
         {
             InitializeComponent();
         }
+        private void LoadChart()
+        {
+            
+        }
     }
 }

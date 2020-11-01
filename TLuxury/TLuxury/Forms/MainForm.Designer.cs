@@ -42,6 +42,7 @@
             this.buttonHome = new System.Windows.Forms.Button();
             this.buttonBanHang = new System.Windows.Forms.Button();
             this.buttonHangHoa = new System.Windows.Forms.Button();
+            this.buttonEmployee = new System.Windows.Forms.Button();
             this.panelDropdownGiaoDich = new System.Windows.Forms.Panel();
             this.buttonHD_Nhap = new System.Windows.Forms.Button();
             this.buttonHD_Ban = new System.Windows.Forms.Button();
@@ -58,7 +59,6 @@
             this.buttonCLose = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.buttonEmployee = new System.Windows.Forms.Button();
             this.panelDropdownRP.SuspendLayout();
             this.flowLayoutPanelMenu.SuspendLayout();
             this.panelDropdownGiaoDich.SuspendLayout();
@@ -217,8 +217,9 @@
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Size = new System.Drawing.Size(217, 50);
             this.buttonHome.TabIndex = 16;
-            this.buttonHome.Text = "Home";
+            this.buttonHome.Text = "DashBoard";
             this.buttonHome.UseVisualStyleBackColor = false;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
             // buttonBanHang
             // 
@@ -257,6 +258,23 @@
             this.buttonHangHoa.Click += new System.EventHandler(this.buttonHangHoa_Click);
             this.buttonHangHoa.MouseEnter += new System.EventHandler(this.Hover);
             this.buttonHangHoa.MouseLeave += new System.EventHandler(this.Leave);
+            // 
+            // buttonEmployee
+            // 
+            this.buttonEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(60)))));
+            this.buttonEmployee.FlatAppearance.BorderSize = 0;
+            this.buttonEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEmployee.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEmployee.ForeColor = System.Drawing.Color.White;
+            this.buttonEmployee.Image = ((System.Drawing.Image)(resources.GetObject("buttonEmployee.Image")));
+            this.buttonEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEmployee.Location = new System.Drawing.Point(3, 282);
+            this.buttonEmployee.Name = "buttonEmployee";
+            this.buttonEmployee.Size = new System.Drawing.Size(214, 50);
+            this.buttonEmployee.TabIndex = 17;
+            this.buttonEmployee.Text = "Nhân Viên";
+            this.buttonEmployee.UseVisualStyleBackColor = false;
+            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
             // 
             // panelDropdownGiaoDich
             // 
@@ -470,23 +488,6 @@
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1080, 652);
             this.panelContent.TabIndex = 14;
-            // 
-            // buttonEmployee
-            // 
-            this.buttonEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(60)))));
-            this.buttonEmployee.FlatAppearance.BorderSize = 0;
-            this.buttonEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEmployee.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEmployee.ForeColor = System.Drawing.Color.White;
-            this.buttonEmployee.Image = ((System.Drawing.Image)(resources.GetObject("buttonEmployee.Image")));
-            this.buttonEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEmployee.Location = new System.Drawing.Point(3, 282);
-            this.buttonEmployee.Name = "buttonEmployee";
-            this.buttonEmployee.Size = new System.Drawing.Size(214, 50);
-            this.buttonEmployee.TabIndex = 17;
-            this.buttonEmployee.Text = "Nhân Viên";
-            this.buttonEmployee.UseVisualStyleBackColor = false;
-            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
             // 
             // MainForm
             // 

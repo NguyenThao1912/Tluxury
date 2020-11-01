@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Employee));
             this.panelDataGrid = new System.Windows.Forms.Panel();
             this.DanhsachNhanVien = new System.Windows.Forms.DataGridView();
@@ -43,7 +43,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxRole = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.radioButtonNam = new System.Windows.Forms.RadioButton();
             this.buttonSave = new System.Windows.Forms.Button();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
@@ -56,6 +56,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
+            this.dateOfbirth = new System.Windows.Forms.DateTimePicker();
             this.panelDataGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachNhanVien)).BeginInit();
             this.groupBoxTimKiem.SuspendLayout();
@@ -76,33 +77,34 @@
             // DanhsachNhanVien
             // 
             this.DanhsachNhanVien.AllowDrop = true;
+            this.DanhsachNhanVien.AllowUserToAddRows = false;
             this.DanhsachNhanVien.AllowUserToResizeColumns = false;
             this.DanhsachNhanVien.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DanhsachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DanhsachNhanVien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(148)))), ((int)(((byte)(181)))));
             this.DanhsachNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachNhanVien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DanhsachNhanVien.ColumnHeadersHeight = 25;
             this.DanhsachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DanhsachNhanVien.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DanhsachNhanVien.DefaultCellStyle = dataGridViewCellStyle6;
             this.DanhsachNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DanhsachNhanVien.EnableHeadersVisualStyles = false;
             this.DanhsachNhanVien.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -117,6 +119,7 @@
             this.DanhsachNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DanhsachNhanVien.Size = new System.Drawing.Size(646, 529);
             this.DanhsachNhanVien.TabIndex = 2;
+            this.DanhsachNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhsachNhanVien_CellClick);
             // 
             // buttonSua
             // 
@@ -136,6 +139,7 @@
             this.buttonSua.Text = "Sửa";
             this.buttonSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSua.UseVisualStyleBackColor = false;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
             // buttonThêm
             // 
@@ -194,10 +198,11 @@
             // 
             this.groupBoxThongTin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBoxThongTin.Controls.Add(this.dateOfbirth);
             this.groupBoxThongTin.Controls.Add(this.label6);
             this.groupBoxThongTin.Controls.Add(this.comboBoxRole);
             this.groupBoxThongTin.Controls.Add(this.label1);
-            this.groupBoxThongTin.Controls.Add(this.radioButton1);
+            this.groupBoxThongTin.Controls.Add(this.radioButtonNu);
             this.groupBoxThongTin.Controls.Add(this.radioButtonNam);
             this.groupBoxThongTin.Controls.Add(this.buttonSave);
             this.groupBoxThongTin.Controls.Add(this.textBoxPhoneNumber);
@@ -214,7 +219,7 @@
             this.groupBoxThongTin.Size = new System.Drawing.Size(415, 372);
             this.groupBoxThongTin.TabIndex = 15;
             this.groupBoxThongTin.TabStop = false;
-            this.groupBoxThongTin.Text = "Thông tin Khách Hàng";
+            this.groupBoxThongTin.Text = "Thông tin Nhân Viên";
             // 
             // label6
             // 
@@ -223,7 +228,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Leelawadee UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(204, 29);
+            this.label6.Location = new System.Drawing.Point(255, 29);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 17);
             this.label6.TabIndex = 17;
@@ -231,9 +236,10 @@
             // 
             // comboBoxRole
             // 
-            this.comboBoxRole.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxRole.Enabled = false;
+            this.comboBoxRole.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxRole.FormattingEnabled = true;
-            this.comboBoxRole.Location = new System.Drawing.Point(207, 50);
+            this.comboBoxRole.Location = new System.Drawing.Point(258, 49);
             this.comboBoxRole.Name = "comboBoxRole";
             this.comboBoxRole.Size = new System.Drawing.Size(121, 29);
             this.comboBoxRole.TabIndex = 16;
@@ -249,23 +255,25 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Giới Tính";
             // 
-            // radioButton1
+            // radioButtonNu
             // 
-            this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(312, 242);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(49, 25);
-            this.radioButton1.TabIndex = 14;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nữ";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonNu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButtonNu.AutoSize = true;
+            this.radioButtonNu.Enabled = false;
+            this.radioButtonNu.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonNu.Location = new System.Drawing.Point(312, 242);
+            this.radioButtonNu.Name = "radioButtonNu";
+            this.radioButtonNu.Size = new System.Drawing.Size(49, 25);
+            this.radioButtonNu.TabIndex = 14;
+            this.radioButtonNu.TabStop = true;
+            this.radioButtonNu.Text = "Nữ";
+            this.radioButtonNu.UseVisualStyleBackColor = true;
             // 
             // radioButtonNam
             // 
             this.radioButtonNam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButtonNam.AutoSize = true;
+            this.radioButtonNam.Enabled = false;
             this.radioButtonNam.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonNam.Location = new System.Drawing.Point(227, 240);
             this.radioButtonNam.Name = "radioButtonNam";
@@ -294,6 +302,7 @@
             this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSave.UseVisualStyleBackColor = false;
             this.buttonSave.Visible = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // textBoxPhoneNumber
             // 
@@ -351,7 +360,7 @@
             this.textBoxName.Location = new System.Drawing.Point(19, 110);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.ReadOnly = true;
-            this.textBoxName.Size = new System.Drawing.Size(380, 25);
+            this.textBoxName.Size = new System.Drawing.Size(225, 25);
             this.textBoxName.TabIndex = 3;
             // 
             // label3
@@ -372,7 +381,7 @@
             this.textBoxID.Location = new System.Drawing.Point(19, 54);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
-            this.textBoxID.Size = new System.Drawing.Size(140, 25);
+            this.textBoxID.Size = new System.Drawing.Size(162, 25);
             this.textBoxID.TabIndex = 1;
             // 
             // label2
@@ -416,6 +425,18 @@
             this.labelTitle.Size = new System.Drawing.Size(111, 30);
             this.labelTitle.TabIndex = 13;
             this.labelTitle.Text = "Nhân Viên";
+            // 
+            // dateOfbirth
+            // 
+            this.dateOfbirth.CalendarFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOfbirth.CustomFormat = "dd/M/yyyy";
+            this.dateOfbirth.Enabled = false;
+            this.dateOfbirth.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOfbirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateOfbirth.Location = new System.Drawing.Point(258, 110);
+            this.dateOfbirth.Name = "dateOfbirth";
+            this.dateOfbirth.Size = new System.Drawing.Size(121, 29);
+            this.dateOfbirth.TabIndex = 18;
             // 
             // CF_Employee
             // 
@@ -469,7 +490,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxRole;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonNu;
         private System.Windows.Forms.RadioButton radioButtonNam;
+        private System.Windows.Forms.DateTimePicker dateOfbirth;
     }
 }

@@ -55,11 +55,6 @@
             this.buttonthanhtoan = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridViewhanghoa = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBoxtimhang = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +63,11 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewhanghoa = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxtimhang = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -102,7 +102,7 @@
             this.panel1.Controls.Add(this.buttonthanhtoan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(748, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(318, 614);
             this.panel1.TabIndex = 0;
@@ -112,7 +112,7 @@
             this.textBoxthanhtoan.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxthanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxthanhtoan.Location = new System.Drawing.Point(153, 445);
-            this.textBoxthanhtoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxthanhtoan.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxthanhtoan.Name = "textBoxthanhtoan";
             this.textBoxthanhtoan.Size = new System.Drawing.Size(149, 26);
             this.textBoxthanhtoan.TabIndex = 16;
@@ -259,9 +259,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(14, 66);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(287, 139);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -272,7 +272,7 @@
             this.button2.ImageIndex = 1;
             this.button2.ImageList = this.imageList1;
             this.button2.Location = new System.Drawing.Point(185, 31);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(31, 26);
             this.button2.TabIndex = 4;
@@ -290,7 +290,7 @@
             // textBoxtenkh
             // 
             this.textBoxtenkh.Location = new System.Drawing.Point(85, 77);
-            this.textBoxtenkh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxtenkh.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxtenkh.Name = "textBoxtenkh";
             this.textBoxtenkh.Size = new System.Drawing.Size(189, 26);
             this.textBoxtenkh.TabIndex = 3;
@@ -298,7 +298,7 @@
             // textBoxmakh
             // 
             this.textBoxmakh.Location = new System.Drawing.Point(85, 32);
-            this.textBoxmakh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxmakh.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxmakh.Name = "textBoxmakh";
             this.textBoxmakh.Size = new System.Drawing.Size(96, 26);
             this.textBoxmakh.TabIndex = 2;
@@ -341,7 +341,7 @@
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(23, 19);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(171, 28);
             this.comboBox1.TabIndex = 1;
@@ -351,7 +351,7 @@
             this.buttonthanhtoan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonthanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonthanhtoan.Location = new System.Drawing.Point(62, 547);
-            this.buttonthanhtoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonthanhtoan.Margin = new System.Windows.Forms.Padding(2);
             this.buttonthanhtoan.Name = "buttonthanhtoan";
             this.buttonthanhtoan.Size = new System.Drawing.Size(208, 46);
             this.buttonthanhtoan.TabIndex = 0;
@@ -363,7 +363,7 @@
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -396,9 +396,10 @@
             this.Column6});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(160, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -406,62 +407,6 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(160, 217);
-            this.panel3.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 190);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // dataGridViewhanghoa
-            // 
-            this.dataGridViewhanghoa.AllowUserToAddRows = false;
-            this.dataGridViewhanghoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewhanghoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewhanghoa.Location = new System.Drawing.Point(0, 35);
-            this.dataGridViewhanghoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridViewhanghoa.MultiSelect = false;
-            this.dataGridViewhanghoa.Name = "dataGridViewhanghoa";
-            this.dataGridViewhanghoa.ReadOnly = true;
-            this.dataGridViewhanghoa.RowHeadersWidth = 51;
-            this.dataGridViewhanghoa.RowTemplate.Height = 24;
-            this.dataGridViewhanghoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewhanghoa.Size = new System.Drawing.Size(746, 350);
-            this.dataGridViewhanghoa.TabIndex = 1;
-            this.dataGridViewhanghoa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewhanghoa_CellDoubleClick);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.textBoxtimhang);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(746, 35);
-            this.panel2.TabIndex = 0;
-            // 
-            // textBoxtimhang
-            // 
-            this.textBoxtimhang.Location = new System.Drawing.Point(9, 7);
-            this.textBoxtimhang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBoxtimhang.Name = "textBoxtimhang";
-            this.textBoxtimhang.Size = new System.Drawing.Size(198, 20);
-            this.textBoxtimhang.TabIndex = 0;
             // 
             // Column1
             // 
@@ -478,7 +423,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 75;
+            this.Column2.Width = 84;
             // 
             // Column8
             // 
@@ -529,6 +474,63 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(160, 217);
+            this.panel3.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 190);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // dataGridViewhanghoa
+            // 
+            this.dataGridViewhanghoa.AllowUserToAddRows = false;
+            this.dataGridViewhanghoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewhanghoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewhanghoa.Location = new System.Drawing.Point(0, 35);
+            this.dataGridViewhanghoa.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewhanghoa.MultiSelect = false;
+            this.dataGridViewhanghoa.Name = "dataGridViewhanghoa";
+            this.dataGridViewhanghoa.ReadOnly = true;
+            this.dataGridViewhanghoa.RowHeadersVisible = false;
+            this.dataGridViewhanghoa.RowHeadersWidth = 51;
+            this.dataGridViewhanghoa.RowTemplate.Height = 24;
+            this.dataGridViewhanghoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewhanghoa.Size = new System.Drawing.Size(746, 350);
+            this.dataGridViewhanghoa.TabIndex = 1;
+            this.dataGridViewhanghoa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewhanghoa_CellDoubleClick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBoxtimhang);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(746, 35);
+            this.panel2.TabIndex = 0;
+            // 
+            // textBoxtimhang
+            // 
+            this.textBoxtimhang.Location = new System.Drawing.Point(9, 7);
+            this.textBoxtimhang.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxtimhang.Name = "textBoxtimhang";
+            this.textBoxtimhang.Size = new System.Drawing.Size(198, 20);
+            this.textBoxtimhang.TabIndex = 0;
+            // 
             // CF_BANHANG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -537,7 +539,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CF_BANHANG";
             this.Text = "BANHANG";
             this.Load += new System.EventHandler(this.BANHANG_Load);
