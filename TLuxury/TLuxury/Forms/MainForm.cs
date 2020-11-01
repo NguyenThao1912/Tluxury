@@ -120,7 +120,7 @@ namespace TLuxury.Forms
         }
         private void buttonHangHoa_Click(object sender, EventArgs e)
         {
-          
+            OpenChildForm(new CF_Products(), (Button)sender);
         }
         private void buttonDT_KhachHang_Click(object sender, EventArgs e)
         {

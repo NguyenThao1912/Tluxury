@@ -39,7 +39,6 @@
             this.timerOpen = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.buttonHome = new System.Windows.Forms.Button();
             this.buttonBanHang = new System.Windows.Forms.Button();
             this.buttonHangHoa = new System.Windows.Forms.Button();
             this.buttonEmployee = new System.Windows.Forms.Button();
@@ -73,7 +72,7 @@
             this.panelDropdownRP.Controls.Add(this.buttonRP_Doanhthu);
             this.panelDropdownRP.Controls.Add(this.buttonRP_NCC);
             this.panelDropdownRP.Controls.Add(this.buttonBaoCao);
-            this.panelDropdownRP.Location = new System.Drawing.Point(3, 517);
+            this.panelDropdownRP.Location = new System.Drawing.Point(3, 461);
             this.panelDropdownRP.MaximumSize = new System.Drawing.Size(220, 150);
             this.panelDropdownRP.MinimumSize = new System.Drawing.Size(220, 50);
             this.panelDropdownRP.Name = "panelDropdownRP";
@@ -177,7 +176,6 @@
             // 
             this.flowLayoutPanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(60)))));
             this.flowLayoutPanelMenu.Controls.Add(this.panelLogo);
-            this.flowLayoutPanelMenu.Controls.Add(this.buttonHome);
             this.flowLayoutPanelMenu.Controls.Add(this.buttonBanHang);
             this.flowLayoutPanelMenu.Controls.Add(this.buttonHangHoa);
             this.flowLayoutPanelMenu.Controls.Add(this.buttonEmployee);
@@ -204,23 +202,6 @@
             this.panelLogo.TabIndex = 0;
             this.panelLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
-            // buttonHome
-            // 
-            this.buttonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(60)))));
-            this.buttonHome.FlatAppearance.BorderSize = 0;
-            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Font = new System.Drawing.Font("Leelawadee UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHome.ForeColor = System.Drawing.Color.White;
-            this.buttonHome.Image = ((System.Drawing.Image)(resources.GetObject("buttonHome.Image")));
-            this.buttonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.Location = new System.Drawing.Point(3, 114);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(217, 50);
-            this.buttonHome.TabIndex = 16;
-            this.buttonHome.Text = "DashBoard";
-            this.buttonHome.UseVisualStyleBackColor = false;
-            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
-            // 
             // buttonBanHang
             // 
             this.buttonBanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(60)))));
@@ -230,7 +211,7 @@
             this.buttonBanHang.ForeColor = System.Drawing.Color.White;
             this.buttonBanHang.Image = ((System.Drawing.Image)(resources.GetObject("buttonBanHang.Image")));
             this.buttonBanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBanHang.Location = new System.Drawing.Point(3, 170);
+            this.buttonBanHang.Location = new System.Drawing.Point(3, 114);
             this.buttonBanHang.Name = "buttonBanHang";
             this.buttonBanHang.Size = new System.Drawing.Size(217, 50);
             this.buttonBanHang.TabIndex = 15;
@@ -249,7 +230,7 @@
             this.buttonHangHoa.ForeColor = System.Drawing.Color.White;
             this.buttonHangHoa.Image = ((System.Drawing.Image)(resources.GetObject("buttonHangHoa.Image")));
             this.buttonHangHoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHangHoa.Location = new System.Drawing.Point(3, 226);
+            this.buttonHangHoa.Location = new System.Drawing.Point(3, 170);
             this.buttonHangHoa.Name = "buttonHangHoa";
             this.buttonHangHoa.Size = new System.Drawing.Size(214, 50);
             this.buttonHangHoa.TabIndex = 14;
@@ -268,7 +249,7 @@
             this.buttonEmployee.ForeColor = System.Drawing.Color.White;
             this.buttonEmployee.Image = ((System.Drawing.Image)(resources.GetObject("buttonEmployee.Image")));
             this.buttonEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEmployee.Location = new System.Drawing.Point(3, 282);
+            this.buttonEmployee.Location = new System.Drawing.Point(3, 226);
             this.buttonEmployee.Name = "buttonEmployee";
             this.buttonEmployee.Size = new System.Drawing.Size(214, 50);
             this.buttonEmployee.TabIndex = 17;
@@ -281,7 +262,7 @@
             this.panelDropdownGiaoDich.Controls.Add(this.buttonHD_Nhap);
             this.panelDropdownGiaoDich.Controls.Add(this.buttonHD_Ban);
             this.panelDropdownGiaoDich.Controls.Add(this.buttonGiaoDich);
-            this.panelDropdownGiaoDich.Location = new System.Drawing.Point(3, 338);
+            this.panelDropdownGiaoDich.Location = new System.Drawing.Point(3, 282);
             this.panelDropdownGiaoDich.MaximumSize = new System.Drawing.Size(220, 117);
             this.panelDropdownGiaoDich.MinimumSize = new System.Drawing.Size(220, 50);
             this.panelDropdownGiaoDich.Name = "panelDropdownGiaoDich";
@@ -347,7 +328,7 @@
             this.panelDropdown_DoiTac.Controls.Add(this.buttonDT_NhaCungCap);
             this.panelDropdown_DoiTac.Controls.Add(this.buttonDT_KhachHang);
             this.panelDropdown_DoiTac.Controls.Add(this.buttonDoiTac);
-            this.panelDropdown_DoiTac.Location = new System.Drawing.Point(3, 461);
+            this.panelDropdown_DoiTac.Location = new System.Drawing.Point(3, 405);
             this.panelDropdown_DoiTac.MaximumSize = new System.Drawing.Size(220, 113);
             this.panelDropdown_DoiTac.MinimumSize = new System.Drawing.Size(220, 50);
             this.panelDropdown_DoiTac.Name = "panelDropdown_DoiTac";
@@ -536,7 +517,6 @@
         private System.Windows.Forms.Button buttonHangHoa;
         private System.Windows.Forms.Button buttonBanHang;   //============================================================
         private System.Windows.Forms.Panel panelParentOfPanelMenu;
-        private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panelRedBar;
