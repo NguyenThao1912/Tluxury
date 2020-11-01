@@ -98,14 +98,13 @@ namespace TLuxury.Forms
         {
             if (CheckForms())
             {              
-                
+                //Lấy Thông tin được chọn từ Forms
                 Employee = (Model_Employee)comboBoxEmployee.SelectedItem;
                 Model_Product Product = (Model_Product)comboBoxProduct.SelectedItem;
                 Supplier = (Model_Supplier)comboBoxSupplier.SelectedItem;
-                string NameOfProduct = GetProductName(Product.Name);
-                
+                string NameOfProduct = GetProductName(Product.Name);             
                 DateTime day = DateEntryPicker.Value;
-                // Them data vao datagridview
+                // Kiem tra  san pham da co trong danh sách chưa
                 if (CheckStock(Product.ID) == false)
                     MessageBox.Show("Đã có sản phẩm trong danh sách", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 else

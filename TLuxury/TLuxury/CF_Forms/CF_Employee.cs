@@ -21,6 +21,7 @@ namespace TLuxury.Forms
             InitializeComponent();
             WireData();
             LoadRole();
+            comboBox1.SelectedIndex = 0;
         }
         private void WireData()
         {
@@ -110,10 +111,146 @@ namespace TLuxury.Forms
             buttonSave.Visible = true;
 
         }
-
+        private bool Validation()
+        {
+            if(textBoxName.Text == "")
+            {
+                MessageBox.Show("Tên Không được để trống", "Thông Báo", MessageBoxButtons.OK);
+                return false;
+            }
+            if(textBoxPhoneNumber.Text =="")
+            {
+                MessageBox.Show("Số điện thoại không được để trống", "Thông Báo", MessageBoxButtons.OK);
+                return false;
+            }
+            if(DateTime.Now.Year - dateOfbirth.Value.Year <18)
+            {
+                MessageBox.Show("Chỉ nhận nhân viên trên 18 tuổi", "Thông Báo", MessageBoxButtons.OK);
+                return false;
+            }
+            if(comboBoxRole.Text == "")
+            {
+                MessageBox.Show("Cần chọn chức vụ cho nhân viên", "Thông Báo", MessageBoxButtons.OK);
+                return false;
+            }
+            return true;
+        }
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            if(Validation())
+            {
+                Model_Employee em = new Model_Employee();
+                Model_Role role = new Model_Role();
+                em.ID = textBoxID.Text;
+                em.Name = textBoxName.Text;
+                em.DateOfBirth = dateOfbirth.Value;
+                em.Address = textBoxAddress.Text;
+                em.PhoneNumber = textBoxPhoneNumber.Text;
+                role = (Model_Role)comboBoxRole.SelectedItem;
+                em.Role = role;
+                if (radioButtonNam.Checked == true)
+                    em.Sex = 'M';
+                else
+                    em.Sex = 'F';
+                try
+                {
+                    GlobalConfig.Connection.UpdateEmployee(em);
+                    WireData();
+                }
+                catch(Exception t)
+                {
+                    MessageBox.Show($"Lỗi không update được  {t}");
+                }
+                finally
+                {
+                    DeActiveBtn();
+                }
+
+            }
+      
+        }
+
+        private void buttonThem_Click(object sender, EventArgs e)
+        {
+            AddEmployee add = new AddEmployee();
+            add.ShowDialog();
+            WireData();
+        }
+
+        private void textBoxID_TextChanged(object sender, EventArgs e)
+        {
             DeActiveBtn();
+        }
+
+        private void textBoxPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (textBoxID.Text == "")
+            {
+                MessageBox.Show("hãy chọn vào 1 nhân viên trên danh sách", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
+            if(MessageBox.Show("Bạn có chắc muốn xóa nhân viên này","Thông Báo",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    GlobalConfig.Connection.DeleteEmployee(textBoxID.Text);
+                    WireData();
+                    ClearText();
+                    MessageBox.Show($"Xóa Thành Công Nhân viên MÃ {textBoxID.Text}", "Thông Báo", MessageBoxButtons.OK);
+                }
+                catch
+                {
+                    MessageBox.Show("Có Lỗi Không xóa được");
+                }
+            }
+
+        }
+
+        private void textBoxFind_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxFind.Text == "")
+            {
+                WireData();
+            }
+            else
+            {
+                DataTable table = new DataTable();
+                try
+                {
+                    if (comboBox1.Text != "--- Tìm Kiếm ---")
+                    {
+                        if (comboBox1.Text == "Tìm Kiếm Theo Tên Nhân Viên")
+                        {
+                            table = GlobalConfig.Connection.FindEmployeeBy_Name($"{textBoxFind.Text.Trim()}");
+                        }
+                        else if (comboBox1.Text == "Tìm Kiếm Theo Mã Nhân Viên")
+                        {
+                            table = GlobalConfig.Connection.FindEmployeeBy_ID(textBoxFind.Text);
+                        }
+                    }
+                    if (table.Rows.Count > 0)
+                    {
+                        DanhsachNhanVien.DataSource = null;
+                        DanhsachNhanVien.DataSource = table;
+                    }
+                    else
+                        if (comboBox1.Text == "--- Tìm Kiếm ---")
+                        {
+                            MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            textBoxFind.Text = "";
+                        }
+                }
+                catch (Exception b)
+                {
+                    MessageBox.Show($"Xảy ra lỗi trong quá trình tìm kiếm {b} ", "Thông báo", MessageBoxButtons.OK);
+                }
+            }
         }
     }
 }

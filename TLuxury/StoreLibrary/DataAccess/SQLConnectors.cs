@@ -563,5 +563,55 @@ namespace StoreLibrary.DataAccess
             }
 
         }
+
+        public void UpdateEmployee(Model_Employee model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@EmployeeID", model.ID);
+                p.Add("@Name", model.Name);
+                p.Add("@Sex", model.Sex);
+                p.Add("@DateOfBirth", model.DateOfBirth.Date);
+                p.Add("@PhoneNumber", model.PhoneNumber);
+                p.Add("@Address", model.Address);
+                p.Add("@RoleID", model.Role.ID);
+                connection.Execute("dbo.UpdateEmployee", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void DeleteEmployee(string ID)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@EmployeeID", ID);
+                connection.Execute("dbo.Delete_Employee", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public DataTable FindEmployeeBy_ID(string ID)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@ID", ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindEmployeeBy_ID", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+        public DataTable FindEmployeeBy_Name(string name)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@Name", name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindEmployeeBy_Name", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
     }
 }

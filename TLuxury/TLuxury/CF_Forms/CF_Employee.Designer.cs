@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Employee));
             this.panelDataGrid = new System.Windows.Forms.Panel();
             this.DanhsachNhanVien = new System.Windows.Forms.DataGridView();
             this.buttonSua = new System.Windows.Forms.Button();
-            this.buttonThêm = new System.Windows.Forms.Button();
+            this.buttonThem = new System.Windows.Forms.Button();
             this.groupBoxTimKiem = new System.Windows.Forms.GroupBox();
             this.textBoxFind = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBoxThongTin = new System.Windows.Forms.GroupBox();
+            this.dateOfbirth = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxRole = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.dateOfbirth = new System.Windows.Forms.DateTimePicker();
             this.panelDataGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachNhanVien)).BeginInit();
             this.groupBoxTimKiem.SuspendLayout();
@@ -80,31 +80,31 @@
             this.DanhsachNhanVien.AllowUserToAddRows = false;
             this.DanhsachNhanVien.AllowUserToResizeColumns = false;
             this.DanhsachNhanVien.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             this.DanhsachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DanhsachNhanVien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(148)))), ((int)(((byte)(181)))));
             this.DanhsachNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachNhanVien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.DanhsachNhanVien.ColumnHeadersHeight = 25;
             this.DanhsachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DanhsachNhanVien.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DanhsachNhanVien.DefaultCellStyle = dataGridViewCellStyle24;
             this.DanhsachNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DanhsachNhanVien.EnableHeadersVisualStyles = false;
             this.DanhsachNhanVien.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -141,24 +141,25 @@
             this.buttonSua.UseVisualStyleBackColor = false;
             this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
-            // buttonThêm
+            // buttonThem
             // 
-            this.buttonThêm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonThêm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(245)))));
-            this.buttonThêm.FlatAppearance.BorderSize = 0;
-            this.buttonThêm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThêm.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThêm.ForeColor = System.Drawing.Color.White;
-            this.buttonThêm.Image = ((System.Drawing.Image)(resources.GetObject("buttonThêm.Image")));
-            this.buttonThêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThêm.Location = new System.Drawing.Point(717, 34);
-            this.buttonThêm.Name = "buttonThêm";
-            this.buttonThêm.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.buttonThêm.Size = new System.Drawing.Size(104, 48);
-            this.buttonThêm.TabIndex = 17;
-            this.buttonThêm.Text = "Thêm ";
-            this.buttonThêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThêm.UseVisualStyleBackColor = false;
+            this.buttonThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(245)))));
+            this.buttonThem.FlatAppearance.BorderSize = 0;
+            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThem.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThem.ForeColor = System.Drawing.Color.White;
+            this.buttonThem.Image = ((System.Drawing.Image)(resources.GetObject("buttonThem.Image")));
+            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThem.Location = new System.Drawing.Point(717, 34);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonThem.Size = new System.Drawing.Size(104, 48);
+            this.buttonThem.TabIndex = 17;
+            this.buttonThem.Text = "Thêm ";
+            this.buttonThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonThem.UseVisualStyleBackColor = false;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // groupBoxTimKiem
             // 
@@ -179,6 +180,7 @@
             this.textBoxFind.Name = "textBoxFind";
             this.textBoxFind.Size = new System.Drawing.Size(377, 25);
             this.textBoxFind.TabIndex = 9;
+            this.textBoxFind.TextChanged += new System.EventHandler(this.textBoxFind_TextChanged);
             // 
             // comboBox1
             // 
@@ -187,11 +189,11 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "--- Tìm Kiếm ---",
-            "Tìm Kiếm Theo Tên Khách",
-            "Tìm Kiếm Theo Mã Khách"});
+            "Tìm Kiếm Theo Tên Nhân Viên",
+            "Tìm Kiếm Theo Mã Nhân Viên"});
             this.comboBox1.Location = new System.Drawing.Point(20, 48);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(222, 29);
+            this.comboBox1.Size = new System.Drawing.Size(245, 29);
             this.comboBox1.TabIndex = 10;
             // 
             // groupBoxThongTin
@@ -220,6 +222,18 @@
             this.groupBoxThongTin.TabIndex = 15;
             this.groupBoxThongTin.TabStop = false;
             this.groupBoxThongTin.Text = "Thông tin Nhân Viên";
+            // 
+            // dateOfbirth
+            // 
+            this.dateOfbirth.CalendarFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOfbirth.CustomFormat = "dd/M/yyyy";
+            this.dateOfbirth.Enabled = false;
+            this.dateOfbirth.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOfbirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateOfbirth.Location = new System.Drawing.Point(258, 110);
+            this.dateOfbirth.Name = "dateOfbirth";
+            this.dateOfbirth.Size = new System.Drawing.Size(121, 29);
+            this.dateOfbirth.TabIndex = 18;
             // 
             // label6
             // 
@@ -314,6 +328,7 @@
             this.textBoxPhoneNumber.ReadOnly = true;
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(162, 25);
             this.textBoxPhoneNumber.TabIndex = 7;
+            this.textBoxPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhoneNumber_KeyPress);
             // 
             // label5
             // 
@@ -383,6 +398,7 @@
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(162, 25);
             this.textBoxID.TabIndex = 1;
+            this.textBoxID.TextChanged += new System.EventHandler(this.textBoxID_TextChanged);
             // 
             // label2
             // 
@@ -415,6 +431,7 @@
             this.buttonDelete.Text = "Xóa";
             this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // labelTitle
             // 
@@ -426,18 +443,6 @@
             this.labelTitle.TabIndex = 13;
             this.labelTitle.Text = "Nhân Viên";
             // 
-            // dateOfbirth
-            // 
-            this.dateOfbirth.CalendarFont = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfbirth.CustomFormat = "dd/M/yyyy";
-            this.dateOfbirth.Enabled = false;
-            this.dateOfbirth.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfbirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateOfbirth.Location = new System.Drawing.Point(258, 110);
-            this.dateOfbirth.Name = "dateOfbirth";
-            this.dateOfbirth.Size = new System.Drawing.Size(121, 29);
-            this.dateOfbirth.TabIndex = 18;
-            // 
             // CF_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,7 +451,7 @@
             this.ClientSize = new System.Drawing.Size(1080, 654);
             this.Controls.Add(this.panelDataGrid);
             this.Controls.Add(this.buttonSua);
-            this.Controls.Add(this.buttonThêm);
+            this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.groupBoxTimKiem);
             this.Controls.Add(this.groupBoxThongTin);
             this.Controls.Add(this.buttonDelete);
@@ -471,7 +476,7 @@
         private System.Windows.Forms.Panel panelDataGrid;
         private System.Windows.Forms.DataGridView DanhsachNhanVien;
         private System.Windows.Forms.Button buttonSua;
-        private System.Windows.Forms.Button buttonThêm;
+        private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.GroupBox groupBoxTimKiem;
         private System.Windows.Forms.TextBox textBoxFind;
         private System.Windows.Forms.ComboBox comboBox1;

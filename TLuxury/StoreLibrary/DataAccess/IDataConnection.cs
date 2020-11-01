@@ -53,5 +53,9 @@ namespace StoreLibrary.DataAccess
         DataTable FindEntryInvoiceBySupplierName(string name);
         DataTable FindEntryInvoiceByEmployeeName(string name);
         DataTable GetAllEntryDetails(string id, out int quantity, out decimal total, out string supplierName);
+        void UpdateEmployee(Model_Employee model);
+        void DeleteEmployee(string ID);
+        DataTable FindEmployeeBy_ID(string ID);
+        DataTable FindEmployeeBy_Name(string name);
     }
 }
