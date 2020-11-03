@@ -23,3 +23,12 @@ D:\git\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.csproj.CoreCompileInp
 D:\git\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.csproj.CopyComplete
 D:\git\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.dll
 D:\git\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.pdb
+E:\C#####\Tluxury\TLuxury\StoreLibrary\bin\Debug\StoreLibrary.dll
+E:\C#####\Tluxury\TLuxury\StoreLibrary\bin\Debug\StoreLibrary.pdb
+E:\C#####\Tluxury\TLuxury\StoreLibrary\bin\Debug\Dapper.dll
+E:\C#####\Tluxury\TLuxury\StoreLibrary\bin\Debug\Dapper.xml
+E:\C#####\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.csprojAssemblyReference.cache
+E:\C#####\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.csproj.CoreCompileInputs.cache
+E:\C#####\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.csproj.CopyComplete
+E:\C#####\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.dll
+E:\C#####\Tluxury\TLuxury\StoreLibrary\obj\Debug\StoreLibrary.pdb

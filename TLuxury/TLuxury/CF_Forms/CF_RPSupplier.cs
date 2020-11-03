@@ -144,5 +144,10 @@ namespace TLuxury.CF_Forms
                 MessageBox.Show("Không có gì để Báo Cáo , hãy kiểm tra đã chọn nhà cung cấp chưa", "Thông Báo");
 
         }
+
+        private void DanhsachNCC_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
