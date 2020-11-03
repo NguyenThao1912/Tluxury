@@ -67,7 +67,6 @@ D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\StoreUI.csproj.CoreCompileInputs.cache
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\StoreUI.csproj.CopyComplete
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.exe
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.pdb
-D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.Add_hoadon.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_HOADON.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_EntryInvoice.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_Products.resources
@@ -105,3 +104,7 @@ D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_BANHANG
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.EntryDetails.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_Employee.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_Home.resources
+D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.CF_Forms.CF_RPSupplier.resources
+D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.CF_Forms.CF_RPCustomer.resources
+D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.CF_Forms.CF_RP_CantSellProducts.resources
+D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.CF_Forms.CF_RPSaleInvoice.resources

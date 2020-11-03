@@ -19,21 +19,13 @@ namespace TLuxury.Forms
             WireData();
             comboBox1.SelectedItem = "--- Tìm Kiếm ---";
         }
-
-        private void buttonThêm_Click(object sender, EventArgs e)
-        {
-            AddEntryInvoice entry = new AddEntryInvoice();
-            entry.ShowDialog();
-         
-        }
         private void WireData()
         {
             try
-            {
-                DataTable table = new DataTable();
+            {              
                 DateTime start = DateStart.Value.AddDays(-1);
-                DateTime end = DateEnd.Value;
-                table = GlobalConfig.Connection.GetAllEntryBills(start, end);
+                DateTime end = DateEnd.Value.AddDays(1);
+                DataTable table = GlobalConfig.Connection.GetAllEntryBills(start, end);
                 DanhsachHoaDon.DataSource = null;
                 DanhsachHoaDon.DataSource = table;
             }
@@ -41,7 +33,6 @@ namespace TLuxury.Forms
             {
                 MessageBox.Show($"Lỗi câu lenh SQL Dòng 35 {t}");
             }
-
         }
 
         private void DateStart_ValueChanged(object sender, EventArgs e)
@@ -127,8 +118,15 @@ namespace TLuxury.Forms
         private void DanhsachHoaDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1) return;
-            EntryDetails f = new EntryDetails(DanhsachHoaDon.Rows[e.RowIndex].Cells[0].Value.ToString(), DanhsachHoaDon.Rows[e.RowIndex].Cells[3].Value.ToString());
-            f.ShowDialog();
+            EntryDetails f = new EntryDetails(DanhsachHoaDon.Rows[e.RowIndex].Cells["Mã Hóa Đơn"].Value.ToString(), DanhsachHoaDon.Rows[e.RowIndex].Cells["Ngày Nhập"].Value.ToString());
+            f.ShowDialog();          
+        }
+
+        private void buttonThem_Click(object sender, EventArgs e)
+        {
+            AddEntryInvoice entry = new AddEntryInvoice();
+            entry.ShowDialog();
+            WireData();
         }
     }
 }

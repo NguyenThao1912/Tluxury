@@ -58,6 +58,7 @@
             this.buttonCLose = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.buttonRPHoaDonBan = new System.Windows.Forms.Button();
             this.panelDropdownRP.SuspendLayout();
             this.flowLayoutPanelMenu.SuspendLayout();
             this.panelDropdownGiaoDich.SuspendLayout();
@@ -68,15 +69,16 @@
             // 
             // panelDropdownRP
             // 
+            this.panelDropdownRP.Controls.Add(this.buttonRPHoaDonBan);
             this.panelDropdownRP.Controls.Add(this.buttonRP_KhachHang);
             this.panelDropdownRP.Controls.Add(this.buttonRP_Doanhthu);
             this.panelDropdownRP.Controls.Add(this.buttonRP_NCC);
             this.panelDropdownRP.Controls.Add(this.buttonBaoCao);
-            this.panelDropdownRP.Location = new System.Drawing.Point(3, 461);
-            this.panelDropdownRP.MaximumSize = new System.Drawing.Size(220, 150);
+            this.panelDropdownRP.Location = new System.Drawing.Point(3, 394);
+            this.panelDropdownRP.MaximumSize = new System.Drawing.Size(220, 183);
             this.panelDropdownRP.MinimumSize = new System.Drawing.Size(220, 50);
             this.panelDropdownRP.Name = "panelDropdownRP";
-            this.panelDropdownRP.Size = new System.Drawing.Size(220, 150);
+            this.panelDropdownRP.Size = new System.Drawing.Size(220, 183);
             this.panelDropdownRP.TabIndex = 9;
             // 
             // buttonRP_KhachHang
@@ -92,8 +94,9 @@
             this.buttonRP_KhachHang.Name = "buttonRP_KhachHang";
             this.buttonRP_KhachHang.Size = new System.Drawing.Size(220, 33);
             this.buttonRP_KhachHang.TabIndex = 11;
-            this.buttonRP_KhachHang.Text = "Khách Hàng";
+            this.buttonRP_KhachHang.Text = "RP Khách Hàng";
             this.buttonRP_KhachHang.UseVisualStyleBackColor = false;
+            this.buttonRP_KhachHang.Click += new System.EventHandler(this.buttonRP_KhachHang_Click);
             // 
             // buttonRP_Doanhthu
             // 
@@ -108,8 +111,9 @@
             this.buttonRP_Doanhthu.Name = "buttonRP_Doanhthu";
             this.buttonRP_Doanhthu.Size = new System.Drawing.Size(220, 33);
             this.buttonRP_Doanhthu.TabIndex = 10;
-            this.buttonRP_Doanhthu.Text = "Doanh Thu";
+            this.buttonRP_Doanhthu.Text = "RP Sản Phẩm";
             this.buttonRP_Doanhthu.UseVisualStyleBackColor = false;
+            this.buttonRP_Doanhthu.Click += new System.EventHandler(this.buttonRP_Doanhthu_Click);
             // 
             // buttonRP_NCC
             // 
@@ -124,8 +128,9 @@
             this.buttonRP_NCC.Name = "buttonRP_NCC";
             this.buttonRP_NCC.Size = new System.Drawing.Size(220, 33);
             this.buttonRP_NCC.TabIndex = 9;
-            this.buttonRP_NCC.Text = "Nhà Cung Cấp";
+            this.buttonRP_NCC.Text = "RP Nhà Cung Cấp";
             this.buttonRP_NCC.UseVisualStyleBackColor = false;
+            this.buttonRP_NCC.Click += new System.EventHandler(this.buttonRP_NCC_Click);
             // 
             // buttonBaoCao
             // 
@@ -266,7 +271,7 @@
             this.panelDropdownGiaoDich.MaximumSize = new System.Drawing.Size(220, 117);
             this.panelDropdownGiaoDich.MinimumSize = new System.Drawing.Size(220, 50);
             this.panelDropdownGiaoDich.Name = "panelDropdownGiaoDich";
-            this.panelDropdownGiaoDich.Size = new System.Drawing.Size(220, 117);
+            this.panelDropdownGiaoDich.Size = new System.Drawing.Size(220, 50);
             this.panelDropdownGiaoDich.TabIndex = 13;
             // 
             // buttonHD_Nhap
@@ -328,7 +333,7 @@
             this.panelDropdown_DoiTac.Controls.Add(this.buttonDT_NhaCungCap);
             this.panelDropdown_DoiTac.Controls.Add(this.buttonDT_KhachHang);
             this.panelDropdown_DoiTac.Controls.Add(this.buttonDoiTac);
-            this.panelDropdown_DoiTac.Location = new System.Drawing.Point(3, 405);
+            this.panelDropdown_DoiTac.Location = new System.Drawing.Point(3, 338);
             this.panelDropdown_DoiTac.MaximumSize = new System.Drawing.Size(220, 113);
             this.panelDropdown_DoiTac.MinimumSize = new System.Drawing.Size(220, 50);
             this.panelDropdown_DoiTac.Name = "panelDropdown_DoiTac";
@@ -470,6 +475,23 @@
             this.panelContent.Size = new System.Drawing.Size(1080, 652);
             this.panelContent.TabIndex = 14;
             // 
+            // buttonRPHoaDonBan
+            // 
+            this.buttonRPHoaDonBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(101)))), ((int)(((byte)(109)))));
+            this.buttonRPHoaDonBan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRPHoaDonBan.FlatAppearance.BorderSize = 0;
+            this.buttonRPHoaDonBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRPHoaDonBan.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRPHoaDonBan.ForeColor = System.Drawing.Color.White;
+            this.buttonRPHoaDonBan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRPHoaDonBan.Location = new System.Drawing.Point(0, 149);
+            this.buttonRPHoaDonBan.Name = "buttonRPHoaDonBan";
+            this.buttonRPHoaDonBan.Size = new System.Drawing.Size(220, 34);
+            this.buttonRPHoaDonBan.TabIndex = 12;
+            this.buttonRPHoaDonBan.Text = "RP Hóa Đơn Bán";
+            this.buttonRPHoaDonBan.UseVisualStyleBackColor = false;
+            this.buttonRPHoaDonBan.Click += new System.EventHandler(this.buttonRPHoaDonBan_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -526,5 +548,6 @@
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.Button buttonEmployee;
+        private System.Windows.Forms.Button buttonRPHoaDonBan;
     }
 }

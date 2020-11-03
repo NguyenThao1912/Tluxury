@@ -30,7 +30,7 @@ namespace TLuxury.Forms
             try
             {
                 DataTable table = GlobalConfig.Connection.GetAllEntryDetails(ID,out quantity, out money, out SupplierName);
-                labelID.Text = "Mã Hóa Đơn : " + ID.ToString();
+                labelID.Text = "Mã Hóa Đơn : " + ID.ToString(); 
                 labelName.Text = "Tên Nhà Cung Cấp : " + SupplierName;
                 labelTotal.Text = "Tổng Tiền : " + money.ToString("N0", System.Globalization.CultureInfo.GetCultureInfo("de")) + " VND";
                 labelQuantity.Text = "Số Lượng Sản Phẩm : " + quantity.ToString();

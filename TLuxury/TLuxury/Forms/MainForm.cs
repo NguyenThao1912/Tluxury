@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using TLuxury.CF_Forms;
 
 namespace TLuxury.Forms
 {
@@ -155,6 +156,26 @@ namespace TLuxury.Forms
         private void buttonHome_Click(object sender, EventArgs e)
         {
             OpenChildForm(new CF_Home(), (Button)sender);
+        }
+
+        private void buttonRP_NCC_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CF_RPSupplier(), (Button)sender);
+        }
+
+        private void buttonRP_KhachHang_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CF_RPCustomer(), (Button)sender);
+        }
+
+        private void buttonRP_Doanhthu_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CF_RP_CantSellProducts(), (Button)sender);
+        }
+
+        private void buttonRPHoaDonBan_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CF_RPSaleInvoice(), (Button)sender);
         }
     }
 }

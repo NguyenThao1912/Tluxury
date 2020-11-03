@@ -44,7 +44,6 @@ namespace TLuxury.Forms
         }
         private void GetSupplier()
         {
-
             try
             {
                 List<Model_Supplier> suppliers = GlobalConfig.Connection.GetAllSupplier_List();
@@ -60,7 +59,6 @@ namespace TLuxury.Forms
         }
         private void GetEmployee()
         {
-
             try
             {
                 List<Model_Employee> employees = GlobalConfig.Connection.GetAllEmployee_List();
@@ -110,15 +108,16 @@ namespace TLuxury.Forms
                 else
                 {
                     stockEntry.Add(Product.ID);
-                    tongtien += numericUpDownQuantity.Value * int.Parse(textBoxUnitPrice.Text);
+                    //Tổng tiền = (Số Lượng * đơn Giá ) * (1 - Giảm Giá)
+                    tongtien += (numericUpDownQuantity.Value * decimal.Parse(textBoxUnitPrice.Text))* (1- decimal.Parse(textBoxDiscount.Text)/100);
                     labelTotal.Text ="Tổng tiền : " + tongtien.ToString("N0",System.Globalization.CultureInfo.GetCultureInfo("de")) + " VND";
+                    //Thêm thông tin vào datagridview
                     int n = dataGridView1.Rows.Add();
                     dataGridView1.Rows[n].Cells[0].Value = Product.ID;
                     dataGridView1.Rows[n].Cells[1].Value = NameOfProduct;
                     dataGridView1.Rows[n].Cells[2].Value = numericUpDownQuantity.Value.ToString();
                     dataGridView1.Rows[n].Cells[3].Value = textBoxUnitPrice.Text;
                     dataGridView1.Rows[n].Cells[4].Value = textBoxDiscount.Text;
-                    dataGridView1.Rows[n].Cells[5].Value = Supplier.ID;
                 }
                 
                 //Clear data
@@ -141,16 +140,8 @@ namespace TLuxury.Forms
             dataGridView1.Columns.Add("ProductName", "Tên Sản Phẩm"); //columnname , header
             dataGridView1.Columns.Add("Quantity", "Số Lượng");        //columnname , header
             dataGridView1.Columns.Add("UnitPrice", "Đơn Giá");        //columnname , header
-            dataGridView1.Columns.Add("Discount", "Giảm Giá");        //columnname , header
-            dataGridView1.Columns.Add("SupplierID", "Nhà Cung Cấp");  //columnname , header
+            dataGridView1.Columns.Add("Discount", "Giảm Giá (%)");    //columnname , header
 
-            //set size cho tung cot
-            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
         private bool CheckForms()
         {
@@ -189,14 +180,18 @@ namespace TLuxury.Forms
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count < 2)
+            if (dataGridView1.Rows.Count < 1)
                 return;
             if(MessageBox.Show("Bạn chắc chắn muốn xóa sản phẩm này ","Thông báo",MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                //Tiến hành Tính lại tiền sau khi xóa
                 foreach (DataGridViewRow item in dataGridView1.SelectedRows)
                 {
-                    decimal money = decimal.Parse(item.Cells[2].Value.ToString()) * decimal.Parse(item.Cells[3].Value.ToString());
+                    //Lấy tiền từ đối tượng được chọn
+                    decimal money = (decimal.Parse(item.Cells[2].Value.ToString()) * decimal.Parse(item.Cells[3].Value.ToString())) * (1-decimal.Parse(item.Cells["Discount"].Value.ToString())/100);
+                    //Lấy tổng tiền hiện tại trừ đi 
                     tongtien = tongtien - money;
+                    //Cập nhật lại Tổng tiền trên label
                     labelTotal.Text = "Tổng tiền : " + tongtien.ToString("N0", System.Globalization.CultureInfo.GetCultureInfo("de")) + " VND";
                     stockEntry.Remove(item.Cells[0].Value.ToString());
                     dataGridView1.Rows.RemoveAt(item.Index);                  
@@ -208,7 +203,7 @@ namespace TLuxury.Forms
         {
             if (MessageBox.Show("Xác Nhận Nhập Hàng  ^_^ ", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-
+                //Thêm dữ liệu vào bảng hóa đơn nhập
                 try
                 {
                     model = GlobalConfig.Connection.InsertNewEntryInvoice(Employee.ID, Supplier.ID, DateEntryPicker.Value.ToString("yyyy-MM-dd HH:mm:ss"), tongtien);
@@ -217,20 +212,24 @@ namespace TLuxury.Forms
                 {
                     MessageBox.Show($"{r.ToString()} Lỗi câu lệnh sql ~ 1 ~ line 186", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+                //Thêm dữ liệu vào bảng chi tiết hóa đơn nhập
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     if (row != null)
                     {
                         try
                         {
+                            decimal unitprice = decimal.Parse(row.Cells["UnitPrice"].Value.ToString());
+                            decimal quantity = decimal.Parse(row.Cells["Quantity"].Value.ToString());
+                            decimal discount = (1 - decimal.Parse(row.Cells["Discount"].Value.ToString()) / 100);
+                            //Truy Vấn SQL
                             GlobalConfig.Connection.InsertNewEntryDetails(
                                 model.ID,
                                 row.Cells["ProductID"].Value.ToString(),
-                                (float.Parse(row.Cells["Discount"].Value.ToString()) * 100) / 100,
+                                float.Parse(row.Cells["Discount"].Value.ToString()),
                                 decimal.Parse(row.Cells["UnitPrice"].Value.ToString()),
                                 int.Parse(row.Cells["Quantity"].Value.ToString()),
-                                decimal.Parse(row.Cells["UnitPrice"].Value.ToString()) * decimal.Parse(row.Cells["Quantity"].Value.ToString())
+                                (unitprice * quantity) * discount
                              );
                           //  dataGridView1.Rows.Clear();
                          //   labelTotal.Text = "Tổng Tiền : 0 VND";

@@ -11,6 +11,7 @@ namespace StoreLibrary.DataAccess
 {
     public class SQLConnectors : IDataConnection
     {
+        #region Tạo Mới Thuộc Tính Sản Phẩm
         public Model_Category CreateNew_Category(Model_Category model)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
@@ -115,7 +116,9 @@ namespace StoreLibrary.DataAccess
                 return model;
             }
         }
-
+        #endregion
+        //----------------------------------------------------------------------------------------------------------------------------------
+        #region Lấy Ra Các Thông Tin từ CSDL
         public List<Model_Category> GetAllCategory()
         {
             List<Model_Category> model;
@@ -195,79 +198,10 @@ namespace StoreLibrary.DataAccess
             }
             return model;
         }
-
-        public Model_Product InsertNewProduct(Model_Product model)
-        {
-            using(IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                var p = new  DynamicParameters();
-                p.Add("@ProductName", model.Name);
-                p.Add("@CategoryID", model.Category.ID);
-                p.Add("@SizeID", model.Size.ID);
-                p.Add("@RawMaterial_ID", model.Material.ID);
-                p.Add("@ColorID", model.Color.ID);
-                p.Add("@ObjectID", model.Object.ID);
-                p.Add("@SeasonId", model.Season.ID);
-                p.Add("@ManufacturedID", model.Manufactured.ID);
-                p.Add("Quantity", model.Quantity);
-                p.Add("@Picture", model.Picture);
-                p.Add("@PriceEntry", model.PriceEntry);
-                p.Add("@PriceSell", model.PriceSell);
-                p.Add("@ProductID","",DbType.String,direction:ParameterDirection.Output);
-                connection.Execute("dbo.InsertNewProduct", p,commandType: CommandType.StoredProcedure);
-                model.ID = p.Get<string>("@ProductID");
-            }
-            return model;
-        }
-
-        public Model_Employee InsertNewEmployee(Model_Employee model)
-        {
-            using(IDbConnection connection =  new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                var p = new DynamicParameters();
-                p.Add("@Name", model.Name);
-                p.Add("@Sex", model.Sex);
-                p.Add("@DateOfBirth", model.DateOfBirth);
-                p.Add("@PhoneNumber", model.PhoneNumber);
-                p.Add("@Address", model.Address);
-                p.Add("@RoleID", model.Role.ID);
-                p.Add("@ID", "", DbType.String, direction: ParameterDirection.Output);
-                connection.Execute("dbo.InsertNewEmployee", p, commandType: CommandType.StoredProcedure);
-                p.Get<string>("@ID");
-                return model;
-            }
-        }
-
-        public Model_Supplier InsertNewSupplier(Model_Supplier model)
-        {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                var p = new DynamicParameters();
-                p.Add("@Name", model.Name);
-                p.Add("@Address", model.Address);
-                p.Add("@PhoneNumber", model.PhoneNumber);
-                p.Add("@ID", "", DbType.String, direction: ParameterDirection.Output);
-                connection.Execute("dbo.InsertNewSupplier", p, commandType: CommandType.StoredProcedure);
-                p.Get<string>("@ID");
-                return model;
-            }
-        }
-
-        public Model_Customer InsertNewCustomer(Model_Customer model)
-        {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                var p = new DynamicParameters();
-                p.Add("@Name", model.Name);
-                p.Add("@Address", model.Address);
-                p.Add("@PhoneNumber", model.PhoneNumber);
-                p.Add("@ID", "", DbType.String, direction: ParameterDirection.Output);
-                connection.Execute("dbo.InsertNewCustomer", p, commandType: CommandType.StoredProcedure);
-                p.Get<string>("@ID");
-                return model;
-            }
-        }
-
+        /// <summary>
+        /// Lấy ra Datatable có thông tin của khách Hàng
+        /// </summary>
+        /// <returns></returns>
         public DataTable GetAllCustomers()
         {
             DataTable model = new DataTable();
@@ -277,20 +211,6 @@ namespace StoreLibrary.DataAccess
             }
             return model;
         }
- 
-        /// <summary>
-        /// Xóa Khách hàng 
-        /// </summary>
-        public void DeleteCustomer(Model_Customer model)
-        {
-            DynamicParameters p = new DynamicParameters();
-            p.Add("@CustomerID", model.ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                connection.Execute("Delete_Customer", p, commandType: CommandType.StoredProcedure);
-            }
-        }
-
         /// <summary>
         /// Lấy toàn bộ Nhân viên ra 1 data table
         /// </summary>
@@ -348,101 +268,6 @@ namespace StoreLibrary.DataAccess
             }
             return model;
         }
-
-        /// <summary>
-        /// Lấy toàn bộ Hóa đơn bán ra 1 data table
-        /// </summary>
-        /// <returns></returns>
-        public DataTable GetAllSellBills()
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public void UpdateCustomer(Model_Customer model)
-        {
-            DynamicParameters p = new DynamicParameters();
-            p.Add("@CustomerID", model.ID);
-            p.Add("@Name", model.Name);
-            p.Add("@PhoneNumber", model.PhoneNumber);
-            p.Add("@Address", model.Address);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                connection.Execute("UpdateCustomer", p, commandType: CommandType.StoredProcedure);
-            }
-        }
-
-        public DataTable FindCustomerByName(string name)
-        {
-            DynamicParameters p = new DynamicParameters();
-            DataTable table = new DataTable();
-            p.Add("@CustomerName", name);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-               table.Load(connection.ExecuteReader("FindCustomerBy_Name", p, commandType: CommandType.StoredProcedure));
-            }
-            return table;
-        }
-
-        public DataTable FindCustomerByID(string ID)
-        {
-            DynamicParameters p = new DynamicParameters();
-            DataTable table = new DataTable();
-            p.Add("@CustomerID", ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                table.Load(connection.ExecuteReader("FindCustomerBy_ID", p, commandType: CommandType.StoredProcedure));
-            }
-            return table;
-        }
-
-        public void UpdateSupplier(Model_Supplier model)
-        {
-            DynamicParameters p = new DynamicParameters();
-            p.Add("@SupplierID", model.ID);
-            p.Add("@Name", model.Name);
-            p.Add("@PhoneNumber", model.PhoneNumber);
-            p.Add("@Address", model.Address);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                connection.Execute("UpdateSupplier", p, commandType: CommandType.StoredProcedure);
-            }
-        }
-
-        public void DeleteSupplier(Model_Supplier model)
-        {
-            DynamicParameters p = new DynamicParameters();
-            p.Add("@SupplierID", model.ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                connection.Execute("Delete_Supplier", p, commandType: CommandType.StoredProcedure);
-            }
-        }
-
-        public DataTable FindSupplierByName(string name)
-        {
-            DynamicParameters p = new DynamicParameters();
-            DataTable table = new DataTable();
-            p.Add("@SupplierName", name);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                table.Load(connection.ExecuteReader("FindSupplierBy_Name", p, commandType: CommandType.StoredProcedure));
-            }
-            return table;
-        }
-
-        public DataTable FindSupplierByID(string ID)
-        {
-            DynamicParameters p = new DynamicParameters();
-            DataTable table = new DataTable();
-            p.Add("@SupplierID", ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                table.Load(connection.ExecuteReader("FindSupplierBy_ID", p, commandType: CommandType.StoredProcedure));
-            }
-            return table;
-        }
-
         public List<Model_Product> GetAllProduct_List()
         {
             List<Model_Product> model;
@@ -472,8 +297,37 @@ namespace StoreLibrary.DataAccess
             }
             return model;
         }
+        public DataTable GetAllEntryDetails(string id, out int quantity, out decimal total, out string supplierName)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                DataTable table = new DataTable();
+                var p = new DynamicParameters();
+                p.Add("@EntryInvoiceID", id);
+                p.Add("@Quantity", 0, DbType.Int32, direction: ParameterDirection.Output);
+                p.Add("@Total", 0, DbType.Decimal, direction: ParameterDirection.Output);
+                p.Add("@Name", "", DbType.String, direction: ParameterDirection.Output);
+                table.Load(connection.ExecuteReader("GetAllProduct_In_EntryInvoice", p, commandType: CommandType.StoredProcedure));
+                quantity = p.Get<int>("@Quantity");
+                total = p.Get<decimal>("@Total");
+                supplierName = p.Get<string>("@Name");
+                return table;
+            }
 
-        public Model_EntryInvoice InsertNewEntryInvoice(string emID,string supID,string day,decimal total)
+        }
+        /// <summary>
+        /// Lấy toàn bộ Hóa đơn bán ra 1 data table
+        /// </summary>
+        /// <returns></returns>
+        public DataTable GetAllSellBills()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+        //----------------------------------------------------------------------------------------------------------------------------------
+        #region Các Câu lệnh Insert đối tượng chính
+        //Tạo Hóa đơn nhập mới
+        public Model_EntryInvoice InsertNewEntryInvoice(string emID, string supID, string day, decimal total)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
@@ -485,7 +339,7 @@ namespace StoreLibrary.DataAccess
                 p.Add("@Total", total);
                 p.Add("@EntryID", "", DbType.String, direction: ParameterDirection.Output);
                 connection.Execute("dbo.InsertNewEntryInvoice", p, commandType: CommandType.StoredProcedure);
-                model.ID =  p.Get<string>("@EntryID");
+                model.ID = p.Get<string>("@EntryID");
                 model.SupplierID = supID;
                 model.Day = DateTime.Parse(day);
                 model.EmployeeID = emID;
@@ -493,7 +347,7 @@ namespace StoreLibrary.DataAccess
                 return model;
             }
         }
-
+        //Tạo chi tiết hóa đơn  nhập mới
         public void InsertNewEntryDetails(string entryID, string prodID, float discount, decimal unitprice, int quantity, decimal total)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
@@ -503,11 +357,358 @@ namespace StoreLibrary.DataAccess
                 p.Add("@ProductID", prodID);
                 p.Add("@Discount", discount);
                 p.Add("@UnitPrice", unitprice);
-                p.Add("@Quantity",quantity );
+                p.Add("@Quantity", quantity);
                 p.Add("@Total", total);
                 connection.Execute("dbo.InsertNewEntryDetails", p, commandType: CommandType.StoredProcedure);
             }
         }
+        //Tạo Sản phẩm mới
+        public Model_Product InsertNewProduct(Model_Product model)
+        {
+            using(IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                var p = new  DynamicParameters();
+                p.Add("@ProductName", model.Name);
+                p.Add("@CategoryID", model.Category.ID);
+                p.Add("@SizeID", model.Size.ID);
+                p.Add("@RawMaterial_ID", model.Material.ID);
+                p.Add("@ColorID", model.Color.ID);
+                p.Add("@ObjectID", model.Object.ID);
+                p.Add("@SeasonId", model.Season.ID);
+                p.Add("@ManufacturedID", model.Manufactured.ID);
+                p.Add("Quantity", model.Quantity);
+                p.Add("@Picture", model.Picture);
+                p.Add("@PriceEntry", model.PriceEntry);
+                p.Add("@PriceSell", model.PriceSell);
+                p.Add("@ProductID","",DbType.String,direction:ParameterDirection.Output);
+                connection.Execute("dbo.InsertNewProduct", p,commandType: CommandType.StoredProcedure);
+                model.ID = p.Get<string>("@ProductID");
+            }
+            return model;
+        }
+        //Tạo Nhân Viên mới
+        public Model_Employee InsertNewEmployee(Model_Employee model)
+        {
+            using(IDbConnection connection =  new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@Name", model.Name);
+                p.Add("@Sex", model.Sex);
+                p.Add("@DateOfBirth", model.DateOfBirth);
+                p.Add("@PhoneNumber", model.PhoneNumber);
+                p.Add("@Address", model.Address);
+                p.Add("@RoleID", model.Role.ID);
+                p.Add("@ID", "", DbType.String, direction: ParameterDirection.Output);
+                connection.Execute("dbo.InsertNewEmployee", p, commandType: CommandType.StoredProcedure);
+                p.Get<string>("@ID");
+                return model;
+            }
+        }
+        //Tạo Nhà Cung Cấp mới
+        public Model_Supplier InsertNewSupplier(Model_Supplier model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@Name", model.Name);
+                p.Add("@Address", model.Address);
+                p.Add("@PhoneNumber", model.PhoneNumber);
+                p.Add("@ID", "", DbType.String, direction: ParameterDirection.Output);
+                connection.Execute("dbo.InsertNewSupplier", p, commandType: CommandType.StoredProcedure);
+                p.Get<string>("@ID");
+                return model;
+            }
+        }
+        //Tạo Khách hàng mới
+        public Model_Customer InsertNewCustomer(Model_Customer model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@Name", model.Name);
+                p.Add("@Address", model.Address);
+                p.Add("@PhoneNumber", model.PhoneNumber);
+                p.Add("@ID", "", DbType.String, direction: ParameterDirection.Output);
+                connection.Execute("dbo.InsertNewCustomer", p, commandType: CommandType.StoredProcedure);
+                p.Get<string>("@ID");
+                return model;
+            }
+        }
+
+        #endregion
+        //----------------------------------------------------------------------------------------------------------------------------------
+        #region Các Lệnh Delete Update
+        public void UpdateEmployee(Model_Employee model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@EmployeeID", model.ID);
+                p.Add("@Name", model.Name);
+                p.Add("@Sex", model.Sex);
+                p.Add("@DateOfBirth", model.DateOfBirth.Date);
+                p.Add("@PhoneNumber", model.PhoneNumber);
+                p.Add("@Address", model.Address);
+                p.Add("@RoleID", model.Role.ID);
+                connection.Execute("dbo.UpdateEmployee", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void DeleteEmployee(string ID)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@EmployeeID", ID);
+                connection.Execute("dbo.Delete_Employee", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+        /// <summary>
+        /// Xóa Khách hàng 
+        /// </summary>
+        public void DeleteCustomer(Model_Customer model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@CustomerID", model.ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("Delete_Customer", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void UpdateCustomer(Model_Customer model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@CustomerID", model.ID);
+            p.Add("@Name", model.Name);
+            p.Add("@PhoneNumber", model.PhoneNumber);
+            p.Add("@Address", model.Address);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("UpdateCustomer", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void UpdateSupplier(Model_Supplier model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@SupplierID", model.ID);
+            p.Add("@Name", model.Name);
+            p.Add("@PhoneNumber", model.PhoneNumber);
+            p.Add("@Address", model.Address);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("UpdateSupplier", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void DeleteSupplier(Model_Supplier model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@SupplierID", model.ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("Delete_Supplier", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+        public void DeleteCategory(Model_Category model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                DynamicParameters p = new DynamicParameters();
+                p.Add("@ID", model.ID);
+                connection.Execute("DeleteCategory", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void DeleteColor(Model_Color model)
+        {
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                DynamicParameters p = new DynamicParameters();
+                p.Add("@ID", model.ID);
+                connection.Execute("DeleteColor", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void DeleteManuFactured(Model_Manufactured model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ID", model.ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("DeleteManuFactured", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void DeleteObject(Model_Object model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ID", model.ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("DeleteObject", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void DeleteMaterial(Model_RawMaterial model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ID", model.ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("DeleteRawMaterial", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void DeleteSize(Model_Size model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ID", model.ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("DeleteSize", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void DeleteSeason(Model_Season model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ID", model.ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("DeleteSeason", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void UpdateCategory(Model_Category model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ID", model.ID);
+            p.Add("@Name", model.Name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("UpdateCategory", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void UpdateColor(Model_Color model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ID", model.ID);
+            p.Add("@Name", model.Name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("UpdateColor", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void UpdateManuFactured(Model_Manufactured model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ID", model.ID);
+            p.Add("@Name", model.Name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("UpdateManuFactured", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void UpdateObject(Model_Object model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ID", model.ID);
+            p.Add("@Name", model.Name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("UpdateObject", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void UpdateMaterial(Model_RawMaterial model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ID", model.ID);
+            p.Add("@Name", model.Name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("UpdateRawMaterial", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void UpdateSize(Model_Size model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ID", model.ID);
+            p.Add("@Name", model.Size);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("UpdateSize", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void UpdateSeason(Model_Season model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ID", model.ID);
+            p.Add("@Name", model.Name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("UpdateSeason", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+        #endregion
+        //----------------------------------------------------------------------------------------------------------------------------------
+        #region Lệnh Tìm Kiếm
+        public DataTable FindCustomerByName(string name)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@CustomerName", name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+               table.Load(connection.ExecuteReader("FindCustomerBy_Name", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+        public DataTable FindCustomerByID(string ID)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@CustomerID", ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindCustomerBy_ID", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+        public DataTable FindSupplierByName(string name)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@SupplierName", name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindSupplierBy_Name", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+        public DataTable FindSupplierByID(string ID)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@SupplierID", ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindSupplierBy_ID", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
 
         public DataTable FindEntryInvoiceByID(string ID)
         {
@@ -545,50 +746,9 @@ namespace StoreLibrary.DataAccess
             return table;
         }
 
-        public DataTable GetAllEntryDetails(string id, out int quantity, out decimal total, out string supplierName)
-        {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                DataTable table = new DataTable();
-                var p = new DynamicParameters();
-                p.Add("@EntryInvoiceID", id);
-                p.Add("@Quantity", 0, DbType.Int32, direction: ParameterDirection.Output);
-                p.Add("@Total", 0, DbType.Decimal, direction: ParameterDirection.Output);
-                p.Add("@Name", "", DbType.String, direction: ParameterDirection.Output);
-                table.Load(connection.ExecuteReader("GetAllProduct_In_EntryInvoice", p, commandType: CommandType.StoredProcedure));
-                quantity = p.Get<int>("@Quantity");
-                total = p.Get<decimal>("@Total");
-                supplierName = p.Get<string>("@Name");
-                return table;
-            }
 
-        }
 
-        public void UpdateEmployee(Model_Employee model)
-        {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                var p = new DynamicParameters();
-                p.Add("@EmployeeID", model.ID);
-                p.Add("@Name", model.Name);
-                p.Add("@Sex", model.Sex);
-                p.Add("@DateOfBirth", model.DateOfBirth.Date);
-                p.Add("@PhoneNumber", model.PhoneNumber);
-                p.Add("@Address", model.Address);
-                p.Add("@RoleID", model.Role.ID);
-                connection.Execute("dbo.UpdateEmployee", p, commandType: CommandType.StoredProcedure);
-            }
-        }
 
-        public void DeleteEmployee(string ID)
-        {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
-            {
-                var p = new DynamicParameters();
-                p.Add("@EmployeeID", ID);
-                connection.Execute("dbo.Delete_Employee", p, commandType: CommandType.StoredProcedure);
-            }
-        }
 
         public DataTable FindEmployeeBy_ID(string ID)
         {
@@ -613,5 +773,46 @@ namespace StoreLibrary.DataAccess
             }
             return table;
         }
+        #endregion
+        //----------------------------------------------------------------------------------------------------------------------------------
+        #region Lấy Báo Cáo
+        public DataTable ReportSupplier(string ID)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@SupplierID", ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("ReportSupplier", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+        public DataTable ReportTop5Cus(int year)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@year", year);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("[ReportTop5KH]", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+        public DataTable ReportCantSellProduct(int month)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@month", month);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("[ReportcantSellProduct]", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+       
+        #endregion
     }
 }

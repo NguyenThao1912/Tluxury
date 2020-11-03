@@ -38,7 +38,7 @@
             this.DateStart = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.buttonThêm = new System.Windows.Forms.Button();
+            this.buttonThem = new System.Windows.Forms.Button();
             this.textBoxFind = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -159,25 +159,25 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Đến Ngày";
             // 
-            // buttonThêm
+            // buttonThem
             // 
-            this.buttonThêm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonThêm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(245)))));
-            this.buttonThêm.FlatAppearance.BorderSize = 0;
-            this.buttonThêm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThêm.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThêm.ForeColor = System.Drawing.Color.White;
-            this.buttonThêm.Image = ((System.Drawing.Image)(resources.GetObject("buttonThêm.Image")));
-            this.buttonThêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThêm.Location = new System.Drawing.Point(960, 12);
-            this.buttonThêm.Name = "buttonThêm";
-            this.buttonThêm.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.buttonThêm.Size = new System.Drawing.Size(108, 48);
-            this.buttonThêm.TabIndex = 19;
-            this.buttonThêm.Text = "Thêm ";
-            this.buttonThêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThêm.UseVisualStyleBackColor = false;
-            this.buttonThêm.Click += new System.EventHandler(this.buttonThêm_Click);
+            this.buttonThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(245)))));
+            this.buttonThem.FlatAppearance.BorderSize = 0;
+            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThem.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThem.ForeColor = System.Drawing.Color.White;
+            this.buttonThem.Image = ((System.Drawing.Image)(resources.GetObject("buttonThem.Image")));
+            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThem.Location = new System.Drawing.Point(960, 12);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonThem.Size = new System.Drawing.Size(108, 48);
+            this.buttonThem.TabIndex = 19;
+            this.buttonThem.Text = "Thêm ";
+            this.buttonThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonThem.UseVisualStyleBackColor = false;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // textBoxFind
             // 
@@ -211,7 +211,7 @@
             this.panel1.Controls.Add(this.DateEnd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.buttonThêm);
+            this.panel1.Controls.Add(this.buttonThem);
             this.panel1.Controls.Add(this.DateStart);
             this.panel1.Controls.Add(this.textBoxFind);
             this.panel1.Controls.Add(this.label3);
@@ -248,7 +248,7 @@
         private System.Windows.Forms.DateTimePicker DateStart;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonThêm;
+        private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.DataGridView DanhsachHoaDon;
         private System.Windows.Forms.TextBox textBoxFind;
         private System.Windows.Forms.ComboBox comboBox1;

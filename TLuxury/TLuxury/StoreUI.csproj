@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -47,12 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\addhoadon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\addhoadon.designer.cs">
-      <DependentUpon>addhoadon.cs</DependentUpon>
-    </Compile>
     <Compile Include="CF_Forms\CF_BANHANG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +68,30 @@
     </Compile>
     <Compile Include="CF_Forms\CF_EntryInvoice.Designer.cs">
       <DependentUpon>CF_EntryInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CF_Forms\CF_RPCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CF_Forms\CF_RPCustomer.Designer.cs">
+      <DependentUpon>CF_RPCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CF_Forms\CF_RPSaleInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CF_Forms\CF_RPSaleInvoice.Designer.cs">
+      <DependentUpon>CF_RPSaleInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CF_Forms\CF_RPSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CF_Forms\CF_RPSupplier.Designer.cs">
+      <DependentUpon>CF_RPSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CF_Forms\CF_RP_CantSellProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CF_Forms\CF_RP_CantSellProducts.Designer.cs">
+      <DependentUpon>CF_RP_CantSellProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="CF_Forms\CF_SaleInvoice.cs">
       <SubType>Form</SubType>
@@ -154,9 +176,6 @@
     <EmbeddedResource Include="CF_Forms\CF_Home.resx">
       <DependentUpon>CF_Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\addhoadon.resx">
-      <DependentUpon>addhoadon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CF_Forms\CF_BANHANG.resx">
       <DependentUpon>CF_BANHANG.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +184,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CF_Forms\CF_EntryInvoice.resx">
       <DependentUpon>CF_EntryInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CF_Forms\CF_RPCustomer.resx">
+      <DependentUpon>CF_RPCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CF_Forms\CF_RPSaleInvoice.resx">
+      <DependentUpon>CF_RPSaleInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CF_Forms\CF_RPSupplier.resx">
+      <DependentUpon>CF_RPSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CF_Forms\CF_RP_CantSellProducts.resx">
+      <DependentUpon>CF_RP_CantSellProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CF_Forms\CF_SaleInvoice.resx">
       <DependentUpon>CF_SaleInvoice.cs</DependentUpon>
@@ -211,6 +242,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -223,9 +255,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UC_Forms\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StoreLibrary\StoreLibrary.csproj">

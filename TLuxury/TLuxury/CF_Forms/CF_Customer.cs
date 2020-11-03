@@ -47,6 +47,7 @@ namespace TLuxury.Forms
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Lấy thông tin của dòng được người dùng Click
             if (e.RowIndex >= 0)
             {
                 if (textBoxName.ReadOnly == false)
@@ -66,6 +67,7 @@ namespace TLuxury.Forms
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
+            //Xóa Đối tượng được lựa chọn
            if(temp != null)
            {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa Khách Hàng này ? ", "Thông Báo", MessageBoxButtons.YesNo) != DialogResult.Yes)
@@ -75,7 +77,6 @@ namespace TLuxury.Forms
                     try
                     {
                         GlobalConfig.Connection.DeleteCustomer(temp);
-                        temp = null;
                         MessageBox.Show("Xóa Thành Công", "Thông Báo", MessageBoxButtons.OK);
                         temp = null;
                         ClearData();

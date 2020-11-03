@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_HOADON));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DateEnd = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonThem = new System.Windows.Forms.Button();
             this.DateStart = new System.Windows.Forms.DateTimePicker();
             this.textBoxFind = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,7 +51,6 @@
             this.panel1.Controls.Add(this.DateEnd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.buttonThem);
             this.panel1.Controls.Add(this.DateStart);
             this.panel1.Controls.Add(this.textBoxFind);
             this.panel1.Controls.Add(this.label3);
@@ -97,25 +94,6 @@
             this.label2.Size = new System.Drawing.Size(68, 21);
             this.label2.TabIndex = 16;
             this.label2.Text = "Từ Ngày";
-            // 
-            // buttonThem
-            // 
-            this.buttonThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(245)))));
-            this.buttonThem.FlatAppearance.BorderSize = 0;
-            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThem.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThem.ForeColor = System.Drawing.Color.White;
-            this.buttonThem.Image = ((System.Drawing.Image)(resources.GetObject("buttonThem.Image")));
-            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThem.Location = new System.Drawing.Point(960, 12);
-            this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.buttonThem.Size = new System.Drawing.Size(108, 48);
-            this.buttonThem.TabIndex = 19;
-            this.buttonThem.Text = "Thêm ";
-            this.buttonThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThem.UseVisualStyleBackColor = false;
             // 
             // DateStart
             // 
@@ -242,7 +220,6 @@
         private System.Windows.Forms.DateTimePicker DateEnd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.DateTimePicker DateStart;
         private System.Windows.Forms.TextBox textBoxFind;
         private System.Windows.Forms.Label label3;
