@@ -152,12 +152,6 @@ namespace TLuxury.Forms
         {
             OpenChildForm(new CF_Employee(), (Button)sender);
         }
-
-        private void buttonHome_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new CF_Home(), (Button)sender);
-        }
-
         private void buttonRP_NCC_Click(object sender, EventArgs e)
         {
             OpenChildForm(new CF_RPSupplier(), (Button)sender);

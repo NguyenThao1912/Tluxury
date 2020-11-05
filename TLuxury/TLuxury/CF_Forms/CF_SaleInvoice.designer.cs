@@ -35,11 +35,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.DateStart = new System.Windows.Forms.DateTimePicker();
-            this.textBoxFind = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panelDatagrid = new System.Windows.Forms.Panel();
             this.DanhsachHoaDon = new System.Windows.Forms.DataGridView();
+            this.textBoxFind = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panelDatagrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachHoaDon)).BeginInit();
@@ -48,13 +48,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.panel1.Controls.Add(this.textBoxFind);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.DateEnd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.DateStart);
-            this.panel1.Controls.Add(this.textBoxFind);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -73,6 +73,8 @@
             this.DateEnd.Name = "DateEnd";
             this.DateEnd.Size = new System.Drawing.Size(109, 29);
             this.DateEnd.TabIndex = 14;
+            this.DateEnd.Value = new System.DateTime(2020, 12, 31, 19, 26, 0, 0);
+            this.DateEnd.ValueChanged += new System.EventHandler(this.DateEnd_ValueChanged);
             // 
             // label1
             // 
@@ -107,16 +109,8 @@
             this.DateStart.Name = "DateStart";
             this.DateStart.Size = new System.Drawing.Size(114, 29);
             this.DateStart.TabIndex = 15;
-            this.DateStart.Value = new System.DateTime(2019, 10, 24, 18, 44, 0, 0);
-            // 
-            // textBoxFind
-            // 
-            this.textBoxFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxFind.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFind.Location = new System.Drawing.Point(21, 101);
-            this.textBoxFind.Name = "textBoxFind";
-            this.textBoxFind.Size = new System.Drawing.Size(404, 29);
-            this.textBoxFind.TabIndex = 20;
+            this.DateStart.Value = new System.DateTime(2020, 1, 1, 18, 44, 0, 0);
+            this.DateStart.ValueChanged += new System.EventHandler(this.DateStart_ValueChanged);
             // 
             // label3
             // 
@@ -128,22 +122,6 @@
             this.label3.Size = new System.Drawing.Size(79, 21);
             this.label3.TabIndex = 17;
             this.label3.Text = "Đến Ngày";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "--- Tìm Kiếm ---",
-            "Tìm Theo Mã Hóa Đơn",
-            "Tìm Theo Tên Khách Hàng",
-            "Tìm Theo Tên Nhân Viên"});
-            this.comboBox1.Location = new System.Drawing.Point(21, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 29);
-            this.comboBox1.TabIndex = 21;
             // 
             // panelDatagrid
             // 
@@ -194,6 +172,33 @@
             this.DanhsachHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DanhsachHoaDon.Size = new System.Drawing.Size(1080, 516);
             this.DanhsachHoaDon.TabIndex = 3;
+            this.DanhsachHoaDon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhsachHoaDon_CellDoubleClick);
+            // 
+            // textBoxFind
+            // 
+            this.textBoxFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxFind.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFind.Location = new System.Drawing.Point(22, 99);
+            this.textBoxFind.Name = "textBoxFind";
+            this.textBoxFind.Size = new System.Drawing.Size(404, 29);
+            this.textBoxFind.TabIndex = 22;
+            this.textBoxFind.TextChanged += new System.EventHandler(this.textBoxFind_TextChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "--- Tìm Kiếm ---",
+            "Tìm Theo Mã Hóa Đơn",
+            "Tìm Theo Tên Khách Hàng",
+            "Tìm Theo Tên Nhân Viên"});
+            this.comboBox1.Location = new System.Drawing.Point(22, 63);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(221, 29);
+            this.comboBox1.TabIndex = 23;
             // 
             // CF_HOADON
             // 
@@ -221,10 +226,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker DateStart;
-        private System.Windows.Forms.TextBox textBoxFind;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panelDatagrid;
         private System.Windows.Forms.DataGridView DanhsachHoaDon;
+        private System.Windows.Forms.TextBox textBoxFind;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

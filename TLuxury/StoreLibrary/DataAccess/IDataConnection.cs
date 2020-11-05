@@ -38,8 +38,9 @@ namespace StoreLibrary.DataAccess
         DataTable GetAllProducts();
         DataTable GetAllSuppliers();
         DataTable GetAllEntryBills(DateTime start, DateTime end);
-        DataTable GetAllSellBills();
+        DataTable GetAllSellBills(DateTime start, DateTime end);
         DataTable GetAllEntryDetails(string id, out int quantity, out decimal total, out string supplierName);
+        DataTable GetAllSaleDetails(string id, out int quantity, out decimal total, out string Cusname);
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
         #region Các Câu lệnh Insert đối tượng chính
@@ -84,6 +85,9 @@ namespace StoreLibrary.DataAccess
         DataTable FindEntryInvoiceByEmployeeName(string name);
         DataTable FindEmployeeBy_ID(string ID);
         DataTable FindEmployeeBy_Name(string name);
+        DataTable FindSaleInvoiceBy_ID(string ID);
+        DataTable FindSaleInvoiceBy_CusName(string name);
+        DataTable FindSaleInvoiceBy_EmName(string name);
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
         #region Lấy báo Cáo

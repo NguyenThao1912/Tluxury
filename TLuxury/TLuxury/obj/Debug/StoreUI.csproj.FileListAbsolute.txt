@@ -103,7 +103,6 @@ D:\Netflix\Git\Luxury\Tluxury-9159102c47a64707509932d53298c2b104121aa8\TLuxury\T
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_BANHANG.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.EntryDetails.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_Employee.resources
-D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_Home.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.CF_Forms.CF_RPSupplier.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.CF_Forms.CF_RPCustomer.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.CF_Forms.CF_RP_CantSellProducts.resources
@@ -142,3 +141,4 @@ E:\C#####\Tluxury\TLuxury\TLuxury\obj\Debug\StoreUI.csproj.CoreCompileInputs.cac
 E:\C#####\Tluxury\TLuxury\TLuxury\obj\Debug\StoreUI.csproj.CopyComplete
 E:\C#####\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.exe
 E:\C#####\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.pdb
+D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.SaleDetails.resources

@@ -319,9 +319,36 @@ namespace StoreLibrary.DataAccess
         /// Lấy toàn bộ Hóa đơn bán ra 1 data table
         /// </summary>
         /// <returns></returns>
-        public DataTable GetAllSellBills()
+        public DataTable GetAllSellBills(DateTime start, DateTime end)
         {
-            throw new NotImplementedException();
+            DataTable model = new DataTable();
+            var p = new DynamicParameters();
+            p.Add("@DateStart", start);
+            p.Add("@DateEnd", end);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                model.Load(connection.ExecuteReader("dbo.[GetAllSaleInvoice]", p, commandType: CommandType.StoredProcedure));
+            }
+            return model;
+        }
+
+        public DataTable GetAllSaleDetails(string id, out int quantity, out decimal total, out string Cusname)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                DataTable table = new DataTable();
+                var p = new DynamicParameters();
+                p.Add("@SaleInvoiceID", id);
+                p.Add("@Quantity", 0, DbType.Int32, direction: ParameterDirection.Output);
+                p.Add("@Total", 0, DbType.Decimal, direction: ParameterDirection.Output);
+                p.Add("@Name", "", DbType.String, direction: ParameterDirection.Output);
+                table.Load(connection.ExecuteReader("[GetAllProduct_In_SaleInvoice]", p, commandType: CommandType.StoredProcedure));
+                quantity = p.Get<int>("@Quantity");
+                total = p.Get<decimal>("@Total");
+                Cusname = p.Get<string>("@Name");
+                return table;
+            }
+
         }
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
@@ -745,11 +772,6 @@ namespace StoreLibrary.DataAccess
             }
             return table;
         }
-
-
-
-
-
         public DataTable FindEmployeeBy_ID(string ID)
         {
             DynamicParameters p = new DynamicParameters();
@@ -773,6 +795,45 @@ namespace StoreLibrary.DataAccess
             }
             return table;
         }
+
+
+        public DataTable FindSaleInvoiceBy_ID(string ID)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@ID", ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindSaleInvoiceby_ID", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+        public DataTable FindSaleInvoiceBy_CusName(string name)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@CusName", name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindSaleInvoiceby_CusName", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+        public DataTable FindSaleInvoiceBy_EmName(string name)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@EmName", name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindSaleInvoiceby_EmName", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+
+
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
         #region Lấy Báo Cáo
@@ -812,7 +873,8 @@ namespace StoreLibrary.DataAccess
             return table;
         }
 
-       
+
+
         #endregion
     }
 }
