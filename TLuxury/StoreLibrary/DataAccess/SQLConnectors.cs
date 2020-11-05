@@ -129,6 +129,7 @@ namespace StoreLibrary.DataAccess
             return model;
         }
 
+        
         public List<Model_Color> GetAllColor()
         {
             List<Model_Color> model;
@@ -277,8 +278,17 @@ namespace StoreLibrary.DataAccess
             }
             return model;
         }
+        public List<Model_Employee> getbanhang()
+        {
+            List<Model_Employee> model;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                model = connection.Query<Model_Employee>("exec dbo.getbanhang").ToList();
+            }
+            return model;
+        }
 
-        public List<Model_Supplier> GetAllSupplier_List()
+    public List<Model_Supplier> GetAllSupplier_List()
         {
             List<Model_Supplier> model;
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
@@ -389,6 +399,47 @@ namespace StoreLibrary.DataAccess
                 connection.Execute("dbo.InsertNewEntryDetails", p, commandType: CommandType.StoredProcedure);
             }
         }
+        public Model_SaleInvoice insert_hoadonban(string nhanvien_id, string day, string khach_id, decimal tongtien)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                Model_SaleInvoice model = new Model_SaleInvoice();
+                var p = new DynamicParameters();
+                p.Add("@id", "", DbType.String, direction: ParameterDirection.Output);
+                p.Add("@manv ", nhanvien_id);
+                p.Add("@makh", khach_id);
+                p.Add("@ngayban", day);
+                p.Add("@tongtien", tongtien);
+                connection.Execute("dbo.insert_hoadonban", p, commandType: CommandType.StoredProcedure);
+                model.ID = p.Get<string>("@id");
+                model.EmployeeID = nhanvien_id;
+                model.day = DateTime.Parse(day);
+                model.CustomerID = khach_id;
+                model.Total = tongtien;
+                return model;
+            }
+        }
+        public void insert_hoadonban_chitiet(string hoadon_id, string hanghoa_ID, float giamgia, int soluong, decimal thanhtien)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@idhoadon ", hoadon_id);
+                p.Add("@idhanghoa", hanghoa_ID);
+                p.Add("@soluong", soluong);
+                p.Add("@giamgia", giamgia);
+                p.Add("@thanhtien", thanhtien);
+                connection.Execute("dbo.insert_hoadonban_chitiet", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+
+
+
+
+
+
+
         //Tạo Sản phẩm mới
         public Model_Product InsertNewProduct(Model_Product model)
         {
@@ -699,7 +750,17 @@ namespace StoreLibrary.DataAccess
             }
             return table;
         }
-
+        public DataTable FindhanghoaByName(string name)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@ProductName", name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("findhanghoa_banhang", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
         public DataTable FindCustomerByID(string ID)
         {
             DynamicParameters p = new DynamicParameters();

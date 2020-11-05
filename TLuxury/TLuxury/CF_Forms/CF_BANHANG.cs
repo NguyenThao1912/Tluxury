@@ -1,6 +1,7 @@
 ﻿using StoreLibrary;
 using StoreLibrary.Models;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
@@ -13,18 +14,28 @@ namespace TLuxury.Forms
             InitializeComponent();
             InitializeButton();
         }
+
+        private List<string> idhang = new List<string>();
+        private Model_SaleInvoice model;
+
         private void InitializeButton()
         {
-            DataGridViewButtonColumn button = new DataGridViewButtonColumn();
-            {
-                button.Name = "hihi";
-                button.HeaderText = "Chức Năng";
-                button.Text = "Xóa";
-                button.UseColumnTextForButtonValue = true; 
-                this.dataGridView1.Columns.Add(button);
-            }
         }
+
         private void BANHANG_Load(object sender, EventArgs e)
+        {
+            GetEmployee();
+            reset();
+        }
+
+        private bool checkma(string ma)
+        {
+            if (idhang.Contains(ma))
+                return false;
+            return true;
+        }
+
+        private void reset()
         {
             try
             {
@@ -44,19 +55,270 @@ namespace TLuxury.Forms
                 dataGridViewhanghoa.Columns["Số Lượng"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridViewhanghoa.Columns["Giá Bán"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
-            catch(Exception r)
+            catch (Exception r)
             {
                 MessageBox.Show($"lỗi sql  {r}");
             }
         }
+
+        private void GetEmployee()
+        {
+            try
+            {
+                List<Model_Employee> employees = GlobalConfig.Connection.GetAllEmployee_List();
+                comboBox1.DataSource = null;
+                comboBox1.DataSource = employees;
+                comboBox1.DisplayMember = "Name";
+                comboBox1.SelectedIndex = -1;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Thông Báo", MessageBoxButtons.OK);
+            }
+        }
+
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+            if (dataGridView1.CurrentRow.Cells[0].Value == null)
+            {
+                dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+                return;
+            }
+
+            //ktra nhâp chữ
+            DataGridViewCell cuCell = dataGridView1.CurrentCell;
+            string mainStr = dataGridView1.CurrentCell.Value.ToString();
+            for (int scan = 0; scan < mainStr.Length; scan++)
+            {
+                if (Char.IsDigit(mainStr[scan])) { }
+                else
+                {
+                    MessageBox.Show("Chỉ được nhập số, và phải > 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    dataGridView1.CurrentRow.Cells[4].Value = 1;
+                    dataGridView1.CurrentRow.Cells[7].Value = 0;
+                    dataGridView1.ClearSelection();
+                    dataGridView1.CurrentCell = cuCell;
+                    dataGridView1.CurrentCell.Selected = true;
+                    return;
+                }
+            }
+            //ktra số lượng
+            if (int.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString()) >
+                getsoluong(dataGridView1.CurrentRow.Cells[0].Value.ToString()) || int.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString()) < 1)
+            {
+                dataGridView1.CurrentRow.Cells[4].Value = 1;
+                MessageBox.Show("Không được nhỏ hơn 1 hoặc quá số lượng hiện có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            //KHOẢNG KHUYẾN MÃI
+            if (int.Parse(dataGridView1.CurrentRow.Cells[6].Value.ToString()) > 100 || int.Parse(dataGridView1.CurrentRow.Cells[6].Value.ToString()) < 0)
+            {
+                MessageBox.Show("giá trị khuyến mãi không được nhỏ hơn 0 và lớn hơn 100", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dataGridView1.CurrentRow.Cells[6].Value = 0;
+                return;
+            }
+
             dataGridView1.CurrentRow.Cells[7].Value =
                 decimal.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString()) *
                 decimal.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString()) *
-                ( 1-(decimal.Parse(dataGridView1.CurrentRow.Cells[6].Value.ToString())/100));
+                (1 - (decimal.Parse(dataGridView1.CurrentRow.Cells[6].Value.ToString()) / 100))
+                ;
 
-            int dem = 0; float tongtien = 0;
+            int dem = 0; float tongtien = 0, khachtra = 0; ;
+            for (var VARIABLE = 0; VARIABLE <= dataGridView1.Rows.Count - 1; VARIABLE++)
+            {
+                if (dataGridView1.Rows[VARIABLE].Cells[4].Value != null)
+                    dem += int.Parse(dataGridView1.Rows[VARIABLE].Cells[4].Value.ToString());
+                if (dataGridView1.Rows[VARIABLE].Cells[7].Value != null)
+                    tongtien += float.Parse(dataGridView1.Rows[VARIABLE].Cells[4].Value.ToString()) * float.Parse(dataGridView1.Rows[VARIABLE].Cells[5].Value.ToString());
+                if (dataGridView1.Rows[VARIABLE].Cells[7].Value != null)
+                    khachtra += float.Parse(dataGridView1.Rows[VARIABLE].Cells[7].Value.ToString());
+            }
+
+            labeltongtien.Text = "" + tongtien;
+            labeltongsoluong.Text = "" + (dem);
+            labelkhachtra.Text = "" + khachtra;
+            labelgiamgia.Text = float.Parse(labeltongtien.Text) -
+                float.Parse(labelkhachtra.Text) + "";
+        }
+
+        private void dataGridViewhanghoa_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 0) return;
+            //het hang
+            if (int.Parse(dataGridViewhanghoa.CurrentRow.Cells[9].Value.ToString()) == 0)
+                MessageBox.Show("Sản phẩm đã hết", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //sp đã đc chọn
+            if (checkma(dataGridViewhanghoa.CurrentRow.Cells[0].Value.ToString()) == false)
+                MessageBox.Show("Sản phẩm đã được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                idhang.Add(dataGridViewhanghoa.CurrentRow.Cells[0].Value.ToString());
+
+                Model_Product product = new Model_Product();
+                DataGridViewRow currentRow = new DataGridViewRow();
+                currentRow = dataGridViewhanghoa.CurrentRow;
+                product.ID = currentRow.Cells[0].Value.ToString();
+                product.Name = currentRow.Cells[1].Value.ToString();
+                Model_Color cloColor = new Model_Color();
+                cloColor.Name = currentRow.Cells[5].Value.ToString();
+                product.Color = cloColor;
+                Model_Size modelSize = new Model_Size();
+                modelSize.Size = currentRow.Cells[3].Value.ToString();
+                product.Size = modelSize;
+                product.PriceSell = decimal.Parse(currentRow.Cells[10].Value.ToString());
+
+                DataGridViewRow addRow = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+
+                addRow.Cells[0].Value = product.ID;
+                addRow.Cells[1].Value = product.Name;
+                addRow.Cells[2].Value = product.Size.Size;
+                addRow.Cells[3].Value = product.Color.Name;
+                addRow.Cells[4].Value = 1;
+                addRow.Cells[5].Value = product.PriceSell;
+                addRow.Cells[6].Value = 0;
+                addRow.Cells[7].Value = product.PriceSell;
+
+                dataGridView1.Rows.Add(addRow);
+                int dem = 0;
+                float tongtien = 0;
+                for (var VARIABLE = 0; VARIABLE <= dataGridView1.Rows.Count - 1; VARIABLE++)
+                {
+                    if (dataGridView1.Rows[VARIABLE].Cells[4].Value != null)
+                        dem += int.Parse(dataGridView1.Rows[VARIABLE].Cells[4].Value.ToString());
+                    if (dataGridView1.Rows[VARIABLE].Cells[7].Value != null)
+                        tongtien += float.Parse(dataGridView1.Rows[VARIABLE].Cells[7].Value.ToString());
+                }
+
+                labeltongsoluong.Text = " " + (dem);
+                labeltongtien.Text = " " + tongtien;
+                labelkhachtra.Text = float.Parse(labeltongtien.Text) - float.Parse(labelgiamgia.Text) + "";
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //DO SOMETHING
+        }
+
+        private void buttonthanhtoan_Click(object sender, EventArgs e)
+        {
+            if (textBoxthanhtoan.Text == "") textBoxthanhtoan.Text = "0";
+            if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Chọn nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+                ;
+            }
+
+            if (textBoxmakh.Text == "")
+            {
+                MessageBox.Show("Chọn khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Model_Employee nhanvien = (Model_Employee)comboBox1.SelectedItem;
+            if (int.Parse(textBoxthanhtoan.Text) < float.Parse(labelkhachtra.Text))
+            {
+                MessageBox.Show("Số tiền khách trả chưa đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            try
+            {
+                model = GlobalConfig.Connection.insert_hoadonban(nhanvien.ID, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), textBoxmakh.Text, decimal.Parse(labelkhachtra.Text));
+            }
+            catch (Exception r)
+            {
+                MessageBox.Show($"{r.ToString()} Lỗi câu lệnh sql ~ 1 ~ line 186", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            for (var VARIABLE = 0; VARIABLE <= dataGridView1.Rows.Count - 1; VARIABLE++)
+            {
+                try
+                {
+                    if (dataGridView1.Rows[VARIABLE].Cells[4].Value != null || dataGridView1.Rows[VARIABLE].Cells[6].Value != null || dataGridView1.Rows[VARIABLE].Cells[7].Value != null)
+                        GlobalConfig.Connection.insert_hoadonban_chitiet(
+                            model.ID,
+                            dataGridView1.Rows[VARIABLE].Cells[0].Value.ToString(),
+                            float.Parse(dataGridView1.Rows[VARIABLE].Cells[6].Value.ToString()),
+                            int.Parse(dataGridView1.Rows[VARIABLE].Cells[4].Value.ToString()),
+                            decimal.Parse(dataGridView1.Rows[VARIABLE].Cells[7].Value.ToString())
+                        );
+                }
+                catch
+                {
+                    MessageBox.Show(" Lỗi câu lệnh sql ~ 2 ~ line 199", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            model = null;
+
+            labeltienthua.Text = "" + (float.Parse(textBoxthanhtoan.Text) - float.Parse(labelkhachtra.Text));
+            reset();
+            MessageBox.Show("Lập hóa đơn thành công", "Thông báo", MessageBoxButtons.OK);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            addkhach_banhang frm = new addkhach_banhang();
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            labeltongtien.Text = "0";
+            labelkhachtra.Text = "0";
+            labelgiamgia.Text = "0";
+            labeltongsoluong.Text = "0";
+            labeltienthua.Text = "0";
+            textBoxmakh.Text = "";
+            textBoxtenkh.Text = "";
+            textBoxthanhtoan.Text = "";
+            idhang.Clear();
+            reset();
+        }
+
+        private void textBoxthanhtoan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private int getsoluong(string id)
+        {
+            for (var VARIABLE = 0; VARIABLE <= dataGridViewhanghoa.Rows.Count - 1; VARIABLE++)
+            {
+                if (dataGridViewhanghoa.Rows[VARIABLE].Cells[0].Value != null && dataGridViewhanghoa.Rows[VARIABLE].Cells[9].Value != null)
+                    if (dataGridViewhanghoa.Rows[VARIABLE].Cells[0].Value.ToString() == id)
+                        return int.Parse(dataGridViewhanghoa.Rows[VARIABLE].Cells[9].Value.ToString());
+            }
+            return 0;
+        }
+
+        private void textBoxtimhang_TextChanged(object sender, EventArgs e)
+        {
+            DataTable table = new DataTable();
+            table = GlobalConfig.Connection.FindhanghoaByName($"{textBoxtimhang.Text.Trim()}");
+            dataGridViewhanghoa.DataSource = null;
+            dataGridViewhanghoa.DataSource = table;
+            dataGridViewhanghoa.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewhanghoa.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewhanghoa.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewhanghoa.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewhanghoa.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewhanghoa.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewhanghoa.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewhanghoa.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewhanghoa.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewhanghoa.Columns[9].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewhanghoa.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+        private void dataGridView1_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            int dem = 0;
+            float tongtien = 0;
             for (var VARIABLE = 0; VARIABLE <= dataGridView1.Rows.Count - 1; VARIABLE++)
             {
                 if (dataGridView1.Rows[VARIABLE].Cells[4].Value != null)
@@ -67,63 +329,85 @@ namespace TLuxury.Forms
 
             labeltongsoluong.Text = " " + (dem);
             labeltongtien.Text = " " + tongtien;
+            labelkhachtra.Text = float.Parse(labeltongtien.Text) - float.Parse(labelgiamgia.Text) + "";
         }
 
-        private void dataGridViewhanghoa_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            if (dataGridView1.Rows.Count == 0) return;
-            Model_Product product = new Model_Product();
-            DataGridViewRow currentRow = new DataGridViewRow();
-            currentRow = dataGridViewhanghoa.CurrentRow;
-            product.ID = currentRow.Cells[0].Value.ToString();
-            product.Name = currentRow.Cells[1].Value.ToString();
-            Model_Color cloColor = new Model_Color();
-            cloColor.Name = currentRow.Cells[5].Value.ToString();
-            product.Color = cloColor;
-            Model_Size modelSize = new Model_Size();
-            modelSize.Size = currentRow.Cells[3].Value.ToString();
-            product.Size = modelSize;
-            product.PriceSell = decimal.Parse(currentRow.Cells[10].Value.ToString());
-
-            DataGridViewRow addRow = (DataGridViewRow)dataGridView1.Rows[0].Clone();
-
-            addRow.Cells[0].Value = product.ID;
-            addRow.Cells[1].Value = product.Name;
-            addRow.Cells[2].Value = product.Size.Size;
-            addRow.Cells[3].Value = product.Color.Name;
-            addRow.Cells[4].Value = 1;
-            addRow.Cells[5].Value = product.PriceSell;
-            addRow.Cells[6].Value = 0;
-            addRow.Cells[7].Value = product.PriceSell;
-
-
-/*            Button b = new Button();
-            b.Text = " ";
-            b.ImageList = imageList1;
-            b.ImageIndex = 3;
-
-            addRow.Cells[8].Value = b;*/
-
-
-
-
-            dataGridView1.Rows.Add(addRow);
-            int dem = 0; float tongtien = 0;
-            for (var VARIABLE = 0; VARIABLE <= dataGridView1.Rows.Count - 1; VARIABLE++)
-            {
-                if (dataGridView1.Rows[VARIABLE].Cells[4].Value != null)
-                    dem += int.Parse(dataGridView1.Rows[VARIABLE].Cells[4].Value.ToString());
-                if (dataGridView1.Rows[VARIABLE].Cells[7].Value != null)
-                    tongtien += float.Parse(dataGridView1.Rows[VARIABLE].Cells[7].Value.ToString());
-            }
-
-            labeltongsoluong.Text = " " + (dem);
-            labeltongtien.Text = " " + tongtien;    
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //DO SOMETHING
+            idhang.Remove(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            
         }
     }
 }
+/*create proc getbanhang
+as
+begin
+	SELECT ID,ID + ' - ' + Name as 'Name',Address,PhoneNumber  FROM Employee where RoleID=1
+end
+
+create proc findhanghoa_banhang
+@ProductName nvarchar(50)
+as 
+begin
+	SELECT	Product.ID as		N'Mã Sản Phẩm',
+			Product.Name as		N'Tên Sản Phẩm',
+			Category.Name as	N'Loại Sản Phẩm',
+			Size.Size as		N'Kích Cỡ',
+			RawMaterial.Name as N'Nguyên Liệu',
+			Color.Name as		N'Màu Sắc',
+			Object.Name as		N'Đối Tượng',
+			Season.Name as		N'Mùa',
+			Manufactured.Name as N'Nhà Sản Xuất',
+			Quantity as			N'Số Lượng',
+			PriceSell as		N'Giá Bán'
+	FROM Product
+	INNER JOIN  Category on CategoryID = Category.ID 
+	INNER JOIN	Size on SizeID = Size.ID
+	INNER JOIN	RawMaterial on RawMaterial_ID = RawMaterial.ID
+	INNER JOIN	Color on ColorID = Color.ID
+	INNER JOIN	Object on Object.ID = ObjectID
+	INNER JOIN	Season on SeasonID = Season.ID
+	INNER JOIN	Manufactured on Manufactured.ID = ManufacturedID
+	WHERE  Product.Name LIKE '%' + @ProductName + '%'
+end
+ALTER proc insert_hoadonban
+@id varchar(7) output,
+@manv varchar(7),
+@makh varchar(7),
+@ngayban datetime,
+@tongtien money
+as
+begin
+	
+	DECLARE @MA int
+	DECLARE @s varchar(7)
+	SELECT @MA  = MAX (CAST(SUBSTRING(ID,4,4) as INT))+1
+	FROM SaleInvoice
+	IF(@MA is null)
+		SET @MA = 1
+	SELECT @s = '000' + RTRIM(CAST(@MA as varchar(4)))
+	SELECT @s = 'HDB' + @s
+	SELECT @ID = @s
+	insert into SaleInvoice
+	values(@id,@manv,@makh,@ngayban,@tongtien)
+end
+
+DECLARE @S CHAR(7)
+exec insert_hoadonban @s,'NV0001','KH0001','2020-01-01',5000000
+
+ALTER proc insert_hoadonban_chitiet
+@idhoadon varchar(7),
+@idhanghoa varchar(7),
+
+@soluong int,
+@giamgia int,
+@thanhtien money
+as
+begin
+	update Product
+	set Quantity=Quantity-@soluong
+	where ID=@idhanghoa
+	
+	insert into SaleDetails (SaleID,ProductID,Quantity,Discount,Total)
+	values(@idhoadon,@idhanghoa,@soluong, @giamgia,@thanhtien)
+end*/

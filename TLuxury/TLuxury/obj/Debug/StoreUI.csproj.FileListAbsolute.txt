@@ -50,7 +50,6 @@ D:\git\Tluxury\TLuxury\TLuxury\bin\Debug\Dapper.dll
 D:\git\Tluxury\TLuxury\TLuxury\bin\Debug\StoreLibrary.pdb
 D:\git\Tluxury\TLuxury\TLuxury\bin\Debug\Dapper.xml
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\StoreUI.csprojAssemblyReference.cache
-D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.Add_hoadon.resources
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_HOADON.resources
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.Add.resources
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.AddCustomer.resources
@@ -70,7 +69,6 @@ D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.pdb
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_HOADON.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_EntryInvoice.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_Products.resources
-D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.BANHANG.resources
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_EntryInvoice.resources
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_Products.resources
 D:\Netflix\Git\Luxury\Tluxury-9159102c47a64707509932d53298c2b104121aa8\TLuxury\TLuxury\bin\Debug\TLuxury.exe.config
@@ -142,3 +140,12 @@ E:\C#####\Tluxury\TLuxury\TLuxury\obj\Debug\StoreUI.csproj.CopyComplete
 E:\C#####\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.exe
 E:\C#####\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.pdb
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.SaleDetails.resources
+D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_BANHANG.resources
+D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.CF_Employee.resources
+D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.CF_Forms.CF_RPCustomer.resources
+D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.CF_Forms.CF_RPSaleInvoice.resources
+D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.CF_Forms.CF_RPSupplier.resources
+D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.CF_Forms.CF_RP_CantSellProducts.resources
+D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.addkhach_banhang.resources
+D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.EntryDetails.resources
+D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.SaleDetails.resources

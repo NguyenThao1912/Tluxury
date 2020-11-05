@@ -35,6 +35,8 @@ namespace StoreLibrary.DataAccess
         List<Model_Supplier> GetAllSupplier_List();
         DataTable GetAllCustomers();
         DataTable GetAllEmployees();
+        List<Model_Employee> getbanhang();
+
         DataTable GetAllProducts();
         DataTable GetAllSuppliers();
         DataTable GetAllEntryBills(DateTime start, DateTime end);
@@ -48,8 +50,11 @@ namespace StoreLibrary.DataAccess
         Model_Employee InsertNewEmployee(Model_Employee model);
         Model_Supplier InsertNewSupplier(Model_Supplier model);
         Model_Customer InsertNewCustomer(Model_Customer model);
+
         void InsertNewEntryDetails(string entryID, string prodID, float discount, decimal unitprice, int quantity, decimal total);
         Model_EntryInvoice InsertNewEntryInvoice(string emID, string supID, string day, decimal total);
+        Model_SaleInvoice insert_hoadonban(string nhanvien_id, string day, string khach_id, decimal tongtien);
+        void insert_hoadonban_chitiet(string hoadon_id, string hanghoa_ID, float giamgia, int soluong, decimal thanhtien);
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
         #region Lệnh Delete-Update
@@ -85,6 +90,7 @@ namespace StoreLibrary.DataAccess
         DataTable FindEntryInvoiceByEmployeeName(string name);
         DataTable FindEmployeeBy_ID(string ID);
         DataTable FindEmployeeBy_Name(string name);
+        DataTable FindhanghoaByName(string name);
         DataTable FindSaleInvoiceBy_ID(string ID);
         DataTable FindSaleInvoiceBy_CusName(string name);
         DataTable FindSaleInvoiceBy_EmName(string name);
