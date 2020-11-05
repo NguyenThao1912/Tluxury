@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabSP_CC = new System.Windows.Forms.TabControl();
             this.tabSP = new System.Windows.Forms.TabPage();
             this.DanhsachSP = new System.Windows.Forms.DataGridView();
@@ -85,7 +85,7 @@
             this.btnXoaCL = new System.Windows.Forms.Button();
             this.btnThemCL = new System.Windows.Forms.Button();
             this.txtTenCL = new System.Windows.Forms.TextBox();
-            this.txt = new System.Windows.Forms.TextBox();
+            this.txtMaCL = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -181,7 +181,7 @@
             this.tabSP.Controls.Add(this.label1);
             this.tabSP.Location = new System.Drawing.Point(4, 30);
             this.tabSP.Name = "tabSP";
-            this.tabSP.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabSP.Padding = new System.Windows.Forms.Padding(3);
             this.tabSP.Size = new System.Drawing.Size(1056, 581);
             this.tabSP.TabIndex = 0;
             this.tabSP.Text = "Sản Phẩm";
@@ -194,8 +194,8 @@
             this.DanhsachSP.AllowUserToAddRows = false;
             this.DanhsachSP.AllowUserToResizeColumns = false;
             this.DanhsachSP.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachSP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle57.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachSP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle57;
             this.DanhsachSP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -204,38 +204,38 @@
             this.DanhsachSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachSP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachSP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle58.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle58.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle58.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle58;
             this.DanhsachSP.ColumnHeadersHeight = 30;
             this.DanhsachSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DanhsachSP.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle59.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle59.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle59.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DanhsachSP.DefaultCellStyle = dataGridViewCellStyle59;
             this.DanhsachSP.EnableHeadersVisualStyles = false;
             this.DanhsachSP.GridColor = System.Drawing.SystemColors.ControlLight;
             this.DanhsachSP.Location = new System.Drawing.Point(46, 169);
             this.DanhsachSP.MultiSelect = false;
             this.DanhsachSP.Name = "DanhsachSP";
             this.DanhsachSP.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachSP.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle60.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle60.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle60.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle60.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachSP.RowHeadersDefaultCellStyle = dataGridViewCellStyle60;
             this.DanhsachSP.RowHeadersVisible = false;
             this.DanhsachSP.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.DanhsachSP.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,7 +247,7 @@
             // btnSuaSP
             // 
             this.btnSuaSP.Location = new System.Drawing.Point(770, 89);
-            this.btnSuaSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaSP.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaSP.Name = "btnSuaSP";
             this.btnSuaSP.Size = new System.Drawing.Size(112, 39);
             this.btnSuaSP.TabIndex = 3;
@@ -257,7 +257,7 @@
             // btnXoaSP
             // 
             this.btnXoaSP.Location = new System.Drawing.Point(572, 89);
-            this.btnXoaSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaSP.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaSP.Name = "btnXoaSP";
             this.btnXoaSP.Size = new System.Drawing.Size(112, 39);
             this.btnXoaSP.TabIndex = 2;
@@ -267,7 +267,7 @@
             // btnThemSP
             // 
             this.btnThemSP.Location = new System.Drawing.Point(367, 89);
-            this.btnThemSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemSP.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemSP.Name = "btnThemSP";
             this.btnThemSP.Size = new System.Drawing.Size(112, 39);
             this.btnThemSP.TabIndex = 1;
@@ -291,7 +291,7 @@
             this.tabPage2.Controls.Add(this.tabControl2);
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1056, 581);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Chung Chung";
@@ -326,7 +326,7 @@
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1042, 541);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Màu";
@@ -338,8 +338,8 @@
             this.DanhsachMau.AllowUserToAddRows = false;
             this.DanhsachMau.AllowUserToResizeColumns = false;
             this.DanhsachMau.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachMau.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle61.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachMau.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle61;
             this.DanhsachMau.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -348,38 +348,38 @@
             this.DanhsachMau.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachMau.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachMau.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachMau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle62.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle62.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle62.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachMau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle62;
             this.DanhsachMau.ColumnHeadersHeight = 30;
             this.DanhsachMau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DanhsachMau.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle63.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle63.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle63.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DanhsachMau.DefaultCellStyle = dataGridViewCellStyle63;
             this.DanhsachMau.EnableHeadersVisualStyles = false;
             this.DanhsachMau.GridColor = System.Drawing.SystemColors.ControlLight;
             this.DanhsachMau.Location = new System.Drawing.Point(40, 229);
             this.DanhsachMau.MultiSelect = false;
             this.DanhsachMau.Name = "DanhsachMau";
             this.DanhsachMau.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachMau.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle64.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle64.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle64.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle64.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle64.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachMau.RowHeadersDefaultCellStyle = dataGridViewCellStyle64;
             this.DanhsachMau.RowHeadersVisible = false;
             this.DanhsachMau.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.DanhsachMau.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -392,7 +392,7 @@
             // btnSuaMau
             // 
             this.btnSuaMau.Location = new System.Drawing.Point(776, 166);
-            this.btnSuaMau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaMau.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaMau.Name = "btnSuaMau";
             this.btnSuaMau.Size = new System.Drawing.Size(112, 39);
             this.btnSuaMau.TabIndex = 8;
@@ -403,7 +403,7 @@
             // btnXoaMau
             // 
             this.btnXoaMau.Location = new System.Drawing.Point(776, 113);
-            this.btnXoaMau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaMau.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaMau.Name = "btnXoaMau";
             this.btnXoaMau.Size = new System.Drawing.Size(112, 39);
             this.btnXoaMau.TabIndex = 7;
@@ -414,7 +414,7 @@
             // btnThemMau
             // 
             this.btnThemMau.Location = new System.Drawing.Point(776, 61);
-            this.btnThemMau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemMau.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemMau.Name = "btnThemMau";
             this.btnThemMau.Size = new System.Drawing.Size(112, 39);
             this.btnThemMau.TabIndex = 6;
@@ -425,7 +425,7 @@
             // txtTenMau
             // 
             this.txtTenMau.Location = new System.Drawing.Point(363, 158);
-            this.txtTenMau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenMau.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenMau.Name = "txtTenMau";
             this.txtTenMau.Size = new System.Drawing.Size(324, 29);
             this.txtTenMau.TabIndex = 5;
@@ -433,7 +433,7 @@
             // txtMaMau
             // 
             this.txtMaMau.Location = new System.Drawing.Point(363, 92);
-            this.txtMaMau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaMau.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaMau.Name = "txtMaMau";
             this.txtMaMau.ReadOnly = true;
             this.txtMaMau.Size = new System.Drawing.Size(324, 29);
@@ -477,13 +477,13 @@
             this.tabPage4.Controls.Add(this.btnXoaCL);
             this.tabPage4.Controls.Add(this.btnThemCL);
             this.tabPage4.Controls.Add(this.txtTenCL);
-            this.tabPage4.Controls.Add(this.txt);
+            this.tabPage4.Controls.Add(this.txtMaCL);
             this.tabPage4.Controls.Add(this.label5);
             this.tabPage4.Controls.Add(this.label6);
             this.tabPage4.Controls.Add(this.label7);
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1042, 541);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Chất Liệu";
@@ -495,8 +495,8 @@
             this.DanhsachCL.AllowUserToAddRows = false;
             this.DanhsachCL.AllowUserToResizeColumns = false;
             this.DanhsachCL.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachCL.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachCL.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle33;
             this.DanhsachCL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -505,50 +505,50 @@
             this.DanhsachCL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachCL.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachCL.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachCL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachCL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.DanhsachCL.ColumnHeadersHeight = 30;
             this.DanhsachCL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DanhsachCL.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DanhsachCL.DefaultCellStyle = dataGridViewCellStyle35;
             this.DanhsachCL.EnableHeadersVisualStyles = false;
             this.DanhsachCL.GridColor = System.Drawing.SystemColors.ControlLight;
             this.DanhsachCL.Location = new System.Drawing.Point(40, 250);
             this.DanhsachCL.MultiSelect = false;
             this.DanhsachCL.Name = "DanhsachCL";
             this.DanhsachCL.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachCL.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachCL.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.DanhsachCL.RowHeadersVisible = false;
             this.DanhsachCL.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.DanhsachCL.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachCL.RowTemplate.Height = 30;
             this.DanhsachCL.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachCL.Size = new System.Drawing.Size(964, 279);
+            this.DanhsachCL.Size = new System.Drawing.Size(964, 287);
             this.DanhsachCL.TabIndex = 18;
             // 
             // btnSuaCL
             // 
             this.btnSuaCL.Location = new System.Drawing.Point(776, 187);
-            this.btnSuaCL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaCL.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaCL.Name = "btnSuaCL";
             this.btnSuaCL.Size = new System.Drawing.Size(112, 39);
             this.btnSuaCL.TabIndex = 17;
@@ -558,7 +558,7 @@
             // btnXoaCL
             // 
             this.btnXoaCL.Location = new System.Drawing.Point(776, 134);
-            this.btnXoaCL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaCL.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaCL.Name = "btnXoaCL";
             this.btnXoaCL.Size = new System.Drawing.Size(112, 39);
             this.btnXoaCL.TabIndex = 16;
@@ -568,7 +568,7 @@
             // btnThemCL
             // 
             this.btnThemCL.Location = new System.Drawing.Point(776, 82);
-            this.btnThemCL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemCL.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemCL.Name = "btnThemCL";
             this.btnThemCL.Size = new System.Drawing.Size(112, 39);
             this.btnThemCL.TabIndex = 15;
@@ -578,18 +578,19 @@
             // txtTenCL
             // 
             this.txtTenCL.Location = new System.Drawing.Point(363, 179);
-            this.txtTenCL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenCL.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenCL.Name = "txtTenCL";
             this.txtTenCL.Size = new System.Drawing.Size(324, 29);
             this.txtTenCL.TabIndex = 14;
             // 
-            // txt
+            // txtMaCL
             // 
-            this.txt.Location = new System.Drawing.Point(363, 113);
-            this.txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(324, 29);
-            this.txt.TabIndex = 13;
+            this.txtMaCL.Location = new System.Drawing.Point(363, 113);
+            this.txtMaCL.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaCL.Name = "txtMaCL";
+            this.txtMaCL.ReadOnly = true;
+            this.txtMaCL.Size = new System.Drawing.Size(324, 29);
+            this.txtMaCL.TabIndex = 13;
             // 
             // label5
             // 
@@ -646,8 +647,8 @@
             this.DanhsachDoiTuong.AllowUserToAddRows = false;
             this.DanhsachDoiTuong.AllowUserToResizeColumns = false;
             this.DanhsachDoiTuong.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachDoiTuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachDoiTuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
             this.DanhsachDoiTuong.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -656,50 +657,50 @@
             this.DanhsachDoiTuong.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachDoiTuong.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachDoiTuong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachDoiTuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachDoiTuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
             this.DanhsachDoiTuong.ColumnHeadersHeight = 30;
             this.DanhsachDoiTuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DanhsachDoiTuong.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DanhsachDoiTuong.DefaultCellStyle = dataGridViewCellStyle39;
             this.DanhsachDoiTuong.EnableHeadersVisualStyles = false;
             this.DanhsachDoiTuong.GridColor = System.Drawing.SystemColors.ControlLight;
             this.DanhsachDoiTuong.Location = new System.Drawing.Point(40, 250);
             this.DanhsachDoiTuong.MultiSelect = false;
             this.DanhsachDoiTuong.Name = "DanhsachDoiTuong";
             this.DanhsachDoiTuong.ReadOnly = true;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachDoiTuong.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachDoiTuong.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
             this.DanhsachDoiTuong.RowHeadersVisible = false;
             this.DanhsachDoiTuong.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.DanhsachDoiTuong.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachDoiTuong.RowTemplate.Height = 30;
             this.DanhsachDoiTuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachDoiTuong.Size = new System.Drawing.Size(964, 279);
+            this.DanhsachDoiTuong.Size = new System.Drawing.Size(964, 287);
             this.DanhsachDoiTuong.TabIndex = 18;
             // 
             // btnSuaDT
             // 
             this.btnSuaDT.Location = new System.Drawing.Point(776, 187);
-            this.btnSuaDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaDT.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaDT.Name = "btnSuaDT";
             this.btnSuaDT.Size = new System.Drawing.Size(112, 39);
             this.btnSuaDT.TabIndex = 17;
@@ -709,7 +710,7 @@
             // btnXoaDT
             // 
             this.btnXoaDT.Location = new System.Drawing.Point(776, 134);
-            this.btnXoaDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaDT.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaDT.Name = "btnXoaDT";
             this.btnXoaDT.Size = new System.Drawing.Size(112, 39);
             this.btnXoaDT.TabIndex = 16;
@@ -719,7 +720,7 @@
             // btnThemDT
             // 
             this.btnThemDT.Location = new System.Drawing.Point(776, 82);
-            this.btnThemDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemDT.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemDT.Name = "btnThemDT";
             this.btnThemDT.Size = new System.Drawing.Size(112, 39);
             this.btnThemDT.TabIndex = 15;
@@ -729,7 +730,7 @@
             // txtTenDT
             // 
             this.txtTenDT.Location = new System.Drawing.Point(363, 179);
-            this.txtTenDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenDT.Name = "txtTenDT";
             this.txtTenDT.Size = new System.Drawing.Size(324, 29);
             this.txtTenDT.TabIndex = 14;
@@ -737,8 +738,9 @@
             // txtMaDT
             // 
             this.txtMaDT.Location = new System.Drawing.Point(363, 113);
-            this.txtMaDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaDT.Name = "txtMaDT";
+            this.txtMaDT.ReadOnly = true;
             this.txtMaDT.Size = new System.Drawing.Size(324, 29);
             this.txtMaDT.TabIndex = 13;
             // 
@@ -797,8 +799,8 @@
             this.DanhsachNSX.AllowUserToAddRows = false;
             this.DanhsachNSX.AllowUserToResizeColumns = false;
             this.DanhsachNSX.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachNSX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachNSX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
             this.DanhsachNSX.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -807,50 +809,50 @@
             this.DanhsachNSX.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachNSX.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachNSX.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachNSX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachNSX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.DanhsachNSX.ColumnHeadersHeight = 30;
             this.DanhsachNSX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DanhsachNSX.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DanhsachNSX.DefaultCellStyle = dataGridViewCellStyle43;
             this.DanhsachNSX.EnableHeadersVisualStyles = false;
             this.DanhsachNSX.GridColor = System.Drawing.SystemColors.ControlLight;
             this.DanhsachNSX.Location = new System.Drawing.Point(40, 250);
             this.DanhsachNSX.MultiSelect = false;
             this.DanhsachNSX.Name = "DanhsachNSX";
             this.DanhsachNSX.ReadOnly = true;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachNSX.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachNSX.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
             this.DanhsachNSX.RowHeadersVisible = false;
             this.DanhsachNSX.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.DanhsachNSX.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachNSX.RowTemplate.Height = 30;
             this.DanhsachNSX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachNSX.Size = new System.Drawing.Size(964, 279);
+            this.DanhsachNSX.Size = new System.Drawing.Size(964, 287);
             this.DanhsachNSX.TabIndex = 18;
             // 
             // btnSuaNSX
             // 
             this.btnSuaNSX.Location = new System.Drawing.Point(776, 187);
-            this.btnSuaNSX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaNSX.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaNSX.Name = "btnSuaNSX";
             this.btnSuaNSX.Size = new System.Drawing.Size(112, 39);
             this.btnSuaNSX.TabIndex = 17;
@@ -860,7 +862,7 @@
             // btnXoaNSX
             // 
             this.btnXoaNSX.Location = new System.Drawing.Point(776, 134);
-            this.btnXoaNSX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaNSX.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaNSX.Name = "btnXoaNSX";
             this.btnXoaNSX.Size = new System.Drawing.Size(112, 39);
             this.btnXoaNSX.TabIndex = 16;
@@ -870,7 +872,7 @@
             // btnThemNSX
             // 
             this.btnThemNSX.Location = new System.Drawing.Point(776, 82);
-            this.btnThemNSX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemNSX.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemNSX.Name = "btnThemNSX";
             this.btnThemNSX.Size = new System.Drawing.Size(112, 39);
             this.btnThemNSX.TabIndex = 15;
@@ -880,7 +882,7 @@
             // txtTenNSX
             // 
             this.txtTenNSX.Location = new System.Drawing.Point(363, 179);
-            this.txtTenNSX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenNSX.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenNSX.Name = "txtTenNSX";
             this.txtTenNSX.Size = new System.Drawing.Size(324, 29);
             this.txtTenNSX.TabIndex = 14;
@@ -888,8 +890,9 @@
             // txtMaNSX
             // 
             this.txtMaNSX.Location = new System.Drawing.Point(363, 113);
-            this.txtMaNSX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaNSX.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaNSX.Name = "txtMaNSX";
+            this.txtMaNSX.ReadOnly = true;
             this.txtMaNSX.Size = new System.Drawing.Size(324, 29);
             this.txtMaNSX.TabIndex = 13;
             // 
@@ -948,8 +951,8 @@
             this.DanhsachMua.AllowUserToAddRows = false;
             this.DanhsachMua.AllowUserToResizeColumns = false;
             this.DanhsachMua.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachMua.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachMua.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle45;
             this.DanhsachMua.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -958,50 +961,50 @@
             this.DanhsachMua.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachMua.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachMua.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachMua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachMua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
             this.DanhsachMua.ColumnHeadersHeight = 30;
             this.DanhsachMua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DanhsachMua.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DanhsachMua.DefaultCellStyle = dataGridViewCellStyle47;
             this.DanhsachMua.EnableHeadersVisualStyles = false;
             this.DanhsachMua.GridColor = System.Drawing.SystemColors.ControlLight;
             this.DanhsachMua.Location = new System.Drawing.Point(40, 250);
             this.DanhsachMua.MultiSelect = false;
             this.DanhsachMua.Name = "DanhsachMua";
             this.DanhsachMua.ReadOnly = true;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachMua.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachMua.RowHeadersDefaultCellStyle = dataGridViewCellStyle48;
             this.DanhsachMua.RowHeadersVisible = false;
             this.DanhsachMua.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.DanhsachMua.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachMua.RowTemplate.Height = 30;
             this.DanhsachMua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachMua.Size = new System.Drawing.Size(964, 279);
+            this.DanhsachMua.Size = new System.Drawing.Size(964, 287);
             this.DanhsachMua.TabIndex = 18;
             // 
             // btnSuaMua
             // 
             this.btnSuaMua.Location = new System.Drawing.Point(776, 187);
-            this.btnSuaMua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaMua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaMua.Name = "btnSuaMua";
             this.btnSuaMua.Size = new System.Drawing.Size(112, 39);
             this.btnSuaMua.TabIndex = 17;
@@ -1011,7 +1014,7 @@
             // btnXoaMua
             // 
             this.btnXoaMua.Location = new System.Drawing.Point(776, 134);
-            this.btnXoaMua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaMua.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaMua.Name = "btnXoaMua";
             this.btnXoaMua.Size = new System.Drawing.Size(112, 39);
             this.btnXoaMua.TabIndex = 16;
@@ -1021,7 +1024,7 @@
             // btnThemMua
             // 
             this.btnThemMua.Location = new System.Drawing.Point(776, 82);
-            this.btnThemMua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemMua.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemMua.Name = "btnThemMua";
             this.btnThemMua.Size = new System.Drawing.Size(112, 39);
             this.btnThemMua.TabIndex = 15;
@@ -1031,7 +1034,7 @@
             // txtTenMua
             // 
             this.txtTenMua.Location = new System.Drawing.Point(363, 179);
-            this.txtTenMua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenMua.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenMua.Name = "txtTenMua";
             this.txtTenMua.Size = new System.Drawing.Size(324, 29);
             this.txtTenMua.TabIndex = 14;
@@ -1039,8 +1042,9 @@
             // txtMaMua
             // 
             this.txtMaMua.Location = new System.Drawing.Point(363, 113);
-            this.txtMaMua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaMua.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaMua.Name = "txtMaMua";
+            this.txtMaMua.ReadOnly = true;
             this.txtMaMua.Size = new System.Drawing.Size(324, 29);
             this.txtMaMua.TabIndex = 13;
             // 
@@ -1087,7 +1091,7 @@
             this.tabPage8.Controls.Add(this.label18);
             this.tabPage8.Controls.Add(this.label19);
             this.tabPage8.Location = new System.Drawing.Point(4, 30);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Size = new System.Drawing.Size(1042, 541);
             this.tabPage8.TabIndex = 5;
@@ -1100,8 +1104,8 @@
             this.DanhsachLoai.AllowUserToAddRows = false;
             this.DanhsachLoai.AllowUserToResizeColumns = false;
             this.DanhsachLoai.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachLoai.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachLoai.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle49;
             this.DanhsachLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1110,50 +1114,50 @@
             this.DanhsachLoai.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachLoai.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachLoai.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachLoai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachLoai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle50;
             this.DanhsachLoai.ColumnHeadersHeight = 30;
             this.DanhsachLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DanhsachLoai.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle51.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DanhsachLoai.DefaultCellStyle = dataGridViewCellStyle51;
             this.DanhsachLoai.EnableHeadersVisualStyles = false;
             this.DanhsachLoai.GridColor = System.Drawing.SystemColors.ControlLight;
             this.DanhsachLoai.Location = new System.Drawing.Point(40, 250);
             this.DanhsachLoai.MultiSelect = false;
             this.DanhsachLoai.Name = "DanhsachLoai";
             this.DanhsachLoai.ReadOnly = true;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachLoai.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle52.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachLoai.RowHeadersDefaultCellStyle = dataGridViewCellStyle52;
             this.DanhsachLoai.RowHeadersVisible = false;
             this.DanhsachLoai.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.DanhsachLoai.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachLoai.RowTemplate.Height = 30;
             this.DanhsachLoai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachLoai.Size = new System.Drawing.Size(964, 279);
+            this.DanhsachLoai.Size = new System.Drawing.Size(964, 287);
             this.DanhsachLoai.TabIndex = 18;
             // 
             // btnSuaLoai
             // 
             this.btnSuaLoai.Location = new System.Drawing.Point(776, 187);
-            this.btnSuaLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaLoai.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaLoai.Name = "btnSuaLoai";
             this.btnSuaLoai.Size = new System.Drawing.Size(112, 39);
             this.btnSuaLoai.TabIndex = 17;
@@ -1163,7 +1167,7 @@
             // btnXoaLoai
             // 
             this.btnXoaLoai.Location = new System.Drawing.Point(776, 134);
-            this.btnXoaLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaLoai.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaLoai.Name = "btnXoaLoai";
             this.btnXoaLoai.Size = new System.Drawing.Size(112, 39);
             this.btnXoaLoai.TabIndex = 16;
@@ -1173,7 +1177,7 @@
             // btnThemLoai
             // 
             this.btnThemLoai.Location = new System.Drawing.Point(776, 82);
-            this.btnThemLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemLoai.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemLoai.Name = "btnThemLoai";
             this.btnThemLoai.Size = new System.Drawing.Size(112, 39);
             this.btnThemLoai.TabIndex = 15;
@@ -1183,7 +1187,7 @@
             // txtTenLoai
             // 
             this.txtTenLoai.Location = new System.Drawing.Point(363, 179);
-            this.txtTenLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenLoai.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenLoai.Name = "txtTenLoai";
             this.txtTenLoai.Size = new System.Drawing.Size(324, 29);
             this.txtTenLoai.TabIndex = 14;
@@ -1191,8 +1195,9 @@
             // txtMaLoai
             // 
             this.txtMaLoai.Location = new System.Drawing.Point(363, 113);
-            this.txtMaLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaLoai.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaLoai.Name = "txtMaLoai";
+            this.txtMaLoai.ReadOnly = true;
             this.txtMaLoai.Size = new System.Drawing.Size(324, 29);
             this.txtMaLoai.TabIndex = 13;
             // 
@@ -1239,7 +1244,7 @@
             this.tabKichco.Controls.Add(this.label21);
             this.tabKichco.Controls.Add(this.label22);
             this.tabKichco.Location = new System.Drawing.Point(4, 30);
-            this.tabKichco.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabKichco.Margin = new System.Windows.Forms.Padding(2);
             this.tabKichco.Name = "tabKichco";
             this.tabKichco.Size = new System.Drawing.Size(1042, 541);
             this.tabKichco.TabIndex = 6;
@@ -1252,8 +1257,8 @@
             this.DanhsachKichCo.AllowUserToAddRows = false;
             this.DanhsachKichCo.AllowUserToResizeColumns = false;
             this.DanhsachKichCo.AllowUserToResizeRows = false;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DanhsachKichCo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DanhsachKichCo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle53;
             this.DanhsachKichCo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1262,50 +1267,50 @@
             this.DanhsachKichCo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhsachKichCo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.DanhsachKichCo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachKichCo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle54.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachKichCo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle54;
             this.DanhsachKichCo.ColumnHeadersHeight = 30;
             this.DanhsachKichCo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DanhsachKichCo.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle55.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle55.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle55.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle55.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DanhsachKichCo.DefaultCellStyle = dataGridViewCellStyle55;
             this.DanhsachKichCo.EnableHeadersVisualStyles = false;
             this.DanhsachKichCo.GridColor = System.Drawing.SystemColors.ControlLight;
             this.DanhsachKichCo.Location = new System.Drawing.Point(40, 250);
             this.DanhsachKichCo.MultiSelect = false;
             this.DanhsachKichCo.Name = "DanhsachKichCo";
             this.DanhsachKichCo.ReadOnly = true;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DanhsachKichCo.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle56.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle56.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle56.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DanhsachKichCo.RowHeadersDefaultCellStyle = dataGridViewCellStyle56;
             this.DanhsachKichCo.RowHeadersVisible = false;
             this.DanhsachKichCo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.DanhsachKichCo.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachKichCo.RowTemplate.Height = 30;
             this.DanhsachKichCo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachKichCo.Size = new System.Drawing.Size(964, 279);
+            this.DanhsachKichCo.Size = new System.Drawing.Size(964, 287);
             this.DanhsachKichCo.TabIndex = 27;
             // 
             // btnSuaKichCo
             // 
             this.btnSuaKichCo.Location = new System.Drawing.Point(776, 187);
-            this.btnSuaKichCo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaKichCo.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaKichCo.Name = "btnSuaKichCo";
             this.btnSuaKichCo.Size = new System.Drawing.Size(112, 39);
             this.btnSuaKichCo.TabIndex = 26;
@@ -1315,7 +1320,7 @@
             // btnXoaKichCo
             // 
             this.btnXoaKichCo.Location = new System.Drawing.Point(776, 134);
-            this.btnXoaKichCo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaKichCo.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaKichCo.Name = "btnXoaKichCo";
             this.btnXoaKichCo.Size = new System.Drawing.Size(112, 39);
             this.btnXoaKichCo.TabIndex = 25;
@@ -1325,7 +1330,7 @@
             // btnThemKichCo
             // 
             this.btnThemKichCo.Location = new System.Drawing.Point(776, 82);
-            this.btnThemKichCo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemKichCo.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemKichCo.Name = "btnThemKichCo";
             this.btnThemKichCo.Size = new System.Drawing.Size(112, 39);
             this.btnThemKichCo.TabIndex = 24;
@@ -1335,7 +1340,7 @@
             // txtTenKichCo
             // 
             this.txtTenKichCo.Location = new System.Drawing.Point(363, 179);
-            this.txtTenKichCo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenKichCo.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenKichCo.Name = "txtTenKichCo";
             this.txtTenKichCo.Size = new System.Drawing.Size(324, 29);
             this.txtTenKichCo.TabIndex = 23;
@@ -1343,8 +1348,9 @@
             // txtMaKichCo
             // 
             this.txtMaKichCo.Location = new System.Drawing.Point(363, 113);
-            this.txtMaKichCo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaKichCo.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaKichCo.Name = "txtMaKichCo";
+            this.txtMaKichCo.ReadOnly = true;
             this.txtMaKichCo.Size = new System.Drawing.Size(324, 29);
             this.txtMaKichCo.TabIndex = 22;
             // 
@@ -1450,7 +1456,7 @@
         private System.Windows.Forms.Button btnXoaCL;
         private System.Windows.Forms.Button btnThemCL;
         private System.Windows.Forms.TextBox txtTenCL;
-        private System.Windows.Forms.TextBox txt;
+        private System.Windows.Forms.TextBox txtMaCL;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
