@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_BANHANG));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.textBoxthanhtoan = new System.Windows.Forms.TextBox();
             this.labeltienthua = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -45,7 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.textBoxtenkh = new System.Windows.Forms.TextBox();
             this.textBoxmakh = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -84,6 +85,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBoxthanhtoan);
             this.panel1.Controls.Add(this.labeltienthua);
             this.panel1.Controls.Add(this.label14);
@@ -107,6 +109,28 @@
             this.panel1.Size = new System.Drawing.Size(318, 614);
             this.panel1.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.ImageIndex = 4;
+            this.button1.ImageList = this.imageList1;
+            this.button1.Location = new System.Drawing.Point(17, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(38, 35);
+            this.button1.TabIndex = 5;
+            this.button1.Text = " ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "14_Add-512.png");
+            this.imageList1.Images.SetKeyName(1, "unnamed.png");
+            this.imageList1.Images.SetKeyName(2, "iconfinder_basket_1814090.png");
+            this.imageList1.Images.SetKeyName(3, "5_glyph-256.png");
+            this.imageList1.Images.SetKeyName(4, "iconfinder_update_678134.png");
+            // 
             // textBoxthanhtoan
             // 
             this.textBoxthanhtoan.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -116,6 +140,7 @@
             this.textBoxthanhtoan.Name = "textBoxthanhtoan";
             this.textBoxthanhtoan.Size = new System.Drawing.Size(149, 26);
             this.textBoxthanhtoan.TabIndex = 16;
+            this.textBoxthanhtoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxthanhtoan_KeyPress);
             // 
             // labeltienthua
             // 
@@ -278,14 +303,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = " ";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "14_Add-512.png");
-            this.imageList1.Images.SetKeyName(1, "unnamed.png");
-            this.imageList1.Images.SetKeyName(2, "iconfinder_basket_1814090.png");
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBoxtenkh
             // 
@@ -328,8 +346,17 @@
             this.labeltime.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labeltime.AutoSize = true;
             this.labeltime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
             this.labeltime.Location = new System.Drawing.Point(210, 22);
             this.labeltime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+=======
+<<<<<<< HEAD:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
+            this.labeltime.Location = new System.Drawing.Point(263, 42);
+=======
+            this.labeltime.Location = new System.Drawing.Point(210, 22);
+            this.labeltime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+>>>>>>> 878f5baf005d4ca4759e71538ea2251bf5dbf7df:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
+>>>>>>> Stashed changes:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
             this.labeltime.Name = "labeltime";
             this.labeltime.Size = new System.Drawing.Size(51, 20);
             this.labeltime.TabIndex = 2;
@@ -340,10 +367,23 @@
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
+<<<<<<< Updated upstream:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
             this.comboBox1.Location = new System.Drawing.Point(23, 19);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(171, 28);
+=======
+<<<<<<< HEAD:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
+            this.comboBox1.Location = new System.Drawing.Point(17, 39);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(240, 33);
+=======
+            this.comboBox1.Location = new System.Drawing.Point(23, 19);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(171, 28);
+>>>>>>> 878f5baf005d4ca4759e71538ea2251bf5dbf7df:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
+>>>>>>> Stashed changes:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
             this.comboBox1.TabIndex = 1;
             // 
             // buttonthanhtoan
@@ -357,6 +397,7 @@
             this.buttonthanhtoan.TabIndex = 0;
             this.buttonthanhtoan.Text = "Thanh toán";
             this.buttonthanhtoan.UseVisualStyleBackColor = true;
+            this.buttonthanhtoan.Click += new System.EventHandler(this.buttonthanhtoan_Click);
             // 
             // splitContainer1
             // 
@@ -384,6 +425,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -407,6 +450,14 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+<<<<<<< Updated upstream:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
+=======
+<<<<<<< HEAD:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
+            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
+            this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
+=======
+>>>>>>> 878f5baf005d4ca4759e71538ea2251bf5dbf7df:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
+>>>>>>> Stashed changes:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
             // 
             // Column1
             // 
@@ -479,24 +530,87 @@
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+<<<<<<< Updated upstream:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(160, 217);
+=======
+<<<<<<< HEAD:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 272);
+=======
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(160, 217);
+>>>>>>> 878f5baf005d4ca4759e71538ea2251bf5dbf7df:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
+>>>>>>> Stashed changes:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
             this.panel3.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+<<<<<<< Updated upstream:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
+=======
+<<<<<<< HEAD:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
+            this.pictureBox1.Location = new System.Drawing.Point(8, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(184, 238);
+=======
+>>>>>>> Stashed changes:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
             this.pictureBox1.Location = new System.Drawing.Point(6, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(147, 190);
+<<<<<<< Updated upstream:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
+=======
+>>>>>>> 878f5baf005d4ca4759e71538ea2251bf5dbf7df:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
+>>>>>>> Stashed changes:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // dataGridViewhanghoa
+<<<<<<< Updated upstream:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
             // 
+=======
+<<<<<<< HEAD:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
+            // 
+            this.dataGridViewhanghoa.AllowUserToAddRows = false;
+            this.dataGridViewhanghoa.AllowUserToDeleteRows = false;
+            this.dataGridViewhanghoa.AllowUserToResizeColumns = false;
+            this.dataGridViewhanghoa.AllowUserToResizeRows = false;
+            this.dataGridViewhanghoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewhanghoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewhanghoa.Location = new System.Drawing.Point(0, 44);
+            this.dataGridViewhanghoa.MultiSelect = false;
+            this.dataGridViewhanghoa.Name = "dataGridViewhanghoa";
+            this.dataGridViewhanghoa.ReadOnly = true;
+            this.dataGridViewhanghoa.RowHeadersWidth = 51;
+            this.dataGridViewhanghoa.RowTemplate.Height = 24;
+            this.dataGridViewhanghoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewhanghoa.Size = new System.Drawing.Size(932, 438);
+            this.dataGridViewhanghoa.TabIndex = 1;
+            this.dataGridViewhanghoa.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewhanghoa_CellContentDoubleClick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBoxtimhang);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(932, 44);
+            this.panel2.TabIndex = 0;
+            // 
+            // textBoxtimhang
+            // 
+            this.textBoxtimhang.Location = new System.Drawing.Point(11, 9);
+            this.textBoxtimhang.Name = "textBoxtimhang";
+            this.textBoxtimhang.Size = new System.Drawing.Size(246, 22);
+            this.textBoxtimhang.TabIndex = 0;
+            this.textBoxtimhang.TextChanged += new System.EventHandler(this.textBoxtimhang_TextChanged);
+=======
+            // 
+>>>>>>> Stashed changes:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
             this.dataGridViewhanghoa.AllowUserToAddRows = false;
             this.dataGridViewhanghoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewhanghoa.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -530,6 +644,10 @@
             this.textBoxtimhang.Name = "textBoxtimhang";
             this.textBoxtimhang.Size = new System.Drawing.Size(198, 20);
             this.textBoxtimhang.TabIndex = 0;
+<<<<<<< Updated upstream:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
+=======
+>>>>>>> 878f5baf005d4ca4759e71538ea2251bf5dbf7df:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
+>>>>>>> Stashed changes:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
             // 
             // CF_BANHANG
             // 
@@ -539,7 +657,14 @@
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+<<<<<<< Updated upstream:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
             this.Margin = new System.Windows.Forms.Padding(2);
+=======
+<<<<<<< HEAD:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
+=======
+            this.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 878f5baf005d4ca4759e71538ea2251bf5dbf7df:TLuxury/TLuxury/CF_Forms/CF_BANHANG.Designer.cs
+>>>>>>> Stashed changes:TLuxury/TLuxury/Forms/CF_BANHANG.Designer.cs
             this.Name = "CF_BANHANG";
             this.Text = "BANHANG";
             this.Load += new System.EventHandler(this.BANHANG_Load);
@@ -593,6 +718,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBoxthanhtoan;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;

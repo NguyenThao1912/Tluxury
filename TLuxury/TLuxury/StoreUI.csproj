@@ -56,8 +56,23 @@
     </Compile>
     <Compile Include="CF_Forms\CF_BANHANG.Designer.cs">
       <DependentUpon>CF_BANHANG.cs</DependentUpon>
+<<<<<<< Updated upstream
     </Compile>
     <Compile Include="CF_Forms\CF_Employee.cs">
+=======
+    </Compile>
+<<<<<<< HEAD
+    <Compile Include="Forms\addkhach_banhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\addkhach_banhang.Designer.cs">
+      <DependentUpon>addkhach_banhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CF_BANHANG.cs">
+=======
+    <Compile Include="CF_Forms\CF_Employee.cs">
+>>>>>>> 878f5baf005d4ca4759e71538ea2251bf5dbf7df
+>>>>>>> Stashed changes
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CF_Forms\CF_Employee.Designer.cs">
@@ -173,7 +188,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< Updated upstream
     <EmbeddedResource Include="CF_Forms\CF_BANHANG.resx">
+=======
+<<<<<<< HEAD
+    <EmbeddedResource Include="Forms\addhoadon.resx">
+      <DependentUpon>addhoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\addkhach_banhang.resx">
+      <DependentUpon>addkhach_banhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CF_BANHANG.resx">
+=======
+    <EmbeddedResource Include="CF_Forms\CF_BANHANG.resx">
+>>>>>>> 878f5baf005d4ca4759e71538ea2251bf5dbf7df
+>>>>>>> Stashed changes
       <DependentUpon>CF_BANHANG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CF_Forms\CF_Employee.resx">
@@ -241,6 +270,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -261,6 +291,9 @@
       <Project>{7b494c35-9242-472e-b999-86c85ae0c22d}</Project>
       <Name>StoreLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_glyph-256.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -771,6 +771,17 @@ namespace StoreLibrary.DataAccess
                 table.Load(connection.ExecuteReader("FindEntryInvoiceBy_EmployeeName", p, commandType: CommandType.StoredProcedure));
             }
             return table;
+<<<<<<< Updated upstream
+        }
+        public DataTable FindEmployeeBy_ID(string ID)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@ID", ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FindEmployeeBy_ID", p, commandType: CommandType.StoredProcedure));
+=======
         }
         public DataTable FindEmployeeBy_ID(string ID)
         {
@@ -792,12 +803,62 @@ namespace StoreLibrary.DataAccess
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("FindEmployeeBy_Name", p, commandType: CommandType.StoredProcedure));
+>>>>>>> Stashed changes
             }
             return table;
         }
 
+<<<<<<< Updated upstream
+        public DataTable FindEmployeeBy_Name(string name)
+=======
+<<<<<<< HEAD
+         public   List<Model_Employee> getbanhang()
+>>>>>>> Stashed changes
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@Name", name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+<<<<<<< Updated upstream
+                table.Load(connection.ExecuteReader("FindEmployeeBy_Name", p, commandType: CommandType.StoredProcedure));
+=======
+                model = connection.Query<Model_Employee>("exec dbo.getbanhang").ToList();
+>>>>>>> Stashed changes
+            }
+            return table;
+        }
+
+<<<<<<< Updated upstream
 
         public DataTable FindSaleInvoiceBy_ID(string ID)
+=======
+         public Model_SaleInvoice insert_hoadonban(string nhanvien_id, string day, string khach_id, decimal tongtien)
+        {
+             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+             {
+                 Model_SaleInvoice model = new Model_SaleInvoice();
+                 var p = new DynamicParameters();
+                 p.Add("@id", "", DbType.String, direction: ParameterDirection.Output);
+                 p.Add("@manv ", nhanvien_id);
+                 p.Add("@makh", khach_id);
+                 p.Add("@ngayban", day);
+                 p.Add("@tongtien", tongtien);
+                 connection.Execute("dbo.insert_hoadonban", p, commandType: CommandType.StoredProcedure);
+                 model.ID = p.Get<string>("@id");
+                 model.EmployeeID = nhanvien_id;
+                 model.day = DateTime.Parse(day);
+                 model.CustomerID = khach_id;
+                 model.Total = tongtien;
+                 return model;
+             }
+         }
+        public Model_EntryInvoice InsertNewEntryInvoice(string emID,string supID,string day,decimal total)
+=======
+
+        public DataTable FindSaleInvoiceBy_ID(string ID)
+>>>>>>> 878f5baf005d4ca4759e71538ea2251bf5dbf7df
+>>>>>>> Stashed changes
         {
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
@@ -820,8 +881,40 @@ namespace StoreLibrary.DataAccess
             }
             return table;
         }
+        public void insert_hoadonban_chitiet(string hoadon_id, string hanghoa_ID, float giamgia, int soluong, decimal thanhtien)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@idhoadon ", hoadon_id);
+                p.Add("@idhanghoa", hanghoa_ID);
+                p.Add("@soluong", soluong);
 
+<<<<<<< Updated upstream
         public DataTable FindSaleInvoiceBy_EmName(string name)
+=======
+<<<<<<< HEAD
+                p.Add("@giamgia", giamgia);
+                p.Add("@thanhtien", thanhtien);
+                connection.Execute("dbo.insert_hoadonban_chitiet", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+        public DataTable FindhanghoaByName(string name)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@ProductName", name);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("findhanghoa_banhang", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
+        public DataTable FindEntryInvoiceByID(string ID)
+=======
+        public DataTable FindSaleInvoiceBy_EmName(string name)
+>>>>>>> 878f5baf005d4ca4759e71538ea2251bf5dbf7df
+>>>>>>> Stashed changes
         {
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();

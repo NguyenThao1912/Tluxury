@@ -32,6 +32,7 @@ namespace StoreLibrary.DataAccess
         List<Model_Product> GetAllProduct_List();
         List<Model_Role> GetAllRole();
         List<Model_Employee> GetAllEmployee_List();
+        List<Model_Employee> getbanhang();//LAY NV BAN HANG
         List<Model_Supplier> GetAllSupplier_List();
         DataTable GetAllCustomers();
         DataTable GetAllEmployees();
@@ -79,7 +80,18 @@ namespace StoreLibrary.DataAccess
         DataTable FindCustomerByName(string name);
         DataTable FindCustomerByID(string ID);
         DataTable FindSupplierByName(string name);
+        DataTable FindhanghoaByName(string name);
         DataTable FindSupplierByID(string ID);
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+        Model_EntryInvoice InsertNewEntryInvoice(string emID, string supID, string day, decimal total);
+        Model_SaleInvoice insert_hoadonban(string nhanvien_id, string day, string khach_id, decimal tongtien);
+        void InsertNewEntryDetails(string entryID,string prodID,float discount,decimal unitprice,int quantity,decimal total );
+        void insert_hoadonban_chitiet(string hoadon_id, string hanghoa_ID, float giamgia, int soluong, decimal thanhtien);
+=======
+>>>>>>> 878f5baf005d4ca4759e71538ea2251bf5dbf7df
+>>>>>>> Stashed changes
         DataTable FindEntryInvoiceByID(string ID);
         DataTable FindEntryInvoiceBySupplierName(string name);
         DataTable FindEntryInvoiceByEmployeeName(string name);
