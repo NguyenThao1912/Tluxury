@@ -95,5 +95,295 @@ namespace TLuxury.Forms
             themSP.ShowDialog();
             WireData();
         }
+
+        private void DanhsachCL_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtMaCL.Text = DanhsachCL.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtTenCL.Text = DanhsachCL.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+        }
+
+        private void btnThemCL_Click(object sender, EventArgs e)
+        {
+            Add themCL = new Add(4);
+            themCL.ShowDialog();
+            WireData();
+        }
+
+        private void btnXoaCL_Click(object sender, EventArgs e)
+        {
+            if (txtMaCL.Text != "")
+            {
+                try
+                {
+                    Model_RawMaterial cl = new Model_RawMaterial();
+                    cl.ID = int.Parse(txtMaCL.Text);
+                    cl.Name = txtTenCL.Text;
+                    GlobalConfig.Connection.DeleteMaterial(cl);
+                    WireData();
+                }
+                catch (Exception t)
+                {
+                    MessageBox.Show($"Co loi xay ra{t.ToString()}");
+                }
+            }
+            else MessageBox.Show("Hay chon Chat Lieu can xoa");
+        }
+
+        private void btnSuaCL_Click(object sender, EventArgs e)
+        {
+            Model_RawMaterial cl = new Model_RawMaterial();
+            cl.ID = int.Parse(txtMaCL.Text);
+            cl.Name = txtTenCL.Text;
+            GlobalConfig.Connection.UpdateMaterial(cl);
+            WireData();
+        }
+
+     
+
+        private void btnThemDT_Click(object sender, EventArgs e)
+        {
+
+            Add themDT = new Add(5);
+            themDT.ShowDialog();
+            WireData();
+        }
+
+        private void btnXoaDT_Click(object sender, EventArgs e)
+        {
+            if (txtMaDT.Text != "")
+            {
+                try
+                {
+                    Model_Object ob = new Model_Object();
+                    ob.ID = int.Parse(txtMaDT.Text);
+                    ob.Name = txtTenDT.Text;
+                    GlobalConfig.Connection.DeleteObject(ob);
+                    WireData();
+                }
+                catch (Exception t)
+                {
+                    MessageBox.Show($"Co loi xay ra{t.ToString()}");
+                }
+            }
+            else MessageBox.Show("Hay chon Doi Tuong can xoa");
+        }
+
+        private void btnSuaDT_Click(object sender, EventArgs e)
+        {
+            Model_Object ob = new Model_Object();
+            ob.ID = int.Parse(txtMaDT.Text);
+            ob.Name = txtTenDT.Text;
+            GlobalConfig.Connection.UpdateObject(ob);
+            WireData();
+        }
+
+        private void btnThemNSX_Click(object sender, EventArgs e)
+        {
+
+            Add themNSX = new Add(3);
+            themNSX.ShowDialog();
+            WireData();
+        }
+
+        private void btnXoaNSX_Click(object sender, EventArgs e)
+        {
+            if (txtMaNSX.Text != "")
+            {
+                try
+                {
+                    Model_Manufactured ob = new Model_Manufactured();
+                    ob.ID = int.Parse(txtMaNSX.Text);
+                    ob.Name = txtTenNSX.Text;
+                    GlobalConfig.Connection.DeleteManuFactured(ob);
+                    WireData();
+                }
+                catch (Exception t)
+                {
+                    MessageBox.Show($"Co loi xay ra{t.ToString()}");
+                }
+            }
+            else MessageBox.Show("Hay chon NSX can xoa");
+        }
+
+        private void btnSuaNSX_Click(object sender, EventArgs e)
+        {
+            Model_Manufactured ob = new Model_Manufactured();
+            ob.ID = int.Parse(txtMaNSX.Text);
+            ob.Name = txtTenNSX.Text;
+            GlobalConfig.Connection.UpdateManuFactured(ob);
+            WireData();
+        }
+
+        private void btnThemMua_Click(object sender, EventArgs e)
+        {
+            Add themMua = new Add(6);
+            themMua.ShowDialog();
+            WireData();
+        }
+
+        private void btnXoaMua_Click(object sender, EventArgs e)
+        {
+            if (txtMaMua.Text != "")
+            {
+                try
+                {
+                    Model_Season ob = new Model_Season();
+
+                    ob.ID = int.Parse(txtMaMua.Text);
+                    ob.Name = txtTenMua.Text;
+                    GlobalConfig.Connection.DeleteSeason(ob);
+                    WireData();
+                }
+                catch (Exception t)
+                {
+                    MessageBox.Show($"Co loi xay ra{t.ToString()}");
+                }
+            }
+            else MessageBox.Show("Hay chon Mua can xoa");
+        }
+
+        private void btnSuaMua_Click(object sender, EventArgs e)
+        {
+            Model_Season ob = new Model_Season();
+            ob.ID = int.Parse(txtMaMua.Text);
+            ob.Name = txtTenMua.Text;
+            GlobalConfig.Connection.UpdateSeason(ob);
+            WireData();
+        }
+
+        private void btnThemLoai_Click(object sender, EventArgs e)
+        {
+            Add themLoai = new Add(1);
+            themLoai.ShowDialog();
+            WireData();
+        }
+
+        private void btnXoaLoai_Click(object sender, EventArgs e)
+        {
+            if (txtMaLoai.Text != "")
+            {
+                try
+                {
+                    Model_Category ob = new Model_Category();
+
+                    ob.ID = int.Parse(txtMaLoai.Text);
+                    ob.Name = txtTenLoai.Text;
+                    GlobalConfig.Connection.DeleteCategory(ob);
+                    WireData();
+                }
+                catch (Exception t)
+                {
+                    MessageBox.Show($"Co loi xay ra{t.ToString()}");
+                }
+            }
+            else MessageBox.Show("Hay chon Loai can xoa");
+        }
+
+        private void btnSuaLoai_Click(object sender, EventArgs e)
+        {
+            Model_Category ob = new Model_Category();
+            ob.ID = int.Parse(txtMaLoai.Text);
+            ob.Name = txtTenLoai.Text;
+            GlobalConfig.Connection.UpdateCategory(ob);
+            WireData();
+        }
+
+        private void DanhsachDoiTuong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtMaDT.Text = DanhsachDoiTuong.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtTenDT.Text = DanhsachDoiTuong.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+        }
+
+        private void DanhsachNSX_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtMaNSX.Text = DanhsachNSX.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtTenNSX.Text = DanhsachNSX.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+        }
+
+        private void DanhsachMua_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtMaMua.Text = DanhsachMua.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtTenMua.Text = DanhsachMua.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+        }
+
+        private void DanhsachLoai_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtMaLoai.Text = DanhsachLoai.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtTenLoai.Text = DanhsachLoai.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+
+        }
+
+        private void DanhsachKichCo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtMaKichCo.Text = DanhsachKichCo.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtTenKichCo.Text = DanhsachKichCo.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+        }
+
+        private void DanhsachMau_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtMaMau.Text = DanhsachMau.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtTenMau.Text = DanhsachMau.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+        }
+        
+        private void btnThemKichCo_Click(object sender, EventArgs e)
+        {
+            Add themKichco = new Add(7);
+            themKichco.ShowDialog();
+            WireData();
+        }
+
+
+        private void btnXoaKichCo_Click(object sender, EventArgs e)
+        {
+            if (txtMaKichCo.Text != "")
+            {
+                try
+                {
+                Model_Size ob = new Model_Size();
+
+                ob.ID = int.Parse(txtMaKichCo.Text);
+                ob.Size = txtTenKichCo.Text;
+                GlobalConfig.Connection.DeleteSize(ob);
+                WireData();
+                  }
+                catch (Exception t)
+                {
+                MessageBox.Show($"Co loi xay ra{t.ToString()}");
+                }
+            }
+            else MessageBox.Show("Hay chon Size can xoa");
+        }
+
+        private void btnSuaKichCo_Click(object sender, EventArgs e)
+        {
+            Model_Size ob = new Model_Size();
+            ob.ID = int.Parse(txtMaKichCo.Text);
+            ob.Size = txtTenKichCo.Text;
+            GlobalConfig.Connection.UpdateSize(ob);
+            WireData();
+        }
+
+        
     }
 }
