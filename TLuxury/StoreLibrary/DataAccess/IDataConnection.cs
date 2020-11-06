@@ -54,7 +54,7 @@ namespace StoreLibrary.DataAccess
 
         void InsertNewEntryDetails(string entryID, string prodID, float discount, decimal unitprice, int quantity, decimal total);
         Model_EntryInvoice InsertNewEntryInvoice(string emID, string supID, string day, decimal total);
-        Model_SaleInvoice insert_hoadonban(string nhanvien_id, string day, string khach_id, decimal tongtien);
+        Model_SaleInvoice Insert_SaleInvoice(string nhanvien_id, string day, string khach_id, decimal tongtien);
         void insert_hoadonban_chitiet(string hoadon_id, string hanghoa_ID, float giamgia, int soluong, decimal thanhtien);
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
@@ -79,7 +79,6 @@ namespace StoreLibrary.DataAccess
         void UpdateMaterial(Model_RawMaterial model);   //sửa nguyên liệu
         void UpdateSize(Model_Size model);              //sửa kích cỡ
         void UpdateSeason(Model_Season model);          //sửa mùa
-        void DeleteProduct(Model_Product model);
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
         #region Lệnh Tìm Kiếm
@@ -102,6 +101,7 @@ namespace StoreLibrary.DataAccess
         DataTable ReportSupplier(string ID);
         DataTable ReportTop5Cus(int year);
         DataTable ReportCantSellProduct(int month);
+        DataTable ReportSaleInvoice(int month, int year,out decimal Amount);
         #endregion
     }
 }

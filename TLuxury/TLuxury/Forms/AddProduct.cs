@@ -34,60 +34,111 @@ namespace TLuxury.Forms
         }
         private void WireDataSize()
         {
-            List<Model_Size> size = GlobalConfig.Connection.GetAllSize();
-            cbxKichco.DataSource = null;
-            cbxKichco.DataSource = size;
-            cbxKichco.DisplayMember = "Size";
-            cbxKichco.SelectedIndex = -1;
+            try
+            {
+                List<Model_Size> size = GlobalConfig.Connection.GetAllSize();
+                cbxKichco.DataSource = null;
+                cbxKichco.DataSource = size;
+                cbxKichco.DisplayMember = "Size";
+                cbxKichco.SelectedIndex = -1;
+            }
+            catch
+            {
+
+            }
+
         }
         private void WireDataCate()
         {
-            List<Model_Category> category = GlobalConfig.Connection.GetAllCategory();
-            cbxSanPham.DataSource = null;
-            cbxSanPham.DataSource = category;
-            cbxSanPham.DisplayMember = "Name";
-            cbxSanPham.SelectedIndex = -1;
+            try
+            {   
+                List<Model_Category> category = GlobalConfig.Connection.GetAllCategory();
+                cbxSanPham.DataSource = null;
+                cbxSanPham.DataSource = category;
+                cbxSanPham.DisplayMember = "Name";
+                cbxSanPham.SelectedIndex = -1;
+            }
+            catch
+            {
+
+            }
+
         }
         private void WireDataColor()
         {
-            List<Model_Color> color = GlobalConfig.Connection.GetAllColor();
-            cbxMauSac.DataSource = null;
-            cbxMauSac.DataSource = color;
-            cbxMauSac.DisplayMember = "Name";
-            cbxMauSac.SelectedIndex = -1;
+            try
+            {
+                List<Model_Color> color = GlobalConfig.Connection.GetAllColor();
+                cbxMauSac.DataSource = null;
+                cbxMauSac.DataSource = color;
+                cbxMauSac.DisplayMember = "Name";
+                cbxMauSac.SelectedIndex = -1;
+            }
+            catch
+            {
+
+            }
         }
         private void WireDataMaterial()
         {
-            List<Model_RawMaterial> material = GlobalConfig.Connection.GetModel_RawMaterials();
-            cbxChatLieu.DataSource = null;
-            cbxChatLieu.DataSource = material;
-            cbxChatLieu.DisplayMember = "Name";
-            cbxChatLieu.SelectedIndex = -1;
+            try
+            {
+                List<Model_RawMaterial> material = GlobalConfig.Connection.GetModel_RawMaterials();
+                cbxChatLieu.DataSource = null;
+                cbxChatLieu.DataSource = material;
+                cbxChatLieu.DisplayMember = "Name";
+                cbxChatLieu.SelectedIndex = -1;
+            }
+            catch
+            {
+
+            }
         }
         private void WireDataManufactured()
         {
-            List<Model_Manufactured> manufac = GlobalConfig.Connection.GetAllManufactured();
-            cbxNSX.DataSource = null;
-            cbxNSX.DataSource = manufac;
-            cbxNSX.DisplayMember = "Name";
-            cbxNSX.SelectedIndex = -1;
+            try
+            {
+                List<Model_Manufactured> manufac = GlobalConfig.Connection.GetAllManufactured();
+                cbxNSX.DataSource = null;
+                cbxNSX.DataSource = manufac;
+                cbxNSX.DisplayMember = "Name";
+                cbxNSX.SelectedIndex = -1;
+            }
+            catch
+            {
+
+            }
         }
         private void WireDataSeason()
         {
+            try
+            {
+                List<Model_Season> season = GlobalConfig.Connection.GetAllSeason();
+                cbxMua.DataSource = null;
+                cbxMua.DataSource = season;
+                cbxMua.DisplayMember = "Name";
+                cbxMua.SelectedIndex = -1;
+            }
+            catch
+            {
 
-            List<Model_Season> season = GlobalConfig.Connection.GetAllSeason();
-            cbxMua.DataSource = null;
-            cbxMua.DataSource = season;
-            cbxMua.DisplayMember = "Name";
-            cbxMua.SelectedIndex = -1;
+            }
+
         }
         private void WireDataObject()
         {
-            List<Model_Object> obj = GlobalConfig.Connection.GetAllObject();
-            cbxDoituong.DataSource = null;
-            cbxDoituong.DataSource = obj;
-            cbxDoituong.DisplayMember = "Name";
-            cbxDoituong.SelectedIndex = -1;
+            try
+            {
+                List<Model_Object> obj = GlobalConfig.Connection.GetAllObject();
+                cbxDoituong.DataSource = null;
+                cbxDoituong.DataSource = obj;
+                cbxDoituong.DisplayMember = "Name";
+                cbxDoituong.SelectedIndex = -1;
+            }
+            catch
+            {
+
+            }
         }
         private void buttonThemLoai_Click(object sender, EventArgs e)
         {

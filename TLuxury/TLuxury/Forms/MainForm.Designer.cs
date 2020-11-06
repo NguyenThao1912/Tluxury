@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelDropdownRP = new System.Windows.Forms.Panel();
+            this.buttonRPHoaDonBan = new System.Windows.Forms.Button();
             this.buttonRP_KhachHang = new System.Windows.Forms.Button();
             this.buttonRP_Doanhthu = new System.Windows.Forms.Button();
             this.buttonRP_NCC = new System.Windows.Forms.Button();
@@ -58,7 +59,6 @@
             this.buttonCLose = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.buttonRPHoaDonBan = new System.Windows.Forms.Button();
             this.panelDropdownRP.SuspendLayout();
             this.flowLayoutPanelMenu.SuspendLayout();
             this.panelDropdownGiaoDich.SuspendLayout();
@@ -78,8 +78,25 @@
             this.panelDropdownRP.MaximumSize = new System.Drawing.Size(220, 183);
             this.panelDropdownRP.MinimumSize = new System.Drawing.Size(220, 50);
             this.panelDropdownRP.Name = "panelDropdownRP";
-            this.panelDropdownRP.Size = new System.Drawing.Size(220, 183);
+            this.panelDropdownRP.Size = new System.Drawing.Size(220, 50);
             this.panelDropdownRP.TabIndex = 9;
+            // 
+            // buttonRPHoaDonBan
+            // 
+            this.buttonRPHoaDonBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(101)))), ((int)(((byte)(109)))));
+            this.buttonRPHoaDonBan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRPHoaDonBan.FlatAppearance.BorderSize = 0;
+            this.buttonRPHoaDonBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRPHoaDonBan.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRPHoaDonBan.ForeColor = System.Drawing.Color.White;
+            this.buttonRPHoaDonBan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRPHoaDonBan.Location = new System.Drawing.Point(0, 149);
+            this.buttonRPHoaDonBan.Name = "buttonRPHoaDonBan";
+            this.buttonRPHoaDonBan.Size = new System.Drawing.Size(220, 34);
+            this.buttonRPHoaDonBan.TabIndex = 12;
+            this.buttonRPHoaDonBan.Text = "RP Hóa Đơn Bán";
+            this.buttonRPHoaDonBan.UseVisualStyleBackColor = false;
+            this.buttonRPHoaDonBan.Click += new System.EventHandler(this.buttonRPHoaDonBan_Click);
             // 
             // buttonRP_KhachHang
             // 
@@ -474,23 +491,6 @@
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1080, 652);
             this.panelContent.TabIndex = 14;
-            // 
-            // buttonRPHoaDonBan
-            // 
-            this.buttonRPHoaDonBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(101)))), ((int)(((byte)(109)))));
-            this.buttonRPHoaDonBan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonRPHoaDonBan.FlatAppearance.BorderSize = 0;
-            this.buttonRPHoaDonBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRPHoaDonBan.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRPHoaDonBan.ForeColor = System.Drawing.Color.White;
-            this.buttonRPHoaDonBan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRPHoaDonBan.Location = new System.Drawing.Point(0, 149);
-            this.buttonRPHoaDonBan.Name = "buttonRPHoaDonBan";
-            this.buttonRPHoaDonBan.Size = new System.Drawing.Size(220, 34);
-            this.buttonRPHoaDonBan.TabIndex = 12;
-            this.buttonRPHoaDonBan.Text = "RP Hóa Đơn Bán";
-            this.buttonRPHoaDonBan.UseVisualStyleBackColor = false;
-            this.buttonRPHoaDonBan.Click += new System.EventHandler(this.buttonRPHoaDonBan_Click);
             // 
             // MainForm
             // 

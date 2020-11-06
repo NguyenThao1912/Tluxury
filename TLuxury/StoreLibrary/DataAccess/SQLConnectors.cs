@@ -6,7 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data.SqlClient;
 namespace StoreLibrary.DataAccess
 {
     public class SQLConnectors : IDataConnection
@@ -325,6 +325,15 @@ namespace StoreLibrary.DataAccess
             }
 
         }
+        public DataTable GetProductss()
+        {
+            DataTable model = new DataTable();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                model.Load(connection.ExecuteReader("dbo.[GetAllProduct]", null, commandType: CommandType.StoredProcedure));
+            }
+            return model;
+        }
         /// <summary>
         /// Lấy toàn bộ Hóa đơn bán ra 1 data table
         /// </summary>
@@ -399,7 +408,7 @@ namespace StoreLibrary.DataAccess
                 connection.Execute("dbo.InsertNewEntryDetails", p, commandType: CommandType.StoredProcedure);
             }
         }
-        public Model_SaleInvoice insert_hoadonban(string nhanvien_id, string day, string khach_id, decimal tongtien)
+        public Model_SaleInvoice Insert_SaleInvoice(string nhanvien_id, string day, string khach_id, decimal tongtien)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
@@ -410,7 +419,7 @@ namespace StoreLibrary.DataAccess
                 p.Add("@makh", khach_id);
                 p.Add("@ngayban", day);
                 p.Add("@tongtien", tongtien);
-                connection.Execute("dbo.insert_hoadonban", p, commandType: CommandType.StoredProcedure);
+                connection.Execute("Insert_SaleInvoice", p, commandType: CommandType.StoredProcedure);
                 model.ID = p.Get<string>("@id");
                 model.EmployeeID = nhanvien_id;
                 model.day = DateTime.Parse(day);
@@ -432,13 +441,6 @@ namespace StoreLibrary.DataAccess
                 connection.Execute("dbo.insert_hoadonban_chitiet", p, commandType: CommandType.StoredProcedure);
             }
         }
-
-
-
-
-
-
-
 
         //Tạo Sản phẩm mới
         public Model_Product InsertNewProduct(Model_Product model)
@@ -518,7 +520,7 @@ namespace StoreLibrary.DataAccess
         #region Các Lệnh Delete Update
         public void UpdateEmployee(Model_Employee model)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 var p = new DynamicParameters();
                 p.Add("@EmployeeID", model.ID);
@@ -534,7 +536,7 @@ namespace StoreLibrary.DataAccess
 
         public void DeleteEmployee(string ID)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 var p = new DynamicParameters();
                 p.Add("@EmployeeID", ID);
@@ -548,7 +550,7 @@ namespace StoreLibrary.DataAccess
         {
             DynamicParameters p = new DynamicParameters();
             p.Add("@CustomerID", model.ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 connection.Execute("Delete_Customer", p, commandType: CommandType.StoredProcedure);
             }
@@ -561,7 +563,7 @@ namespace StoreLibrary.DataAccess
             p.Add("@Name", model.Name);
             p.Add("@PhoneNumber", model.PhoneNumber);
             p.Add("@Address", model.Address);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 connection.Execute("UpdateCustomer", p, commandType: CommandType.StoredProcedure);
             }
@@ -574,7 +576,7 @@ namespace StoreLibrary.DataAccess
             p.Add("@Name", model.Name);
             p.Add("@PhoneNumber", model.PhoneNumber);
             p.Add("@Address", model.Address);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 connection.Execute("UpdateSupplier", p, commandType: CommandType.StoredProcedure);
             }
@@ -584,14 +586,14 @@ namespace StoreLibrary.DataAccess
         {
             DynamicParameters p = new DynamicParameters();
             p.Add("@SupplierID", model.ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 connection.Execute("Delete_Supplier", p, commandType: CommandType.StoredProcedure);
             }
         }
         public void DeleteCategory(Model_Category model)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 DynamicParameters p = new DynamicParameters();
                 p.Add("@ID", model.ID);
@@ -602,7 +604,7 @@ namespace StoreLibrary.DataAccess
         public void DeleteColor(Model_Color model)
         {
 
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 DynamicParameters p = new DynamicParameters();
                 p.Add("@ID", model.ID);
@@ -614,7 +616,7 @@ namespace StoreLibrary.DataAccess
         {
             DynamicParameters p = new DynamicParameters();
             p.Add("@ID", model.ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 connection.Execute("DeleteManuFactured", p, commandType: CommandType.StoredProcedure);
             }
@@ -624,7 +626,7 @@ namespace StoreLibrary.DataAccess
         {
             DynamicParameters p = new DynamicParameters();
             p.Add("@ID", model.ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 connection.Execute("DeleteObject", p, commandType: CommandType.StoredProcedure);
             }
@@ -634,7 +636,7 @@ namespace StoreLibrary.DataAccess
         {
             DynamicParameters p = new DynamicParameters();
             p.Add("@ID", model.ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 connection.Execute("DeleteRawMaterial", p, commandType: CommandType.StoredProcedure);
             }
@@ -744,7 +746,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@CustomerName", name);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                table.Load(connection.ExecuteReader("FindCustomerBy_Name", p, commandType: CommandType.StoredProcedure));
             }
@@ -755,7 +757,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@ProductName", name);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("findhanghoa_banhang", p, commandType: CommandType.StoredProcedure));
             }
@@ -766,7 +768,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@CustomerID", ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("FindCustomerBy_ID", p, commandType: CommandType.StoredProcedure));
             }
@@ -778,7 +780,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@SupplierName", name);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("FindSupplierBy_Name", p, commandType: CommandType.StoredProcedure));
             }
@@ -790,7 +792,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@SupplierID", ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("FindSupplierBy_ID", p, commandType: CommandType.StoredProcedure));
             }
@@ -803,7 +805,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@EntryID", ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("FindEntryInvoiceBy_ID ", p, commandType: CommandType.StoredProcedure));
             }
@@ -815,7 +817,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@SupplierName", name);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("FindEntryInvoiceBy_SupplierName", p, commandType: CommandType.StoredProcedure));
             }
@@ -827,7 +829,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@EmployeeName", name);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("FindEntryInvoiceBy_EmployeeName", p, commandType: CommandType.StoredProcedure));
             }
@@ -838,7 +840,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@ID", ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("FindEmployeeBy_ID", p, commandType: CommandType.StoredProcedure));
             }
@@ -850,7 +852,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@Name", name);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("FindEmployeeBy_Name", p, commandType: CommandType.StoredProcedure));
             }
@@ -863,7 +865,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@ID", ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("FindSaleInvoiceby_ID", p, commandType: CommandType.StoredProcedure));
             }
@@ -875,7 +877,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@CusName", name);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("FindSaleInvoiceby_CusName", p, commandType: CommandType.StoredProcedure));
             }
@@ -887,7 +889,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@EmName", name);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("FindSaleInvoiceby_EmName", p, commandType: CommandType.StoredProcedure));
             }
@@ -903,7 +905,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@SupplierID", ID);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("ReportSupplier", p, commandType: CommandType.StoredProcedure));
             }
@@ -915,7 +917,7 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@year", year);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("[ReportTop5KH]", p, commandType: CommandType.StoredProcedure));
             }
@@ -927,11 +929,29 @@ namespace StoreLibrary.DataAccess
             DynamicParameters p = new DynamicParameters();
             DataTable table = new DataTable();
             p.Add("@month", month);
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 table.Load(connection.ExecuteReader("[ReportcantSellProduct]", p, commandType: CommandType.StoredProcedure));
             }
             return table;
+        }
+
+
+
+        public DataTable ReportSaleInvoice(int month, int year,out decimal Amount)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@month", month);
+            p.Add("@year", year);
+            p.Add("@Amount", 0,DbType.Decimal, ParameterDirection.Output);
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("ReportSaleInvoice", p, commandType: CommandType.StoredProcedure));
+            }
+            Amount = p.Get<decimal>("@Amount");
+            return table;
+
         }
 
 

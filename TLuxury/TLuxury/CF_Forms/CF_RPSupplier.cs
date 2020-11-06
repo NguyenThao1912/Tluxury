@@ -27,17 +27,32 @@ namespace TLuxury.CF_Forms
             if(comboBoxNCC.Text != "")
             {
                 Model_Supplier s = (Model_Supplier)comboBoxNCC.SelectedItem;
-                DataTable table = GlobalConfig.Connection.ReportSupplier(s.ID);
-                DanhsachNCC.DataSource = null;
-                DanhsachNCC.DataSource = table;
+                try
+                {
+                    DataTable table = GlobalConfig.Connection.ReportSupplier(s.ID);
+                    DanhsachNCC.DataSource = null;
+                    DanhsachNCC.DataSource = table;
+                }
+                catch
+                {
+
+                }
+
             }
         }
         private void WireData()
         {
-            List<Model_Supplier> sup = GlobalConfig.Connection.GetAllSupplier_List();
-            comboBoxNCC.DataSource = sup;
-            comboBoxNCC.DisplayMember = "Name";
-            comboBoxNCC.SelectedIndex = -1;
+            try
+            {
+                List<Model_Supplier> sup = GlobalConfig.Connection.GetAllSupplier_List();
+                comboBoxNCC.DataSource = sup;
+                comboBoxNCC.DisplayMember = "Name";
+                comboBoxNCC.SelectedIndex = -1;
+            }
+            catch
+            {
+
+            }
         }
         private void PrintTable(Excel.Worksheet wsheet,DataGridView data,int rowheader,int colheader)
         {

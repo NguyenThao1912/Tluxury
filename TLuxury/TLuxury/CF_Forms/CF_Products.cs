@@ -14,7 +14,6 @@ namespace TLuxury.Forms
 {
     public partial class CF_Products : Form
     {
-
         public CF_Products()
         {
             InitializeComponent();
@@ -325,12 +324,13 @@ namespace TLuxury.Forms
             try
             {
                 GlobalConfig.Connection.UpdateCategory(ob);
+                WireData();
             }
             catch
             {
 
             }
-            WireData();
+          
         }
 
         private void DanhsachDoiTuong_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -433,9 +433,22 @@ namespace TLuxury.Forms
             WireData();
         }
 
-        private void btnXoaSP_Click(object sender, EventArgs e)
+
+        private void buttonThêm_Click_1(object sender, EventArgs e)
         {
-            
+            AddProduct a = new AddProduct();
+            a.ShowDialog();
+            WireData();
+        }
+
+        private void buttonDelete_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSua_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tính năng chưa có thời gian làm thôi bỏ qua test nút khác đi wtf :)");
         }
     }
 }

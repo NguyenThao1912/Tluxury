@@ -208,7 +208,6 @@ namespace TLuxury.Forms
             {
                 MessageBox.Show("Chọn nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-                ;
             }
 
             if (textBoxmakh.Text == "")
@@ -225,7 +224,7 @@ namespace TLuxury.Forms
             }
             try
             {
-                model = GlobalConfig.Connection.insert_hoadonban(nhanvien.ID, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), textBoxmakh.Text, decimal.Parse(labelkhachtra.Text));
+                model = GlobalConfig.Connection.Insert_SaleInvoice(nhanvien.ID, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), textBoxmakh.Text, decimal.Parse(labelkhachtra.Text));
             }
             catch (Exception r)
             {
@@ -339,75 +338,3 @@ namespace TLuxury.Forms
         }
     }
 }
-/*create proc getbanhang
-as
-begin
-	SELECT ID,ID + ' - ' + Name as 'Name',Address,PhoneNumber  FROM Employee where RoleID=1
-end
-
-create proc findhanghoa_banhang
-@ProductName nvarchar(50)
-as 
-begin
-	SELECT	Product.ID as		N'Mã Sản Phẩm',
-			Product.Name as		N'Tên Sản Phẩm',
-			Category.Name as	N'Loại Sản Phẩm',
-			Size.Size as		N'Kích Cỡ',
-			RawMaterial.Name as N'Nguyên Liệu',
-			Color.Name as		N'Màu Sắc',
-			Object.Name as		N'Đối Tượng',
-			Season.Name as		N'Mùa',
-			Manufactured.Name as N'Nhà Sản Xuất',
-			Quantity as			N'Số Lượng',
-			PriceSell as		N'Giá Bán'
-	FROM Product
-	INNER JOIN  Category on CategoryID = Category.ID 
-	INNER JOIN	Size on SizeID = Size.ID
-	INNER JOIN	RawMaterial on RawMaterial_ID = RawMaterial.ID
-	INNER JOIN	Color on ColorID = Color.ID
-	INNER JOIN	Object on Object.ID = ObjectID
-	INNER JOIN	Season on SeasonID = Season.ID
-	INNER JOIN	Manufactured on Manufactured.ID = ManufacturedID
-	WHERE  Product.Name LIKE '%' + @ProductName + '%'
-end
-ALTER proc insert_hoadonban
-@id varchar(7) output,
-@manv varchar(7),
-@makh varchar(7),
-@ngayban datetime,
-@tongtien money
-as
-begin
-	
-	DECLARE @MA int
-	DECLARE @s varchar(7)
-	SELECT @MA  = MAX (CAST(SUBSTRING(ID,4,4) as INT))+1
-	FROM SaleInvoice
-	IF(@MA is null)
-		SET @MA = 1
-	SELECT @s = '000' + RTRIM(CAST(@MA as varchar(4)))
-	SELECT @s = 'HDB' + @s
-	SELECT @ID = @s
-	insert into SaleInvoice
-	values(@id,@manv,@makh,@ngayban,@tongtien)
-end
-
-DECLARE @S CHAR(7)
-exec insert_hoadonban @s,'NV0001','KH0001','2020-01-01',5000000
-
-ALTER proc insert_hoadonban_chitiet
-@idhoadon varchar(7),
-@idhanghoa varchar(7),
-
-@soluong int,
-@giamgia int,
-@thanhtien money
-as
-begin
-	update Product
-	set Quantity=Quantity-@soluong
-	where ID=@idhanghoa
-	
-	insert into SaleDetails (SaleID,ProductID,Quantity,Discount,Total)
-	values(@idhoadon,@idhanghoa,@soluong, @giamgia,@thanhtien)
-end*/

@@ -49,7 +49,14 @@ namespace TLuxury.Forms
             {
                 Model_Supplier model = new Model_Supplier(textBoxName.Text,textBoxAddress.Text,textBoxPhoneNumber.Text);
                 //Chạy lệnh SQL
-                GlobalConfig.Connection.InsertNewSupplier(model);
+                try
+                {
+                    GlobalConfig.Connection.InsertNewSupplier(model);
+                }
+                catch
+                {
+
+                }
                 MessageBox.Show("Nhập Thành Công", "Thông Báo", MessageBoxButtons.OK);
                 this.Dispose();
             }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StoreLibrary;
+using System;
+using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
@@ -7,6 +9,7 @@ namespace TLuxury.CF_Forms
 {
     public partial class CF_RPSaleInvoice : Form
     {
+      
         public CF_RPSaleInvoice()
         {
             InitializeComponent();
@@ -15,10 +18,22 @@ namespace TLuxury.CF_Forms
         {
             try
             {
-                if(comboBoxThang.Text != "")
+                decimal Amount;
+                if (comboBoxThang.Text != "")
                 {
+                    DataTable table = GlobalConfig.Connection.ReportSaleInvoice(int.Parse(comboBoxThang.Text), int.Parse(textBoxYear.Text),out Amount);
+                    if(table !=  null)
+                    {
+                        DanhsachSP.DataSource = null;
+                        DanhsachSP.DataSource = table;
+                        labelAmount.Text = "Tổng Tiền :" + Amount.ToString("N0", System.Globalization.CultureInfo.GetCultureInfo("de")) + " VND";
+                    }
 
                 }
+            }
+            catch(System.ApplicationException)
+            {
+                MessageBox.Show($"Không tìm thấy dữ liệu ở tháng này");
             }
             catch(Exception e)
             {
@@ -130,6 +145,24 @@ namespace TLuxury.CF_Forms
             else
                 MessageBox.Show("Không có gì để Báo Cáo , hãy kiểm tra đã chọn nhà cung cấp chưa", "Thông Báo");
 
+        }
+
+        private void textBoxYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxYear_TextChanged(object sender, EventArgs e)
+        {
+            comboBoxThang.SelectedIndex = -1;
+        }
+
+        private void comboBoxThang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            WireData();
         }
     }
 }

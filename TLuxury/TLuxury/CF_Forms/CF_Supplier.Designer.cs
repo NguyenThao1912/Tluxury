@@ -52,7 +52,7 @@
             this.ContextMenu1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ItemNum1 = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonSua = new System.Windows.Forms.Button();
-            this.buttonThêm = new System.Windows.Forms.Button();
+            this.buttonThem = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.groupBoxTimKiem.SuspendLayout();
             this.groupBoxThôngTin.SuspendLayout();
@@ -332,25 +332,25 @@
             this.buttonSua.UseVisualStyleBackColor = false;
             this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
-            // buttonThêm
+            // buttonThem
             // 
-            this.buttonThêm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonThêm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(245)))));
-            this.buttonThêm.FlatAppearance.BorderSize = 0;
-            this.buttonThêm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThêm.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThêm.ForeColor = System.Drawing.Color.White;
-            this.buttonThêm.Image = ((System.Drawing.Image)(resources.GetObject("buttonThêm.Image")));
-            this.buttonThêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThêm.Location = new System.Drawing.Point(707, 46);
-            this.buttonThêm.Name = "buttonThêm";
-            this.buttonThêm.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.buttonThêm.Size = new System.Drawing.Size(104, 48);
-            this.buttonThêm.TabIndex = 2;
-            this.buttonThêm.Text = "Thêm ";
-            this.buttonThêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThêm.UseVisualStyleBackColor = false;
-            this.buttonThêm.Click += new System.EventHandler(this.buttonThêm_Click);
+            this.buttonThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(245)))));
+            this.buttonThem.FlatAppearance.BorderSize = 0;
+            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThem.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThem.ForeColor = System.Drawing.Color.White;
+            this.buttonThem.Image = ((System.Drawing.Image)(resources.GetObject("buttonThem.Image")));
+            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThem.Location = new System.Drawing.Point(707, 46);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonThem.Size = new System.Drawing.Size(104, 48);
+            this.buttonThem.TabIndex = 2;
+            this.buttonThem.Text = "Thêm ";
+            this.buttonThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonThem.UseVisualStyleBackColor = false;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThêm_Click);
             // 
             // buttonDelete
             // 
@@ -379,7 +379,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1080, 654);
             this.Controls.Add(this.buttonSua);
-            this.Controls.Add(this.buttonThêm);
+            this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.groupBoxThôngTin);
             this.Controls.Add(this.panelDataGird);
@@ -419,7 +419,7 @@
         private System.Windows.Forms.DataGridView DanhsachNCC;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonSua;
-        private System.Windows.Forms.Button buttonThêm;
+        private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.ContextMenuStrip ContextMenu1;
         private System.Windows.Forms.ToolStripMenuItem ItemNum1;

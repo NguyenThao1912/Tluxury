@@ -17,6 +17,7 @@ namespace TLuxury.Forms
         {
             InitializeComponent();
             WireData();
+            comboBox1.SelectedIndex = 0;
         }
         private void WireData()
         {

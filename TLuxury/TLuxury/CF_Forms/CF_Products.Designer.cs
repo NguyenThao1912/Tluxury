@@ -60,12 +60,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Products));
             this.tabSP_CC = new System.Windows.Forms.TabControl();
             this.tabSP = new System.Windows.Forms.TabPage();
             this.DanhsachSP = new System.Windows.Forms.DataGridView();
-            this.btnSuaSP = new System.Windows.Forms.Button();
-            this.btnXoaSP = new System.Windows.Forms.Button();
-            this.btnThemSP = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -139,6 +137,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.buttonSua = new System.Windows.Forms.Button();
+            this.buttonThêm = new System.Windows.Forms.Button();
             this.tabSP_CC.SuspendLayout();
             this.tabSP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachSP)).BeginInit();
@@ -174,10 +174,9 @@
             // 
             // tabSP
             // 
+            this.tabSP.Controls.Add(this.buttonSua);
+            this.tabSP.Controls.Add(this.buttonThêm);
             this.tabSP.Controls.Add(this.DanhsachSP);
-            this.tabSP.Controls.Add(this.btnSuaSP);
-            this.tabSP.Controls.Add(this.btnXoaSP);
-            this.tabSP.Controls.Add(this.btnThemSP);
             this.tabSP.Controls.Add(this.label1);
             this.tabSP.Location = new System.Drawing.Point(4, 30);
             this.tabSP.Name = "tabSP";
@@ -244,40 +243,9 @@
             this.DanhsachSP.Size = new System.Drawing.Size(966, 366);
             this.DanhsachSP.TabIndex = 4;
             // 
-            // btnSuaSP
-            // 
-            this.btnSuaSP.Location = new System.Drawing.Point(618, 100);
-            this.btnSuaSP.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSuaSP.Name = "btnSuaSP";
-            this.btnSuaSP.Size = new System.Drawing.Size(112, 39);
-            this.btnSuaSP.TabIndex = 3;
-            this.btnSuaSP.Text = "Sửa";
-            this.btnSuaSP.UseVisualStyleBackColor = true;
-            // 
-            // btnXoaSP
-            // 
-            this.btnXoaSP.Location = new System.Drawing.Point(482, 100);
-            this.btnXoaSP.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXoaSP.Name = "btnXoaSP";
-            this.btnXoaSP.Size = new System.Drawing.Size(112, 39);
-            this.btnXoaSP.TabIndex = 2;
-            this.btnXoaSP.Text = "Xóa";
-            this.btnXoaSP.UseVisualStyleBackColor = true;
-            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
-            // 
-            // btnThemSP
-            // 
-            this.btnThemSP.Location = new System.Drawing.Point(346, 100);
-            this.btnThemSP.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(112, 39);
-            this.btnThemSP.TabIndex = 1;
-            this.btnThemSP.Text = "Thêm";
-            this.btnThemSP.UseVisualStyleBackColor = true;
-            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
-            // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Leelawadee UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(372, 3);
@@ -386,7 +354,7 @@
             this.DanhsachMau.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachMau.RowTemplate.Height = 30;
             this.DanhsachMau.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachMau.Size = new System.Drawing.Size(964, 272);
+            this.DanhsachMau.Size = new System.Drawing.Size(964, 264);
             this.DanhsachMau.TabIndex = 9;
             this.DanhsachMau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhsachMau_CellClick);
             // 
@@ -462,6 +430,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(446, 18);
@@ -543,7 +512,7 @@
             this.DanhsachCL.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachCL.RowTemplate.Height = 30;
             this.DanhsachCL.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachCL.Size = new System.Drawing.Size(964, 295);
+            this.DanhsachCL.Size = new System.Drawing.Size(964, 319);
             this.DanhsachCL.TabIndex = 18;
             // 
             // btnSuaCL
@@ -695,7 +664,7 @@
             this.DanhsachDoiTuong.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachDoiTuong.RowTemplate.Height = 30;
             this.DanhsachDoiTuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachDoiTuong.Size = new System.Drawing.Size(964, 295);
+            this.DanhsachDoiTuong.Size = new System.Drawing.Size(964, 319);
             this.DanhsachDoiTuong.TabIndex = 18;
             // 
             // btnSuaDT
@@ -847,7 +816,7 @@
             this.DanhsachNSX.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachNSX.RowTemplate.Height = 30;
             this.DanhsachNSX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachNSX.Size = new System.Drawing.Size(964, 295);
+            this.DanhsachNSX.Size = new System.Drawing.Size(964, 319);
             this.DanhsachNSX.TabIndex = 18;
             // 
             // btnSuaNSX
@@ -999,7 +968,7 @@
             this.DanhsachMua.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachMua.RowTemplate.Height = 30;
             this.DanhsachMua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachMua.Size = new System.Drawing.Size(964, 295);
+            this.DanhsachMua.Size = new System.Drawing.Size(964, 319);
             this.DanhsachMua.TabIndex = 18;
             // 
             // btnSuaMua
@@ -1152,7 +1121,7 @@
             this.DanhsachLoai.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachLoai.RowTemplate.Height = 30;
             this.DanhsachLoai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachLoai.Size = new System.Drawing.Size(964, 295);
+            this.DanhsachLoai.Size = new System.Drawing.Size(964, 319);
             this.DanhsachLoai.TabIndex = 18;
             // 
             // btnSuaLoai
@@ -1305,7 +1274,7 @@
             this.DanhsachKichCo.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachKichCo.RowTemplate.Height = 30;
             this.DanhsachKichCo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachKichCo.Size = new System.Drawing.Size(964, 295);
+            this.DanhsachKichCo.Size = new System.Drawing.Size(964, 319);
             this.DanhsachKichCo.TabIndex = 27;
             // 
             // btnSuaKichCo
@@ -1386,6 +1355,46 @@
             this.label22.TabIndex = 19;
             this.label22.Text = "Thông tin Kích Cỡ";
             // 
+            // buttonSua
+            // 
+            this.buttonSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(158)))), ((int)(((byte)(0)))));
+            this.buttonSua.FlatAppearance.BorderSize = 0;
+            this.buttonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSua.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSua.ForeColor = System.Drawing.Color.White;
+            this.buttonSua.Image = ((System.Drawing.Image)(resources.GetObject("buttonSua.Image")));
+            this.buttonSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSua.Location = new System.Drawing.Point(908, 97);
+            this.buttonSua.Name = "buttonSua";
+            this.buttonSua.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonSua.Size = new System.Drawing.Size(104, 48);
+            this.buttonSua.TabIndex = 6;
+            this.buttonSua.Text = "Sửa";
+            this.buttonSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSua.UseVisualStyleBackColor = false;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
+            // 
+            // buttonThêm
+            // 
+            this.buttonThêm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonThêm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(245)))));
+            this.buttonThêm.FlatAppearance.BorderSize = 0;
+            this.buttonThêm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThêm.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThêm.ForeColor = System.Drawing.Color.White;
+            this.buttonThêm.Image = ((System.Drawing.Image)(resources.GetObject("buttonThêm.Image")));
+            this.buttonThêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThêm.Location = new System.Drawing.Point(786, 97);
+            this.buttonThêm.Name = "buttonThêm";
+            this.buttonThêm.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonThêm.Size = new System.Drawing.Size(104, 48);
+            this.buttonThêm.TabIndex = 5;
+            this.buttonThêm.Text = "Thêm ";
+            this.buttonThêm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonThêm.UseVisualStyleBackColor = false;
+            this.buttonThêm.Click += new System.EventHandler(this.buttonThêm_Click_1);
+            // 
             // CF_Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1437,9 +1446,6 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.Button btnSuaSP;
-        private System.Windows.Forms.Button btnXoaSP;
-        private System.Windows.Forms.Button btnThemSP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DanhsachSP;
         private System.Windows.Forms.TabPage tabPage8;
@@ -1507,5 +1513,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button buttonThêm;
+        private System.Windows.Forms.Button buttonSua;
     }
 }

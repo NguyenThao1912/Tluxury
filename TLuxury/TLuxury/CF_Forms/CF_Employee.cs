@@ -25,9 +25,16 @@ namespace TLuxury.Forms
         }
         private void WireData()
         {
-            DataTable table = GlobalConfig.Connection.GetAllEmployees();
-            DanhsachNhanVien.DataSource = null;
-            DanhsachNhanVien.DataSource = table;
+            try
+            {
+                DataTable table = GlobalConfig.Connection.GetAllEmployees();
+                DanhsachNhanVien.DataSource = null;
+                DanhsachNhanVien.DataSource = table;
+            }
+            catch(Exception t)
+            {
+                MessageBox.Show($"Lỗi SQL line 36 {t}", "Thông báo");
+            }
         }
         private void LoadRole()
         {

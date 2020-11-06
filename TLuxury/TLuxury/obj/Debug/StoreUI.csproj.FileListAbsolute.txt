@@ -149,3 +149,4 @@ D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.CF_Forms.CF_RP_CantSellProducts
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.addkhach_banhang.resources
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.EntryDetails.resources
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.SaleDetails.resources
+D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.addkhach_banhang.resources

@@ -13,10 +13,7 @@ namespace TLuxury.Forms
 {
     public partial class SaleDetails : Form
     {
-        int quantity;
-        decimal money;
         string ID;
-        string CusName;
         string dayentry;
         public SaleDetails(string id, string Dayentry)
         {
@@ -27,11 +24,15 @@ namespace TLuxury.Forms
         }
         private void WireData()
         {
+            int quantity;
+            decimal money;
+            string CusName;
+
             try
             {
                 DataTable table = GlobalConfig.Connection.GetAllSaleDetails(ID, out quantity, out money, out CusName);
                 labelID.Text = "Mã Hóa Đơn : " + ID.ToString();
-                labelName.Text = "Tên Nhà Cung Cấp : " + CusName;
+                labelName.Text = "Tên Khách Hàng : " + CusName;
                 labelTotal.Text = "Tổng Tiền : " + money.ToString("N0", System.Globalization.CultureInfo.GetCultureInfo("de")) + " VND";
                 labelQuantity.Text = "Số Lượng Sản Phẩm : " + quantity.ToString();
                 labelDay.Text = "Ngày Nhập : " + dayentry.ToString();
