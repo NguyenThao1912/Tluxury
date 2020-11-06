@@ -117,6 +117,10 @@
     <Compile Include="Forms\AddEntryInvoice.Designer.cs">
       <DependentUpon>AddEntryInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\addkhach_banhang.cs" />
+    <Compile Include="Forms\addkhach_banhang.Designer.cs">
+      <DependentUpon>addkhach_banhang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddEntryInvoice.resx">
       <DependentUpon>AddEntryInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\addkhach_banhang.resx">
+      <DependentUpon>addkhach_banhang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
