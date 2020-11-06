@@ -130,7 +130,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DanhsachSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DanhsachSP.ColumnHeadersHeight = 25;
+            this.DanhsachSP.ColumnHeadersHeight = 30;
             this.DanhsachSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;

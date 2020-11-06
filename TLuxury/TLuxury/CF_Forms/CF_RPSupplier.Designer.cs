@@ -64,7 +64,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DanhsachNCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DanhsachNCC.ColumnHeadersHeight = 25;
+            this.DanhsachNCC.ColumnHeadersHeight = 30;
             this.DanhsachNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -76,8 +76,7 @@
             this.DanhsachNCC.DefaultCellStyle = dataGridViewCellStyle3;
             this.DanhsachNCC.EnableHeadersVisualStyles = false;
             this.DanhsachNCC.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.DanhsachNCC.Location = new System.Drawing.Point(77, 167);
-            this.DanhsachNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DanhsachNCC.Location = new System.Drawing.Point(58, 136);
             this.DanhsachNCC.MultiSelect = false;
             this.DanhsachNCC.Name = "DanhsachNCC";
             this.DanhsachNCC.ReadOnly = true;
@@ -94,7 +93,7 @@
             this.DanhsachNCC.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachNCC.RowTemplate.Height = 30;
             this.DanhsachNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachNCC.Size = new System.Drawing.Size(1288, 588);
+            this.DanhsachNCC.Size = new System.Drawing.Size(966, 478);
             this.DanhsachNCC.TabIndex = 3;
             this.DanhsachNCC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhsachNCC_CellContentClick);
             // 
@@ -106,10 +105,9 @@
             this.comboBoxNCC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNCC.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNCC.FormattingEnabled = true;
-            this.comboBoxNCC.Location = new System.Drawing.Point(555, 91);
-            this.comboBoxNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxNCC.Location = new System.Drawing.Point(416, 74);
             this.comboBoxNCC.Name = "comboBoxNCC";
-            this.comboBoxNCC.Size = new System.Drawing.Size(360, 36);
+            this.comboBoxNCC.Size = new System.Drawing.Size(271, 29);
             this.comboBoxNCC.TabIndex = 4;
             this.comboBoxNCC.SelectedIndexChanged += new System.EventHandler(this.comboBoxNCC_SelectedIndexChanged);
             // 
@@ -120,10 +118,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(344, 95);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(258, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 28);
+            this.label1.Size = new System.Drawing.Size(152, 21);
             this.label1.TabIndex = 5;
             this.label1.Text = "Chọn Nhà Cung Cấp";
             // 
@@ -132,10 +129,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(365, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(274, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(616, 37);
+            this.label2.Size = new System.Drawing.Size(487, 30);
             this.label2.TabIndex = 6;
             this.label2.Text = "Báo Cáo Danh Sách Hóa Đơn Của 1 Nhà Cung Cấp";
             // 
@@ -143,10 +139,9 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1073, 81);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(805, 66);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 53);
+            this.button1.Size = new System.Drawing.Size(113, 43);
             this.button1.TabIndex = 7;
             this.button1.Text = "Xuất Báo Cáo";
             this.button1.UseVisualStyleBackColor = true;
@@ -154,16 +149,15 @@
             // 
             // CF_RPSupplier
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 805);
+            this.ClientSize = new System.Drawing.Size(1080, 654);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxNCC);
             this.Controls.Add(this.DanhsachNCC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CF_RPSupplier";
             this.Text = "CF_RPSupplier";
             this.Load += new System.EventHandler(this.CF_RPSupplier_Load);
