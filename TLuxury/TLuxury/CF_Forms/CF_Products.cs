@@ -4,10 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -18,6 +14,7 @@ namespace TLuxury.Forms
         {
             InitializeComponent();
             WireData();
+            comboBox1.SelectedIndex = 0;
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -449,6 +446,64 @@ namespace TLuxury.Forms
         private void buttonSua_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Tính năng chưa có thời gian làm thôi bỏ qua test nút khác đi wtf :)");
+        }
+
+        private void textBoxFind_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxFind.Text == "")
+            {
+                WireData();
+            }
+            else
+            {
+                DataTable table = new DataTable();
+                try
+                {
+                    if (comboBox1.Text != "--- Tìm Kiếm ---")
+                    {
+                        if (comboBox1.Text == "Tìm Theo Mã Sản Phẩm")
+                        {
+                            table = GlobalConfig.Connection.FindProduct($"{textBoxFind.Text.Trim()}", 1);
+                        }
+                        else if (comboBox1.Text == "Tìm Theo Màu")
+                        {
+                            table = GlobalConfig.Connection.FindProduct($"{textBoxFind.Text.Trim()}", 2);
+                        }
+                        else if (comboBox1.Text == "Tìm Theo Loại Sản Phẩm")
+                        {
+                            table = GlobalConfig.Connection.FindProduct($"{textBoxFind.Text.Trim()}", 3);
+                        }
+                        else if (comboBox1.Text == "Tìm Theo Nguyên Liệu")
+                        {
+                            table = GlobalConfig.Connection.FindProduct($"{textBoxFind.Text.Trim()}", 4);
+                        }
+                        else if (comboBox1.Text == "Tìm Theo Nhà Sản Xuất")
+                        {
+                            table = GlobalConfig.Connection.FindProduct($"{textBoxFind.Text.Trim()}", 5);
+                        }
+                        else if (comboBox1.Text == "Tìm Theo Mùa")
+                        {
+                            table = GlobalConfig.Connection.FindProduct($"{textBoxFind.Text.Trim()}", 6);
+                        }
+                    }
+                    if (table.Rows.Count > 0)
+                    {
+                        DanhsachSP.DataSource = null;
+                        DanhsachSP.DataSource = table;
+   
+                    }
+                    else
+                        if (comboBox1.Text == "--- Tìm Kiếm ---")
+                    {
+                        MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxFind.Text = "";
+                    }
+                }
+                catch (Exception b)
+                {
+                    MessageBox.Show($"Xảy ra lỗi trong quá trình tìm kiếm {b} ", "Thông báo", MessageBoxButtons.OK);
+                }
+            }
         }
     }
 }

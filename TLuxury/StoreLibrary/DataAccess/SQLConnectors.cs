@@ -895,6 +895,19 @@ namespace StoreLibrary.DataAccess
             }
             return table;
         }
+        //TÌM KIẾM SẢN PHẨM
+        public DataTable FindProduct(string name,int type)
+        {
+            DynamicParameters p = new DynamicParameters();
+            DataTable table = new DataTable();
+            p.Add("@Find", name);
+            p.Add("@Type", type);
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                table.Load(connection.ExecuteReader("FINDPRODUCT", p, commandType: CommandType.StoredProcedure));
+            }
+            return table;
+        }
 
 
         #endregion
@@ -911,7 +924,6 @@ namespace StoreLibrary.DataAccess
             }
             return table;
         }
-
         public DataTable ReportTop5Cus(int year)
         {
             DynamicParameters p = new DynamicParameters();
@@ -923,7 +935,6 @@ namespace StoreLibrary.DataAccess
             }
             return table;
         }
-
         public DataTable ReportCantSellProduct(int month)
         {
             DynamicParameters p = new DynamicParameters();
@@ -935,9 +946,6 @@ namespace StoreLibrary.DataAccess
             }
             return table;
         }
-
-
-
         public DataTable ReportSaleInvoice(int month, int year,out decimal Amount)
         {
             DynamicParameters p = new DynamicParameters();
@@ -953,9 +961,6 @@ namespace StoreLibrary.DataAccess
             return table;
 
         }
-
-
-
         #endregion
     }
 }

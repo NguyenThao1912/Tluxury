@@ -95,6 +95,7 @@ namespace StoreLibrary.DataAccess
         DataTable FindSaleInvoiceBy_ID(string ID);
         DataTable FindSaleInvoiceBy_CusName(string name);
         DataTable FindSaleInvoiceBy_EmName(string name);
+        DataTable FindProduct(string name,int type);
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
         #region Lấy báo Cáo
