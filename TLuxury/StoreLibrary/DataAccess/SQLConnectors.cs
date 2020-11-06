@@ -128,7 +128,15 @@ namespace StoreLibrary.DataAccess
             }
             return model;
         }
-
+        public DataTable GetProductss()
+        {
+            DataTable model = new DataTable();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                model.Load(connection.ExecuteReader("dbo.[GetAllProduct]", null, commandType: CommandType.StoredProcedure));
+            }
+            return model;
+        }
         public List<Model_Color> GetAllColor()
         {
             List<Model_Color> model;
@@ -685,6 +693,17 @@ namespace StoreLibrary.DataAccess
                 connection.Execute("UpdateSeason", p, commandType: CommandType.StoredProcedure);
             }
         }
+
+        public void DeleteProduct(Model_Product model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@ProductID", model.ID);
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("DeleteProduct", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
         #region Lệnh Tìm Kiếm
@@ -872,6 +891,7 @@ namespace StoreLibrary.DataAccess
             }
             return table;
         }
+
 
 
 

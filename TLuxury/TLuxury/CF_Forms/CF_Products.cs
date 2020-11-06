@@ -27,23 +27,29 @@ namespace TLuxury.Forms
         }
         private void WireData()
         {
-            List<Model_Color> listColor = GlobalConfig.Connection.GetAllColor();
-            DanhsachMau.DataSource = listColor;
-            List<Model_RawMaterial> listCL = GlobalConfig.Connection.GetModel_RawMaterials();
-            DanhsachCL.DataSource = listCL;
-            List<Model_Object> listObj = GlobalConfig.Connection.GetAllObject();
-            DanhsachDoiTuong.DataSource = listObj;
-            List<Model_Manufactured> listNSX = GlobalConfig.Connection.GetAllManufactured();
-            DanhsachNSX.DataSource = listNSX;
-            List<Model_Season> listSS = GlobalConfig.Connection.GetAllSeason();
-            DanhsachMua.DataSource = listSS;
-            List<Model_Category> listLoai = GlobalConfig.Connection.GetAllCategory();
-            DanhsachLoai.DataSource = listLoai;
-            List<Model_Size> listSize = GlobalConfig.Connection.GetAllSize();
-            DanhsachKichCo.DataSource = listSize;
+            try
+            {
+                List<Model_Color> listColor = GlobalConfig.Connection.GetAllColor();
+                DanhsachMau.DataSource = listColor;
+                List<Model_RawMaterial> listCL = GlobalConfig.Connection.GetModel_RawMaterials();
+                DanhsachCL.DataSource = listCL;
+                List<Model_Object> listObj = GlobalConfig.Connection.GetAllObject();
+                DanhsachDoiTuong.DataSource = listObj;
+                List<Model_Manufactured> listNSX = GlobalConfig.Connection.GetAllManufactured();
+                DanhsachNSX.DataSource = listNSX;
+                List<Model_Season> listSS = GlobalConfig.Connection.GetAllSeason();
+                DanhsachMua.DataSource = listSS;
+                List<Model_Category> listLoai = GlobalConfig.Connection.GetAllCategory();
+                DanhsachLoai.DataSource = listLoai;
+                List<Model_Size> listSize = GlobalConfig.Connection.GetAllSize();
+                DanhsachKichCo.DataSource = listSize;
+                DataTable tbSanPham = GlobalConfig.Connection.GetProductss();
+                DanhsachSP.DataSource = tbSanPham;
+            }
+            catch
+            {
 
-            DataTable tbSanPham = GlobalConfig.Connection.GetAllProducts();
-            DanhsachSP.DataSource = tbSanPham;
+            }
         }
 
         private void DanhsachMau_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -60,7 +66,14 @@ namespace TLuxury.Forms
             Model_Color cl = new Model_Color();
             cl.ID = int.Parse(txtMaMau.Text);
             cl.Name = txtTenMau.Text;
-            GlobalConfig.Connection.UpdateColor(cl);
+            try
+            {
+                GlobalConfig.Connection.UpdateColor(cl);
+            }
+            catch
+            {
+
+            }
             WireData();
         }
 
@@ -88,14 +101,12 @@ namespace TLuxury.Forms
             }
             else MessageBox.Show("Hay chon mau can xoa");
         }
-
         private void btnThemSP_Click(object sender, EventArgs e)
         {
             AddProduct themSP = new AddProduct();
             themSP.ShowDialog();
             WireData();
         }
-
         private void DanhsachCL_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -104,14 +115,12 @@ namespace TLuxury.Forms
                 txtTenCL.Text = DanhsachCL.Rows[e.RowIndex].Cells[1].Value.ToString();
             }
         }
-
         private void btnThemCL_Click(object sender, EventArgs e)
         {
             Add themCL = new Add(4);
             themCL.ShowDialog();
             WireData();
         }
-
         private void btnXoaCL_Click(object sender, EventArgs e)
         {
             if (txtMaCL.Text != "")
@@ -137,11 +146,16 @@ namespace TLuxury.Forms
             Model_RawMaterial cl = new Model_RawMaterial();
             cl.ID = int.Parse(txtMaCL.Text);
             cl.Name = txtTenCL.Text;
-            GlobalConfig.Connection.UpdateMaterial(cl);
+            try
+            {
+                GlobalConfig.Connection.UpdateMaterial(cl);
+            }
+            catch
+            {
+
+            }
             WireData();
         }
-
-     
 
         private void btnThemDT_Click(object sender, EventArgs e)
         {
@@ -176,7 +190,14 @@ namespace TLuxury.Forms
             Model_Object ob = new Model_Object();
             ob.ID = int.Parse(txtMaDT.Text);
             ob.Name = txtTenDT.Text;
-            GlobalConfig.Connection.UpdateObject(ob);
+            try
+            {
+                GlobalConfig.Connection.UpdateObject(ob);
+            }
+            catch
+            {
+
+            }
             WireData();
         }
 
@@ -213,7 +234,14 @@ namespace TLuxury.Forms
             Model_Manufactured ob = new Model_Manufactured();
             ob.ID = int.Parse(txtMaNSX.Text);
             ob.Name = txtTenNSX.Text;
-            GlobalConfig.Connection.UpdateManuFactured(ob);
+            try
+            {
+                GlobalConfig.Connection.UpdateManuFactured(ob);
+            }
+            catch
+            {
+
+            }
             WireData();
         }
 
@@ -250,7 +278,14 @@ namespace TLuxury.Forms
             Model_Season ob = new Model_Season();
             ob.ID = int.Parse(txtMaMua.Text);
             ob.Name = txtTenMua.Text;
-            GlobalConfig.Connection.UpdateSeason(ob);
+            try
+            {
+                GlobalConfig.Connection.UpdateSeason(ob);
+            }
+            catch
+            {
+
+            }
             WireData();
         }
 
@@ -287,7 +322,14 @@ namespace TLuxury.Forms
             Model_Category ob = new Model_Category();
             ob.ID = int.Parse(txtMaLoai.Text);
             ob.Name = txtTenLoai.Text;
-            GlobalConfig.Connection.UpdateCategory(ob);
+            try
+            {
+                GlobalConfig.Connection.UpdateCategory(ob);
+            }
+            catch
+            {
+
+            }
             WireData();
         }
 
@@ -360,16 +402,16 @@ namespace TLuxury.Forms
             {
                 try
                 {
-                Model_Size ob = new Model_Size();
+                    Model_Size ob = new Model_Size();
 
-                ob.ID = int.Parse(txtMaKichCo.Text);
-                ob.Size = txtTenKichCo.Text;
-                GlobalConfig.Connection.DeleteSize(ob);
-                WireData();
+                    ob.ID = int.Parse(txtMaKichCo.Text);
+                    ob.Size = txtTenKichCo.Text;
+                    GlobalConfig.Connection.DeleteSize(ob);
+                    WireData();
                   }
                 catch (Exception t)
                 {
-                MessageBox.Show($"Co loi xay ra{t.ToString()}");
+                    MessageBox.Show($"Co loi xay ra{t.ToString()}");
                 }
             }
             else MessageBox.Show("Hay chon Size can xoa");
@@ -380,10 +422,20 @@ namespace TLuxury.Forms
             Model_Size ob = new Model_Size();
             ob.ID = int.Parse(txtMaKichCo.Text);
             ob.Size = txtTenKichCo.Text;
-            GlobalConfig.Connection.UpdateSize(ob);
+            try
+            {
+                GlobalConfig.Connection.UpdateSize(ob);
+            }
+            catch
+            {
+
+            }
             WireData();
         }
 
-        
+        private void btnXoaSP_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

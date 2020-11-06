@@ -33,6 +33,7 @@ namespace StoreLibrary.DataAccess
         List<Model_Role> GetAllRole();
         List<Model_Employee> GetAllEmployee_List();
         List<Model_Supplier> GetAllSupplier_List();
+        DataTable GetProductss();
         DataTable GetAllCustomers();
         DataTable GetAllEmployees();
         DataTable GetAllProducts();
@@ -73,6 +74,7 @@ namespace StoreLibrary.DataAccess
         void UpdateMaterial(Model_RawMaterial model);   //sửa nguyên liệu
         void UpdateSize(Model_Size model);              //sửa kích cỡ
         void UpdateSeason(Model_Season model);          //sửa mùa
+        void DeleteProduct(Model_Product model);
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
         #region Lệnh Tìm Kiếm
