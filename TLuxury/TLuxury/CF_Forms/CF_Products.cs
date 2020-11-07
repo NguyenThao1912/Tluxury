@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -502,6 +503,28 @@ namespace TLuxury.Forms
                 catch (Exception b)
                 {
                     MessageBox.Show($"Xảy ra lỗi trong quá trình tìm kiếm {b} ", "Thông báo", MessageBoxButtons.OK);
+                }
+            }
+        }
+
+        private void DanhsachSP_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                try
+                {
+                    string picture = DanhsachSP.Rows[e.RowIndex].Cells["Link ảnh"].Value.ToString();
+                    if (picture != "Khong co anh")
+                    {
+                        int index = System.Reflection.Assembly.GetExecutingAssembly().Location.IndexOf("bin");
+                        string resource = System.Reflection.Assembly.GetExecutingAssembly().Location.Substring(0, index) + @"Resources\" + picture;
+                        pictureBox1.Image = new Bitmap(resource);
+                    }
+                    return;
+                }
+                catch
+                {
+                    MessageBox.Show("Loi dau do");
                 }
             }
         }

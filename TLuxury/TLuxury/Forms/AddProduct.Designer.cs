@@ -69,6 +69,8 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -452,7 +454,7 @@
             // 
             this.textBoxAddpicture.Location = new System.Drawing.Point(153, 314);
             this.textBoxAddpicture.Name = "textBoxAddpicture";
-            this.textBoxAddpicture.Size = new System.Drawing.Size(423, 20);
+            this.textBoxAddpicture.Size = new System.Drawing.Size(341, 20);
             this.textBoxAddpicture.TabIndex = 13;
             // 
             // buttonAddPicture
@@ -461,7 +463,7 @@
             this.buttonAddPicture.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonAddPicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddPicture.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddPicture.Image")));
-            this.buttonAddPicture.Location = new System.Drawing.Point(577, 311);
+            this.buttonAddPicture.Location = new System.Drawing.Point(506, 308);
             this.buttonAddPicture.Name = "buttonAddPicture";
             this.buttonAddPicture.Size = new System.Drawing.Size(29, 26);
             this.buttonAddPicture.TabIndex = 30;
@@ -493,6 +495,15 @@
             this.label14.TabIndex = 36;
             this.label14.Text = "( Đồng )";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(506, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(78, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,6 +511,7 @@
             this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(654, 430);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.buttonAddPicture);
@@ -542,6 +554,7 @@
             this.Name = "AddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddProduct";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,5 +601,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

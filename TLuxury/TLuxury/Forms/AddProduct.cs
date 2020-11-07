@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace TLuxury.Forms
     {
         //form con
         private Add addform ;
+        string fileName;
         public AddProduct()
         {
             InitializeComponent();
@@ -29,8 +31,23 @@ namespace TLuxury.Forms
         }
         private void buttonAddPicture_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            textBoxAddpicture.Text = openFileDialog1.FileName;
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    textBoxAddpicture.Text = openFileDialog1.FileName;
+                    int index = System.Reflection.Assembly.GetExecutingAssembly().Location.IndexOf("bin");
+                    fileName = openFileDialog1.SafeFileName;
+                    MessageBox.Show(fileName);
+                    File.Copy(openFileDialog1.FileName, System.Reflection.Assembly.GetExecutingAssembly().Location.Substring(0, index) + @"Resources\" + openFileDialog1.SafeFileName, true);
+                    pictureBox1.Image = new Bitmap(openFileDialog1.FileName);
+                }
+                catch
+                {
+                    MessageBox.Show("Loi dau do ");
+                }
+            }
+
         }
         private void WireDataSize()
         {
@@ -274,7 +291,7 @@ namespace TLuxury.Forms
                 Model_Product model = new Model_Product(Name,cate,size,material,color,obj,season,manufactured,quantity,priceEntry,priceSell);
                 if (textBoxAddpicture.Text != "")
                 {
-                    model.Picture = textBoxAddpicture.Text;
+                    model.Picture = model.Picture = fileName;
                 }
                 try
                 {

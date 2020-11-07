@@ -59,5 +59,15 @@ namespace TLuxury.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _122409670_2666243856961364_8363362088084695017_n {
+            get {
+                object obj = ResourceManager.GetObject("122409670_2666243856961364_8363362088084695017_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

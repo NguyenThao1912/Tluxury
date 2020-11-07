@@ -117,7 +117,9 @@
     <Compile Include="Forms\AddEntryInvoice.Designer.cs">
       <DependentUpon>AddEntryInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\addkhach_banhang.cs" />
+    <Compile Include="Forms\addkhach_banhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\addkhach_banhang.Designer.cs">
       <DependentUpon>addkhach_banhang.cs</DependentUpon>
     </Compile>
@@ -269,6 +271,9 @@
       <Project>{7b494c35-9242-472e-b999-86c85ae0c22d}</Project>
       <Name>StoreLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\122409670_2666243856961364_8363362088084695017_n.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
