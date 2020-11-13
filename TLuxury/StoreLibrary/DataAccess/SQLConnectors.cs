@@ -375,7 +375,7 @@ namespace StoreLibrary.DataAccess
         //Tạo Hóa đơn nhập mới
         public Model_EntryInvoice InsertNewEntryInvoice(string emID, string supID, string day, decimal total)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 Model_EntryInvoice model = new Model_EntryInvoice();
                 var p = new DynamicParameters();
@@ -396,7 +396,7 @@ namespace StoreLibrary.DataAccess
         //Tạo chi tiết hóa đơn  nhập mới
         public void InsertNewEntryDetails(string entryID, string prodID, float discount, decimal unitprice, int quantity, decimal total)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 var p = new DynamicParameters();
                 p.Add("@EntryID ", entryID);
@@ -410,7 +410,7 @@ namespace StoreLibrary.DataAccess
         }
         public Model_SaleInvoice Insert_SaleInvoice(string nhanvien_id, string day, string khach_id, decimal tongtien)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 Model_SaleInvoice model = new Model_SaleInvoice();
                 var p = new DynamicParameters();
@@ -430,7 +430,7 @@ namespace StoreLibrary.DataAccess
         }
         public void insert_hoadonban_chitiet(string hoadon_id, string hanghoa_ID, float giamgia, int soluong, decimal thanhtien)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 var p = new DynamicParameters();
                 p.Add("@idhoadon ", hoadon_id);
@@ -445,7 +445,7 @@ namespace StoreLibrary.DataAccess
         //Tạo Sản phẩm mới
         public Model_Product InsertNewProduct(Model_Product model)
         {
-            using(IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            using(IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 var p = new  DynamicParameters();
                 p.Add("@ProductName", model.Name);
@@ -961,6 +961,25 @@ namespace StoreLibrary.DataAccess
             return table;
 
         }
+
         #endregion
+        public Users Checklogin(string username, string pass)
+        {
+            Users us = new Users();
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@user", username);
+            p.Add("@pass", pass);
+            p.Add("@status", 0, DbType.Int32, ParameterDirection.Output);
+            p.Add("@role", 0, DbType.Int32, ParameterDirection.Output);
+            p.Add("@islogin", 0, DbType.Int32, ParameterDirection.Output);
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("CheckLogin", p, commandType: CommandType.StoredProcedure);
+            }
+            us.status = p.Get<int>("@status");
+            us.role = p.Get<int>("@role");
+            us.islogin = p.Get<int>("@islogin");
+            return us;
+        }
     }
 }

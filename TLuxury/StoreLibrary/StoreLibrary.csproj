@@ -64,6 +64,7 @@
     <Compile Include="Models\Model_Season.cs" />
     <Compile Include="Models\Model_Size.cs" />
     <Compile Include="Models\Model_Supplier.cs" />
+    <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -104,5 +104,6 @@ namespace StoreLibrary.DataAccess
         DataTable ReportCantSellProduct(int month);
         DataTable ReportSaleInvoice(int month, int year,out decimal Amount);
         #endregion
+        Users Checklogin(string username, string pass);
     }
 }

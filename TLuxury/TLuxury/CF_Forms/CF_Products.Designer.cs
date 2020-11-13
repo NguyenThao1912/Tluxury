@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Products));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -60,9 +61,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_Products));
             this.tabSP_CC = new System.Windows.Forms.TabControl();
             this.tabSP = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxFind = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonSua = new System.Windows.Forms.Button();
@@ -141,9 +142,9 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabSP_CC.SuspendLayout();
             this.tabSP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachSP)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -161,7 +162,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachLoai)).BeginInit();
             this.tabKichco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachKichCo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabSP_CC
@@ -193,6 +193,18 @@
             this.tabSP.Text = "Sản Phẩm";
             this.tabSP.UseVisualStyleBackColor = true;
             this.tabSP.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(686, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // textBoxFind
             // 
@@ -231,7 +243,7 @@
             this.buttonSua.ForeColor = System.Drawing.Color.White;
             this.buttonSua.Image = ((System.Drawing.Image)(resources.GetObject("buttonSua.Image")));
             this.buttonSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSua.Location = new System.Drawing.Point(786, 95);
+            this.buttonSua.Location = new System.Drawing.Point(932, 169);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonSua.Size = new System.Drawing.Size(104, 48);
@@ -251,7 +263,7 @@
             this.buttonThêm.ForeColor = System.Drawing.Color.White;
             this.buttonThêm.Image = ((System.Drawing.Image)(resources.GetObject("buttonThêm.Image")));
             this.buttonThêm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThêm.Location = new System.Drawing.Point(661, 95);
+            this.buttonThêm.Location = new System.Drawing.Point(932, 238);
             this.buttonThêm.Name = "buttonThêm";
             this.buttonThêm.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonThêm.Size = new System.Drawing.Size(104, 48);
@@ -587,7 +599,7 @@
             this.DanhsachCL.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachCL.RowTemplate.Height = 30;
             this.DanhsachCL.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachCL.Size = new System.Drawing.Size(964, 335);
+            this.DanhsachCL.Size = new System.Drawing.Size(964, 343);
             this.DanhsachCL.TabIndex = 18;
             // 
             // btnSuaCL
@@ -739,7 +751,7 @@
             this.DanhsachDoiTuong.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachDoiTuong.RowTemplate.Height = 30;
             this.DanhsachDoiTuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachDoiTuong.Size = new System.Drawing.Size(964, 335);
+            this.DanhsachDoiTuong.Size = new System.Drawing.Size(964, 343);
             this.DanhsachDoiTuong.TabIndex = 18;
             // 
             // btnSuaDT
@@ -891,7 +903,7 @@
             this.DanhsachNSX.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachNSX.RowTemplate.Height = 30;
             this.DanhsachNSX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachNSX.Size = new System.Drawing.Size(964, 335);
+            this.DanhsachNSX.Size = new System.Drawing.Size(964, 343);
             this.DanhsachNSX.TabIndex = 18;
             // 
             // btnSuaNSX
@@ -1043,7 +1055,7 @@
             this.DanhsachMua.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachMua.RowTemplate.Height = 30;
             this.DanhsachMua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachMua.Size = new System.Drawing.Size(964, 335);
+            this.DanhsachMua.Size = new System.Drawing.Size(964, 343);
             this.DanhsachMua.TabIndex = 18;
             // 
             // btnSuaMua
@@ -1196,7 +1208,7 @@
             this.DanhsachLoai.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachLoai.RowTemplate.Height = 30;
             this.DanhsachLoai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachLoai.Size = new System.Drawing.Size(964, 335);
+            this.DanhsachLoai.Size = new System.Drawing.Size(964, 343);
             this.DanhsachLoai.TabIndex = 18;
             // 
             // btnSuaLoai
@@ -1349,7 +1361,7 @@
             this.DanhsachKichCo.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DanhsachKichCo.RowTemplate.Height = 30;
             this.DanhsachKichCo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DanhsachKichCo.Size = new System.Drawing.Size(964, 335);
+            this.DanhsachKichCo.Size = new System.Drawing.Size(964, 343);
             this.DanhsachKichCo.TabIndex = 27;
             // 
             // btnSuaKichCo
@@ -1430,18 +1442,6 @@
             this.label22.TabIndex = 19;
             this.label22.Text = "Thông tin Kích Cỡ";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(912, 169);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 136);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // CF_Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1454,6 +1454,7 @@
             this.tabSP_CC.ResumeLayout(false);
             this.tabSP.ResumeLayout(false);
             this.tabSP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachSP)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -1478,7 +1479,6 @@
             this.tabKichco.ResumeLayout(false);
             this.tabKichco.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachKichCo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

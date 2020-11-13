@@ -48,7 +48,8 @@ namespace TLuxury.Forms
         }
         private void buttonCLose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            Login.Instance.Show();
         }
         private void buttonBaoCao_Click(object sender, EventArgs e)
         {
