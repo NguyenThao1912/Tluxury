@@ -15,7 +15,6 @@ namespace TLuxury.Forms
         {
             InitializeComponent();
             WireData();
-            comboBox1.SelectedIndex = 0;
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -446,66 +445,10 @@ namespace TLuxury.Forms
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tính năng chưa có thời gian làm thôi bỏ qua test nút khác đi wtf :)");
+            MessageBox.Show("Tính năng chưa có thời gian làm thôi bỏ qua test nút khác đi  :)", "WARNING !! uwu");
         }
 
-        private void textBoxFind_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxFind.Text == "")
-            {
-                WireData();
-            }
-            else
-            {
-                DataTable table = new DataTable();
-                try
-                {
-                    if (comboBox1.Text != "--- Tìm Kiếm ---")
-                    {
-                        if (comboBox1.Text == "Tìm Theo Mã Sản Phẩm")
-                        {
-                            table = GlobalConfig.Connection.FindProduct($"{textBoxFind.Text.Trim()}", 1);
-                        }
-                        else if (comboBox1.Text == "Tìm Theo Màu")
-                        {
-                            table = GlobalConfig.Connection.FindProduct($"{textBoxFind.Text.Trim()}", 2);
-                        }
-                        else if (comboBox1.Text == "Tìm Theo Loại Sản Phẩm")
-                        {
-                            table = GlobalConfig.Connection.FindProduct($"{textBoxFind.Text.Trim()}", 3);
-                        }
-                        else if (comboBox1.Text == "Tìm Theo Nguyên Liệu")
-                        {
-                            table = GlobalConfig.Connection.FindProduct($"{textBoxFind.Text.Trim()}", 4);
-                        }
-                        else if (comboBox1.Text == "Tìm Theo Nhà Sản Xuất")
-                        {
-                            table = GlobalConfig.Connection.FindProduct($"{textBoxFind.Text.Trim()}", 5);
-                        }
-                        else if (comboBox1.Text == "Tìm Theo Mùa")
-                        {
-                            table = GlobalConfig.Connection.FindProduct($"{textBoxFind.Text.Trim()}", 6);
-                        }
-                    }
-                    if (table.Rows.Count > 0)
-                    {
-                        DanhsachSP.DataSource = null;
-                        DanhsachSP.DataSource = table;
-   
-                    }
-                    else
-                        if (comboBox1.Text == "--- Tìm Kiếm ---")
-                    {
-                        MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        textBoxFind.Text = "";
-                    }
-                }
-                catch (Exception b)
-                {
-                    MessageBox.Show($"Xảy ra lỗi trong quá trình tìm kiếm {b} ", "Thông báo", MessageBoxButtons.OK);
-                }
-            }
-        }
+       
 
         private void DanhsachSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -520,6 +463,12 @@ namespace TLuxury.Forms
                         string resource = System.Reflection.Assembly.GetExecutingAssembly().Location.Substring(0, index) + @"Resources\" + picture;
                         pictureBox1.Image = new Bitmap(resource);
                     }
+                    else
+                    {
+                        int index = System.Reflection.Assembly.GetExecutingAssembly().Location.IndexOf("bin");
+                        string resource = System.Reflection.Assembly.GetExecutingAssembly().Location.Substring(0, index) + @"Resources\" + "macdinh.png";
+                        pictureBox1.Image = new Bitmap(resource);
+                    }
                     return;
                 }
                 catch
@@ -527,6 +476,93 @@ namespace TLuxury.Forms
                     MessageBox.Show("Loi dau do");
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string Filter = "";
+            if (textBoxID.Text != "")
+                Filter += $"Product.ID LIKE '%' + '{textBoxID.Text}' + '%' and ";
+            if (textBoxName.Text != "")
+                Filter += $"Product.Name LIKE '%' + N'{textBoxName.Text}' + '%' and ";
+            if (textBoxCate.Text != "")
+                Filter += $"Category.Name LIKE '%' + N'{textBoxCate.Text}' + '%' and ";
+            if (textBoxSize.Text != "")
+                Filter += $"Size.Size LIKE '%' + N'{textBoxSize.Text}' + '%' and ";
+            if (textBoxMaterial.Text != "")
+                Filter += $"RawMaterial.Name LIKE '%' + N'{textBoxMaterial.Text}' + '%' and ";
+            if (textBoxColor.Text != "")
+                Filter += $"Color.Name LIKE '%' + N'{textBoxColor.Text}' + '%' and ";
+            if (textBoxObject.Text != "")
+                Filter += $"Object.Name LIKE '%' + N'{textBoxObject.Text}' + '%' and ";
+            if (textBoxSeason.Text != "")
+                Filter += $"Season.Name LIKE '%' + N'{textBoxSeason.Text}'+ '%' and ";
+            if (textBoxManufac.Text != "")
+                Filter += $"Manufactured.Name LIKE '%' + N'{textBoxManufac.Text}' + '%' and ";
+            if (Filter.Length > 0)
+            {
+                
+                /*  string CutFilter = "SELECT Product.* ," +
+                   "Product.Name  ," +
+                   "Category.*  ," +
+                   "Size.*  ," +
+                   "RawMaterial.* ," +
+                   "Color.* ," +
+                   "Object.* ," +
+                   "Season.* ," +
+                   "Manufactured.* ," +
+                   "FROM Product, Category, Size, RawMaterial, Color, Object, Season, Manufactured " +
+                   "Left join Category on Product.CategoryID = Category.ID " +
+                   "Left join Size on Product.CategoryID = Size.ID " +
+                   "Left join RawMaterial on Product.CategoryID = RawMaterial.ID " +
+                   "Left join Color on Product.CategoryID = Color.ID " +
+                   "Left join Object on Product.CategoryID = Object.ID " +
+                   "Left join Season on Product.CategoryID = Season.ID " +
+                   "Left join Manufactured on Product.CategoryID = Manufactured.ID " +
+                   "WHERE CategoryID = Category.ID AND " +
+                   "SizeID = Size.ID AND " +
+                   "RawMaterial_ID = RawMaterial.ID AND " +
+                   "ColorID = Color.ID AND " +
+                   "Object.ID = ObjectID AND " +
+                   "SeasonID = Season.ID AND " +
+                   "Manufactured.ID = ManufacturedID AND ";*/
+                try
+                {
+                    DanhsachSP.DataSource = GlobalConfig.Connection.FindProduct(Filter);
+                }
+                catch
+                {
+
+                }
+            }
+            else
+                return;
+        }
+
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBoxCate.Text = "";
+                textBoxColor.Text = "";
+                textBoxID.Text = "";
+                textBoxManufac.Text = "";
+                textBoxMaterial.Text = "";
+                textBoxName.Text = "";
+                textBoxObject.Text = "";
+                textBoxSize.Text = "";
+                textBoxSeason.Text = "";
+                DanhsachSP.DataSource = GlobalConfig.Connection.GetProductss();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tính năng chưa có thời gian làm thôi bỏ qua test nút khác đi :)","WARNING !! uwu");
         }
     }
 }

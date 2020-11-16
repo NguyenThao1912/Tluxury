@@ -33,6 +33,8 @@ namespace TLuxury.Forms
             InitializeComponent();
             buttonDangNhap.FlatAppearance.MouseOverBackColor = Color.FromArgb(237, 125, 49);
             buttonDangNhap.FlatAppearance.MouseDownBackColor = Color.FromArgb(237, 125, 49);
+            textBoxUser.Text = "Thao";
+            textBoxPassword.Text = "123456";
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -896,19 +896,38 @@ namespace StoreLibrary.DataAccess
             return table;
         }
         //TÌM KIẾM SẢN PHẨM
-        public DataTable FindProduct(string name,int type)
+        public DataTable FindProduct(string sql)
         {
-            DynamicParameters p = new DynamicParameters();
+            string CutFilter = "SELECT Product.ID as N'Mã Sản Phẩm'," +
+                    "Product.Name as N'Tên Sản Phẩm'," +
+                    "Category.Name as N'Loại Sản Phẩm'," +
+                    "Size.Size as N'Kích Cỡ'," +
+                    "RawMaterial.Name as N'Nguyên Liệu'," +
+                    "Color.Name as N'Màu Sắc'," +
+                    "Object.Name as N'Đối Tượng'," +
+                    "Season.Name as N'Mùa'," +
+                    "Manufactured.Name as N'Nhà Sản Xuất'," +
+                    "Quantity as 'Số Lượng'," +
+                    "PriceEntry as N'Giá Nhập'," +
+                    "PriceSell as N'Giá Bán'," +
+                    "Picture as N'Link ảnh' " +
+                    "FROM Product, Category, Size, RawMaterial, Color, Object, Season, Manufactured " +
+                    "WHERE CategoryID = Category.ID AND " +
+                    "SizeID = Size.ID AND " +
+                    "RawMaterial_ID = RawMaterial.ID AND " +
+                    "ColorID = Color.ID AND " +
+                    "Object.ID = ObjectID AND " +
+                    "SeasonID = Season.ID AND " +
+                    "Manufactured.ID = ManufacturedID AND ";
+            CutFilter += sql.Remove(sql.Length - 4, 3);
             DataTable table = new DataTable();
-            p.Add("@Find", name);
-            p.Add("@Type", type);
             using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
-                table.Load(connection.ExecuteReader("FINDPRODUCT", p, commandType: CommandType.StoredProcedure));
+                table.Load(connection.ExecuteReader(CutFilter, commandType: CommandType.Text));
             }
             return table;
         }
-
+        // connection.Query<Model_Product,Model_Category,Model_Size,Model_RawMaterial,Model_Color,Model_Object,Model_Season,Model_Manufactured>("sql");
 
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
