@@ -438,25 +438,17 @@ namespace TLuxury.Forms
             WireData();
         }
 
-        private void buttonDelete_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonSua_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Tính năng chưa có thời gian làm thôi bỏ qua test nút khác đi  :)", "WARNING !! uwu");
         }
-
-       
-
         private void DanhsachSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 try
                 {
-                    string picture = DanhsachSP.Rows[e.RowIndex].Cells["Link ảnh"].Value.ToString();
+                    string picture = GlobalConfig.Connection.find_anh(DanhsachSP.Rows[e.RowIndex].Cells[0].Value.ToString());
                     if (picture != "Khong co anh")
                     {
                         int index = System.Reflection.Assembly.GetExecutingAssembly().Location.IndexOf("bin");

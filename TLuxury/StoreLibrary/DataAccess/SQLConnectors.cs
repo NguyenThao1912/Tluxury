@@ -747,7 +747,7 @@ namespace StoreLibrary.DataAccess
             {
                 string model = "";
                 var p = new DynamicParameters();
-                p.Add("@mahang ", hang_id);
+                p.Add("@mahang", hang_id);
                 p.Add("@link", "", DbType.String, direction: ParameterDirection.Output);
                 connection.Execute("laylinkanh", p, commandType: CommandType.StoredProcedure);
                 model = p.Get<string>("@link");
@@ -922,8 +922,7 @@ namespace StoreLibrary.DataAccess
                     "Manufactured.Name as N'Nhà Sản Xuất'," +
                     "Quantity as 'Số Lượng'," +
                     "PriceEntry as N'Giá Nhập'," +
-                    "PriceSell as N'Giá Bán'," +
-                    "Picture as N'Link ảnh' " +
+                    "PriceSell as N'Giá Bán'" +
                     "FROM Product, Category, Size, RawMaterial, Color, Object, Season, Manufactured " +
                     "WHERE CategoryID = Category.ID AND " +
                     "SizeID = Size.ID AND " +

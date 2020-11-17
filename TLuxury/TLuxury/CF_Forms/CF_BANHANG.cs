@@ -13,16 +13,13 @@ namespace TLuxury.Forms
         public CF_BANHANG()
         {
             InitializeComponent();
-            InitializeButton();
         }
 
         private List<string> idhang = new List<string>();
         private Model_SaleInvoice model;
 
         public delegate void sendma(string id, string ten);
-        private void InitializeButton()
-        {
-        }
+
 
         private void BANHANG_Load(object sender, EventArgs e)
         {
