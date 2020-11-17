@@ -151,3 +151,4 @@ D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.EntryDetails.resources
 D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.SaleDetails.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.addkhach_banhang.resources
 D:\Netflix\Git\Luxury\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.Login.resources
+D:\git\Tluxury\TLuxury\TLuxury\obj\Debug\TLuxury.Forms.Login.resources

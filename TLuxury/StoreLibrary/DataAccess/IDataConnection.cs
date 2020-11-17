@@ -83,6 +83,7 @@ namespace StoreLibrary.DataAccess
         //----------------------------------------------------------------------------------------------------------------------------------
         #region Lệnh Tìm Kiếm
         DataTable FindCustomerByName(string name);
+        string find_anh(string hang_id);
         DataTable FindCustomerByID(string ID);
         DataTable FindSupplierByName(string name);
         DataTable FindSupplierByID(string ID);

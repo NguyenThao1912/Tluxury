@@ -3,6 +3,7 @@ using StoreLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -199,6 +200,18 @@ namespace TLuxury.Forms
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //DO SOMETHING
+            string s;
+            s = GlobalConfig.Connection.find_anh(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            
+            try
+            {
+                pictureBox1.Image = Image.FromFile(s);
+                label5.Text= dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void buttonthanhtoan_Click(object sender, EventArgs e)
@@ -336,5 +349,35 @@ namespace TLuxury.Forms
             idhang.Remove(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             
         }
+
+        private void dataGridViewhanghoa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string s;
+            s = GlobalConfig.Connection.find_anh(dataGridViewhanghoa.CurrentRow.Cells[0].Value.ToString());
+     
+
+            try
+            {
+
+                pictureBox1.Image = Image.FromFile(s);
+                label5.Text = dataGridViewhanghoa.CurrentRow.Cells[0].Value.ToString();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
     }
 }
+/*
+ *
+ALTER proc laylinkanh
+@mahang nvarchar(7),
+@link nvarchar(50) output
+as
+begin
+select @link=Picture
+from Product
+where ID=@mahang
+end
+ */

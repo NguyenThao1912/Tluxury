@@ -741,6 +741,19 @@ namespace StoreLibrary.DataAccess
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
         #region Lệnh Tìm Kiếm
+        public string find_anh(string hang_id)
+        {
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                string model = "";
+                var p = new DynamicParameters();
+                p.Add("@mahang ", hang_id);
+                p.Add("@link", "", DbType.String, direction: ParameterDirection.Output);
+                connection.Execute("laylinkanh", p, commandType: CommandType.StoredProcedure);
+                model = p.Get<string>("@link");
+                return model;
+            }
+        }
         public DataTable FindCustomerByName(string name)
         {
             DynamicParameters p = new DynamicParameters();
