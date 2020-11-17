@@ -19,6 +19,7 @@ namespace TLuxury.Forms
         private List<string> idhang = new List<string>();
         private Model_SaleInvoice model;
 
+        public delegate void sendma(string id, string ten);
         private void InitializeButton()
         {
         }
@@ -272,10 +273,17 @@ namespace TLuxury.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            addkhach_banhang frm = new addkhach_banhang();
-            frm.Show();
+            addkhach_banhang frm = new addkhach_banhang(nhankhach);
+            
+            frm.ShowDialog();
+            
         }
 
+        private void nhankhach(string id, string ten)
+        {
+            this.textBoxmakh.Text = id;
+            this.textBoxtenkh.Text = ten;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();

@@ -18,6 +18,12 @@ namespace TLuxury.Forms
             InitializeComponent();
         }
 
+        public addkhach_banhang(CF_BANHANG.sendma sendma)
+        {
+            InitializeComponent();
+            this.send = sendma;
+        }
+        public CF_BANHANG.sendma send;
         private void addkhach_banhang_Load(object sender, EventArgs e)
         {
             laydata();
@@ -35,6 +41,8 @@ namespace TLuxury.Forms
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            this.send(this.textBox1.Text,this.textBox2.Text);
+            
             Close();
         }
 
