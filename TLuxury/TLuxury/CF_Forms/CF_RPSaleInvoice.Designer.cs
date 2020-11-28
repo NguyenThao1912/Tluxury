@@ -53,7 +53,7 @@
             this.buttonbaoCao.TabIndex = 17;
             this.buttonbaoCao.Text = "Xuất Báo Cáo";
             this.buttonbaoCao.UseVisualStyleBackColor = true;
-            this.buttonbaoCao.Click += new System.EventHandler(this.buttonbaoCao_Click);
+            this.buttonbaoCao.Click += new System.EventHandler(this.buttonXuatBaoCao_Click);
             // 
             // label2
             // 

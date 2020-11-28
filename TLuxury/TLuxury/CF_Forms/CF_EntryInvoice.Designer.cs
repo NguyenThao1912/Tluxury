@@ -42,6 +42,7 @@
             this.textBoxFind = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.panelDatagrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachHoaDon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -208,6 +209,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.panel1.Controls.Add(this.buttonDelete);
             this.panel1.Controls.Add(this.DateEnd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
@@ -221,6 +223,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1080, 138);
             this.panel1.TabIndex = 22;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(0)))));
+            this.buttonDelete.FlatAppearance.BorderSize = 0;
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDelete.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.ForeColor = System.Drawing.Color.White;
+            this.buttonDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete.Image")));
+            this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDelete.Location = new System.Drawing.Point(850, 12);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonDelete.Size = new System.Drawing.Size(104, 48);
+            this.buttonDelete.TabIndex = 22;
+            this.buttonDelete.Text = "Xóa";
+            this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // CF_EntryInvoice
             // 
@@ -253,5 +275,6 @@
         private System.Windows.Forms.TextBox textBoxFind;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }

@@ -146,10 +146,16 @@ namespace TLuxury.Forms
             if (dataGridView1.Rows.Count == 0) return;
             //het hang
             if (int.Parse(dataGridViewhanghoa.CurrentRow.Cells[9].Value.ToString()) == 0)
+            {
                 MessageBox.Show("Sản phẩm đã hết", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+   
             //sp đã đc chọn
             if (checkma(dataGridViewhanghoa.CurrentRow.Cells[0].Value.ToString()) == false)
+            {
                 MessageBox.Show("Sản phẩm đã được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
                 idhang.Add(dataGridViewhanghoa.CurrentRow.Cells[0].Value.ToString());
@@ -195,23 +201,6 @@ namespace TLuxury.Forms
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //DO SOMETHING
-            string s;
-            s = GlobalConfig.Connection.find_anh(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            
-            try
-            {
-                pictureBox1.Image = Image.FromFile(s);
-                label5.Text= dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
-        }
-
         private void buttonthanhtoan_Click(object sender, EventArgs e)
         {
             if (textBoxthanhtoan.Text == "") textBoxthanhtoan.Text = "0";
@@ -228,7 +217,7 @@ namespace TLuxury.Forms
             }
 
             Model_Employee nhanvien = (Model_Employee)comboBox1.SelectedItem;
-            if (int.Parse(textBoxthanhtoan.Text) < float.Parse(labelkhachtra.Text))
+            if (float.Parse(textBoxthanhtoan.Text) < float.Parse(labelkhachtra.Text))
             {
                 MessageBox.Show("Số tiền khách trả chưa đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -266,6 +255,7 @@ namespace TLuxury.Forms
             labeltienthua.Text = "" + (float.Parse(textBoxthanhtoan.Text) - float.Parse(labelkhachtra.Text));
             reset();
             MessageBox.Show("Lập hóa đơn thành công", "Thông báo", MessageBoxButtons.OK);
+            button1.PerformClick();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -328,7 +318,7 @@ namespace TLuxury.Forms
             dataGridViewhanghoa.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewhanghoa.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewhanghoa.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewhanghoa.Columns[9].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewhanghoa.Columns[9].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewhanghoa.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
@@ -355,34 +345,55 @@ namespace TLuxury.Forms
             
         }
 
-        private void dataGridViewhanghoa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewhanghoa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string s;
-            s = GlobalConfig.Connection.find_anh(dataGridViewhanghoa.CurrentRow.Cells[0].Value.ToString());
-     
-
             try
             {
-
-                pictureBox1.Image = Image.FromFile(s);
-                label5.Text = dataGridViewhanghoa.CurrentRow.Cells[0].Value.ToString();
+                string picture = GlobalConfig.Connection.find_anh(dataGridViewhanghoa.Rows[e.RowIndex].Cells[0].Value.ToString());
+                if (picture != "Khong co anh")
+                {
+                    int index = System.Reflection.Assembly.GetExecutingAssembly().Location.IndexOf("bin");
+                    string resource = System.Reflection.Assembly.GetExecutingAssembly().Location.Substring(0, index) + @"Resources\" + picture;
+                    pictureBox1.Image = new Bitmap(resource);
+                }
+                else
+                {
+                    int index = System.Reflection.Assembly.GetExecutingAssembly().Location.IndexOf("bin");
+                    string resource = System.Reflection.Assembly.GetExecutingAssembly().Location.Substring(0, index) + @"Resources\" + "macdinh.png";
+                    pictureBox1.Image = new Bitmap(resource);
+                }
+                return;
             }
-            catch (Exception exception)
+            catch
             {
-                MessageBox.Show(exception.Message);
+                MessageBox.Show("Loi dau do");
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string picture = GlobalConfig.Connection.find_anh(dataGridViewhanghoa.Rows[e.RowIndex].Cells[0].Value.ToString());
+                if (picture != "Khong co anh")
+                {
+                    int index = System.Reflection.Assembly.GetExecutingAssembly().Location.IndexOf("bin");
+                    string resource = System.Reflection.Assembly.GetExecutingAssembly().Location.Substring(0, index) + @"Resources\" + picture;
+                    pictureBox1.Image = new Bitmap(resource);
+                }
+                else
+                {
+                    int index = System.Reflection.Assembly.GetExecutingAssembly().Location.IndexOf("bin");
+                    string resource = System.Reflection.Assembly.GetExecutingAssembly().Location.Substring(0, index) + @"Resources\" + "macdinh.png";
+                    pictureBox1.Image = new Bitmap(resource);
+                }
+                return;
+            }
+            catch
+            {
+                MessageBox.Show("Loi dau do");
             }
         }
     }
 }
-/*
- *
-ALTER proc laylinkanh
-@mahang nvarchar(7),
-@link nvarchar(50) output
-as
-begin
-select @link=Picture
-from Product
-where ID=@mahang
-end
- */
+

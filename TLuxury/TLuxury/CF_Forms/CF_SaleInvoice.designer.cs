@@ -30,7 +30,11 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CF_HOADON));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonThem = new System.Windows.Forms.Button();
+            this.textBoxFind = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.DateEnd = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,8 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panelDatagrid = new System.Windows.Forms.Panel();
             this.DanhsachHoaDon = new System.Windows.Forms.DataGridView();
-            this.textBoxFind = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelDatagrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhsachHoaDon)).BeginInit();
@@ -48,6 +51,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.panel1.Controls.Add(this.buttonDelete);
+            this.panel1.Controls.Add(this.buttonThem);
             this.panel1.Controls.Add(this.textBoxFind);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.DateEnd);
@@ -60,6 +65,52 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1080, 138);
             this.panel1.TabIndex = 24;
+            // 
+            // buttonThem
+            // 
+            this.buttonThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(245)))));
+            this.buttonThem.FlatAppearance.BorderSize = 0;
+            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThem.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThem.ForeColor = System.Drawing.Color.White;
+            this.buttonThem.Image = ((System.Drawing.Image)(resources.GetObject("buttonThem.Image")));
+            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThem.Location = new System.Drawing.Point(958, 12);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonThem.Size = new System.Drawing.Size(108, 48);
+            this.buttonThem.TabIndex = 24;
+            this.buttonThem.Text = "Thêm ";
+            this.buttonThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonThem.UseVisualStyleBackColor = false;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
+            // 
+            // textBoxFind
+            // 
+            this.textBoxFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxFind.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFind.Location = new System.Drawing.Point(22, 99);
+            this.textBoxFind.Name = "textBoxFind";
+            this.textBoxFind.Size = new System.Drawing.Size(404, 29);
+            this.textBoxFind.TabIndex = 22;
+            this.textBoxFind.TextChanged += new System.EventHandler(this.textBoxFind_TextChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "--- Tìm Kiếm ---",
+            "Tìm Theo Mã Hóa Đơn",
+            "Tìm Theo Tên Khách Hàng",
+            "Tìm Theo Tên Nhân Viên"});
+            this.comboBox1.Location = new System.Drawing.Point(22, 63);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(221, 29);
+            this.comboBox1.TabIndex = 23;
             // 
             // DateEnd
             // 
@@ -174,31 +225,25 @@
             this.DanhsachHoaDon.TabIndex = 3;
             this.DanhsachHoaDon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DanhsachHoaDon_CellDoubleClick);
             // 
-            // textBoxFind
+            // buttonDelete
             // 
-            this.textBoxFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxFind.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFind.Location = new System.Drawing.Point(22, 99);
-            this.textBoxFind.Name = "textBoxFind";
-            this.textBoxFind.Size = new System.Drawing.Size(404, 29);
-            this.textBoxFind.TabIndex = 22;
-            this.textBoxFind.TextChanged += new System.EventHandler(this.textBoxFind_TextChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "--- Tìm Kiếm ---",
-            "Tìm Theo Mã Hóa Đơn",
-            "Tìm Theo Tên Khách Hàng",
-            "Tìm Theo Tên Nhân Viên"});
-            this.comboBox1.Location = new System.Drawing.Point(22, 63);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(221, 29);
-            this.comboBox1.TabIndex = 23;
+            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(0)))));
+            this.buttonDelete.FlatAppearance.BorderSize = 0;
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDelete.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.ForeColor = System.Drawing.Color.White;
+            this.buttonDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete.Image")));
+            this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDelete.Location = new System.Drawing.Point(848, 12);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonDelete.Size = new System.Drawing.Size(104, 48);
+            this.buttonDelete.TabIndex = 25;
+            this.buttonDelete.Text = "Xóa";
+            this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // CF_HOADON
             // 
@@ -231,5 +276,7 @@
         private System.Windows.Forms.DataGridView DanhsachHoaDon;
         private System.Windows.Forms.TextBox textBoxFind;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button buttonThem;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }

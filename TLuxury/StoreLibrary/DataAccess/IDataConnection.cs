@@ -65,6 +65,8 @@ namespace StoreLibrary.DataAccess
         void DeleteSupplier(Model_Supplier model);      //xóa nhà cung cấp
         void UpdateEmployee(Model_Employee model);      //sửa nhân viên
         void DeleteEmployee(string ID);                 //xóa nhân viên
+        void DeleteEntryInvoice(string ID);             //xóa hóa đơn nhập
+        void DeleteSaleInvoice(string ID);              //xóa hóa đơn bán
         void DeleteCategory(Model_Category model);      //xóa loại sản phẩm
         void DeleteColor(Model_Color model);            //xóa Màu
         void DeleteManuFactured(Model_Manufactured model); //Xóa nhà sản xuất

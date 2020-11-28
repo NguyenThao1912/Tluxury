@@ -128,5 +128,23 @@ namespace TLuxury.Forms
             entry.ShowDialog();
             WireData();
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn Có Chắc muốn xóa hóa đơn này ", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    string id = DanhsachHoaDon.CurrentRow.Cells[0].Value.ToString();
+                    GlobalConfig.Connection.DeleteEntryInvoice(id);
+                    WireData();
+                    MessageBox.Show($"Xóa Thành công hóa đơn mã {id}");
+                }
+                catch
+                {
+                    MessageBox.Show("Lỗi Không Xóa được");
+                }
+            }
+        }
     }
 }

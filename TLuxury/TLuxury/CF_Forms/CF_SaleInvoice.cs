@@ -124,5 +124,28 @@ namespace TLuxury.Forms
             SaleDetails f = new SaleDetails(DanhsachHoaDon.Rows[e.RowIndex].Cells["Mã Hóa Đơn"].Value.ToString(), DanhsachHoaDon.Rows[e.RowIndex].Cells["Ngày Bán"].Value.ToString());
             f.ShowDialog();
         }
+
+        private void buttonThem_Click(object sender, EventArgs e)
+        {
+            MainForm.Intance.OpenChildForm(new CF_BANHANG(),(Button) sender);
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn Có Chắc muốn xóa hóa đơn này ","Thông Báo",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    string id = DanhsachHoaDon.CurrentRow.Cells[0].Value.ToString();
+                    GlobalConfig.Connection.DeleteSaleInvoice(id);
+                    WireData();
+                    MessageBox.Show($"Xóa Thành công hóa đơn mã {id}");
+                }
+                catch
+                {
+                    MessageBox.Show("Lỗi Không Xóa được");
+                }
+            }
+        }
     }
 }

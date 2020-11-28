@@ -518,6 +518,15 @@ namespace StoreLibrary.DataAccess
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
         #region Các Lệnh Delete Update
+        public void DeleteEntryInvoice(string ID)
+        {
+            var p = new DynamicParameters();
+            p.Add("EntryID", ID);
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+                    {
+                        connection.Execute("dbo.Delete_EntryInvoice", p, commandType: CommandType.StoredProcedure);
+            }
+        }   
         public void UpdateEmployee(Model_Employee model)
         {
             using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
@@ -736,6 +745,15 @@ namespace StoreLibrary.DataAccess
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Clothes")))
             {
                 connection.Execute("UpdateSeason", p, commandType: CommandType.StoredProcedure);
+            }
+        }
+        public void DeleteSaleInvoice(string ID)
+        {
+            var p = new DynamicParameters();
+            p.Add("SaleID", ID);
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.ConnectionString("Clothes")))
+            {
+                connection.Execute("dbo.[Delete_SaleInvoice]", p, commandType: CommandType.StoredProcedure);
             }
         }
         #endregion
@@ -1012,5 +1030,7 @@ namespace StoreLibrary.DataAccess
             us.islogin = p.Get<int>("@islogin");
             return us;
         }
+
+
     }
 }

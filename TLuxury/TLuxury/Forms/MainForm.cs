@@ -8,13 +8,30 @@ namespace TLuxury.Forms
 {
     public partial class MainForm : Form
     {
-        private Panel curPannelDrop;
-        private Form ActiveForms;
-        private Button ActiveButtons;
-        public MainForm()
+
+        private static MainForm instance;
+        private MainForm()
         {
             InitializeComponent();
         }
+        static public MainForm Intance 
+        { 
+            get 
+            {
+                if (instance == null)
+                    instance = new MainForm();
+                return instance;
+            }
+            set
+            {
+                instance = value;
+            }
+        }
+
+
+        private Panel curPannelDrop;
+        private Form ActiveForms;
+        private Button ActiveButtons;
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -104,7 +121,7 @@ namespace TLuxury.Forms
             else
                 this.WindowState = FormWindowState.Normal;
         }
-        private void OpenChildForm(Form childForm,Button sender)
+        public void OpenChildForm(Form childForm,Button sender)
         {
             if (ActiveButtons != null && ActiveButtons.Text == sender.Text)
                 return;

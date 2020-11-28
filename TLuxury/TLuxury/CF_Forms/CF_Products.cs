@@ -299,7 +299,6 @@ namespace TLuxury.Forms
                 try
                 {
                     Model_Category ob = new Model_Category();
-
                     ob.ID = int.Parse(txtMaLoai.Text);
                     ob.Name = txtTenLoai.Text;
                     GlobalConfig.Connection.DeleteCategory(ob);

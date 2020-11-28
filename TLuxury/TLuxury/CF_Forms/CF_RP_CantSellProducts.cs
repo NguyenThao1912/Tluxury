@@ -36,19 +36,25 @@ namespace TLuxury.CF_Forms
             }
 
         }
+        //CAI NAY de IN bang datagridview ra truyen dung thong tin la duoc
         private void PrintTable(Excel.Worksheet wsheet, DataGridView data, int rowheader, int colheader)
         {
+            char[] a = { ' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O' };
+            string b;
             int j = 0; //j là biến đếm vị trí header từ trái sang phải
-            //cho vòng lặp i từ colheader vì sẽ in ra ở cột số colheader trong excel
+                       //cho vòng lặp i từ 2 vì sẽ in ra ở cột số 2 trong excel
             for (int i = colheader; i < data.Columns.Count + colheader; i++)
             {
                 wsheet.Cells[rowheader, i] = data.Columns[j].HeaderText;
+                b = a[i] + rowheader.ToString();
+                wsheet.get_Range(b).ColumnWidth = 15;
+                wsheet.get_Range(b).HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
                 j++;
             }
             //Tiếp tục lặp đến dữ liệu
-            int col = colheader;        //vẫn in từ cột header
-            int row = rowheader + 1;    //hàng trên in header rồi nên chuyển sang hàng tiếp theo in dữ liệu
-            //Duyệt bảng dữ liệu như ma trận 2 chiều bình thường
+            int col = colheader;  //vẫn in từ cột header
+            int row = rowheader + 1;  //hàng trên in header rồi nên chuyển sang hàng tiếp theo in dữ liệu
+                                      //Duyệt bảng như ma trận 2 chiều bình thường
             for (int i = 0; i < data.Rows.Count; i++)
             {
                 for (int k = 0; k < data.Columns.Count; k++)
@@ -56,23 +62,31 @@ namespace TLuxury.CF_Forms
                     //kiểm tra nếu đi hết 1 cột của 1 hàng thì reset về vị trí đầu tiên
                     if (col > data.Columns.Count + colheader - 1) col = colheader;
                     wsheet.Cells[row, col] = data.Rows[i].Cells[k].Value.ToString();
+                    Excel.Range temp = (Excel.Range)wsheet.Cells[row, col];
+                    temp.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
                     col++;
                 }
                 row++;
             }
         }
-        private void comboBoxNCC_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonXuatBaoCao_Click(object sender, EventArgs e)
         {
-            WireData();
-        }
+            //dữ liệu
+            DataGridView datasource = DanhsachSP;
 
-        private void buttonbaoCao_Click(object sender, EventArgs e)
-        {
-            if (DanhsachSP.Rows.Count > 1)
+            if (datasource.Rows.Count > 1 || datasource.Text != "")
             {
-                string tencuahang = "Cửa Hàng Quần Áo TLuxury";
-                string DiaChi = "Địa Chỉ : Số 3 Cầu Giấy, Ngọc Khánh,Đống Đa ,Hà Nội";
-                string TieudeBaoCao = $"Báo Cáo Danh Sách Sản Phẩm Không Bán Được Trong Tháng {comboBoxThang.Text}";
+                //nơi in datagrid
+                int rowPrint = 8; //hàng 8
+                int colprint = 2; //cột 2
+
+                //các tiêu đề
+                string Ten = "Nguyễn Thảo zzz";
+                string DiaChi = "Địa Chỉ : H_ N__";
+                string TieudeBaoCao = $"Báo Cáo Danh Sách Sản Phẩm không Bán Được" ;
+
+
+                char[] col = { ' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O' };
                 //tạo đối tượng excel
                 Excel.Application ex = new Excel.Application();
                 //tạo workbook trong đối tượng excel
@@ -87,7 +101,7 @@ namespace TLuxury.CF_Forms
                 TenCuaHang.Font.Size = 15;
                 TenCuaHang.Font.Color = Color.Blue;
                 TenCuaHang.Font.Bold = true;
-                TenCuaHang.Value = tencuahang;
+                TenCuaHang.Value = Ten;
 
                 Excel.Range Diachi = (Excel.Range)wsheet.Cells[2, 1];
                 Diachi.Font.Size = 13;
@@ -99,13 +113,21 @@ namespace TLuxury.CF_Forms
                 Title.Font.Color = Color.Red;
                 Title.Font.Bold = true;
                 Title.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-                // Tiêu Đề Báo cáo
                 Title.Value = TieudeBaoCao;
+
                 //IN Báo Cáo
-                wsheet.get_Range("E8:I8").HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
-                //Hàm PrintTable(excelsheet,Datagridview,hàng bắt đầu,cột bắt đầu)
-                PrintTable(wsheet, DanhsachSP, 8, 2);
-                ex.Columns["B:H"].AutoFit();    //chỉnh sao cho cột tự động vừa với thông tin ở trong
+
+                wsheet.get_Range("E8:I8").HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+                //==========================================================================
+                PrintTable(wsheet, datasource, rowPrint, colprint);
+                //========================================================================
+                //ex.Columns["B:H"].AutoFit();    //chỉnh sao cho cột tự động vừa với thông tin ở trong dùng thì bỏ // đi
+                //thêm khung vào bảng
+
+                string firstcell = col[colprint] + rowPrint.ToString();
+                string lastcell = col[colprint + datasource.ColumnCount - 1] + (rowPrint + datasource.Rows.Count).ToString();
+                wsheet.get_Range(firstcell + ":" + lastcell).Borders.Weight = Excel.XlBorderWeight.xlMedium;
+
                 wbook.Activate();
                 SaveFileDialog save = new SaveFileDialog();
 
@@ -117,11 +139,12 @@ namespace TLuxury.CF_Forms
                     try
                     {
                         wbook.SaveAs(save.FileName.ToString());
+
                         MessageBox.Show("Xuất Báo Cáo Thành Công", "Thông Báo");
                     }
                     catch (System.Runtime.InteropServices.COMException)
                     {
-                        MessageBox.Show($"Cửa sổ excel hiện đang mở không thể thực hiện thay đổi");
+                        MessageBox.Show("Cửa sổ excel hiện đang mở không thể thực hiện thay đổi");
                     }
                     catch (Exception t)
                     {
@@ -130,21 +153,18 @@ namespace TLuxury.CF_Forms
                     finally
                     {
                         ex.Quit();
-                        Process[] excelProcesses = Process.GetProcessesByName("excel");
-                        foreach (Process p in excelProcesses)
-                        {
-                            if (string.IsNullOrEmpty(p.MainWindowTitle))
-                            {
-                                p.Kill();
-                            }
-                        }
                     }
                 }
 
             }
             else
-                MessageBox.Show("Không có gì để Báo Cáo , hãy kiểm tra đã chọn nhà cung cấp chưa", "Thông Báo");
+                MessageBox.Show("Không có gì để Báo Cáo ", "Thông Báo");
 
         }
+        private void comboBoxNCC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            WireData();
+        }
+
     }
 }

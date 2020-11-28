@@ -48,10 +48,9 @@ namespace TLuxury.Forms
            Users a = GlobalConfig.Connection.Checklogin(textBoxUser.Text,textBoxPassword.Text);
            if(a.islogin == 1)
            {
-                MainForm main = new MainForm();
                 this.Hide();
-                main.BringToFront();
-                main.Show();
+                MainForm.Intance.BringToFront();
+                MainForm.Intance.Show();
            }
            else
            {
