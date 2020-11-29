@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using StoreLibrary;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using StoreLibrary;
 
 namespace TLuxury.Forms
 {
@@ -41,8 +35,8 @@ namespace TLuxury.Forms
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            this.send(this.textBox1.Text,this.textBox2.Text);
-            
+            this.send(this.textBox1.Text, this.textBox2.Text);
+
             Close();
         }
 
@@ -84,7 +78,7 @@ namespace TLuxury.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddCustomer add =new AddCustomer();
+            AddCustomer add = new AddCustomer();
             add.Show();
         }
     }

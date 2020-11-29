@@ -150,7 +150,7 @@ namespace TLuxury.Forms
                 MessageBox.Show("Sản phẩm đã hết", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-   
+
             //sp đã đc chọn
             if (checkma(dataGridViewhanghoa.CurrentRow.Cells[0].Value.ToString()) == false)
             {
@@ -261,9 +261,9 @@ namespace TLuxury.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             addkhach_banhang frm = new addkhach_banhang(nhankhach);
-            
+
             frm.ShowDialog();
-            
+
         }
 
         private void nhankhach(string id, string ten)
@@ -342,7 +342,7 @@ namespace TLuxury.Forms
         private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             idhang.Remove(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            
+
         }
 
         private void dataGridViewhanghoa_CellClick(object sender, DataGridViewCellEventArgs e)

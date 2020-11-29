@@ -1,13 +1,6 @@
 ﻿using StoreLibrary;
 using StoreLibrary.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -20,17 +13,17 @@ namespace TLuxury.Forms
         }
         private bool ValidateForm()
         {
-            if(textBoxName.Text =="")
+            if (textBoxName.Text == "")
             {
                 MessageBox.Show("Tên Nhà Cung Cấp Không được để trống ! ", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(textBoxAddress.Text =="")
+            if (textBoxAddress.Text == "")
             {
                 MessageBox.Show("Địa Chỉ Không được để trống ! ", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(textBoxPhoneNumber.Text == "")
+            if (textBoxPhoneNumber.Text == "")
             {
                 MessageBox.Show("Số điện thoại Không được để trống ! ", "Thông Báo", MessageBoxButtons.OK);
                 return false;
@@ -45,9 +38,9 @@ namespace TLuxury.Forms
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            if(ValidateForm())
+            if (ValidateForm())
             {
-                Model_Supplier model = new Model_Supplier(textBoxName.Text,textBoxAddress.Text,textBoxPhoneNumber.Text);
+                Model_Supplier model = new Model_Supplier(textBoxName.Text, textBoxAddress.Text, textBoxPhoneNumber.Text);
                 //Chạy lệnh SQL
                 try
                 {

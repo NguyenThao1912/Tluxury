@@ -1,13 +1,6 @@
 ﻿using StoreLibrary;
 using StoreLibrary.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -16,14 +9,14 @@ namespace TLuxury.Forms
     {
         public static int Type { get; set; }
         public Add(int type)
-        {            
+        {
             InitializeComponent();
             Type = type;
             SetUp();
         }
         private void SetUp()
         {
-            if(Type == 1)
+            if (Type == 1)
             {
                 //Form them loai
                 labelTitle.Text = "Thêm Loại Sản Phẩm";
@@ -31,7 +24,7 @@ namespace TLuxury.Forms
                 label_Input.Text = "Loại Sản Phẩm";
                 //SQL
             }
-            else if(Type == 2)
+            else if (Type == 2)
             {
                 labelTitle.Text = "Thêm Màu Sản Phẩm";
 
@@ -39,46 +32,46 @@ namespace TLuxury.Forms
                 //Sql
 
             }
-            else if(Type == 3)
+            else if (Type == 3)
             {
                 labelTitle.Text = "Thêm Nhà Sản Xuất";
 
                 label_Input.Text = "Nhà sản xuất";
                 //Sql
-          
+
             }
-            else if(Type == 4)
+            else if (Type == 4)
             {
                 labelTitle.Text = "Thêm Nguyên Liệu";
 
                 label_Input.Text = "Tên Nguyên Liệu";
                 //Sql
-         
+
             }
-            else if(Type == 5)
+            else if (Type == 5)
             {
                 labelTitle.Text = "Thêm Đối tượng sử dụng";
 
                 label_Input.Text = "Tên Đối tượng";
                 //Sql
-         
+
             }
-            else if(Type == 6)
+            else if (Type == 6)
             {
                 labelTitle.Text = "Thêm Mùa";
 
                 label_Input.Text = "Tên Mùa";
                 //Sql
-       
+
             }
-            else if(Type == 7)
+            else if (Type == 7)
             {
                 labelTitle.Text = "Thêm Kích Cỡ";
 
                 label_Input.Text = "Tên Kích Cỡ";
                 //Sql
             }
-            else if(Type == 8)
+            else if (Type == 8)
             {
                 labelTitle.Text = "Thêm Chức vụ";
 
@@ -166,7 +159,7 @@ namespace TLuxury.Forms
                     {
                         GlobalConfig.Connection.CreateNew_Object(model);
                     }
-                    catch 
+                    catch
                     {
                         MessageBox.Show("Lỗi Câu lệnh SQL Thêm Đối Tượng  :( We are sorry about this", "Thông Báo", MessageBoxButtons.OK);
                         return;
@@ -182,7 +175,7 @@ namespace TLuxury.Forms
                     {
                         GlobalConfig.Connection.CreateNew_Season(model);
                     }
-                    catch 
+                    catch
                     {
                         MessageBox.Show("Lỗi Câu lệnh SQL Thêm Mùa  :( We are sorry about this", "Thông Báo", MessageBoxButtons.OK);
                         return;
@@ -198,7 +191,7 @@ namespace TLuxury.Forms
                     {
                         GlobalConfig.Connection.CreateNew_Size(model);
                     }
-                    catch 
+                    catch
                     {
                         MessageBox.Show("Lỗi Câu lệnh SQL Thêm Kích cỡ :( We are sorry about this", "Thông Báo", MessageBoxButtons.OK);
                         return;
@@ -214,12 +207,12 @@ namespace TLuxury.Forms
                     {
                         GlobalConfig.Connection.CreateNew_Role(model);
                     }
-                    catch 
+                    catch
                     {
                         MessageBox.Show("Lỗi Câu lệnh SQL Thêm Chức Vụ  :( We are sorry about this", "Thông Báo", MessageBoxButtons.OK);
                         return;
                     }
- 
+
                 }
                 MessageBox.Show("Nhập Thông tin Thành Công ", "Thông Báo", MessageBoxButtons.OK);
                 this.Dispose();

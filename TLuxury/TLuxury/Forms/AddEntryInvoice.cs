@@ -2,12 +2,7 @@
 using StoreLibrary.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -27,7 +22,7 @@ namespace TLuxury.Forms
             GetEmployee();
         }
         private void GetProducts()
-        { 
+        {
             try
             {
                 List<Model_Product> products = GlobalConfig.Connection.GetAllProduct_List();
@@ -36,9 +31,9 @@ namespace TLuxury.Forms
                 comboBoxProduct.DisplayMember = "Name";
                 comboBoxProduct.SelectedIndex = -1;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                MessageBox.Show(e.ToString(), "Thông Báo",MessageBoxButtons.OK);
+                MessageBox.Show(e.ToString(), "Thông Báo", MessageBoxButtons.OK);
             }
 
         }
@@ -95,22 +90,22 @@ namespace TLuxury.Forms
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             if (CheckForms())
-            {              
+            {
                 //Lấy Thông tin được chọn từ Forms
                 Employee = (Model_Employee)comboBoxEmployee.SelectedItem;
                 Model_Product Product = (Model_Product)comboBoxProduct.SelectedItem;
                 Supplier = (Model_Supplier)comboBoxSupplier.SelectedItem;
-                string NameOfProduct = GetProductName(Product.Name);             
+                string NameOfProduct = GetProductName(Product.Name);
                 DateTime day = DateEntryPicker.Value;
                 // Kiem tra  san pham da co trong danh sách chưa
                 if (CheckStock(Product.ID) == false)
-                    MessageBox.Show("Đã có sản phẩm trong danh sách", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Đã có sản phẩm trong danh sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     stockEntry.Add(Product.ID);
                     //Tổng tiền = (Số Lượng * đơn Giá ) * (1 - Giảm Giá)
-                    tongtien += (numericUpDownQuantity.Value * decimal.Parse(textBoxUnitPrice.Text))* (1- decimal.Parse(textBoxDiscount.Text)/100);
-                    labelTotal.Text ="Tổng tiền : " + tongtien.ToString("N0",System.Globalization.CultureInfo.GetCultureInfo("de")) + " VND";
+                    tongtien += (numericUpDownQuantity.Value * decimal.Parse(textBoxUnitPrice.Text)) * (1 - decimal.Parse(textBoxDiscount.Text) / 100);
+                    labelTotal.Text = "Tổng tiền : " + tongtien.ToString("N0", System.Globalization.CultureInfo.GetCultureInfo("de")) + " VND";
                     //Thêm thông tin vào datagridview
                     int n = dataGridView1.Rows.Add();
                     dataGridView1.Rows[n].Cells[0].Value = Product.ID;
@@ -119,10 +114,10 @@ namespace TLuxury.Forms
                     dataGridView1.Rows[n].Cells[3].Value = textBoxUnitPrice.Text;
                     dataGridView1.Rows[n].Cells[4].Value = textBoxDiscount.Text;
                 }
-                
+
                 //Clear data
                 ClearText();
-            }           
+            }
         }
 
         private void buttonAddProduct_Click(object sender, EventArgs e)
@@ -145,12 +140,12 @@ namespace TLuxury.Forms
         }
         private bool CheckForms()
         {
-            if(comboBoxEmployee.Text == "")
+            if (comboBoxEmployee.Text == "")
             {
                 MessageBox.Show("Cần chọn nhân viên !", "Thông báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(comboBoxProduct.Text == "")
+            if (comboBoxProduct.Text == "")
             {
                 MessageBox.Show("Cần chọn sản Phẩm !", "Thông báo", MessageBoxButtons.OK);
                 return false;
@@ -160,17 +155,17 @@ namespace TLuxury.Forms
                 MessageBox.Show("Cần chọn Nhà Cung Cấp !", "Thông báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(numericUpDownQuantity.Text == "0")
+            if (numericUpDownQuantity.Text == "0")
             {
                 MessageBox.Show("Cần Thêm số lượng !", "Thông báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(textBoxUnitPrice.Text == "")
+            if (textBoxUnitPrice.Text == "")
             {
                 MessageBox.Show("Cần Thêm giá của sản phẩm !", "Thông báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(textBoxDiscount.Text =="")
+            if (textBoxDiscount.Text == "")
             {
                 MessageBox.Show("Cần thêm giảm giá  !", "Thông báo", MessageBoxButtons.OK);
                 return false;
@@ -182,19 +177,19 @@ namespace TLuxury.Forms
         {
             if (dataGridView1.Rows.Count < 1)
                 return;
-            if(MessageBox.Show("Bạn chắc chắn muốn xóa sản phẩm này ","Thông báo",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn chắc chắn muốn xóa sản phẩm này ", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 //Tiến hành Tính lại tiền sau khi xóa
                 foreach (DataGridViewRow item in dataGridView1.SelectedRows)
                 {
                     //Lấy tiền từ đối tượng được chọn
-                    decimal money = (decimal.Parse(item.Cells[2].Value.ToString()) * decimal.Parse(item.Cells[3].Value.ToString())) * (1-decimal.Parse(item.Cells["Discount"].Value.ToString())/100);
+                    decimal money = (decimal.Parse(item.Cells[2].Value.ToString()) * decimal.Parse(item.Cells[3].Value.ToString())) * (1 - decimal.Parse(item.Cells["Discount"].Value.ToString()) / 100);
                     //Lấy tổng tiền hiện tại trừ đi 
                     tongtien = tongtien - money;
                     //Cập nhật lại Tổng tiền trên label
                     labelTotal.Text = "Tổng tiền : " + tongtien.ToString("N0", System.Globalization.CultureInfo.GetCultureInfo("de")) + " VND";
                     stockEntry.Remove(item.Cells[0].Value.ToString());
-                    dataGridView1.Rows.RemoveAt(item.Index);                  
+                    dataGridView1.Rows.RemoveAt(item.Index);
                 }
             }
         }
@@ -231,8 +226,8 @@ namespace TLuxury.Forms
                                 int.Parse(row.Cells["Quantity"].Value.ToString()),
                                 (unitprice * quantity) * discount
                              );
-                          //  dataGridView1.Rows.Clear();
-                         //   labelTotal.Text = "Tổng Tiền : 0 VND";
+                            //  dataGridView1.Rows.Clear();
+                            //   labelTotal.Text = "Tổng Tiền : 0 VND";
                         }
                         catch
                         {

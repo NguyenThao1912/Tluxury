@@ -14,9 +14,9 @@ namespace TLuxury.Forms
         {
             InitializeComponent();
         }
-        static public MainForm Intance 
-        { 
-            get 
+        static public MainForm Intance
+        {
+            get
             {
                 if (instance == null)
                     instance = new MainForm();
@@ -121,7 +121,7 @@ namespace TLuxury.Forms
             else
                 this.WindowState = FormWindowState.Normal;
         }
-        public void OpenChildForm(Form childForm,Button sender)
+        public void OpenChildForm(Form childForm, Button sender)
         {
             if (ActiveButtons != null && ActiveButtons.Text == sender.Text)
                 return;
@@ -131,7 +131,7 @@ namespace TLuxury.Forms
             ActiveButtons = sender;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;    
+            childForm.Dock = DockStyle.Fill;
             this.panelContent.Controls.Add(childForm);
             this.panelContent.Tag = childForm;
             childForm.BringToFront();
@@ -143,7 +143,7 @@ namespace TLuxury.Forms
         }
         private void buttonDT_KhachHang_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new CF_Customer(),(Button) sender);
+            OpenChildForm(new CF_Customer(), (Button)sender);
         }
 
         private void buttonDT_NhaCungCap_Click(object sender, EventArgs e)

@@ -2,12 +2,6 @@
 using StoreLibrary.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -34,41 +28,41 @@ namespace TLuxury.Forms
             {
                 MessageBox.Show("Lỗi lấy dữ liệu chức vụ", "Thông báo");
             }
- 
+
         }
         private bool ValidateForm()
         {
-            if(textBoxFirstName.Text == "")
+            if (textBoxFirstName.Text == "")
             {
                 MessageBox.Show("Tên không được để trống", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(textBoxPhoneNumber.Text =="")
+            if (textBoxPhoneNumber.Text == "")
             {
                 MessageBox.Show("Số điện thoại không được để trống", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(textBoxAddress.Text == "")
+            if (textBoxAddress.Text == "")
             {
                 MessageBox.Show("Địa chỉ không được để trống", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(textBoxPhoneNumber.Text.Length <10)
+            if (textBoxPhoneNumber.Text.Length < 10)
             {
                 MessageBox.Show("Số Điện Thoại Phải có >10 số", "Thông Báo", MessageBoxButtons.OK);
-                return false;             
+                return false;
             }
-            if(rbFeMale.Checked ==false && rbMale.Checked == false)
+            if (rbFeMale.Checked == false && rbMale.Checked == false)
             {
                 MessageBox.Show("hãy Tích vào giới tính", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(DateTime.Now.Year - dateTimePicker1.Value.Year < 18)
+            if (DateTime.Now.Year - dateTimePicker1.Value.Year < 18)
             {
                 MessageBox.Show("Chỉ nhận nhân viên trên 18 tuổi", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(cbxRole.SelectedIndex == -1)
+            if (cbxRole.SelectedIndex == -1)
             {
                 MessageBox.Show("Chức vụ không được để trống", "Thông Báo", MessageBoxButtons.OK);
                 return false;
@@ -89,14 +83,14 @@ namespace TLuxury.Forms
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            if(ValidateForm())
+            if (ValidateForm())
             {
                 char Sex;
                 if (rbMale.Checked == true) Sex = 'M';
                 else Sex = 'F';
                 Model_Role role = (Model_Role)cbxRole.SelectedItem;
                 Model_Employee model = new Model_Employee(textBoxFirstName.Text,
-                    Sex,dateTimePicker1.Value.Date,
+                    Sex, dateTimePicker1.Value.Date,
                     textBoxPhoneNumber.Text,
                     textBoxAddress.Text,
                     role);

@@ -1,13 +1,7 @@
 ﻿using StoreLibrary;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 namespace TLuxury.CF_Forms
@@ -17,7 +11,7 @@ namespace TLuxury.CF_Forms
         public CF_RPCustomer()
         {
             InitializeComponent();
-                WireData();
+            WireData();
         }
         private void WireData()
         {
@@ -26,11 +20,18 @@ namespace TLuxury.CF_Forms
                 if (textBoxYear.Text != "")
                 {
                     DataTable table = GlobalConfig.Connection.ReportTop5Cus(int.Parse(textBoxYear.Text));
-                    DanhsachKH.DataSource = null;
-                    DanhsachKH.DataSource = table;
+                    if(table.Rows.Count > 0)
+                    {
+                        DanhsachKH.DataSource = null;
+                        DanhsachKH.DataSource = table;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có dữ liệu cho tháng này ", "Thông Báo", MessageBoxButtons.OK);
+                    }
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show($"Lỗi gì đó chưa biêt !! {e}");
             }

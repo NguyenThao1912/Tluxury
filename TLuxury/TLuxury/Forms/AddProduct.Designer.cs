@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProduct));
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_TenSP = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -73,17 +73,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelTitle
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(654, 43);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thêm Sản Phẩm";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(0, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(654, 35);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Thêm Sản Phẩm";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -267,9 +267,9 @@
             // 
             this.textBox_soluong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_soluong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_soluong.Enabled = false;
             this.textBox_soluong.Location = new System.Drawing.Point(433, 269);
             this.textBox_soluong.Name = "textBox_soluong";
-            this.textBox_soluong.ReadOnly = true;
             this.textBox_soluong.Size = new System.Drawing.Size(115, 20);
             this.textBox_soluong.TabIndex = 12;
             this.textBox_soluong.Text = "0";
@@ -278,9 +278,9 @@
             // textBox_GiaNhap
             // 
             this.textBox_GiaNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_GiaNhap.Enabled = false;
             this.textBox_GiaNhap.Location = new System.Drawing.Point(433, 113);
             this.textBox_GiaNhap.Name = "textBox_GiaNhap";
-            this.textBox_GiaNhap.ReadOnly = true;
             this.textBox_GiaNhap.Size = new System.Drawing.Size(141, 20);
             this.textBox_GiaNhap.TabIndex = 8;
             this.textBox_GiaNhap.Text = "0";
@@ -312,9 +312,9 @@
             // textBox_GiaBan
             // 
             this.textBox_GiaBan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_GiaBan.Enabled = false;
             this.textBox_GiaBan.Location = new System.Drawing.Point(433, 155);
             this.textBox_GiaBan.Name = "textBox_GiaBan";
-            this.textBox_GiaBan.ReadOnly = true;
             this.textBox_GiaBan.Size = new System.Drawing.Size(141, 20);
             this.textBox_GiaBan.TabIndex = 9;
             this.textBox_GiaBan.Text = "0";
@@ -497,9 +497,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(506, 46);
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(496, 46);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 47);
+            this.pictureBox1.Size = new System.Drawing.Size(78, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
@@ -548,7 +549,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_TenSP);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "AddProduct";
@@ -562,7 +563,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_TenSP;
         private System.Windows.Forms.Label label3;

@@ -3,7 +3,6 @@ using StoreLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -15,6 +14,7 @@ namespace TLuxury.CF_Forms
         {
             InitializeComponent();
             WireData();
+            DanhsachNCC.DataSource = null;
         }
 
         private void CF_RPSupplier_Load(object sender, EventArgs e)
@@ -24,7 +24,7 @@ namespace TLuxury.CF_Forms
 
         private void comboBoxNCC_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBoxNCC.Text != "")
+            if (comboBoxNCC.Text != "")
             {
                 Model_Supplier s = (Model_Supplier)comboBoxNCC.SelectedItem;
                 try

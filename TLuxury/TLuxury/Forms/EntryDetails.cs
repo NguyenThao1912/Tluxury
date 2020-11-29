@@ -1,24 +1,18 @@
 ﻿using StoreLibrary;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
 {
     public partial class EntryDetails : Form
     {
-        int quantity ;
-        decimal money ;
+        int quantity;
+        decimal money;
         string ID;
         string SupplierName;
         string dayentry;
-        public EntryDetails(string id , string Dayentry)
+        public EntryDetails(string id, string Dayentry)
         {
             ID = id;
             dayentry = Dayentry;
@@ -29,8 +23,8 @@ namespace TLuxury.Forms
         {
             try
             {
-                DataTable table = GlobalConfig.Connection.GetAllEntryDetails(ID,out quantity, out money, out SupplierName);
-                labelID.Text = "Mã Hóa Đơn : " + ID.ToString(); 
+                DataTable table = GlobalConfig.Connection.GetAllEntryDetails(ID, out quantity, out money, out SupplierName);
+                labelID.Text = "Mã Hóa Đơn : " + ID.ToString();
                 labelName.Text = "Tên Nhà Cung Cấp : " + SupplierName;
                 labelTotal.Text = "Tổng Tiền : " + money.ToString("N0", System.Globalization.CultureInfo.GetCultureInfo("de")) + " VND";
                 labelQuantity.Text = "Số Lượng Sản Phẩm : " + quantity.ToString();
@@ -41,7 +35,7 @@ namespace TLuxury.Forms
             catch (ApplicationException)
             {
                 MessageBox.Show($" Lỗi Hóa Đơn Không có Sản phẩm nào ");
-                
+
             }
             catch (Exception e)
             {

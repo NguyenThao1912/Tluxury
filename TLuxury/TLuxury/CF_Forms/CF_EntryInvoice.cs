@@ -1,12 +1,6 @@
 ﻿using StoreLibrary;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -22,7 +16,7 @@ namespace TLuxury.Forms
         private void WireData()
         {
             try
-            {              
+            {
                 DateTime start = DateStart.Value.AddDays(-1);
                 DateTime end = DateEnd.Value.AddDays(1);
                 DataTable table = GlobalConfig.Connection.GetAllEntryBills(start, end);
@@ -38,7 +32,7 @@ namespace TLuxury.Forms
         private void DateStart_ValueChanged(object sender, EventArgs e)
         {
             if (DateEnd.Value < DateStart.Value)
-                DateStart.Value = new DateTime(2020, 1, 1);           
+                DateStart.Value = new DateTime(2020, 1, 1);
             WireData();
         }
 
@@ -63,12 +57,12 @@ namespace TLuxury.Forms
                     if (comboBox1.Text != "--- Tìm Kiếm ---")
                     {
                         if (comboBox1.Text == "Tìm Theo Tên Nhà Cung Cấp")
-                        { 
+                        {
                             try
                             {
                                 table = GlobalConfig.Connection.FindEntryInvoiceBySupplierName($"{textBoxFind.Text.Trim()}");
                             }
-                            catch(Exception t)
+                            catch (Exception t)
                             {
                                 MessageBox.Show($"Lỗi câu lenh SQL Dòng 70 {t}");
                             }
@@ -103,10 +97,10 @@ namespace TLuxury.Forms
                     }
                     else
                         if (comboBox1.Text == "--- Tìm Kiếm ---")
-                        {
-                            MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
-                            textBoxFind.Text = "";
-                         }
+                    {
+                        MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxFind.Text = "";
+                    }
                 }
                 catch (Exception b)
                 {
@@ -119,7 +113,7 @@ namespace TLuxury.Forms
         {
             if (e.RowIndex == -1) return;
             EntryDetails f = new EntryDetails(DanhsachHoaDon.Rows[e.RowIndex].Cells["Mã Hóa Đơn"].Value.ToString(), DanhsachHoaDon.Rows[e.RowIndex].Cells["Ngày Nhập"].Value.ToString());
-            f.ShowDialog();          
+            f.ShowDialog();
         }
 
         private void buttonThem_Click(object sender, EventArgs e)

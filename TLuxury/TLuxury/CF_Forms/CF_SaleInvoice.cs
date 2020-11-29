@@ -1,12 +1,6 @@
 ﻿using StoreLibrary;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -47,7 +41,7 @@ namespace TLuxury.Forms
             {
                 DataTable table = new DataTable();
                 try
-                { 
+                {
                     //=================================== Hóa đơn bán ======================================================
                     if (comboBox1.Text != "--- Tìm Kiếm ---")
                     {
@@ -127,12 +121,12 @@ namespace TLuxury.Forms
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            MainForm.Intance.OpenChildForm(new CF_BANHANG(),(Button) sender);
+            MainForm.Intance.OpenChildForm(new CF_BANHANG(), (Button)sender);
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Bạn Có Chắc muốn xóa hóa đơn này ","Thông Báo",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn Có Chắc muốn xóa hóa đơn này ", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
                 {

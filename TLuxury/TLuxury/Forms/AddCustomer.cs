@@ -1,13 +1,6 @@
 ﻿using StoreLibrary;
 using StoreLibrary.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -36,12 +29,12 @@ namespace TLuxury.Forms
                 MessageBox.Show("Số điện thoại Không được để trống ! ", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(textBoxPhoneNumber.Text.Length <10)
+            if (textBoxPhoneNumber.Text.Length < 10)
             {
                 MessageBox.Show("Số điện thoại Phải có ít nhất 10 số ! ", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(textBoxPhoneNumber.Text.Length >15)
+            if (textBoxPhoneNumber.Text.Length > 15)
             {
                 MessageBox.Show("Số điện thoại không được quá 15 số ! ", "Thông Báo", MessageBoxButtons.OK);
                 return false;
@@ -64,7 +57,7 @@ namespace TLuxury.Forms
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            if(ValidateForm())
+            if (ValidateForm())
             {
                 Model_Customer model = new Model_Customer(textBoxName.Text, textBoxAddress.Text, textBoxPhoneNumber.Text);
                 try

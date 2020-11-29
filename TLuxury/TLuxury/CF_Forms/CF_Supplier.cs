@@ -1,13 +1,7 @@
 ﻿using StoreLibrary;
 using StoreLibrary.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -124,7 +118,7 @@ namespace TLuxury.Forms
             else
                 MessageBox.Show("Hãy chọn 1 hàng trên danh sách ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        
+
         private void textBoxFind_TextChanged(object sender, EventArgs e)
         {
             if (textBoxFind.Text == "")
@@ -158,10 +152,10 @@ namespace TLuxury.Forms
                     }
                     else
                         if (comboBox1.Text == "--- Tìm Kiếm ---")
-                        {
-                            MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
-                            textBoxFind.Text = "";
-                        }
+                    {
+                        MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxFind.Text = "";
+                    }
                 }
                 catch (Exception b)
                 {

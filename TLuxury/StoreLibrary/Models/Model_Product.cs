@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StoreLibrary.Models
+﻿namespace StoreLibrary.Models
 {
     public class Model_Product
     {
@@ -19,31 +13,31 @@ namespace StoreLibrary.Models
         /// <summary>
         /// Loại sản Phẩm
         /// </summary>
-        public Model_Category Category { get; set; }
+        public Model_Category Category { get; set; } = new Model_Category();
         /// <summary>
         /// Kích Cỡ
         /// </summary>
-        public Model_Size Size { get; set; }
+        public Model_Size Size { get; set; } = new Model_Size();
         /// <summary>
         /// Chất Liệu
         /// </summary>
-        public Model_RawMaterial Material { get; set; }
+        public Model_RawMaterial Material { get; set; } = new Model_RawMaterial();
         /// <summary>
         /// Màu
         /// </summary>
-        public Model_Color Color { get; set; }
+        public Model_Color Color { get; set; } = new Model_Color();
         /// <summary>
         /// Đối tượng Sử dụng
         /// </summary>
-        public Model_Object Object { get; set; }
+        public Model_Object Object { get; set; } = new Model_Object();
         /// <summary>
         /// Mùa
         /// </summary>
-        public Model_Season Season { get; set; }
+        public Model_Season Season { get; set; } = new Model_Season();
         /// <summary>
         /// Nhà sản xuất
         /// </summary>
-        public Model_Manufactured Manufactured { get; set; }
+        public Model_Manufactured Manufactured { get; set; } = new Model_Manufactured();
         /// <summary>
         /// Số Lượng
         /// </summary>
@@ -79,6 +73,22 @@ namespace StoreLibrary.Models
             Quantity = quantity;
             PriceEntry = priceEntry;
             PriceSell = priceSell;
+        }
+        public Model_Product(string iD,string name,string cate,string size,string mate,string color,string @object,string season,string manu ,string quantity,string priceEntry,string pricesell,string pic)
+        {
+            ID = iD;
+            Name = name;
+            Size.Size = size;
+            Category.Name = cate;
+            Material.Name = mate;
+            Color.Name = color;
+            Object.Name = @object;
+            Season.Name = season;
+            Manufactured.Name = manu;
+            Quantity = int.Parse(quantity);
+            PriceEntry = decimal.Parse(priceEntry);
+            PriceSell = decimal.Parse(pricesell);
+            Picture = pic;
         }
     }
 }

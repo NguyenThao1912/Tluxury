@@ -2,13 +2,8 @@
 using StoreLibrary.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -16,9 +11,11 @@ namespace TLuxury.Forms
     public partial class AddProduct : Form
     {
         //form con
-        private Add addform ;
+        private Add addform;
         string fileName;
-        public AddProduct()
+        bool isAdjust = false;
+        string ID;
+        public AddProduct(Model_Product model = null)
         {
             InitializeComponent();
             WireDataCate();
@@ -28,10 +25,51 @@ namespace TLuxury.Forms
             WireDataObject();
             WireDataSeason();
             WireDataSize();
+            //Nếu có 1 đối tượng được truyền vào 
+            if(model != null)
+            {
+                labelTitle.Text = "Sửa Sản Phẩm";
+                ID = model.ID;
+                getPicture(model.ID);
+                textBox_TenSP.Text = model.Name;
+                cbxChatLieu.Text = model.Material.Name;
+                cbxDoituong.Text = model.Object.Name;
+                cbxKichco.Text = model.Size.Size;
+                cbxMauSac.Text = model.Color.Name;
+                cbxMua.Text = model.Season.Name;
+                cbxNSX.Text = model.Manufactured.Name;
+                cbxSanPham.Text = model.Category.Name;
+                textBox_GiaBan.Text = model.PriceSell.ToString();
+                textBox_GiaNhap.Text = model.PriceEntry.ToString();
+                textBox_soluong.Text = model.Quantity.ToString();
+                //bật tắt nút :)
+                textBox_GiaBan.Enabled = true;
+                textBox_GiaNhap.Enabled = true;
+                textBox_soluong.Enabled = true;
+                //biến để xác định là thêm hay sửa
+                isAdjust = true;
+            }
+        }
+        private void getPicture(string ID)
+        {
+            string picture = GlobalConfig.Connection.find_anh(ID);
+            if (picture != "Khong co anh")
+            {
+                int index = System.Reflection.Assembly.GetExecutingAssembly().Location.IndexOf("bin");
+                string resource = System.Reflection.Assembly.GetExecutingAssembly().Location.Substring(0, index) + @"Resources\" + picture;
+                pictureBox1.Image = new Bitmap(resource);
+            }
+            else
+            {
+                int index = System.Reflection.Assembly.GetExecutingAssembly().Location.IndexOf("bin");
+                string resource = System.Reflection.Assembly.GetExecutingAssembly().Location.Substring(0, index) + @"Resources\" + "macdinh.png";
+                pictureBox1.Image = new Bitmap(resource);
+            }
+            return;
         }
         private void buttonAddPicture_Click(object sender, EventArgs e)
         {
-            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
@@ -68,7 +106,7 @@ namespace TLuxury.Forms
         private void WireDataCate()
         {
             try
-            {   
+            {
                 List<Model_Category> category = GlobalConfig.Connection.GetAllCategory();
                 cbxSanPham.DataSource = null;
                 cbxSanPham.DataSource = category;
@@ -288,28 +326,49 @@ namespace TLuxury.Forms
                 decimal priceEntry = decimal.Parse(textBox_GiaNhap.Text);
                 decimal priceSell = decimal.Parse(textBox_GiaBan.Text);
                 Model_Manufactured manufactured = (Model_Manufactured)cbxNSX.SelectedItem;
-                Model_Product model = new Model_Product(Name,cate,size,material,color,obj,season,manufactured,quantity,priceEntry,priceSell);
+                Model_Product model = new Model_Product(Name, cate, size, material, color, obj, season, manufactured, quantity, priceEntry, priceSell);
                 if (textBoxAddpicture.Text != "")
                 {
-                    model.Picture = model.Picture = fileName;
+                    model.Picture = fileName;
                 }
                 try
                 {
-                    GlobalConfig.Connection.InsertNewProduct(model);
+                    if (isAdjust == false)
+                    {
+                        GlobalConfig.Connection.InsertNewProduct(model);
+                        MessageBox.Show("Thêm Sản Phẩm Thành Công !", "Thông Báo", MessageBoxButtons.OK);
+                        this.Dispose();
+                    }
+
+                    else
+                    {
+                        //dòng 319 chưa có ID nên lúc sửa phải gán lại ID , biến ID là biến toàn cục
+                        model.ID = ID;
+                        //nếu thay đổi ảnh thì vào chỗ if này 
+                        if (textBoxAddpicture.Text != "")
+                            model.Picture = fileName;
+                        else
+                            //nếu k có thay đổi gì thì lấy link ảnh từ db
+                            model.Picture = GlobalConfig.Connection.find_anh(model.ID);
+                        //update thôi 
+                        GlobalConfig.Connection.UpdateProduct(model);
+                        MessageBox.Show("Sửa Sản Phẩm Thành Công !", "Thông Báo", MessageBoxButtons.OK);
+                        this.Dispose();
+                    }
+
                 }
                 catch
                 {
                     MessageBox.Show("Lỗi Thêm Nhân viên vào Database Liên hệ Thảo để fix :)", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                MessageBox.Show("Thêm Sản Phẩm Thành Công !", "Thông Báo", MessageBoxButtons.OK);
-                this.Dispose();
+
             }
         }
 
         private void textBox_GiaNhap_TextChanged(object sender, EventArgs e)
         {
-            if(textBox_GiaNhap.Text != "")
+            if (textBox_GiaNhap.Text != "")
             {
                 float t = float.Parse(textBox_GiaNhap.Text);
                 textBox_GiaBan.Text = (t + t * 0.1).ToString();

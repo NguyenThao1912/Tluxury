@@ -2,7 +2,6 @@
 using StoreLibrary.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -50,7 +49,7 @@ namespace TLuxury.Forms
 
         private void DanhsachMau_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
                 txtMaMau.Text = DanhsachMau.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtTenMau.Text = DanhsachMau.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -92,7 +91,9 @@ namespace TLuxury.Forms
                     GlobalConfig.Connection.DeleteColor(cl);
                     WireData();
                 }
-                catch (Exception t ){ MessageBox.Show($"Co loi xay ra{t.ToString()}");
+                catch (Exception t)
+                {
+                    MessageBox.Show($"Co loi xay ra{t.ToString()}");
                 }
             }
             else MessageBox.Show("Hay chon mau can xoa");
@@ -326,7 +327,7 @@ namespace TLuxury.Forms
             {
 
             }
-          
+
         }
 
         private void DanhsachDoiTuong_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -383,7 +384,7 @@ namespace TLuxury.Forms
                 txtTenMau.Text = DanhsachMau.Rows[e.RowIndex].Cells[1].Value.ToString();
             }
         }
-        
+
         private void btnThemKichCo_Click(object sender, EventArgs e)
         {
             Add themKichco = new Add(7);
@@ -404,7 +405,7 @@ namespace TLuxury.Forms
                     ob.Size = txtTenKichCo.Text;
                     GlobalConfig.Connection.DeleteSize(ob);
                     WireData();
-                  }
+                }
                 catch (Exception t)
                 {
                     MessageBox.Show($"Co loi xay ra{t.ToString()}");
@@ -439,7 +440,41 @@ namespace TLuxury.Forms
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tính năng chưa có thời gian làm thôi bỏ qua test nút khác đi  :)", "WARNING !! uwu");
+            string ID, Name, Cate, Size, material, color, objectt, season, manu, quantity, pic = "Khong co anh", entryPrice, sellPrice;
+            Model_Product pro = null;
+            DataGridViewRow d = DanhsachSP.CurrentRow;
+            if (d.Index >= 0)
+            {
+                //Lấy thông tin từ datagrid view
+                ID = d.Cells[0].Value.ToString();
+                Name = d.Cells[1].Value.ToString();
+                Cate = d.Cells[2].Value.ToString();
+                Size = d.Cells[3].Value.ToString();
+                material = d.Cells[4].Value.ToString();
+                color = d.Cells[5].Value.ToString();
+                objectt = d.Cells[6].Value.ToString();
+                season = d.Cells[7].Value.ToString();
+                manu = d.Cells[8].Value.ToString();
+                quantity = d.Cells[9].Value.ToString();
+                entryPrice = d.Cells[10].Value.ToString();
+                sellPrice = d.Cells[11].Value.ToString();
+                try
+                {
+                    pic = GlobalConfig.Connection.find_anh(ID);
+                }
+                catch
+                {
+
+                }
+                //cho thông tin vào 1 đối tượng
+                pro = new Model_Product(ID, Name, Cate, Size, material, color, objectt, season, manu, quantity, entryPrice, sellPrice, pic);
+                //truyền đối tượng sang form addproduct để update :)
+                AddProduct a = new AddProduct(pro);
+                a.Text = "Sửa sản Phẩm";
+                a.ShowDialog();
+                WireData();
+            }
+
         }
         private void DanhsachSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -492,31 +527,6 @@ namespace TLuxury.Forms
                 Filter += $"Manufactured.Name LIKE '%' + N'{textBoxManufac.Text}' + '%' and ";
             if (Filter.Length > 0)
             {
-                
-                /*  string CutFilter = "SELECT Product.* ," +
-                   "Product.Name  ," +
-                   "Category.*  ," +
-                   "Size.*  ," +
-                   "RawMaterial.* ," +
-                   "Color.* ," +
-                   "Object.* ," +
-                   "Season.* ," +
-                   "Manufactured.* ," +
-                   "FROM Product, Category, Size, RawMaterial, Color, Object, Season, Manufactured " +
-                   "Left join Category on Product.CategoryID = Category.ID " +
-                   "Left join Size on Product.CategoryID = Size.ID " +
-                   "Left join RawMaterial on Product.CategoryID = RawMaterial.ID " +
-                   "Left join Color on Product.CategoryID = Color.ID " +
-                   "Left join Object on Product.CategoryID = Object.ID " +
-                   "Left join Season on Product.CategoryID = Season.ID " +
-                   "Left join Manufactured on Product.CategoryID = Manufactured.ID " +
-                   "WHERE CategoryID = Category.ID AND " +
-                   "SizeID = Size.ID AND " +
-                   "RawMaterial_ID = RawMaterial.ID AND " +
-                   "ColorID = Color.ID AND " +
-                   "Object.ID = ObjectID AND " +
-                   "SeasonID = Season.ID AND " +
-                   "Manufactured.ID = ManufacturedID AND ";*/
                 try
                 {
                     DanhsachSP.DataSource = GlobalConfig.Connection.FindProduct(Filter);
@@ -553,7 +563,31 @@ namespace TLuxury.Forms
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tính năng chưa có thời gian làm thôi bỏ qua test nút khác đi :)","WARNING !! uwu");
+            DataGridViewRow d = DanhsachSP.CurrentRow;
+            if (d.Index >= 0)
+            {              
+                string ID;
+                if (MessageBox.Show("Bạn Có Chắc muôn xóa sản phẩm này ", "Announcement", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        if (d.Index >= 0)
+                        {
+                            ID = d.Cells[0].Value.ToString();
+                            Model_Product a = new Model_Product();
+                            a.ID = ID;
+                            GlobalConfig.Connection.DeleteProduct(a);
+                            WireData();
+                            MessageBox.Show("Xóa Thành Công Sản Phẩm ");
+                        }
+                    }
+                    catch(Exception t)
+                    {
+                        MessageBox.Show($"xóa Không thành công  {t.Message}");
+                    }
+                }
+
+            }
         }
     }
 }

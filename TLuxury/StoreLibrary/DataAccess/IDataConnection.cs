@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StoreLibrary.DataAccess
 {
@@ -59,6 +56,8 @@ namespace StoreLibrary.DataAccess
         #endregion
         //----------------------------------------------------------------------------------------------------------------------------------
         #region Lệnh Delete-Update
+        void DeleteProduct(Model_Product model);        //xóa sản phẩm
+        void UpdateProduct(Model_Product model);        //sửa sản phẩms
         void DeleteCustomer(Model_Customer model);      //xóa khách hàng
         void UpdateCustomer(Model_Customer model);      //sửa khách hàng
         void UpdateSupplier(Model_Supplier model);      //sửa nhà cung cấp
@@ -105,7 +104,7 @@ namespace StoreLibrary.DataAccess
         DataTable ReportSupplier(string ID);
         DataTable ReportTop5Cus(int year);
         DataTable ReportCantSellProduct(int month);
-        DataTable ReportSaleInvoice(int month, int year,out decimal Amount);
+        DataTable ReportSaleInvoice(int month, int year, out decimal Amount);
         #endregion
         Users Checklogin(string username, string pass);
     }

@@ -1,7 +1,6 @@
 ﻿using StoreLibrary;
 using System;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -9,7 +8,7 @@ namespace TLuxury.CF_Forms
 {
     public partial class CF_RPSaleInvoice : Form
     {
-      
+
         public CF_RPSaleInvoice()
         {
             InitializeComponent();
@@ -21,8 +20,8 @@ namespace TLuxury.CF_Forms
                 decimal Amount;
                 if (comboBoxThang.Text != "")
                 {
-                    DataTable table = GlobalConfig.Connection.ReportSaleInvoice(int.Parse(comboBoxThang.Text), int.Parse(textBoxYear.Text),out Amount);
-                    if(table !=  null)
+                    DataTable table = GlobalConfig.Connection.ReportSaleInvoice(int.Parse(comboBoxThang.Text), int.Parse(textBoxYear.Text), out Amount);
+                    if (table != null)
                     {
                         DanhsachSP.DataSource = null;
                         DanhsachSP.DataSource = table;
@@ -31,11 +30,11 @@ namespace TLuxury.CF_Forms
 
                 }
             }
-            catch(System.ApplicationException)
+            catch (System.ApplicationException)
             {
                 MessageBox.Show($"Không tìm thấy dữ liệu ở tháng này");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show($"Lỗi gì đó khó ghê ~~ {e.ToString()}");
             }
@@ -87,7 +86,7 @@ namespace TLuxury.CF_Forms
                 //các tiêu đề
                 string Ten = "Nguyễn Thảo zzz";
                 string DiaChi = "Địa Chỉ : H_ N__";
-                string TieudeBaoCao = $"Báo Cáo Danh Sách Hóa Đơn và tổng tiền bán theo tháng "+ comboBoxThang.Text;
+                string TieudeBaoCao = $"Báo Cáo Danh Sách Hóa Đơn và tổng tiền bán theo tháng " + comboBoxThang.Text;
 
 
                 char[] col = { ' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O' };

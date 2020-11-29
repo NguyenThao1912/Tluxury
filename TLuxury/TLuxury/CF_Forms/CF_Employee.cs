@@ -2,12 +2,7 @@
 using StoreLibrary.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -31,7 +26,7 @@ namespace TLuxury.Forms
                 DanhsachNhanVien.DataSource = null;
                 DanhsachNhanVien.DataSource = table;
             }
-            catch(Exception t)
+            catch (Exception t)
             {
                 MessageBox.Show($"Lỗi SQL line 36 {t}", "Thông báo");
             }
@@ -62,7 +57,7 @@ namespace TLuxury.Forms
             radioButtonNu.Checked = false;
             comboBoxRole.SelectedIndex = -1;
         }
-        private void FillText(string id,string name,char gender,DateTime dateofbirth,string phonenumber,string rolename,string add)
+        private void FillText(string id, string name, char gender, DateTime dateofbirth, string phonenumber, string rolename, string add)
         {
             textBoxID.Text = id;
             textBoxName.Text = name;
@@ -95,8 +90,8 @@ namespace TLuxury.Forms
         }
         private void DanhsachNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0)
-            {               
+            if (e.RowIndex >= 0)
+            {
                 DataGridViewRow selectRow = this.DanhsachNhanVien.Rows[e.RowIndex];
                 model.ID = selectRow.Cells["Mã Nhân Viên"].Value.ToString();
                 model.Name = selectRow.Cells["Tên Nhân Viên"].Value.ToString();
@@ -120,22 +115,22 @@ namespace TLuxury.Forms
         }
         private bool Validation()
         {
-            if(textBoxName.Text == "")
+            if (textBoxName.Text == "")
             {
                 MessageBox.Show("Tên Không được để trống", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(textBoxPhoneNumber.Text =="")
+            if (textBoxPhoneNumber.Text == "")
             {
                 MessageBox.Show("Số điện thoại không được để trống", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(DateTime.Now.Year - dateOfbirth.Value.Year <18)
+            if (DateTime.Now.Year - dateOfbirth.Value.Year < 18)
             {
                 MessageBox.Show("Chỉ nhận nhân viên trên 18 tuổi", "Thông Báo", MessageBoxButtons.OK);
                 return false;
             }
-            if(comboBoxRole.Text == "")
+            if (comboBoxRole.Text == "")
             {
                 MessageBox.Show("Cần chọn chức vụ cho nhân viên", "Thông Báo", MessageBoxButtons.OK);
                 return false;
@@ -144,7 +139,7 @@ namespace TLuxury.Forms
         }
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if(Validation())
+            if (Validation())
             {
                 Model_Employee em = new Model_Employee();
                 Model_Role role = new Model_Role();
@@ -164,7 +159,7 @@ namespace TLuxury.Forms
                     GlobalConfig.Connection.UpdateEmployee(em);
                     WireData();
                 }
-                catch(Exception t)
+                catch (Exception t)
                 {
                     MessageBox.Show($"Lỗi không update được  {t}");
                 }
@@ -174,7 +169,7 @@ namespace TLuxury.Forms
                 }
 
             }
-      
+
         }
 
         private void buttonThem_Click(object sender, EventArgs e)
@@ -202,7 +197,7 @@ namespace TLuxury.Forms
                 return;
             }
 
-            if(MessageBox.Show("Bạn có chắc muốn xóa nhân viên này","Thông Báo",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có chắc muốn xóa nhân viên này", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
                 {
@@ -248,10 +243,10 @@ namespace TLuxury.Forms
                     }
                     else
                         if (comboBox1.Text == "--- Tìm Kiếm ---")
-                        {
-                            MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            textBoxFind.Text = "";
-                        }
+                    {
+                        MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxFind.Text = "";
+                    }
                 }
                 catch (Exception b)
                 {

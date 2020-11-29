@@ -1,20 +1,14 @@
 ﻿using StoreLibrary;
 using StoreLibrary.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
 {
     public partial class CF_Customer : Form
     {
-        Model_Customer temp ; // Đối tượng để xóa
+        Model_Customer temp; // Đối tượng để xóa
         public CF_Customer()
         {
             InitializeComponent();
@@ -22,7 +16,7 @@ namespace TLuxury.Forms
             comboBox1.SelectedItem = "--- Tìm Kiếm ---";
         }
         private void WireData()
-        {   
+        {
             DataTable model = GlobalConfig.Connection.GetAllCustomers();
             DanhsachKH.DataSource = null;
             DanhsachKH.DataSource = model;
@@ -68,8 +62,8 @@ namespace TLuxury.Forms
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             //Xóa Đối tượng được lựa chọn
-           if(temp != null)
-           {
+            if (temp != null)
+            {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa Khách Hàng này ? ", "Thông Báo", MessageBoxButtons.YesNo) != DialogResult.Yes)
                     return;
                 else
@@ -88,9 +82,9 @@ namespace TLuxury.Forms
                     }
                 }
             }
-           else
-                MessageBox.Show("Hãy chọn 1 hàng trên danh sách ", "Thông Báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
-  
+            else
+                MessageBox.Show("Hãy chọn 1 hàng trên danh sách ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
 
         private void buttonSua_Click(object sender, EventArgs e)
@@ -109,7 +103,7 @@ namespace TLuxury.Forms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            Model_Customer model = new Model_Customer(textBoxName.Text,textBoxAddress.Text,textBoxPhoneNumber.Text);
+            Model_Customer model = new Model_Customer(textBoxName.Text, textBoxAddress.Text, textBoxPhoneNumber.Text);
             model.ID = textBoxID.Text;
             try
             {
@@ -123,9 +117,9 @@ namespace TLuxury.Forms
             {
                 MessageBox.Show("Có lỗi Sửa không thành công ", "Thông Báo", MessageBoxButtons.OK);
             }
-            
+
         }
-     
+
         private void textBoxFind_TextChanged(object sender, EventArgs e)
         {
             if (textBoxFind.Text == "")
@@ -159,10 +153,10 @@ namespace TLuxury.Forms
                     }
                     else
                         if (comboBox1.Text == "--- Tìm Kiếm ---")
-                        {
-                            MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
-                            textBoxFind.Text = "";
-                        }
+                    {
+                        MessageBox.Show("Hãy Chọn cách thức tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxFind.Text = "";
+                    }
 
                 }
                 catch (Exception b)

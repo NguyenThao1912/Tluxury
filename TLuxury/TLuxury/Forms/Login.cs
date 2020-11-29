@@ -1,13 +1,7 @@
 ﻿using StoreLibrary;
 using StoreLibrary.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TLuxury.Forms
@@ -44,19 +38,19 @@ namespace TLuxury.Forms
 
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
-            
-           Users a = GlobalConfig.Connection.Checklogin(textBoxUser.Text,textBoxPassword.Text);
-           if(a.islogin == 1)
-           {
+
+            Users a = GlobalConfig.Connection.Checklogin(textBoxUser.Text, textBoxPassword.Text);
+            if (a.islogin == 1)
+            {
                 this.Hide();
                 MainForm.Intance.BringToFront();
                 MainForm.Intance.Show();
-           }
-           else
-           {
+            }
+            else
+            {
                 textBoxUser.Focus();
-                MessageBox.Show("Sai Tài Khoản Hoặc Mật Khẩu ","Attention",MessageBoxButtons.OK,MessageBoxIcon.Error);
-           }
+                MessageBox.Show("Sai Tài Khoản Hoặc Mật Khẩu ", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
